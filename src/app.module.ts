@@ -7,7 +7,8 @@ import { CustomerModule } from './customer/customer.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost/ze-place-api', {useNewUrlParser: true}),
+    // MongooseModule.forRoot('mongodb://localhost/ze-place-api', {useNewUrlParser: true}),
+    MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost/ze-place-api', {useNewUrlParser: true, useFindAndModify: false}),
     CustomerModule
   ],
   controllers: [AppController],
