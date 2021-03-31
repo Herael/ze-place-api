@@ -6,23 +6,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.CustomerModule = void 0;
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
+const customer_controller_1 = require("./customer.controller");
+const customer_service_1 = require("./customer.service");
 const mongoose_1 = require("@nestjs/mongoose");
-const customer_module_1 = require("./customer/customer.module");
-let AppModule = class AppModule {
+const customer_schema_1 = require("./schemas/customer.schema");
+let CustomerModule = class CustomerModule {
 };
-AppModule = __decorate([
+CustomerModule = __decorate([
     common_1.Module({
         imports: [
-            mongoose_1.MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost/ze-place-api', { useNewUrlParser: true, useFindAndModify: false }),
-            customer_module_1.CustomerModule,
+            mongoose_1.MongooseModule.forFeature([{ name: 'Customer', schema: customer_schema_1.CustomerSchema }]),
         ],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        controllers: [customer_controller_1.CustomerController],
+        providers: [customer_service_1.CustomerService],
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], CustomerModule);
+exports.CustomerModule = CustomerModule;
+//# sourceMappingURL=customer.module.js.map

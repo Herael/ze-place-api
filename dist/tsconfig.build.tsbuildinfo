@@ -161,6 +161,11 @@
         "signature": "d2f31f19e1ba6ed59be9259d660a239d9a3fcbbc8e038c6b2009bde34b175fed",
         "affectsGlobalScope": false
       },
+      "../types.ts": {
+        "version": "df0e039cfe8823c2639439623677adb8c9e113af656a04111fb26ab426612287",
+        "signature": "5b8d176962431aa619ca56c7739b9aa56bb770539d69ac10d25681c7778ef474",
+        "affectsGlobalScope": false
+      },
       "../node_modules/reflect-metadata/index.d.ts": {
         "version": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
         "signature": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
@@ -1531,38 +1536,83 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
-      "../src/customer/interfaces/customer.interface.ts": {
-        "version": "7c9f8111d833c227052926f739f1bd5f3dca9da2da8dd8ff02a4c5c34712653e",
+      "../src/modules/customer/interfaces/customer.interface.ts": {
+        "version": "62cf68efd8e9e59f12a0668b589e29c51382e0fafa78a796d8093c802c94f79a",
         "signature": "8f6b3a829abcfc74de08faefbf64e7d5eaae40813aec91d8335cfcc0d7230616",
         "affectsGlobalScope": false
       },
-      "../src/customer/dto/create-customer.dto.ts": {
-        "version": "ce021d22bdc3dc3db393ebeeb51625e8f37980cfc34aa3d23149ee430827b791",
+      "../src/modules/customer/dto/create-customer.dto.ts": {
+        "version": "b3939e4877fa87d6c11e898be319fb8ca3160f5f05abb341245d8471dbc202b2",
         "signature": "d78101ad304516154a9fb1aa63bec4501d92979190454ca0d82d4807671fd8e6",
         "affectsGlobalScope": false
       },
-      "../src/customer/customer.service.ts": {
-        "version": "dd716cf109807010b972b0fd8d3d29e9139c205b345525b4c6f7c2977448711b",
+      "../src/modules/customer/customer.service.ts": {
+        "version": "2f0c176075de0bf244a33833df5c962a9668aec3236ddd369af6eee921bc278a",
         "signature": "7c0a643a526fd75559aef88060af513b9ad5f86668a9533fb39a7ac39f84364b",
         "affectsGlobalScope": false
       },
-      "../src/customer/customer.controller.ts": {
-        "version": "42e20aeab03a5159258e26ae053cbbd34d3f155bdc45faf6b75421f385d202d6",
+      "../src/modules/customer/customer.controller.ts": {
+        "version": "7bc407cc66336b740336361fb0fc26ec86090b8752b701cf7505bf1c1e5c90f5",
         "signature": "48fce02272dafacf3a60d3e7c9ed734bf15cf705874d63911c608b27c4e37182",
         "affectsGlobalScope": false
       },
-      "../src/customer/schemas/customer.schema.ts": {
-        "version": "3f1af3a3ca65f15d1f17628b2cc6398e42cc1a2f6bb66cda94346df9a51c31f9",
+      "../src/modules/customer/schemas/customer.schema.ts": {
+        "version": "92f8ed774fb9576a80af2ade7fc399dd3475be9bdb7aa38517e449a8cc112ff5",
         "signature": "4e0f49eb914132556be58be043c68fc4297e170d5d941b7c8446198f113afb86",
         "affectsGlobalScope": false
       },
-      "../src/customer/customer.module.ts": {
-        "version": "bdc47ce1e9a4e1849bcd9fad6d87018bb55d7bf618b299af73d03778861d90f3",
+      "../src/modules/customer/customer.module.ts": {
+        "version": "9ab7c748d83cecaefe83637949f4080f18b62b1c34a60d8f8f1e0b453ded3756",
         "signature": "b16fc39c01bd9a1562b59fc5bc96d07fdbc1ba20d3858c20611132fbdeb485a9",
         "affectsGlobalScope": false
       },
+      "../src/modules/review/interfaces/review.interface.ts": {
+        "version": "154d9d7792cb05fea6e32eedb09fc4b7e11a02b9ced31f41b95ff4f30bc06bca",
+        "signature": "3d4ee0fbbac8c5e6e27acfaea2bcda38701684228cf67974ef72f392a8bff385",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place/interfaces/place.interface.ts": {
+        "version": "d63f6d87b38074a6e119c8537e702d509030d80b37e6895bf7b29476e983ac6d",
+        "signature": "7da35ca049bc5fc38c54c04a305785749638a47aba8ddbd0ee1aea8600215ecd",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place/place.service.ts": {
+        "version": "d0c1c2cdb65994d8f0aa2408d4bb34ff7e41eca79beb40b84421aa8c60fd3afc",
+        "signature": "4f2d075c6b36073d014cba7473f24968cd31be076987f093d2e60c93e7a92dc4",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place/place.controller.ts": {
+        "version": "5420c2b3ab2c8cb7fecd6cbea05388b0715421461cdbf719a3d1b98d2b616d5e",
+        "signature": "6dae162ba61c7bd231df859c28027139e621d1a95d67cf9f5476177240c7bc30",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/review/review.service.ts": {
+        "version": "f43c0e4ca365d1d5bb472a7d64e8d37dbdb15bd70ce8a2d7a7b2ad28358a3fad",
+        "signature": "b1beb2ef4137a2209090a59adaeb1c571aafd0e39db8eef48a074537ace7fb64",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/review/review.controller.ts": {
+        "version": "4e6a26fa1522a22462cb0e7e4353f850824786abbb12721568f71e52f47ed5e6",
+        "signature": "941a4463b910f60ffbcc414314eb8c3e9c9525618bb46344d82676dbdac43cb1",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/review/review.module.ts": {
+        "version": "fa282352096f5dbccf51a7cddd55d2a32922587c75f9988be619b940dd50e96f",
+        "signature": "145b36f59e42572f72a955b9b8c9077e4160a41f680f82f75d48a84af9fdc5fb",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place/schemas/place.schema.ts": {
+        "version": "16efbdebd32c7e580fe35e5a240e290bd0e978aa6f89944e9e2ae009b4b4fa95",
+        "signature": "b29d58e560e82ebd6eaeab2c411be4ab1c6d2a67eabb4aee61f7898e2071066d",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place/place.module.ts": {
+        "version": "da4f3b784a492d28441529b0a0f0db7742155aa6807949b7bce9c2eddbde6246",
+        "signature": "19d997ce27c99d6e74839ae37762f33da8cb45f4b60f73e7050b6c7bd71dd2b4",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "ee0e3ee977aaa9387e5b482f62b550e3b1c3e76c82506c6244b4016aa5463235",
+        "version": "0161d0fe11443db4d5f35af68c51f7b57d614aa701896a6df4fb13bd8d9c33b1",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -1749,6 +1799,21 @@
       "../src/main.ts": {
         "version": "8ec1a1845ba1caa977bba1ce54fe477b6a6fbafb6601ded9020b3738910f46fc",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place/dto/create-place.dto.ts": {
+        "version": "27f9197b02cdb3f16dabbc80f209fc28ddadcceb491777157ee1e0d10f320ef8",
+        "signature": "426e234e12311ff250ceb5171f91063200c7f5280a8ca743e7b258df8abd99d0",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/review/dto/create-review.dto.ts": {
+        "version": "d1ea006486aa7b6d411b33596bcebb448c7bf4b37fed9152a28504e012878734",
+        "signature": "76e6d71ecedc3f7fb3d43fba2a082a6e1b464fe572f539489a76279af66fffb6",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/review/schemas/review.schema.ts": {
+        "version": "f8021e6305b41c9a577abca91362a05cc69a5086f1091f76a7a9b4dfb41ad544",
+        "signature": "feb373abb796ba5fa4ca6ecfbb6bbbb82b3fb0f09d1e1329420f2b1954d044eb",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -3499,39 +3564,90 @@
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../src/app.controller.ts",
         "../src/app.service.ts",
-        "../src/customer/customer.module.ts"
+        "../src/modules/customer/customer.module.ts",
+        "../src/modules/place/place.module.ts"
       ],
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
-      "../src/customer/customer.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/customer/customer.service.ts",
-        "../src/customer/dto/create-customer.dto.ts"
-      ],
-      "../src/customer/customer.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/mongoose/index.d.ts",
-        "../src/customer/customer.controller.ts",
-        "../src/customer/customer.service.ts",
-        "../src/customer/schemas/customer.schema.ts"
-      ],
-      "../src/customer/customer.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/mongoose/index.d.ts",
-        "../node_modules/mongoose/index.d.ts",
-        "../src/customer/dto/create-customer.dto.ts",
-        "../src/customer/interfaces/customer.interface.ts"
-      ],
-      "../src/customer/interfaces/customer.interface.ts": [
-        "../node_modules/mongoose/index.d.ts"
-      ],
-      "../src/customer/schemas/customer.schema.ts": [
-        "../node_modules/mongoose/index.d.ts"
-      ],
       "../src/main.ts": [
         "../node_modules/@nestjs/core/index.d.ts",
         "../src/app.module.ts"
+      ],
+      "../src/modules/customer/customer.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/customer/customer.service.ts",
+        "../src/modules/customer/dto/create-customer.dto.ts"
+      ],
+      "../src/modules/customer/customer.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/modules/customer/customer.controller.ts",
+        "../src/modules/customer/customer.service.ts",
+        "../src/modules/customer/schemas/customer.schema.ts"
+      ],
+      "../src/modules/customer/customer.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/customer/dto/create-customer.dto.ts",
+        "../src/modules/customer/interfaces/customer.interface.ts"
+      ],
+      "../src/modules/customer/interfaces/customer.interface.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/customer/schemas/customer.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/place/dto/create-place.dto.ts": [
+        "../src/modules/review/interfaces/review.interface.ts",
+        "../types.ts"
+      ],
+      "../src/modules/place/interfaces/place.interface.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/review/interfaces/review.interface.ts",
+        "../types.ts"
+      ],
+      "../src/modules/place/place.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/place/place.service.ts"
+      ],
+      "../src/modules/place/place.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/modules/place/place.controller.ts",
+        "../src/modules/place/place.service.ts",
+        "../src/modules/place/schemas/place.schema.ts"
+      ],
+      "../src/modules/place/place.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/place/interfaces/place.interface.ts"
+      ],
+      "../src/modules/place/schemas/place.schema.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/review/review.module.ts"
+      ],
+      "../src/modules/review/interfaces/review.interface.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/review/review.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/modules/review/review.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/review/review.controller.ts",
+        "../src/modules/review/review.service.ts"
+      ],
+      "../src/modules/review/review.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/modules/review/schemas/review.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../types.ts": [
+        "../node_modules/@types/node/url.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -4951,20 +5067,48 @@
       "../src/app.controller.ts": [
         "../src/app.service.ts"
       ],
-      "../src/customer/customer.controller.ts": [
-        "../src/customer/customer.service.ts",
-        "../src/customer/dto/create-customer.dto.ts"
+      "../src/modules/customer/customer.controller.ts": [
+        "../src/modules/customer/customer.service.ts",
+        "../src/modules/customer/dto/create-customer.dto.ts"
       ],
-      "../src/customer/customer.service.ts": [
+      "../src/modules/customer/customer.service.ts": [
         "../node_modules/mongoose/index.d.ts",
-        "../src/customer/dto/create-customer.dto.ts",
-        "../src/customer/interfaces/customer.interface.ts"
+        "../src/modules/customer/dto/create-customer.dto.ts",
+        "../src/modules/customer/interfaces/customer.interface.ts"
       ],
-      "../src/customer/interfaces/customer.interface.ts": [
+      "../src/modules/customer/interfaces/customer.interface.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
-      "../src/customer/schemas/customer.schema.ts": [
+      "../src/modules/customer/schemas/customer.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/place/dto/create-place.dto.ts": [
+        "../src/modules/review/interfaces/review.interface.ts",
+        "../types.ts"
+      ],
+      "../src/modules/place/interfaces/place.interface.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/review/interfaces/review.interface.ts",
+        "../types.ts"
+      ],
+      "../src/modules/place/place.controller.ts": [
+        "../src/modules/place/place.service.ts"
+      ],
+      "../src/modules/place/place.service.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/place/interfaces/place.interface.ts"
+      ],
+      "../src/modules/place/schemas/place.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/review/interfaces/review.interface.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/review/schemas/review.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../types.ts": [
+        "../node_modules/@types/node/url.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": []
