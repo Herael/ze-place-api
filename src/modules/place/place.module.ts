@@ -1,7 +1,7 @@
+import { MongooseModule } from '@nestjs/mongoose';
 import { Module } from '@nestjs/common';
 import { PlaceService } from './place.service';
 import { PlaceController } from './place.controller';
-import { MongooseModule } from '@nestjs/mongoose';
 import { PlaceSchema } from './schemas/place.schema';
 
 @Module({

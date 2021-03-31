@@ -11,7 +11,8 @@ const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const mongoose_1 = require("@nestjs/mongoose");
-const customer_module_1 = require("./customer/customer.module");
+const customer_module_1 = require("./modules/customer/customer.module");
+const place_module_1 = require("./modules/place/place.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -19,6 +20,7 @@ AppModule = __decorate([
         imports: [
             mongoose_1.MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost/ze-place-api', { useNewUrlParser: true, useFindAndModify: false }),
             customer_module_1.CustomerModule,
+            place_module_1.PlaceModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
