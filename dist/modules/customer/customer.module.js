@@ -21,6 +21,7 @@ CustomerModule = __decorate([
         ],
         controllers: [customer_controller_1.CustomerController],
         providers: [customer_service_1.CustomerService],
+        exports: [customer_service_1.CustomerService],
     })
 ], CustomerModule);
 exports.CustomerModule = CustomerModule;

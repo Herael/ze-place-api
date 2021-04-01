@@ -1,4 +1,13 @@
-import { Controller, Get, Res, HttpStatus, Post, Body } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Res,
+  HttpStatus,
+  Post,
+  Body,
+  UseGuards,
+} from '@nestjs/common';
+import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { CreatePlaceDTO } from './dto/create-place.dto';
 import { PlaceService } from './place.service';
 
@@ -6,6 +15,7 @@ import { PlaceService } from './place.service';
 export class PlaceController {
   constructor(private placeService: PlaceService) {}
 
+  @UseGuards(JwtAuthGuard)
   @Get()
   async getAllPlaces(@Res() res) {
     const places = await this.placeService.getAllPlaces();

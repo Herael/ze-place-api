@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PlaceController = void 0;
 const common_1 = require("@nestjs/common");
+const jwt_auth_guard_1 = require("../../auth/jwt-auth.guard");
 const create_place_dto_1 = require("./dto/create-place.dto");
 const place_service_1 = require("./place.service");
 let PlaceController = class PlaceController {
@@ -33,6 +34,7 @@ let PlaceController = class PlaceController {
     }
 };
 __decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get(),
     __param(0, common_1.Res()),
     __metadata("design:type", Function),

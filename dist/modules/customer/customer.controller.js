@@ -22,10 +22,11 @@ let CustomerController = class CustomerController {
     }
     async getAllCustomer(res) {
         const customers = await this.customerService.getAllCustomer();
+        common_1.Logger.warn(customers);
         return res.status(common_1.HttpStatus.OK).json(customers);
     }
     async getCustomer(res, customerID) {
-        const customer = await this.customerService.getCustomer(customerID);
+        const customer = await this.customerService.findById(customerID);
         if (!customer)
             throw new common_1.NotFoundException('Customer does not exist!');
         return res.status(common_1.HttpStatus.OK).json(customer);

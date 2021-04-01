@@ -24,8 +24,12 @@ let CustomerService = class CustomerService {
         const customers = await this.customerModel.find().exec();
         return customers;
     }
-    async getCustomer(customerID) {
+    async findById(customerID) {
         const customer = await this.customerModel.findById(customerID).exec();
+        return customer;
+    }
+    async findByEmail(email) {
+        const customer = await this.customerModel.findOne({ email: email }).exec();
         return customer;
     }
     async addCustomer(createCustomerDTO) {

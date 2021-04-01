@@ -10,6 +10,7 @@ import {
   NotFoundException,
   Delete,
   Param,
+  Logger,
 } from '@nestjs/common';
 import { CustomerService } from './customer.service';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
@@ -22,13 +23,14 @@ export class CustomerController {
   @Get()
   async getAllCustomer(@Res() res) {
     const customers = await this.customerService.getAllCustomer();
+    Logger.warn(customers);
     return res.status(HttpStatus.OK).json(customers);
   }
 
   // Fetch a particular customer using ID
   @Get('/:customerID')
   async getCustomer(@Res() res, @Param('customerID') customerID) {
-    const customer = await this.customerService.getCustomer(customerID);
+    const customer = await this.customerService.findById(customerID);
     if (!customer) throw new NotFoundException('Customer does not exist!');
     return res.status(HttpStatus.OK).json(customer);
   }

@@ -13,6 +13,8 @@ const app_service_1 = require("./app.service");
 const mongoose_1 = require("@nestjs/mongoose");
 const customer_module_1 = require("./modules/customer/customer.module");
 const place_module_1 = require("./modules/place/place.module");
+const review_module_1 = require("./modules/review/review.module");
+const auth_module_1 = require("./auth/auth.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -21,6 +23,8 @@ AppModule = __decorate([
             mongoose_1.MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost/ze-place-api', { useNewUrlParser: true, useFindAndModify: false }),
             customer_module_1.CustomerModule,
             place_module_1.PlaceModule,
+            review_module_1.ReviewModule,
+            auth_module_1.AuthModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

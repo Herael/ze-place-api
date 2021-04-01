@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Customer } from './interfaces/customer.interface';
@@ -9,24 +9,28 @@ export class CustomerService {
   constructor(
     @InjectModel('Customer') private readonly customerModel: Model<Customer>,
   ) {}
-  // fetch all customers
+
   async getAllCustomer(): Promise<Customer[]> {
     const customers = await this.customerModel.find().exec();
     return customers;
   }
-  // Get a single customer
-  async getCustomer(customerID): Promise<Customer> {
+  async findById(customerID: string): Promise<Customer> {
     const customer = await this.customerModel.findById(customerID).exec();
     return customer;
   }
-  // post a single customer
+
+  async findByEmail(email: string): Promise<Customer | undefined> {
+    const customer = await this.customerModel.findOne({ email: email }).exec();
+    return customer;
+  }
+
   async addCustomer(createCustomerDTO: CreateCustomerDTO): Promise<Customer> {
     const newCustomer = await new this.customerModel(createCustomerDTO).save();
     return newCustomer;
   }
-  // Edit customer details
+
   async updateCustomer(
-    customerID,
+    customerID: string,
     createCustomerDTO: CreateCustomerDTO,
   ): Promise<Customer> {
     const updatedCustomer = await this.customerModel.findByIdAndUpdate(
@@ -36,8 +40,8 @@ export class CustomerService {
     );
     return updatedCustomer;
   }
-  // Delete a customer
-  async deleteCustomer(customerID): Promise<any> {
+
+  async deleteCustomer(customerID: string): Promise<any> {
     const deletedCustomer = await this.customerModel.findByIdAndRemove(
       customerID,
     );
