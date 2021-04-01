@@ -1577,7 +1577,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.service.ts": {
-        "version": "b69d6d589cc4344ce581f5b56b8c1d5220418be306abcbb7820202762d670eff",
+        "version": "2469354a2450b1af4f0f6b5f972102121f2bdba7c1ecd3b2cf4765660326fe93",
         "signature": "4583c0da107cdca1b66ca6925c5a9ecf211920cae10dd616e6dd37cde1148b0a",
         "affectsGlobalScope": false
       },
@@ -1812,7 +1812,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.module.ts": {
-        "version": "a5d86cfe32703b8ab98a9e22a91da4e466b74d6d1c30a3bae30caa90cba7c494",
+        "version": "95f67f1033a4a7bc9842a6108e9c494a104e24749eca46f61b54f04c31c253be",
         "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1",
         "affectsGlobalScope": false
       },
