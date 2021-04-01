@@ -14,7 +14,7 @@ const mongoose_1 = require("@nestjs/mongoose");
 const customer_module_1 = require("./modules/customer/customer.module");
 const place_module_1 = require("./modules/place/place.module");
 const review_module_1 = require("./modules/review/review.module");
-const auth_module_1 = require("./auth/auth.module");
+const auth_module_1 = require("./modules/auth/auth.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
