@@ -4,12 +4,24 @@ import * as request from 'supertest';
 import { AppModule } from './../src/app.module';
 import { AppService } from './../src/app.service';
 
-const app = 'http://localhost:3000';
-
 describe('AppController (e2e)', () => {
 
+  let app: INestApplication;
+  let appService = { getHello: () => 'Hello World!'};
+
+  beforeAll(async () => {
+    const moduleRef = await Test.createTestingModule({
+      imports: [AppModule],
+    })
+      .overrideProvider(AppService)
+      .useValue(appService)
+      .compile();
+
+    app = moduleRef.createNestApplication();
+    await app.init();
+  });
   it('/ (GET)', () => {
-    return request(app())
+    return request(app.getHttpServer())
       .get('/')
       .expect(200)
       .expect('Hello World!');
