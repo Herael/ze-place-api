@@ -19,7 +19,7 @@ describe('AppController', () => {
   describe('findAll', () => {
     it('should return an array of App', async () => {
       const result = 'Hello World!';
-      jest.spyOn(appService, 'findAll').mockImplementation(() => result);
+      jest.spyOn(appService, 'getHello').mockImplementation(() => result);
 
       expect(await appController.getHello()).toBe(result);
     });
