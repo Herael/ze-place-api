@@ -1,4 +1,4 @@
-import { Customer } from 'src/modules/customer/interfaces/customer.interface';
+import { Customer } from '../../customer/interfaces/customer.interface';
 
 export class CreateReviewDTO {
   readonly from: Customer;
