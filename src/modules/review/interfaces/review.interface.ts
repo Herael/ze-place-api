@@ -1,5 +1,5 @@
 import { Document } from 'mongoose';
-import { Customer } from 'src/modules/customer/interfaces/customer.interface';
+import { Customer } from '../../customer/interfaces/customer.interface';
 
 export interface Review extends Document {
   readonly from: Customer;
