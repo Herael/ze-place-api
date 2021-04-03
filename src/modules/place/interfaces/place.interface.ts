@@ -1,6 +1,6 @@
 import { Document } from 'mongoose';
-import { Review } from 'src/modules/review/interfaces/review.interface';
-import { Image } from 'src/modules/types';
+import { Review } from '../../review/interfaces/review.interface';
+import { Image } from '../../types';
 
 export interface Place extends Document {
   readonly title: string;
