@@ -28,5 +28,5 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: npm install
-      - run: npm run start:dev 
+      - run: npm start & npx wait-on http://localhost:3000
       - run: npm run test:e2e
