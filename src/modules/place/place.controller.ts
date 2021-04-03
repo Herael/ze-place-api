@@ -7,7 +7,7 @@ import {
   Body,
   UseGuards,
 } from '@nestjs/common';
-import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
+import { JwtAuthGuard } from '../modules/auth/jwt-auth.guard';
 import { CreatePlaceDTO } from './dto/create-place.dto';
 import { PlaceService } from './place.service';
 
