@@ -1,5 +1,5 @@
-import { Review } from 'src/modules/review/interfaces/review.interface';
-import { Image } from 'src/modules/types';
+import { Review } from '../../review/interfaces/review.interface';
+import { Image } from '../../types';
 
 export class CreatePlaceDTO {
   readonly title: string;
