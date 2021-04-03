@@ -1,9 +1,6 @@
 import { Test } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { AuthService } from './modules/auth/auth.service';
-import { JwtService } from '@nestjs/jwt';
-import { CustomerService } from './modules/customer/customer.service';
 
 describe('AppController', () => {
   let appController: AppController;
@@ -12,7 +9,7 @@ describe('AppController', () => {
   beforeEach(async () => {
     const moduleRef = await Test.createTestingModule({
         controllers: [AppController],
-        providers: [AppService, AuthService, JwtService, CustomerService],
+        providers: [AppService,],
       }).compile();
 
     appService = moduleRef.get<AppService>(AppService);
