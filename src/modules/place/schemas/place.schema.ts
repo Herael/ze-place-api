@@ -1,6 +1,6 @@
 import * as mongoose from 'mongoose';
-import { ReviewSchema } from 'src/modules/review/schemas/review.schema';
-import { ImageSchema } from 'src/modules/schemas';
+import { ReviewSchema } from '../../review/schemas/review.schema';
+import { ImageSchema } from '../../schemas';
 
 export const PlaceSchema = new mongoose.Schema({
   title: String,
