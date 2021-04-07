@@ -9,8 +9,7 @@
 name: Zeplace tests
 
 on:
-  push:
-    branches: [ci_cd_practice_3]
+  
   pull_request:
     branches: [ci_cd_practice_3]
 
