@@ -2242,7 +2242,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/dto/create-place.dto.ts": {
-        "version": "b7b7c3f1719aa9110fb5db7edc1453fc4099f41c7464929612c3a4f6a3524525",
+        "version": "52bca138d44dc1bbb73a5cc90dee70be6daa0bd8f14ff5013c2bef594d151705",
         "signature": "f371f78177ceefe31ce6b5465a4533ca085e0122ac9fb060f330fb0a9ccbcffe",
         "affectsGlobalScope": false
       },
@@ -2632,7 +2632,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/review/dto/create-review.dto.ts": {
-        "version": "7ceed888f13ca7a269e96824c059b7caeb8eefc41ad6a840f3b7804aebe18a85",
+        "version": "38d7f704a8b400ed5c96b50514cf07da61ded7df4a0f3af0fd0f69a706e055e3",
         "signature": "10c72662a95532da4d6bec18bdd3241ebcb6cd69ff918ec583142d743a4e6516",
         "affectsGlobalScope": false
       },
@@ -5003,6 +5003,7 @@
         "../node_modules/mongoose/index.d.ts"
       ],
       "../src/modules/place/dto/create-place.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts",
         "../src/modules/review/interfaces/review.interface.ts",
         "../src/modules/types.ts"
       ],
@@ -5037,6 +5038,7 @@
         "../src/modules/schemas.ts"
       ],
       "../src/modules/review/dto/create-review.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts",
         "../src/modules/customer/interfaces/customer.interface.ts"
       ],
       "../src/modules/review/interfaces/review.interface.ts": [
