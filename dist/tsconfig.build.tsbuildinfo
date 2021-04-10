@@ -2242,7 +2242,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/dto/create-place.dto.ts": {
-        "version": "52bca138d44dc1bbb73a5cc90dee70be6daa0bd8f14ff5013c2bef594d151705",
+        "version": "d4575f020348765b8b76ec81f86f954a755c4dcbff3c1b25acfcc54a6423477c",
         "signature": "f371f78177ceefe31ce6b5465a4533ca085e0122ac9fb060f330fb0a9ccbcffe",
         "affectsGlobalScope": false
       },

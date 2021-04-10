@@ -22,7 +22,6 @@ export class CreatePlaceDTO {
   @IsNotEmpty()
   readonly description: string;
 
-  @IsString()
   @IsNotEmpty()
   readonly images: Array<Image>;
 
