@@ -24,7 +24,7 @@ __decorate([
 ], CreateReviewDTO.prototype, "text", void 0);
 __decorate([
     class_validator_1.IsNumber(),
-    class_validator_1.IsPositive(),
+    class_validator_1.Min(0),
     class_validator_1.Max(5),
     __metadata("design:type", Number)
 ], CreateReviewDTO.prototype, "rate", void 0);

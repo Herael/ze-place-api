@@ -1,10 +1,11 @@
 import {
+  ArrayNotEmpty,
   IsDefined,
   IsNotEmpty,
   IsNumber,
-  IsPositive,
   IsString,
   Max,
+  Min,
 } from 'class-validator';
 import { Review } from 'src/modules/review/interfaces/review.interface';
 import { Image } from 'src/modules/types';
@@ -22,19 +23,20 @@ export class CreatePlaceDTO {
   @IsNotEmpty()
   readonly description: string;
 
-  @IsNotEmpty()
+  @ArrayNotEmpty()
   readonly images: Array<Image>;
 
   @IsNumber()
-  @IsPositive()
+  @Min(0)
   @Max(5)
   readonly rate: number;
 
   @IsNumber()
-  @IsPositive()
+  @Min(0)
   readonly price: number;
 
   @IsDefined()
   readonly reviews: Array<Review>;
+
   readonly created_at: Date;
 }

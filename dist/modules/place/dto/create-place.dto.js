@@ -31,18 +31,18 @@ __decorate([
     __metadata("design:type", String)
 ], CreatePlaceDTO.prototype, "description", void 0);
 __decorate([
-    class_validator_1.IsNotEmpty(),
+    class_validator_1.ArrayNotEmpty(),
     __metadata("design:type", Array)
 ], CreatePlaceDTO.prototype, "images", void 0);
 __decorate([
     class_validator_1.IsNumber(),
-    class_validator_1.IsPositive(),
+    class_validator_1.Min(0),
     class_validator_1.Max(5),
     __metadata("design:type", Number)
 ], CreatePlaceDTO.prototype, "rate", void 0);
 __decorate([
     class_validator_1.IsNumber(),
-    class_validator_1.IsPositive(),
+    class_validator_1.Min(0),
     __metadata("design:type", Number)
 ], CreatePlaceDTO.prototype, "price", void 0);
 __decorate([

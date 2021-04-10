@@ -4,6 +4,7 @@ import {
   IsPositive,
   IsString,
   Max,
+  Min,
 } from 'class-validator';
 import { Customer } from 'src/modules/customer/interfaces/customer.interface';
 
@@ -15,7 +16,7 @@ export class CreateReviewDTO {
   readonly text: string;
 
   @IsNumber()
-  @IsPositive()
+  @Min(0)
   @Max(5)
   readonly rate: number;
 
