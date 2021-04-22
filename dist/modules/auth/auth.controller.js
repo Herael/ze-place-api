@@ -23,6 +23,9 @@ let AuthController = class AuthController {
     async login(req) {
         return this.authService.login(req.user);
     }
+    async register(req) {
+        return this.authService.register(req.body);
+    }
 };
 __decorate([
     common_1.UseGuards(local_auth_guard_1.LocalAuthGuard),
@@ -32,6 +35,13 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "login", null);
+__decorate([
+    common_1.Post('/register'),
+    __param(0, common_1.Request()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], AuthController.prototype, "register", null);
 AuthController = __decorate([
     common_1.Controller('auth'),
     __metadata("design:paramtypes", [auth_service_1.AuthService])

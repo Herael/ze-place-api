@@ -1562,8 +1562,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/interfaces/customer.interface.ts": {
-        "version": "e81cbbc9b340d8039284f55f3b76ff424f6ffb4eb6f5bd90f0882e678c37899b",
-        "signature": "20c6b46b154e4ba1fb77d94ecf7801c8d2d4dba0061eec976f3d02b1f83c19f8",
+        "version": "c347929855b13daa81cb3737a2de5bf1944bda51a9249e825a7a76c416f43a03",
+        "signature": "da665b59e76333415fa719c2ae04abcc9b9529b40479025701f008ceb25cbf7e",
         "affectsGlobalScope": false
       },
       "../node_modules/class-validator/types/validation/validationerror.d.ts": {
@@ -2192,18 +2192,23 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/dto/create-customer.dto.ts": {
-        "version": "3f15671f697372611f134323d92f5200d6475c41c063e6c9904ae5945640a0b4",
-        "signature": "dae766513fb00dad6b3e8a478adfc4fb7dbeff943cfbcfd71f4b07a325f21aba",
+        "version": "a8a791f5ac827b381f1e11e5a051bd8d0c68f84ff411e4d4c5c710371b016470",
+        "signature": "e4ba03381e1b819bc7a33ac6e7965577bf715f45e18f59570e0e13fc9302753e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/bcrypt/index.d.ts": {
+        "version": "6c407a8b6e5cabde0c5e4ad2d1d0e18c4de012983e9a006fc5e3e121545552f1",
+        "signature": "6c407a8b6e5cabde0c5e4ad2d1d0e18c4de012983e9a006fc5e3e121545552f1",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/customer.service.ts": {
-        "version": "f404ee2b5dbe2918d8b588b1b1b59afe9285d827ce171a4e3739c8199b286aba",
-        "signature": "dc2ff925212d81a4b55a925983f393f7ecd1066849bb7eab8d35c6bb307a79d6",
+        "version": "3cce20f2d944ddbe69d43d26a6388b9872a912cdff587527c6340b0e894d4daf",
+        "signature": "186bc04398be63d0199a037864910b8d4b710ab069cfc3f3d9443523fd84f856",
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.service.ts": {
-        "version": "2469354a2450b1af4f0f6b5f972102121f2bdba7c1ecd3b2cf4765660326fe93",
-        "signature": "4583c0da107cdca1b66ca6925c5a9ecf211920cae10dd616e6dd37cde1148b0a",
+        "version": "79f11b5c99aca28e977198e8d0495610d0363f7413bb6d77c4f1ab4c15f1b0d1",
+        "signature": "27343f4cde8fd8cdfa01b3dabf3a27525484076dc109c721b1e5781eae372149",
         "affectsGlobalScope": false
       },
       "../src/app.controller.ts": {
@@ -2212,12 +2217,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/customer.controller.ts": {
-        "version": "ec82c36bd62f3e3c7b05fa3108f825e8cf6e6dfd36290191d11ab8c18895f912",
-        "signature": "48fce02272dafacf3a60d3e7c9ed734bf15cf705874d63911c608b27c4e37182",
+        "version": "85de7055fb34ee44d3f127fd60e4d96d9bdcb598d67351daf033557da807e657",
+        "signature": "5092245efb4ea94c066c8bc2e647b0c02e1939a338a48e44cb777cda073aff3c",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/schemas/customer.schema.ts": {
-        "version": "85ef852ab4c55f921af77c5d351ad55f99a198dea1799ea77fd9c5663064aec3",
+        "version": "77d523cef06460fa63b6548442e76ea67e4abc16fcfd0fc2ca15eaf62dd599b6",
         "signature": "4e0f49eb914132556be58be043c68fc4297e170d5d941b7c8446198f113afb86",
         "affectsGlobalScope": false
       },
@@ -2432,8 +2437,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.controller.ts": {
-        "version": "8f474a1f0c967b65098af5e17b77f7586196bdd3f1b8979e74286227c1b708c6",
-        "signature": "138fea0e382cbb7b5d6e650847e16525be12a174c6e1f591b15ff564e6bf4726",
+        "version": "d8f2aafada8ee11f356a8896ac4c523f5e54c806b499c7623b02687baa79670d",
+        "signature": "77fe988ce29a3ff17c033a9306ece74b7152eb9dffacd028405e5c951da89ca9",
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.module.ts": {
@@ -4950,6 +4955,7 @@
       "../src/modules/auth/auth.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/jwt/index.d.ts",
+        "../node_modules/@types/bcrypt/index.d.ts",
         "../src/modules/customer/customer.service.ts",
         "../src/modules/customer/interfaces/customer.interface.ts"
       ],
@@ -4989,6 +4995,7 @@
       "../src/modules/customer/customer.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/bcrypt/index.d.ts",
         "../node_modules/mongoose/index.d.ts",
         "../src/modules/customer/dto/create-customer.dto.ts",
         "../src/modules/customer/interfaces/customer.interface.ts"
@@ -7345,6 +7352,7 @@
       "../node_modules/@types/babel__generator/index.d.ts",
       "../node_modules/@types/babel__template/index.d.ts",
       "../node_modules/@types/babel__traverse/index.d.ts",
+      "../node_modules/@types/bcrypt/index.d.ts",
       "../node_modules/@types/body-parser/index.d.ts",
       "../node_modules/@types/bson/index.d.ts",
       "../node_modules/@types/connect/index.d.ts",

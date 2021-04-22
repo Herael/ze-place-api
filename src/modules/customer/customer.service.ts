@@ -1,8 +1,9 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Customer } from './interfaces/customer.interface';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
+import { hash } from 'bcrypt';
 
 @Injectable()
 export class CustomerService {
@@ -24,9 +25,10 @@ export class CustomerService {
     return customer;
   }
 
-  async addCustomer(createCustomerDTO: CreateCustomerDTO): Promise<Customer> {
-    const newCustomer = await new this.customerModel(createCustomerDTO).save();
-    return newCustomer;
+  async addCustomer(customer: Customer): Promise<Customer> {
+    const passwordHash = await hash(customer.password, 10);
+    customer.password = passwordHash;
+    return await new this.customerModel(customer).save();
   }
 
   async updateCustomer(

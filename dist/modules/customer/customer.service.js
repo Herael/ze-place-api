@@ -16,6 +16,7 @@ exports.CustomerService = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("mongoose");
 const mongoose_2 = require("@nestjs/mongoose");
+const bcrypt_1 = require("bcrypt");
 let CustomerService = class CustomerService {
     constructor(customerModel) {
         this.customerModel = customerModel;
@@ -32,9 +33,10 @@ let CustomerService = class CustomerService {
         const customer = await this.customerModel.findOne({ email: email }).exec();
         return customer;
     }
-    async addCustomer(createCustomerDTO) {
-        const newCustomer = await new this.customerModel(createCustomerDTO).save();
-        return newCustomer;
+    async addCustomer(customer) {
+        const passwordHash = await bcrypt_1.hash(customer.password, 10);
+        customer.password = passwordHash;
+        return await new this.customerModel(customer).save();
     }
     async updateCustomer(customerID, createCustomerDTO) {
         const updatedCustomer = await this.customerModel.findByIdAndUpdate(customerID, createCustomerDTO, { new: true });
