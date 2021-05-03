@@ -5,4 +5,8 @@ export declare class AuthController {
     login(req: any): Promise<{
         access_token: string;
     }>;
+    register(req: any): Promise<{
+        access_token: string;
+    }>;
+    me(req: any): Promise<import("../customer/interfaces/customer.interface").Customer>;
 }

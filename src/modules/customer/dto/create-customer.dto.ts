@@ -3,26 +3,28 @@ import { IsEmail, IsNotEmpty, IsString, Length } from 'class-validator';
 export class CreateCustomerDTO {
   @IsString()
   @IsNotEmpty()
+  readonly avatar: string;
+
+  @IsString()
+  @IsNotEmpty()
   readonly first_name: string;
 
   @IsString()
   @IsNotEmpty()
   readonly last_name: string;
 
+  readonly birthdate: Date;
+
+  @IsNotEmpty()
+  @IsString()
+  readonly phoneNumber: string;
+
   @IsEmail()
   readonly email: string;
 
   @IsNotEmpty()
-  @Length(2, 64)
-  readonly password: string;
-
-  @IsNotEmpty()
-  @IsString()
-  readonly phone: string;
-
-  @IsNotEmpty()
-  @IsString()
-  readonly address: string;
+  @Length(8, 64)
+  password: string;
 
   @IsNotEmpty()
   @IsString()

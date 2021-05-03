@@ -7,7 +7,7 @@ export declare class CustomerService {
     getAllCustomer(): Promise<Customer[]>;
     findById(customerID: string): Promise<Customer>;
     findByEmail(email: string): Promise<Customer | undefined>;
-    addCustomer(createCustomerDTO: CreateCustomerDTO): Promise<Customer>;
+    addCustomer(customer: Customer): Promise<Customer>;
     updateCustomer(customerID: string, createCustomerDTO: CreateCustomerDTO): Promise<Customer>;
     deleteCustomer(customerID: string): Promise<any>;
 }

@@ -10,16 +10,17 @@ import {
   NotFoundException,
   Delete,
   Param,
+  UseGuards,
   Logger,
 } from '@nestjs/common';
 import { CustomerService } from './customer.service';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
+import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
 
 @Controller('customers')
 export class CustomerController {
   constructor(private customerService: CustomerService) {}
 
-  // Retrieve customers list
   @Get()
   async getAllCustomer(@Res() res) {
     const customers = await this.customerService.getAllCustomer();
@@ -27,22 +28,11 @@ export class CustomerController {
     return res.status(HttpStatus.OK).json(customers);
   }
 
-  // Fetch a particular customer using ID
   @Get('/:customerID')
   async getCustomer(@Res() res, @Param('customerID') customerID) {
     const customer = await this.customerService.findById(customerID);
     if (!customer) throw new NotFoundException('Customer does not exist!');
     return res.status(HttpStatus.OK).json(customer);
-  }
-
-  // add a customer
-  @Post('/create')
-  async addCustomer(@Res() res, @Body() createCustomerDTO: CreateCustomerDTO) {
-    const customer = await this.customerService.addCustomer(createCustomerDTO);
-    return res.status(HttpStatus.OK).json({
-      message: 'Customer has been created successfully',
-      customer,
-    });
   }
 
   // Update a customer's details

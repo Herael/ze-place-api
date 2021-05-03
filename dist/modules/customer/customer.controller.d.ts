@@ -5,7 +5,6 @@ export declare class CustomerController {
     constructor(customerService: CustomerService);
     getAllCustomer(res: any): Promise<any>;
     getCustomer(res: any, customerID: any): Promise<any>;
-    addCustomer(res: any, createCustomerDTO: CreateCustomerDTO): Promise<any>;
     updateCustomer(res: any, customerID: any, createCustomerDTO: CreateCustomerDTO): Promise<any>;
     deleteCustomer(res: any, customerID: any): Promise<any>;
 }
