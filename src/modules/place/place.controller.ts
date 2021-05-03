@@ -6,6 +6,7 @@ import {
   Post,
   Body,
   UseGuards,
+  Logger,
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
 import { CreatePlaceDTO } from './dto/create-place.dto';
@@ -18,6 +19,7 @@ export class PlaceController {
   @UseGuards(JwtAuthGuard)
   @Get()
   async getAllPlaces(@Res() res) {
+    Logger.warn(res.t);
     const places = await this.placeService.getAllPlaces();
     return res.status(HttpStatus.OK).json(places);
   }

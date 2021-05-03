@@ -12,4 +12,5 @@ export declare class AuthService {
     register(customer: Customer): Promise<{
         access_token: string;
     }>;
+    getUser(credentials: any): Promise<Customer>;
 }

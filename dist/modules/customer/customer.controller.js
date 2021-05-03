@@ -16,6 +16,7 @@ exports.CustomerController = void 0;
 const common_1 = require("@nestjs/common");
 const customer_service_1 = require("./customer.service");
 const create_customer_dto_1 = require("./dto/create-customer.dto");
+const jwt_auth_guard_1 = require("../auth/jwt-auth.guard");
 let CustomerController = class CustomerController {
     constructor(customerService) {
         this.customerService = customerService;

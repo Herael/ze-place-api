@@ -53,6 +53,9 @@ let AuthService = class AuthService {
             access_token: this.jwtService.sign(payload),
         };
     }
+    async getUser(credentials) {
+        return await this.customerService.findById(credentials.id);
+    }
 };
 AuthService = __decorate([
     common_1.Injectable(),

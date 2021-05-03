@@ -22,6 +22,7 @@ let PlaceController = class PlaceController {
         this.placeService = placeService;
     }
     async getAllPlaces(res) {
+        common_1.Logger.warn(res.t);
         const places = await this.placeService.getAllPlaces();
         return res.status(common_1.HttpStatus.OK).json(places);
     }

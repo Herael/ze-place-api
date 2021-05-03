@@ -10,10 +10,12 @@ import {
   NotFoundException,
   Delete,
   Param,
+  UseGuards,
   Logger,
 } from '@nestjs/common';
 import { CustomerService } from './customer.service';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
+import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
 
 @Controller('customers')
 export class CustomerController {
