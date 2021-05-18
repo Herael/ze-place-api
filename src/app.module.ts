@@ -6,6 +6,7 @@ import { CustomerModule } from './modules/customer/customer.module';
 import { PlaceModule } from './modules/place/place.module';
 import { ReviewModule } from './modules/review/review.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { PromoModule } from './promo/promo.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { AuthModule } from './modules/auth/auth.module';
     PlaceModule,
     ReviewModule,
     AuthModule,
+    PromoModule,
   ],
   controllers: [AppController],
   providers: [AppService],

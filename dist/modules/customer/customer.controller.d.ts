@@ -7,4 +7,5 @@ export declare class CustomerController {
     getCustomer(res: any, customerID: any): Promise<any>;
     updateCustomer(res: any, customerID: any, createCustomerDTO: CreateCustomerDTO): Promise<any>;
     deleteCustomer(res: any, customerID: any): Promise<any>;
+    addPromoCode(res: any, req: any, customerID: any): Promise<any>;
 }

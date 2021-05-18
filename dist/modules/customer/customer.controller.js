@@ -50,6 +50,13 @@ let CustomerController = class CustomerController {
             customer,
         });
     }
+    async addPromoCode(res, req, customerID) {
+        console.log(req.body);
+        const result = await this.customerService.addPromoCode(req.body, customerID);
+        return res.status(common_1.HttpStatus.OK).json({
+            message: result,
+        });
+    }
 };
 __decorate([
     common_1.Get(),
@@ -81,6 +88,13 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], CustomerController.prototype, "deleteCustomer", null);
+__decorate([
+    common_1.Post('/addPromoCode'),
+    __param(0, common_1.Res()), __param(1, common_1.Request()), __param(2, common_1.Query('customerID')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object, Object]),
+    __metadata("design:returntype", Promise)
+], CustomerController.prototype, "addPromoCode", null);
 CustomerController = __decorate([
     common_1.Controller('customers'),
     __metadata("design:paramtypes", [customer_service_1.CustomerService])

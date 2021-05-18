@@ -15,6 +15,7 @@ const customer_module_1 = require("./modules/customer/customer.module");
 const place_module_1 = require("./modules/place/place.module");
 const review_module_1 = require("./modules/review/review.module");
 const auth_module_1 = require("./modules/auth/auth.module");
+const promo_module_1 = require("./promo/promo.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -25,6 +26,7 @@ AppModule = __decorate([
             place_module_1.PlaceModule,
             review_module_1.ReviewModule,
             auth_module_1.AuthModule,
+            promo_module_1.PromoModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

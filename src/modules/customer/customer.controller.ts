@@ -12,6 +12,7 @@ import {
   Param,
   UseGuards,
   Logger,
+  Request,
 } from '@nestjs/common';
 import { CustomerService } from './customer.service';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
@@ -63,4 +64,17 @@ export class CustomerController {
       customer,
     });
   }
+
+
+  @Post('/addPromoCode')
+  
+  async addPromoCode(@Res() res,@Request() req,@Query('customerID') customerID,) {
+    console.log(req.body);
+    const result = await this.customerService.addPromoCode(req.body,customerID);
+    return res.status(HttpStatus.OK).json({
+      data: result,
+    })
+  }
+  
+
 }
