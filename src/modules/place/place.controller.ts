@@ -19,14 +19,13 @@ export class PlaceController {
   @UseGuards(JwtAuthGuard)
   @Get()
   async getAllPlaces(@Res() res) {
-    Logger.warn(res.t);
     const places = await this.placeService.getAllPlaces();
     return res.status(HttpStatus.OK).json(places);
   }
 
   @Post('/create')
-  async addPlace(@Res() res, @Body() createPlaceDTO: CreatePlaceDTO) {
-    const place = await this.placeService.addPlace(createPlaceDTO);
+  async createPlace(@Res() res, @Body() createPlaceDTO: CreatePlaceDTO) {
+    const place = await this.placeService.createPlace(createPlaceDTO);
     return res.status(HttpStatus.OK).json({
       message: 'Place has been created successfully',
       place,

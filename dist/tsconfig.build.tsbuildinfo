@@ -2362,8 +2362,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/types.ts": {
-        "version": "3bbc807f5219b31eaffa8f2bde9ba202116af26af8a1853f372b2a59143c6c9e",
-        "signature": "420664e60046f9f00d897a9aceb56b99e4c880c33f1988dcaa35dbc8b68bfd54",
+        "version": "b70910c86afa5a50765097435d3ee68a442c382e719b9d905de07f85820295f5",
+        "signature": "b0e9fcfed1b2ca4b4378f5be9321dafa21bf40621b6381168fe50d6aab13afba",
         "affectsGlobalScope": false
       },
       "../src/modules/place/interfaces/place.interface.ts": {
@@ -2371,19 +2371,39 @@
         "signature": "546db2b70090d03294dd3671e30c004fcfbf1cc3281e3b20608e452787f9cf2c",
         "affectsGlobalScope": false
       },
+      "../src/modules/feature/interfaces/feature.interface.ts": {
+        "version": "fa28e41c14aa3a7cb5d298f88f05495f808f276c0d241ea31090c78c568d88af",
+        "signature": "599395b622c7b880ec84a3412a1b7d61b42ba93df6b45253da22ddb344ce7471",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place-type/interfaces/place-type.interface.ts": {
+        "version": "cd367e7e40ec17e249fd970d01728ab80f50a9a2f685e38309f7d690f0b4c502",
+        "signature": "49ff79ceecc7dd6fe1c52f340fd74bd23d740598b106de7f690f466593b0b333",
+        "affectsGlobalScope": false
+      },
       "../src/modules/place/dto/create-place.dto.ts": {
-        "version": "65562f8daffb2c6c274baa2df8988bdf019ca0cb6f2b2133efa6e08bb14ee862",
-        "signature": "f371f78177ceefe31ce6b5465a4533ca085e0122ac9fb060f330fb0a9ccbcffe",
+        "version": "c136c726dc789e8ac5649ac44eec69ad4470ad6044d54d88f6039b20b908a37d",
+        "signature": "daf07d4125c24049cd1718bac12b0d848fdd1b31f3952ab43a492f282d96ace3",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "2133963194894bd45e552a6293f7b344f37bc52796b03e0752f9c7ae5186d606",
-        "signature": "584776d3c1812a398946ef4e852d81ea3afc7c3c818c6a8132a46ea4d648dbf9",
+        "version": "0aaa231e71926f021973bb85f7a9a3162f67b2d37e3c681287a2b105a316800f",
+        "signature": "4ee040be4cc4927a8bc10835e0fb7af58c2ac92a8dd9d6936d95bf8fa87f2371",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "3b410b05b347f14b217c129d5572abd5ca9adbb9afac75cf71b42187dfdc5bf6",
-        "signature": "5b64665acc45fbd2b6d4174d1aa91377f3cc9f76001f0f87340e7f2518569b12",
+        "version": "38ff1e73a43f69782a26ab4c59407ed84ac04fce3f894e99e726b12e8b1e6687",
+        "signature": "7da606b23083536dcaee021da0c6907aca82f2b8f8d11c0424b0d36842eb5cdc",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/feature/schemas/feature.schema.ts": {
+        "version": "7e374e12c58b12a6ddc972d253d7dba4ddde6b035c96108a341adf1d5c4b900a",
+        "signature": "f06ef335f0734e00a1b4490b4dbfa791a7ef89cc822e21924eb8594bd0b9a427",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place-type/schemas/place-type.schema.ts": {
+        "version": "15fc659e1ef779c925d213faea9290677eda86cbabfce35b872a7598926f1c86",
+        "signature": "c8eacaf4c72d12cc50fd05ecbca7de921c478c2f234c9e0e2ca405a519dbd075",
         "affectsGlobalScope": false
       },
       "../src/modules/review/schemas/review.schema.ts": {
@@ -2397,7 +2417,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/schemas/place.schema.ts": {
-        "version": "8d79cbb6aa5362a3fe9e83b120f1486a9b958b1f24595701df0d267eded71a50",
+        "version": "8a4a57b6e798d8997c759b9451b1a650f2afec977fee98c07ff3e5d8961f0e32",
         "signature": "b29d58e560e82ebd6eaeab2c411be4ab1c6d2a67eabb4aee61f7898e2071066d",
         "affectsGlobalScope": false
       },
@@ -2446,8 +2466,38 @@
         "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1",
         "affectsGlobalScope": false
       },
+      "../src/modules/place-type/place-type.service.ts": {
+        "version": "7b8df200a6f408b5d6128ef21e0772801a9136adbf7405c73b0912ece5a1fbb5",
+        "signature": "3a24cc2d0be695537ae09e01d9223cecd87fcce2b771050a54f542d734f0b79c",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place-type/place-type.controller.ts": {
+        "version": "892d7bfb553f52254680e702b27941794db695e2fa937be08b952d92f4f8af61",
+        "signature": "791b0abfbb1f48b1384242e1787cf5c8ab8c124a0b003744ebf116ab1c092144",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place-type/place-type.module.ts": {
+        "version": "2dd469d2847f544119d92f21525f9cfb42f4e5a0241f66572b784b88bb1d2bda",
+        "signature": "3fd0f28ad4ee5e55056ccfba490bb6f46eee34442c54fe3e7d9ca7e63b9dc3d7",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/feature/feature.service.ts": {
+        "version": "5d020c1caaa3faa3d688908f54d8454624ddae2e33a8df1a413a31ed856960ae",
+        "signature": "74961de811918e8dfe9268c436f3fcae74f8c04f0f15f7ca842399c17756ce5e",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/feature/feature.controller.ts": {
+        "version": "8483f3fdf71653bf2f412f08317c415d48789ddd49b9b2e782e04114f167b96c",
+        "signature": "fc37ea888701a93d5be01ee5915dd2d0c809ae9aa21eb1de161aa80391d529be",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/feature/feature.module.ts": {
+        "version": "bab925af5718375d4f6906bc0f6f27e25246c56532820ed945c5b97b0731cd48",
+        "signature": "852aa9ddd23c4fae3a712234e2016e119e2ca34a55038bedb9ff3755957b366d",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "b52565773bba4446a93580c3041058f3119d69b3f2949279b08c87e84c518b7d",
+        "version": "2d50e2b087be384f78d7e5db0da258914bd58879b066240a8ddd29c09f0b3d74",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -2634,6 +2684,16 @@
       "../src/main.ts": {
         "version": "b60ae9d9f57f0e9fde4c253bee74effd37fed954e4fdc2133c85e452f437345c",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/feature/dto/create-feature.dto.ts": {
+        "version": "9c206e0035e71a1ca61c680ff3d6da64b6be2ad3583e94ee8dee8c3ddd5a2cdd",
+        "signature": "27542cf22a0274a13cddfbb90ade416e76150cbd57e14f9be25441f6a1a65711",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place-type/dto/create-place-type.dto.ts": {
+        "version": "c97930058a5f6faf2c59a039f26e133b13e956276152c0cc58ca3d3cad3adf9d",
+        "signature": "f919d75ec5c88e05bdc3ab2662f91005460bd562357c643262da125c1e88dc45",
         "affectsGlobalScope": false
       },
       "../src/modules/review/dto/create-review.dto.ts": {
@@ -4925,6 +4985,8 @@
         "../src/app.service.ts",
         "../src/modules/auth/auth.module.ts",
         "../src/modules/customer/customer.module.ts",
+        "../src/modules/feature/feature.module.ts",
+        "../src/modules/place-type/place-type.module.ts",
         "../src/modules/place/place.module.ts",
         "../src/modules/review/review.module.ts"
       ],
@@ -5014,8 +5076,51 @@
       "../src/modules/customer/schemas/customer.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
+      "../src/modules/feature/dto/create-feature.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
+      "../src/modules/feature/feature.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/modules/feature/feature.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/feature/feature.controller.ts",
+        "../src/modules/feature/feature.service.ts"
+      ],
+      "../src/modules/feature/feature.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/modules/feature/interfaces/feature.interface.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/feature/schemas/feature.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/place-type/dto/create-place-type.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
+      "../src/modules/place-type/interfaces/place-type.interface.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/customer/interfaces/customer.interface.ts"
+      ],
+      "../src/modules/place-type/place-type.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/modules/place-type/place-type.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/place-type/place-type.controller.ts",
+        "../src/modules/place-type/place-type.service.ts"
+      ],
+      "../src/modules/place-type/place-type.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/modules/place-type/schemas/place-type.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
       "../src/modules/place/dto/create-place.dto.ts": [
         "../node_modules/class-validator/types/index.d.ts",
+        "../src/modules/feature/interfaces/feature.interface.ts",
+        "../src/modules/place-type/interfaces/place-type.interface.ts",
         "../src/modules/review/interfaces/review.interface.ts",
         "../src/modules/types.ts"
       ],
@@ -5046,6 +5151,8 @@
       ],
       "../src/modules/place/schemas/place.schema.ts": [
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/feature/schemas/feature.schema.ts",
+        "../src/modules/place-type/schemas/place-type.schema.ts",
         "../src/modules/review/schemas/review.schema.ts",
         "../src/modules/schemas.ts"
       ],
@@ -7105,7 +7212,21 @@
       "../src/modules/customer/schemas/customer.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
+      "../src/modules/feature/interfaces/feature.interface.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/feature/schemas/feature.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/place-type/interfaces/place-type.interface.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/place-type/schemas/place-type.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
       "../src/modules/place/dto/create-place.dto.ts": [
+        "../src/modules/feature/interfaces/feature.interface.ts",
+        "../src/modules/place-type/interfaces/place-type.interface.ts",
         "../src/modules/review/interfaces/review.interface.ts",
         "../src/modules/types.ts"
       ],
@@ -7709,6 +7830,18 @@
       "../src/modules/customer/dto/create-customer.dto.ts",
       "../src/modules/customer/interfaces/customer.interface.ts",
       "../src/modules/customer/schemas/customer.schema.ts",
+      "../src/modules/feature/dto/create-feature.dto.ts",
+      "../src/modules/feature/feature.controller.ts",
+      "../src/modules/feature/feature.module.ts",
+      "../src/modules/feature/feature.service.ts",
+      "../src/modules/feature/interfaces/feature.interface.ts",
+      "../src/modules/feature/schemas/feature.schema.ts",
+      "../src/modules/place-type/dto/create-place-type.dto.ts",
+      "../src/modules/place-type/interfaces/place-type.interface.ts",
+      "../src/modules/place-type/place-type.controller.ts",
+      "../src/modules/place-type/place-type.module.ts",
+      "../src/modules/place-type/place-type.service.ts",
+      "../src/modules/place-type/schemas/place-type.schema.ts",
       "../src/modules/place/dto/create-place.dto.ts",
       "../src/modules/place/interfaces/place.interface.ts",
       "../src/modules/place/place.controller.ts",
