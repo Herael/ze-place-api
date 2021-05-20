@@ -1,3 +1,4 @@
+import { Place } from 'src/modules/place/interfaces/place.interface';
 export declare class CreateCustomerDTO {
     readonly avatar: string;
     readonly first_name: string;
@@ -8,4 +9,5 @@ export declare class CreateCustomerDTO {
     password: string;
     readonly description: string;
     readonly created_at: Date;
+    readonly favorites: Place[];
 }

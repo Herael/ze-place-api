@@ -1,6 +1,8 @@
 import * as mongoose from 'mongoose';
 
-export const CustomerSchema = new mongoose.Schema({
+const Schema = mongoose.Schema;
+
+export const CustomerSchema = new Schema({
   avatar: String,
   first_name: String,
   last_name: String,
@@ -10,4 +12,17 @@ export const CustomerSchema = new mongoose.Schema({
   password: String,
   description: String,
   created_at: { type: Date, default: Date.now },
+  favorites: [
+    {
+      _type: Schema.Types.ObjectId,
+      get type() {
+        return this._type;
+      },
+      set type(value) {
+        this._type = value;
+      },
+      ref: 'places',
+      default: [],
+    },
+  ],
 });
