@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { Model } from 'mongoose';
+import { Model, ObjectId } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Customer } from './interfaces/customer.interface';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
 import { hash } from 'bcrypt';
+import { Place } from '../place/interfaces/place.interface';
 
 @Injectable()
 export class CustomerService {
@@ -15,8 +16,15 @@ export class CustomerService {
     const customers = await this.customerModel.find().exec();
     return customers;
   }
+
   async findById(customerID: string): Promise<Customer> {
-    const customer = await this.customerModel.findById(customerID).exec();
+    const customer = await this.customerModel.findById(customerID).populate({
+      path: 'favorites',
+      model: 'Place',
+      // select: '_id title price',
+    });
+    console.log('favorite : ' + customer.favorites);
+
     return customer;
   }
 
@@ -40,6 +48,21 @@ export class CustomerService {
       createCustomerDTO,
       { new: true },
     );
+    return updatedCustomer;
+  }
+
+  async addFavorite(customerID: string, place: Place): Promise<Customer> {
+    console.log('SERVICE : ');
+    console.log('Place : ' + place);
+    console.log('Place ID : ' + place._id);
+    console.log('Customer ID : ' + customerID);
+
+    const updatedCustomer = await this.customerModel.findById(customerID);
+
+    updatedCustomer.favorites.push(place);
+    console.log('User after favorite : ' + updatedCustomer);
+    updatedCustomer.save();
+    console.log("hey hey hey, c'est good");
     return updatedCustomer;
   }
 

@@ -26,7 +26,11 @@ let CustomerService = class CustomerService {
         return customers;
     }
     async findById(customerID) {
-        const customer = await this.customerModel.findById(customerID).exec();
+        const customer = await this.customerModel.findById(customerID).populate({
+            path: 'favorites',
+            model: 'Place',
+        });
+        console.log('favorite : ' + customer.favorites);
         return customer;
     }
     async findByEmail(email) {
@@ -40,6 +44,18 @@ let CustomerService = class CustomerService {
     }
     async updateCustomer(customerID, createCustomerDTO) {
         const updatedCustomer = await this.customerModel.findByIdAndUpdate(customerID, createCustomerDTO, { new: true });
+        return updatedCustomer;
+    }
+    async addFavorite(customerID, place) {
+        console.log('SERVICE : ');
+        console.log('Place : ' + place);
+        console.log('Place ID : ' + place._id);
+        console.log('Customer ID : ' + customerID);
+        const updatedCustomer = await this.customerModel.findById(customerID);
+        updatedCustomer.favorites.push(place);
+        console.log('User after favorite : ' + updatedCustomer);
+        updatedCustomer.save();
+        console.log("hey hey hey, c'est good");
         return updatedCustomer;
     }
     async deleteCustomer(customerID) {

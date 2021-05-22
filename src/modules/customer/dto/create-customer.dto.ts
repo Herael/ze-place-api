@@ -1,4 +1,5 @@
 import { IsEmail, IsNotEmpty, IsString, Length } from 'class-validator';
+import { ObjectId } from 'mongoose';
 import { Place } from 'src/modules/place/interfaces/place.interface';
 
 export class CreateCustomerDTO {

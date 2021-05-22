@@ -3,19 +3,17 @@ import {
   Get,
   Res,
   HttpStatus,
-  Post,
   Body,
   Put,
   Query,
   NotFoundException,
   Delete,
   Param,
-  UseGuards,
   Logger,
 } from '@nestjs/common';
 import { CustomerService } from './customer.service';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
-import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
+import { Place } from '../place/interfaces/place.interface';
 
 @Controller('customers')
 export class CustomerController {
@@ -49,6 +47,30 @@ export class CustomerController {
     if (!customer) throw new NotFoundException('Customer does not exist!');
     return res.status(HttpStatus.OK).json({
       message: 'Customer has been successfully updated',
+      customer,
+    });
+  }
+
+  //Add a place to the favorite list
+  @Put('/favorite/create')
+  async addFavorite(
+    @Res() res,
+    @Query('customerID') customerID,
+    @Body() place: Place,
+    test: string,
+  ) {
+    console.log('CONTROLLER : ');
+    console.log('Place : ' + place);
+    console.log('Place ID : ' + place._id);
+    console.log('Place Title : ' + place.title);
+    console.log('Customer ID : ' + customerID);
+    console.log('test : ' + test);
+
+    const customer = await this.customerService.addFavorite(customerID, place);
+
+    if (!customer) throw new NotFoundException('Customer does not exist!');
+    return res.status(HttpStatus.OK).json({
+      message: 'Favorite has been successfully added',
       customer,
     });
   }

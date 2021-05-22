@@ -1,4 +1,4 @@
-import { Document } from 'mongoose';
+import { Document, ObjectId } from 'mongoose';
 import { Place } from 'src/modules/place/interfaces/place.interface';
 
 export interface Customer extends Document {
