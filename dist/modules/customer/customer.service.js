@@ -46,21 +46,26 @@ let CustomerService = class CustomerService {
         const updatedCustomer = await this.customerModel.findByIdAndUpdate(customerID, createCustomerDTO, { new: true });
         return updatedCustomer;
     }
-    async addFavorite(customerID, place) {
-        console.log('SERVICE : ');
-        console.log('Place : ' + place);
-        console.log('Place ID : ' + place._id);
-        console.log('Customer ID : ' + customerID);
-        const updatedCustomer = await this.customerModel.findById(customerID);
-        updatedCustomer.favorites.push(place);
-        console.log('User after favorite : ' + updatedCustomer);
-        updatedCustomer.save();
-        console.log("hey hey hey, c'est good");
-        return updatedCustomer;
-    }
     async deleteCustomer(customerID) {
         const deletedCustomer = await this.customerModel.findByIdAndRemove(customerID);
         return deletedCustomer;
+    }
+    async addFavorite(customerID, place) {
+        const updatedCustomer = await this.customerModel.findById(customerID);
+        updatedCustomer.favorites.push(place);
+        console.log('User.favorite after added treatment : ' + updatedCustomer.favorites);
+        updatedCustomer.save();
+        return updatedCustomer;
+    }
+    async deleteFavorite(customerID, place) {
+        const updatedCustomer = await this.customerModel.findById(customerID);
+        const index = updatedCustomer.favorites.indexOf(place._id);
+        if (index > -1) {
+            updatedCustomer.favorites.splice(index, 1);
+        }
+        console.log('User.favorite after deleted treatment : ' + updatedCustomer.favorites);
+        updatedCustomer.save();
+        return updatedCustomer;
     }
 };
 CustomerService = __decorate([

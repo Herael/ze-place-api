@@ -10,6 +10,7 @@ export declare class CustomerService {
     findByEmail(email: string): Promise<Customer | undefined>;
     addCustomer(customer: Customer): Promise<Customer>;
     updateCustomer(customerID: string, createCustomerDTO: CreateCustomerDTO): Promise<Customer>;
-    addFavorite(customerID: string, place: Place): Promise<Customer>;
     deleteCustomer(customerID: string): Promise<any>;
+    addFavorite(customerID: string, place: Place): Promise<Customer>;
+    deleteFavorite(customerID: string, place: Place): Promise<Customer>;
 }

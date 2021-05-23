@@ -51,25 +51,33 @@ export class CustomerService {
     return updatedCustomer;
   }
 
-  async addFavorite(customerID: string, place: Place): Promise<Customer> {
-    console.log('SERVICE : ');
-    console.log('Place : ' + place);
-    console.log('Place ID : ' + place._id);
-    console.log('Customer ID : ' + customerID);
-
-    const updatedCustomer = await this.customerModel.findById(customerID);
-
-    updatedCustomer.favorites.push(place);
-    console.log('User after favorite : ' + updatedCustomer);
-    updatedCustomer.save();
-    console.log("hey hey hey, c'est good");
-    return updatedCustomer;
-  }
-
   async deleteCustomer(customerID: string): Promise<any> {
     const deletedCustomer = await this.customerModel.findByIdAndRemove(
       customerID,
     );
     return deletedCustomer;
+  }
+
+  async addFavorite(customerID: string, place: Place): Promise<Customer> {
+    const updatedCustomer = await this.customerModel.findById(customerID);
+    updatedCustomer.favorites.push(place);
+    console.log(
+      'User.favorite after added treatment : ' + updatedCustomer.favorites,
+    );
+    updatedCustomer.save();
+    return updatedCustomer;
+  }
+
+  async deleteFavorite(customerID: string, place: Place): Promise<Customer> {
+    const updatedCustomer = await this.customerModel.findById(customerID);
+    const index = updatedCustomer.favorites.indexOf(place._id);
+    if (index > -1) {
+      updatedCustomer.favorites.splice(index, 1);
+    }
+    console.log(
+      'User.favorite after deleted treatment : ' + updatedCustomer.favorites,
+    );
+    updatedCustomer.save();
+    return updatedCustomer;
   }
 }

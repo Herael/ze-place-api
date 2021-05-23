@@ -10,6 +10,7 @@ import {
   Delete,
   Param,
   Logger,
+  Post,
 } from '@nestjs/common';
 import { CustomerService } from './customer.service';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
@@ -52,25 +53,34 @@ export class CustomerController {
   }
 
   //Add a place to the favorite list
-  @Put('/favorite/create')
+  @Post('/favorite/create')
   async addFavorite(
     @Res() res,
     @Query('customerID') customerID,
     @Body() place: Place,
-    test: string,
   ) {
-    console.log('CONTROLLER : ');
-    console.log('Place : ' + place);
-    console.log('Place ID : ' + place._id);
-    console.log('Place Title : ' + place.title);
-    console.log('Customer ID : ' + customerID);
-    console.log('test : ' + test);
-
     const customer = await this.customerService.addFavorite(customerID, place);
-
     if (!customer) throw new NotFoundException('Customer does not exist!');
     return res.status(HttpStatus.OK).json({
       message: 'Favorite has been successfully added',
+      customer,
+    });
+  }
+
+  //Delete a place to the favorite list
+  @Post('/favorite/delete')
+  async deleteFavorite(
+    @Res() res,
+    @Query('customerID') customerID,
+    @Body() place: Place,
+  ) {
+    const customer = await this.customerService.deleteFavorite(
+      customerID,
+      place,
+    );
+    if (!customer) throw new NotFoundException('Customer does not exist!');
+    return res.status(HttpStatus.OK).json({
+      message: 'Favorite has been successfully deleted',
       customer,
     });
   }
