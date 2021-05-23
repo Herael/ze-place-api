@@ -25,8 +25,8 @@ let PlaceController = class PlaceController {
         const places = await this.placeService.getAllPlaces();
         return res.status(common_1.HttpStatus.OK).json(places);
     }
-    async addPlace(res, createPlaceDTO) {
-        const place = await this.placeService.addPlace(createPlaceDTO);
+    async createPlace(res, createPlaceDTO) {
+        const place = await this.placeService.createPlace(createPlaceDTO);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Place has been created successfully',
             place,
@@ -47,7 +47,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, create_place_dto_1.CreatePlaceDTO]),
     __metadata("design:returntype", Promise)
-], PlaceController.prototype, "addPlace", null);
+], PlaceController.prototype, "createPlace", null);
 PlaceController = __decorate([
     common_1.Controller('places'),
     __metadata("design:paramtypes", [place_service_1.PlaceService])

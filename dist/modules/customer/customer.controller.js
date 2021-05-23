@@ -31,19 +31,30 @@ let CustomerController = class CustomerController {
             throw new common_1.NotFoundException('Customer does not exist!');
         return res.status(common_1.HttpStatus.OK).json(customer);
     }
-    async addCustomer(res, createCustomerDTO) {
-        const customer = await this.customerService.addCustomer(createCustomerDTO);
-        return res.status(common_1.HttpStatus.OK).json({
-            message: 'Customer has been created successfully',
-            customer,
-        });
-    }
     async updateCustomer(res, customerID, createCustomerDTO) {
         const customer = await this.customerService.updateCustomer(customerID, createCustomerDTO);
         if (!customer)
             throw new common_1.NotFoundException('Customer does not exist!');
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Customer has been successfully updated',
+            customer,
+        });
+    }
+    async addFavorite(res, customerID, place) {
+        const customer = await this.customerService.addFavorite(customerID, place);
+        if (!customer)
+            throw new common_1.NotFoundException('Customer does not exist!');
+        return res.status(common_1.HttpStatus.OK).json({
+            message: 'Favorite has been successfully added',
+            customer,
+        });
+    }
+    async deleteFavorite(res, customerID, place) {
+        const customer = await this.customerService.deleteFavorite(customerID, place);
+        if (!customer)
+            throw new common_1.NotFoundException('Customer does not exist!');
+        return res.status(common_1.HttpStatus.OK).json({
+            message: 'Favorite has been successfully deleted',
             customer,
         });
     }
@@ -72,13 +83,6 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], CustomerController.prototype, "getCustomer", null);
 __decorate([
-    common_1.Post('/create'),
-    __param(0, common_1.Res()), __param(1, common_1.Body()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, create_customer_dto_1.CreateCustomerDTO]),
-    __metadata("design:returntype", Promise)
-], CustomerController.prototype, "addCustomer", null);
-__decorate([
     common_1.Put('/update'),
     __param(0, common_1.Res()),
     __param(1, common_1.Query('customerID')),
@@ -87,6 +91,24 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object, create_customer_dto_1.CreateCustomerDTO]),
     __metadata("design:returntype", Promise)
 ], CustomerController.prototype, "updateCustomer", null);
+__decorate([
+    common_1.Post('/favorite/create'),
+    __param(0, common_1.Res()),
+    __param(1, common_1.Query('customerID')),
+    __param(2, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object, Object]),
+    __metadata("design:returntype", Promise)
+], CustomerController.prototype, "addFavorite", null);
+__decorate([
+    common_1.Post('/favorite/delete'),
+    __param(0, common_1.Res()),
+    __param(1, common_1.Query('customerID')),
+    __param(2, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object, Object]),
+    __metadata("design:returntype", Promise)
+], CustomerController.prototype, "deleteFavorite", null);
 __decorate([
     common_1.Delete('/delete'),
     __param(0, common_1.Res()), __param(1, common_1.Query('customerID')),

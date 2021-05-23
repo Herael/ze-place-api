@@ -6,6 +6,7 @@ import {
   Post,
   Body,
   UseGuards,
+  Logger,
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
 import { CreatePlaceDTO } from './dto/create-place.dto';
@@ -23,8 +24,8 @@ export class PlaceController {
   }
 
   @Post('/create')
-  async addPlace(@Res() res, @Body() createPlaceDTO: CreatePlaceDTO) {
-    const place = await this.placeService.addPlace(createPlaceDTO);
+  async createPlace(@Res() res, @Body() createPlaceDTO: CreatePlaceDTO) {
+    const place = await this.placeService.createPlace(createPlaceDTO);
     return res.status(HttpStatus.OK).json({
       message: 'Place has been created successfully',
       place,

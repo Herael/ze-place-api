@@ -1,8 +1,10 @@
-import { Injectable, Logger } from '@nestjs/common';
-import { Model } from 'mongoose';
+import { Injectable } from '@nestjs/common';
+import { Model, ObjectId } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Customer } from './interfaces/customer.interface';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
+import { hash } from 'bcrypt';
+import { Place } from '../place/interfaces/place.interface';
 
 @Injectable()
 export class CustomerService {
@@ -14,8 +16,15 @@ export class CustomerService {
     const customers = await this.customerModel.find().exec();
     return customers;
   }
+
   async findById(customerID: string): Promise<Customer> {
-    const customer = await this.customerModel.findById(customerID).exec();
+    const customer = await this.customerModel.findById(customerID).populate({
+      path: 'favorites',
+      model: 'Place',
+      // select: '_id title price',
+    });
+    console.log('favorite : ' + customer.favorites);
+
     return customer;
   }
 
@@ -24,9 +33,10 @@ export class CustomerService {
     return customer;
   }
 
-  async addCustomer(createCustomerDTO: CreateCustomerDTO): Promise<Customer> {
-    const newCustomer = await new this.customerModel(createCustomerDTO).save();
-    return newCustomer;
+  async addCustomer(customer: Customer): Promise<Customer> {
+    const passwordHash = await hash(customer.password, 10);
+    customer.password = passwordHash;
+    return await new this.customerModel(customer).save();
   }
 
   async updateCustomer(
@@ -46,5 +56,28 @@ export class CustomerService {
       customerID,
     );
     return deletedCustomer;
+  }
+
+  async addFavorite(customerID: string, place: Place): Promise<Customer> {
+    const updatedCustomer = await this.customerModel.findById(customerID);
+    updatedCustomer.favorites.push(place);
+    console.log(
+      'User.favorite after added treatment : ' + updatedCustomer.favorites,
+    );
+    updatedCustomer.save();
+    return updatedCustomer;
+  }
+
+  async deleteFavorite(customerID: string, place: Place): Promise<Customer> {
+    const updatedCustomer = await this.customerModel.findById(customerID);
+    const index = updatedCustomer.favorites.indexOf(place._id);
+    if (index > -1) {
+      updatedCustomer.favorites.splice(index, 1);
+    }
+    console.log(
+      'User.favorite after deleted treatment : ' + updatedCustomer.favorites,
+    );
+    updatedCustomer.save();
+    return updatedCustomer;
   }
 }

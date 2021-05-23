@@ -1,6 +1,12 @@
 import { IsEmail, IsNotEmpty, IsString, Length } from 'class-validator';
+import { ObjectId } from 'mongoose';
+import { Place } from 'src/modules/place/interfaces/place.interface';
 
 export class CreateCustomerDTO {
+  @IsString()
+  @IsNotEmpty()
+  readonly avatar: string;
+
   @IsString()
   @IsNotEmpty()
   readonly first_name: string;
@@ -9,24 +15,24 @@ export class CreateCustomerDTO {
   @IsNotEmpty()
   readonly last_name: string;
 
+  readonly birthdate: Date;
+
+  @IsNotEmpty()
+  @IsString()
+  readonly phoneNumber: string;
+
   @IsEmail()
   readonly email: string;
 
   @IsNotEmpty()
-  @Length(2, 64)
-  readonly password: string;
-
-  @IsNotEmpty()
-  @IsString()
-  readonly phone: string;
-
-  @IsNotEmpty()
-  @IsString()
-  readonly address: string;
+  @Length(8, 64)
+  password: string;
 
   @IsNotEmpty()
   @IsString()
   readonly description: string;
 
   readonly created_at: Date;
+
+  readonly favorites: Place[];
 }

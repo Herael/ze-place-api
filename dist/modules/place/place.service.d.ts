@@ -5,5 +5,5 @@ export declare class PlaceService {
     private readonly placeModel;
     constructor(placeModel: Model<Place>);
     getAllPlaces(): Promise<Place[]>;
-    addPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;
+    createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;
 }

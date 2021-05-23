@@ -11,8 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateCustomerDTO = void 0;
 const class_validator_1 = require("class-validator");
+const place_interface_1 = require("../../place/interfaces/place.interface");
 class CreateCustomerDTO {
 }
+__decorate([
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
+    __metadata("design:type", String)
+], CreateCustomerDTO.prototype, "avatar", void 0);
 __decorate([
     class_validator_1.IsString(),
     class_validator_1.IsNotEmpty(),
@@ -24,24 +30,19 @@ __decorate([
     __metadata("design:type", String)
 ], CreateCustomerDTO.prototype, "last_name", void 0);
 __decorate([
+    class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    __metadata("design:type", String)
+], CreateCustomerDTO.prototype, "phoneNumber", void 0);
+__decorate([
     class_validator_1.IsEmail(),
     __metadata("design:type", String)
 ], CreateCustomerDTO.prototype, "email", void 0);
 __decorate([
     class_validator_1.IsNotEmpty(),
-    class_validator_1.Length(2, 64),
+    class_validator_1.Length(8, 64),
     __metadata("design:type", String)
 ], CreateCustomerDTO.prototype, "password", void 0);
-__decorate([
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsString(),
-    __metadata("design:type", String)
-], CreateCustomerDTO.prototype, "phone", void 0);
-__decorate([
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsString(),
-    __metadata("design:type", String)
-], CreateCustomerDTO.prototype, "address", void 0);
 __decorate([
     class_validator_1.IsNotEmpty(),
     class_validator_1.IsString(),
