@@ -30,7 +30,6 @@ let CustomerService = class CustomerService {
             path: 'favorites',
             model: 'Place',
         });
-        console.log('favorite : ' + customer.favorites);
         return customer;
     }
     async findByEmail(email) {

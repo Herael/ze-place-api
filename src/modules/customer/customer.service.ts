@@ -23,8 +23,6 @@ export class CustomerService {
       model: 'Place',
       // select: '_id title price',
     });
-    console.log('favorite : ' + customer.favorites);
-
     return customer;
   }
 
