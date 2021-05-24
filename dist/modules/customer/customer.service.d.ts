@@ -12,5 +12,5 @@ export declare class CustomerService {
     addCustomer(customer: Customer): Promise<Customer>;
     updateCustomer(customerID: string, createCustomerDTO: CreateCustomerDTO): Promise<Customer>;
     deleteCustomer(customerID: string): Promise<any>;
-    addPromoCode(promoCodeName: Promo, customerID: string): Promise<Customer | "vous avez deja ce code promo actif">;
+    addPromoCode(promoCodeName: Promo, customerID: string): Promise<any>;
 }

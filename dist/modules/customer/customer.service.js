@@ -56,7 +56,7 @@ let CustomerService = class CustomerService {
         console.log(code._id);
         if (code.user_limit > 0) {
             if (code.end_date > new Date()) {
-                if (!custo.promoCode.includes(promoCodeName.name)) {
+                if (!custo.promoCode.includes(promoCodeName.name) && !custo.historyCode.includes(promoCodeName.name)) {
                     const customer = await this.customerModel.findOneAndUpdate({ _id: customerID }, { $push: { promoCode: code.name } }).exec();
                     const promo = await this.promoModel.findOneAndUpdate({ _id: code._id }, { user_limit: code.user_limit - 1 });
                     console.log(customer);
@@ -67,9 +67,11 @@ let CustomerService = class CustomerService {
                 }
             }
             else {
+                return "La date d'activité du code est depassé";
             }
         }
         else {
+            return "Le code a deja rassemblé tout ses utilisateur";
         }
     }
 };

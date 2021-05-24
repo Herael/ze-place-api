@@ -3,6 +3,8 @@ import { Controller, Request, Post, UseGuards, Logger, Get, Res, HttpStatus } fr
 import { async } from 'rxjs';
 
 
+
+
 @Controller('promo')
 export class PromoController {
 
@@ -18,6 +20,13 @@ export class PromoController {
     @Get('/getCode')
     async getCode(@Res() res){
       const code = await this.promoService.getCode();
+      return res.status(HttpStatus.OK).json(code)
+    }
+
+    @Get('/getSevralCode')
+    async getSevralCode(@Res() res ,@Request() req){
+      
+      const code = await this.promoService.getSevralCode(req.body);      
       return res.status(HttpStatus.OK).json(code)
     }
 

@@ -10,4 +10,5 @@ export interface Customer extends Document {
     readonly description: string;
     readonly created_at: Date;
     readonly promoCode: [string];
+    readonly historyCode: [string];
 }

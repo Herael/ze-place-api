@@ -12,10 +12,13 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PromoService = void 0;
+exports.PromoService = exports.CodeId = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("mongoose");
 const mongoose_2 = require("@nestjs/mongoose");
+class CodeId {
+}
+exports.CodeId = CodeId;
 let PromoService = class PromoService {
     constructor(promoModel) {
         this.promoModel = promoModel;
@@ -26,6 +29,18 @@ let PromoService = class PromoService {
     async getCode() {
         const code = await this.promoModel.find().exec();
         return code;
+    }
+    async getCodeById(id) {
+        const code = await this.promoModel.findById(id).exec();
+        return code;
+    }
+    async getSevralCode(req) {
+        console.log(req.code);
+        const value = await this.promoModel.find({
+            '_id': { $in: req.code }
+        });
+        console.log(value);
+        return value;
     }
 };
 PromoService = __decorate([

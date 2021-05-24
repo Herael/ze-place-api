@@ -3,4 +3,6 @@ export interface Promo extends Document {
     name: string;
     user_limit: number;
     end_date: Date;
+    start_date: Date;
+    value: number;
 }

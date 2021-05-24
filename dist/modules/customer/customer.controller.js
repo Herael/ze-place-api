@@ -54,7 +54,7 @@ let CustomerController = class CustomerController {
         console.log(req.body);
         const result = await this.customerService.addPromoCode(req.body, customerID);
         return res.status(common_1.HttpStatus.OK).json({
-            message: result,
+            data: result,
         });
     }
 };

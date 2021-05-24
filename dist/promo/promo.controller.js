@@ -27,6 +27,10 @@ let PromoController = class PromoController {
         const code = await this.promoService.getCode();
         return res.status(common_1.HttpStatus.OK).json(code);
     }
+    async getSevralCode(res, req) {
+        const code = await this.promoService.getSevralCode(req.body);
+        return res.status(common_1.HttpStatus.OK).json(code);
+    }
 };
 __decorate([
     common_1.Post('/create'),
@@ -42,6 +46,13 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], PromoController.prototype, "getCode", null);
+__decorate([
+    common_1.Get('/getSevralCode'),
+    __param(0, common_1.Res()), __param(1, common_1.Request()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PromoController.prototype, "getSevralCode", null);
 PromoController = __decorate([
     common_1.Controller('promo'),
     __metadata("design:paramtypes", [promo_service_1.PromoService])

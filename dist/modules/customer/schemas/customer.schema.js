@@ -13,5 +13,6 @@ exports.CustomerSchema = new mongoose.Schema({
     description: String,
     created_at: { type: Date, default: Date.now },
     promoCode: [String],
+    historyCode: [String],
 });
 //# sourceMappingURL=customer.schema.js.map

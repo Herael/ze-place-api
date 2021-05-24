@@ -65,7 +65,7 @@ export class CustomerService {
     console.log(code._id);
     if(code.user_limit >0){
       if(code.end_date> new Date()){
-        if (!custo.promoCode.includes(promoCodeName.name)){
+        if (!custo.promoCode.includes(promoCodeName.name) && !custo.historyCode.includes(promoCodeName.name)){
           const customer = await this.customerModel.findOneAndUpdate(
             { _id: customerID }, 
             { $push: { promoCode: code.name  } }).exec();
