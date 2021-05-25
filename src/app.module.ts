@@ -8,6 +8,9 @@ import { ReviewModule } from './modules/review/review.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { PromoModule } from './promo/promo.module';
 
+import { PlaceTypeModule } from './modules/place-type/place-type.module';
+import { FeatureModule } from './modules/feature/feature.module';
+
 @Module({
   imports: [
     // MongooseModule.forRoot('mongodb://localhost/ze-place-api', {useNewUrlParser: true}),
@@ -20,6 +23,8 @@ import { PromoModule } from './promo/promo.module';
     ReviewModule,
     AuthModule,
     PromoModule,
+    PlaceTypeModule,
+    FeatureModule,
   ],
   controllers: [AppController],
   providers: [AppService],

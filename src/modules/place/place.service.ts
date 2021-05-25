@@ -15,7 +15,7 @@ export class PlaceService {
     return places;
   }
 
-  async addPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place> {
+  async createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place> {
     const newPlace = await new this.placeModel(createPlaceDTO).save();
     return newPlace;
   }

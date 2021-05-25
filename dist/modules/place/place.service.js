@@ -24,7 +24,7 @@ let PlaceService = class PlaceService {
         const places = await this.placeModel.find().exec();
         return places;
     }
-    async addPlace(createPlaceDTO) {
+    async createPlace(createPlaceDTO) {
         const newPlace = await new this.placeModel(createPlaceDTO).save();
         return newPlace;
     }

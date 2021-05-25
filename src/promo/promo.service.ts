@@ -32,7 +32,7 @@ export class PromoService {
 
       async getSevralCode(req) {
           
-          console.log(req.code);
+          console.log('req',req.code);
           const value = await this.promoModel.find({
             '_id': { $in: req.code}})
             console.log(value);

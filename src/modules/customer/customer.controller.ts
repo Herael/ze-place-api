@@ -3,20 +3,19 @@ import {
   Get,
   Res,
   HttpStatus,
-  Post,
   Body,
   Put,
   Query,
   NotFoundException,
   Delete,
   Param,
-  UseGuards,
   Logger,
   Request,
+  Post,
 } from '@nestjs/common';
 import { CustomerService } from './customer.service';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
-import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
+import { Place } from '../place/interfaces/place.interface';
 
 @Controller('customers')
 export class CustomerController {
@@ -54,6 +53,39 @@ export class CustomerController {
     });
   }
 
+  //Add a place to the favorite list
+  @Post('/favorite/create')
+  async addFavorite(
+    @Res() res,
+    @Query('customerID') customerID,
+    @Body() place: Place,
+  ) {
+    const customer = await this.customerService.addFavorite(customerID, place);
+    if (!customer) throw new NotFoundException('Customer does not exist!');
+    return res.status(HttpStatus.OK).json({
+      message: 'Favorite has been successfully added',
+      customer,
+    });
+  }
+
+  //Delete a place to the favorite list
+  @Post('/favorite/delete')
+  async deleteFavorite(
+    @Res() res,
+    @Query('customerID') customerID,
+    @Body() place: Place,
+  ) {
+    const customer = await this.customerService.deleteFavorite(
+      customerID,
+      place,
+    );
+    if (!customer) throw new NotFoundException('Customer does not exist!');
+    return res.status(HttpStatus.OK).json({
+      message: 'Favorite has been successfully deleted',
+      customer,
+    });
+  }
+
   // Delete a customer
   @Delete('/delete')
   async deleteCustomer(@Res() res, @Query('customerID') customerID) {
@@ -71,6 +103,8 @@ export class CustomerController {
   async addPromoCode(@Res() res,@Request() req,@Query('customerID') customerID,) {
     console.log(req.body);
     const result = await this.customerService.addPromoCode(req.body,customerID);
+    console.log(result);
+    
     return res.status(HttpStatus.OK).json({
       data: result,
     })

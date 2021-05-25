@@ -28,7 +28,11 @@ let CustomerService = class CustomerService {
         return customers;
     }
     async findById(customerID) {
-        const customer = await this.customerModel.findById(customerID).exec();
+        const customer = await this.customerModel.findById(customerID).populate({
+            path: 'favorites',
+            model: 'Place',
+        });
+        console.log('favorite : ' + customer.favorites);
         return customer;
     }
     async findByEmail(email) {
@@ -49,30 +53,49 @@ let CustomerService = class CustomerService {
         return deletedCustomer;
     }
     async addPromoCode(promoCodeName, customerID) {
-        console.log(promoCodeName.name);
-        console.log(customerID);
         const code = await this.promoModel.findOne({ name: promoCodeName.name }).exec();
         const custo = await this.customerModel.findById(customerID).exec();
         console.log(code._id);
-        if (code.user_limit > 0) {
-            if (code.end_date > new Date()) {
-                if (!custo.promoCode.includes(promoCodeName.name) && !custo.historyCode.includes(promoCodeName.name)) {
-                    const customer = await this.customerModel.findOneAndUpdate({ _id: customerID }, { $push: { promoCode: code.name } }).exec();
-                    const promo = await this.promoModel.findOneAndUpdate({ _id: code._id }, { user_limit: code.user_limit - 1 });
-                    console.log(customer);
-                    return customer;
+        if (code != undefined) {
+            if (code.user_limit > 0) {
+                if (code.end_date > new Date()) {
+                    if (!custo.promoCode.includes(promoCodeName.name) && !custo.historyCode.includes(promoCodeName.name)) {
+                        const customer = await this.customerModel.findOneAndUpdate({ _id: customerID }, { $push: { promoCode: code._id } }).exec();
+                        const promo = await this.promoModel.findOneAndUpdate({ _id: code._id }, { user_limit: code.user_limit - 1 });
+                        return customer;
+                    }
+                    else {
+                        return "vous avez deja ce code promo actif";
+                    }
                 }
                 else {
-                    return "vous avez deja ce code promo actif";
+                    return "La date d'activité du code est depassé";
                 }
             }
             else {
-                return "La date d'activité du code est depassé";
+                return "Le code a deja rassemblé tout ses utilisateur";
             }
         }
         else {
-            return "Le code a deja rassemblé tout ses utilisateur";
+            return "Le code n'existe pas ";
         }
+    }
+    async addFavorite(customerID, place) {
+        const updatedCustomer = await this.customerModel.findById(customerID);
+        updatedCustomer.favorites.push(place);
+        console.log('User.favorite after added treatment : ' + updatedCustomer.favorites);
+        updatedCustomer.save();
+        return updatedCustomer;
+    }
+    async deleteFavorite(customerID, place) {
+        const updatedCustomer = await this.customerModel.findById(customerID);
+        const index = updatedCustomer.favorites.indexOf(place._id);
+        if (index > -1) {
+            updatedCustomer.favorites.splice(index, 1);
+        }
+        console.log('User.favorite after deleted treatment : ' + updatedCustomer.favorites);
+        updatedCustomer.save();
+        return updatedCustomer;
     }
 };
 CustomerService = __decorate([

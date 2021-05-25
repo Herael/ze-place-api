@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateCustomerDTO = void 0;
 const class_validator_1 = require("class-validator");
+const place_interface_1 = require("../../place/interfaces/place.interface");
 class CreateCustomerDTO {
 }
 __decorate([
