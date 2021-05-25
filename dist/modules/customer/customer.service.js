@@ -17,9 +17,11 @@ const common_1 = require("@nestjs/common");
 const mongoose_1 = require("mongoose");
 const mongoose_2 = require("@nestjs/mongoose");
 const bcrypt_1 = require("bcrypt");
+const promo_interface_1 = require("../../promo/interfaces/promo.interface");
 let CustomerService = class CustomerService {
-    constructor(customerModel) {
+    constructor(customerModel, promoModel) {
         this.customerModel = customerModel;
+        this.promoModel = promoModel;
     }
     async getAllCustomer() {
         const customers = await this.customerModel.find().exec();
@@ -50,6 +52,34 @@ let CustomerService = class CustomerService {
         const deletedCustomer = await this.customerModel.findByIdAndRemove(customerID);
         return deletedCustomer;
     }
+    async addPromoCode(promoCodeName, customerID) {
+        const code = await this.promoModel.findOne({ name: promoCodeName.name }).exec();
+        const custo = await this.customerModel.findById(customerID).exec();
+        console.log(code._id);
+        if (code != undefined) {
+            if (code.user_limit > 0) {
+                if (code.end_date > new Date()) {
+                    if (!custo.promoCode.includes(promoCodeName.name) && !custo.historyCode.includes(promoCodeName.name)) {
+                        const customer = await this.customerModel.findOneAndUpdate({ _id: customerID }, { $push: { promoCode: code._id } }).exec();
+                        const promo = await this.promoModel.findOneAndUpdate({ _id: code._id }, { user_limit: code.user_limit - 1 });
+                        return customer;
+                    }
+                    else {
+                        return "vous avez deja ce code promo actif";
+                    }
+                }
+                else {
+                    return "La date d'activité du code est depassé";
+                }
+            }
+            else {
+                return "Le code a deja rassemblé tout ses utilisateur";
+            }
+        }
+        else {
+            return "Le code n'existe pas ";
+        }
+    }
     async addFavorite(customerID, place) {
         const updatedCustomer = await this.customerModel.findById(customerID);
         updatedCustomer.favorites.push(place);
@@ -71,7 +101,9 @@ let CustomerService = class CustomerService {
 CustomerService = __decorate([
     common_1.Injectable(),
     __param(0, mongoose_2.InjectModel('Customer')),
-    __metadata("design:paramtypes", [mongoose_1.Model])
+    __param(1, mongoose_2.InjectModel('Promo')),
+    __metadata("design:paramtypes", [mongoose_1.Model,
+        mongoose_1.Model])
 ], CustomerService);
 exports.CustomerService = CustomerService;
 //# sourceMappingURL=customer.service.js.map

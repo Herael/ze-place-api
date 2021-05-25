@@ -6,25 +6,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CustomerModule = void 0;
+exports.PromoModule = void 0;
 const common_1 = require("@nestjs/common");
-const customer_controller_1 = require("./customer.controller");
-const customer_service_1 = require("./customer.service");
+const promo_service_1 = require("./promo.service");
+const promo_controller_1 = require("./promo.controller");
 const mongoose_1 = require("@nestjs/mongoose");
-const customer_schema_1 = require("./schemas/customer.schema");
-const promo_schema_1 = require("../../promo/schemas/promo.schema");
-let CustomerModule = class CustomerModule {
+const promo_schema_1 = require("./schemas/promo.schema");
+let PromoModule = class PromoModule {
 };
-CustomerModule = __decorate([
+PromoModule = __decorate([
     common_1.Module({
         imports: [
-            mongoose_1.MongooseModule.forFeature([{ name: 'Customer', schema: customer_schema_1.CustomerSchema }]),
             mongoose_1.MongooseModule.forFeature([{ name: 'Promo', schema: promo_schema_1.PromoSchema }]),
         ],
-        controllers: [customer_controller_1.CustomerController],
-        providers: [customer_service_1.CustomerService],
-        exports: [customer_service_1.CustomerService],
+        providers: [promo_service_1.PromoService],
+        controllers: [promo_controller_1.PromoController],
+        exports: [promo_service_1.PromoService],
     })
-], CustomerModule);
-exports.CustomerModule = CustomerModule;
-//# sourceMappingURL=customer.module.js.map
+], PromoModule);
+exports.PromoModule = PromoModule;
+//# sourceMappingURL=promo.module.js.map

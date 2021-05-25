@@ -10,6 +10,7 @@ import {
   Delete,
   Param,
   Logger,
+  Request,
   Post,
 } from '@nestjs/common';
 import { CustomerService } from './customer.service';
@@ -95,4 +96,19 @@ export class CustomerController {
       customer,
     });
   }
+
+
+  @Post('/addPromoCode')
+  
+  async addPromoCode(@Res() res,@Request() req,@Query('customerID') customerID,) {
+    console.log(req.body);
+    const result = await this.customerService.addPromoCode(req.body,customerID);
+    console.log(result);
+    
+    return res.status(HttpStatus.OK).json({
+      data: result,
+    })
+  }
+  
+
 }

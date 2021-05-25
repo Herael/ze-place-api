@@ -12,6 +12,8 @@ export const CustomerSchema = new Schema({
   password: String,
   description: String,
   created_at: { type: Date, default: Date.now },
+  promoCode: [String],
+  historyCode: [String],
   favorites: [
     {
       _type: Schema.Types.ObjectId,
@@ -25,4 +27,5 @@ export const CustomerSchema = new Schema({
       default: [],
     },
   ],
+
 });
