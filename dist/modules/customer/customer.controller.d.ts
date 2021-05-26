@@ -7,8 +7,8 @@ export declare class CustomerController {
     getAllCustomer(res: any): Promise<any>;
     getCustomer(res: any, customerID: any): Promise<any>;
     updateCustomer(res: any, customerID: any, createCustomerDTO: CreateCustomerDTO): Promise<any>;
-    addFavorite(res: any, customerID: any, place: Place): Promise<any>;
-    deleteFavorite(res: any, customerID: any, place: Place): Promise<any>;
+    addFavorite(req: any, res: any, place: Place): Promise<any>;
+    deleteFavorite(req: any, res: any, placeID: any): Promise<any>;
     deleteCustomer(res: any, customerID: any): Promise<any>;
     addPromoCode(res: any, req: any, customerID: any): Promise<any>;
 }

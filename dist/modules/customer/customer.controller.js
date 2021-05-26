@@ -16,6 +16,7 @@ exports.CustomerController = void 0;
 const common_1 = require("@nestjs/common");
 const customer_service_1 = require("./customer.service");
 const create_customer_dto_1 = require("./dto/create-customer.dto");
+const jwt_auth_guard_1 = require("../auth/jwt-auth.guard");
 let CustomerController = class CustomerController {
     constructor(customerService) {
         this.customerService = customerService;
@@ -40,8 +41,8 @@ let CustomerController = class CustomerController {
             customer,
         });
     }
-    async addFavorite(res, customerID, place) {
-        const customer = await this.customerService.addFavorite(customerID, place);
+    async addFavorite(req, res, place) {
+        const customer = await this.customerService.addFavorite(req.user.id, place);
         if (!customer)
             throw new common_1.NotFoundException('Customer does not exist!');
         return res.status(common_1.HttpStatus.OK).json({
@@ -49,13 +50,10 @@ let CustomerController = class CustomerController {
             customer,
         });
     }
-    async deleteFavorite(res, customerID, place) {
-        const customer = await this.customerService.deleteFavorite(customerID, place);
-        if (!customer)
-            throw new common_1.NotFoundException('Customer does not exist!');
+    async deleteFavorite(req, res, placeID) {
+        await this.customerService.deleteFavorite(req.user.id, placeID);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Favorite has been successfully deleted',
-            customer,
         });
     }
     async deleteCustomer(res, customerID) {
@@ -100,19 +98,17 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], CustomerController.prototype, "updateCustomer", null);
 __decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/favorite/create'),
-    __param(0, common_1.Res()),
-    __param(1, common_1.Query('customerID')),
-    __param(2, common_1.Body()),
+    __param(0, common_1.Request()), __param(1, common_1.Res()), __param(2, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", Promise)
 ], CustomerController.prototype, "addFavorite", null);
 __decorate([
-    common_1.Post('/favorite/delete'),
-    __param(0, common_1.Res()),
-    __param(1, common_1.Query('customerID')),
-    __param(2, common_1.Body()),
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Delete('/favorite/delete/:placeID'),
+    __param(0, common_1.Request()), __param(1, common_1.Res()), __param(2, common_1.Param('placeID')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", Promise)
@@ -126,7 +122,9 @@ __decorate([
 ], CustomerController.prototype, "deleteCustomer", null);
 __decorate([
     common_1.Post('/addPromoCode'),
-    __param(0, common_1.Res()), __param(1, common_1.Request()), __param(2, common_1.Query('customerID')),
+    __param(0, common_1.Res()),
+    __param(1, common_1.Request()),
+    __param(2, common_1.Query('customerID')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", Promise)

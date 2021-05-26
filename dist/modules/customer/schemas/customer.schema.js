@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CustomerSchema = void 0;
 const mongoose = require("mongoose");
+const place_schema_1 = require("../../place/schemas/place.schema");
 const Schema = mongoose.Schema;
 exports.CustomerSchema = new Schema({
     avatar: String,
@@ -15,18 +16,6 @@ exports.CustomerSchema = new Schema({
     created_at: { type: Date, default: Date.now },
     promoCode: [String],
     historyCode: [String],
-    favorites: [
-        {
-            _type: Schema.Types.ObjectId,
-            get type() {
-                return this._type;
-            },
-            set type(value) {
-                this._type = value;
-            },
-            ref: 'places',
-            default: [],
-        },
-    ],
+    favorites: [place_schema_1.PlaceSchema],
 });
 //# sourceMappingURL=customer.schema.js.map

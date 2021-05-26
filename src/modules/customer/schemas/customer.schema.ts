@@ -1,4 +1,5 @@
 import * as mongoose from 'mongoose';
+import { PlaceSchema } from 'src/modules/place/schemas/place.schema';
 
 const Schema = mongoose.Schema;
 
@@ -14,18 +15,5 @@ export const CustomerSchema = new Schema({
   created_at: { type: Date, default: Date.now },
   promoCode: [String],
   historyCode: [String],
-  favorites: [
-    {
-      _type: Schema.Types.ObjectId,
-      get type() {
-        return this._type;
-      },
-      set type(value) {
-        this._type = value;
-      },
-      ref: 'places',
-      default: [],
-    },
-  ],
-
+  favorites: [PlaceSchema],
 });

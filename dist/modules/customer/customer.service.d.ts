@@ -15,5 +15,5 @@ export declare class CustomerService {
     deleteCustomer(customerID: string): Promise<any>;
     addPromoCode(promoCodeName: Promo, customerID: string): Promise<any>;
     addFavorite(customerID: string, place: Place): Promise<Customer>;
-    deleteFavorite(customerID: string, place: Place): Promise<Customer>;
+    deleteFavorite(customerID: string, placeId: string): Promise<Customer>;
 }
