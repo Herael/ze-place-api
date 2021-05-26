@@ -16,12 +16,21 @@ exports.PlaceService = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("mongoose");
 const mongoose_2 = require("@nestjs/mongoose");
+const index_1 = require("../../utils/index");
 let PlaceService = class PlaceService {
     constructor(placeModel) {
         this.placeModel = placeModel;
     }
     async getAllPlaces() {
         const places = await this.placeModel.find().exec();
+        return places;
+    }
+    async getPlacesNearbyCoordinates(coords, distance) {
+        let places = await this.placeModel.find().exec();
+        places = places.filter((place) => index_1.isPlaceInRadius({
+            longitude: place.location.longitude,
+            latitude: place.location.latitude,
+        }, coords, distance) === true);
         return places;
     }
     async createPlace(createPlaceDTO) {

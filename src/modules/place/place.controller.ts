@@ -5,8 +5,7 @@ import {
   HttpStatus,
   Post,
   Body,
-  UseGuards,
-  Logger,
+  Query,
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
 import { CreatePlaceDTO } from './dto/create-place.dto';
@@ -16,10 +15,18 @@ import { PlaceService } from './place.service';
 export class PlaceController {
   constructor(private placeService: PlaceService) {}
 
-  @UseGuards(JwtAuthGuard)
   @Get()
   async getAllPlaces(@Res() res) {
     const places = await this.placeService.getAllPlaces();
+    return res.status(HttpStatus.OK).json(places);
+  }
+
+  @Post()
+  async getPlacesNearbyCoordinates(@Res() res, @Body() data) {
+    const places = await this.placeService.getPlacesNearbyCoordinates(
+      data.coords,
+      data.distance,
+    );
     return res.status(HttpStatus.OK).json(places);
   }
 
