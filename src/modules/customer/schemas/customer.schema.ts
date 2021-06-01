@@ -17,4 +17,5 @@ export const CustomerSchema = new Schema({
   historyCode: [String],
   favorites: [PlaceSchema],
   customerId: String,
+  ownedPlaces: [PlaceSchema],
 });

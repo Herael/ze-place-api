@@ -18,8 +18,9 @@ const mongoose_1 = require("mongoose");
 const mongoose_2 = require("@nestjs/mongoose");
 const index_1 = require("../../utils/index");
 let PlaceService = class PlaceService {
-    constructor(placeModel) {
+    constructor(placeModel, customerModel) {
         this.placeModel = placeModel;
+        this.customerModel = customerModel;
     }
     async getAllPlaces() {
         const places = await this.placeModel.find().exec();
@@ -35,13 +36,18 @@ let PlaceService = class PlaceService {
     }
     async createPlace(createPlaceDTO) {
         const newPlace = await new this.placeModel(createPlaceDTO).save();
+        const updatedCustomer = await this.customerModel.findById(createPlaceDTO.ownerId);
+        updatedCustomer.ownedPlaces.push(newPlace);
+        updatedCustomer.save();
         return newPlace;
     }
 };
 PlaceService = __decorate([
     common_1.Injectable(),
     __param(0, mongoose_2.InjectModel('Place')),
-    __metadata("design:paramtypes", [mongoose_1.Model])
+    __param(1, mongoose_2.InjectModel('Customer')),
+    __metadata("design:paramtypes", [mongoose_1.Model,
+        mongoose_1.Model])
 ], PlaceService);
 exports.PlaceService = PlaceService;
 //# sourceMappingURL=place.service.js.map

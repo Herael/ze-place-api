@@ -4,6 +4,8 @@ import {
   Res,
   HttpStatus,
   Post,
+  UseGuards,
+  Request,
   Body,
   Query,
 } from '@nestjs/common';
@@ -30,9 +32,11 @@ export class PlaceController {
     return res.status(HttpStatus.OK).json(places);
   }
 
+  @UseGuards(JwtAuthGuard)
   @Post('/create')
-  async createPlace(@Res() res, @Body() createPlaceDTO: CreatePlaceDTO) {
-    const place = await this.placeService.createPlace(createPlaceDTO);
+  async createPlace(@Res() res , @Body() createPlaceDTO: CreatePlaceDTO) {
+    
+    const place = await this.placeService.createPlace(createPlaceDTO,);
     return res.status(HttpStatus.OK).json({
       message: 'Place has been created successfully',
       place,

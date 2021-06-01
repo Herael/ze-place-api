@@ -1582,13 +1582,13 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/interfaces/place.interface.ts": {
-        "version": "23af0a31e5df15d2745896e9fca4e9f2ad9a3d2f1a9713ade5ac8dc4f9277608",
-        "signature": "a165f23844b7df472fbefbd93463bc00006e71cb220f80436ca8d95b24f705e2",
+        "version": "afe9e0c1c5612e25e0f5df4610a0211cfbdcd3522b0b5659b64907735339ee8c",
+        "signature": "d311140c423fe2a8d94980ec886b31cb141bfa175218d72c1cc8806a890c2761",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/interfaces/customer.interface.ts": {
-        "version": "e12761363a8aaa719af94b7b245ccf1688f4cc9b6726d8c4229e5616872025f2",
-        "signature": "25c38e440127c98703d8e188f42ec7d21e80c6a861eedccc8dfc35fda5d5a1b2",
+        "version": "49682f32a854aed917e19945ad2d35053f458689739a79487fd253a948c7c0a6",
+        "signature": "f72b0a1a64678210592ee26bcef9bb122da174d51b110f511ead556e8cd6290d",
         "affectsGlobalScope": false
       },
       "../node_modules/class-validator/types/validation/validationerror.d.ts": {
@@ -2217,8 +2217,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/dto/create-customer.dto.ts": {
-        "version": "21399ec3aa21a294b31e861c74ea593cbd36a267835f4e9c7f5711e3a29f396a",
-        "signature": "424f330f914ca669ba8671f5883cb5d6e75592d8ef8d5c692d4fa6ce1db6771a",
+        "version": "9cc6c6861089466fdb0cd73d73cd1372d95f38239499e73e3fef2d43a46ee1bd",
+        "signature": "f78a67d0a7c1a985c9038e448d4318fbc7c584a194263d3ea1f40c1dd6bed884",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/bcrypt/index.d.ts": {
@@ -2372,12 +2372,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/schemas/place.schema.ts": {
-        "version": "8a4a57b6e798d8997c759b9451b1a650f2afec977fee98c07ff3e5d8961f0e32",
+        "version": "439f6fab2ece184a1f919082a9d03f06a9a99596ce63221e61336e3c3b941b0e",
         "signature": "b29d58e560e82ebd6eaeab2c411be4ab1c6d2a67eabb4aee61f7898e2071066d",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/schemas/customer.schema.ts": {
-        "version": "7b21e7fc129bd931e5ef0826022496b51fcaee051f917cd3fe59659d2411c72a",
+        "version": "3c3195b8624df18d23e67390a66c6bd6305d38c453204093109adeaf462aee06",
         "signature": "4e0f49eb914132556be58be043c68fc4297e170d5d941b7c8446198f113afb86",
         "affectsGlobalScope": false
       },
@@ -2392,8 +2392,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/dto/create-place.dto.ts": {
-        "version": "c136c726dc789e8ac5649ac44eec69ad4470ad6044d54d88f6039b20b908a37d",
-        "signature": "daf07d4125c24049cd1718bac12b0d848fdd1b31f3952ab43a492f282d96ace3",
+        "version": "86845f5391bb36df6fb0f2b29141644a264771bea2599dc7c955043f130468f9",
+        "signature": "b97cb6696da531b55b6deba353ac8f0269acc28287afa2e7e388f6fabf1717b7",
         "affectsGlobalScope": false
       },
       "../node_modules/geolib/es/types.d.ts": {
@@ -2612,17 +2612,17 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "8d1bf31c863c06a91522d63b579b6a4e90e06f92359f4148aeb0410ed1a337ee",
-        "signature": "efc436ba397d23f8bcbcdf072dea1bdea458a75a3926c0620842d2020a8f7979",
+        "version": "15fbbc7f7c93fd2bc942b59ec83ef5dcb59d6c4f7b0b4d493c28e8eabaa383a5",
+        "signature": "4df3692da4eddc4b4964797603e8dd7f794ad133fbfea10a1e19a113473da218",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "8c36935c297caa7ae826b45aaae42e9aab57db1422d95886baa06be92b568543",
+        "version": "aad8c61e477663f178e3e75cb02c05da819660b17474a07f264d50aa286c9690",
         "signature": "07ca41841e8aa56787be445a4b5f18bd2d71f4e4e8bd3d97bd157d251579ce3f",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.module.ts": {
-        "version": "f6478e951e2ec98c32b7e3de5370bc4b6d9bb4dc103c5082a6949ae1e3970c60",
+        "version": "558663b247e6faa81ea90db464a3ae8249731eb9cf057041b6b18c24164aef67",
         "signature": "19d997ce27c99d6e74839ae37762f33da8cb45f4b60f73e7050b6c7bd71dd2b4",
         "affectsGlobalScope": false
       },
@@ -5542,6 +5542,7 @@
       "../src/modules/place/place.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/modules/customer/schemas/customer.schema.ts",
         "../src/modules/place/place.controller.ts",
         "../src/modules/place/place.service.ts",
         "../src/modules/place/schemas/place.schema.ts"
@@ -5550,6 +5551,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/place/dto/create-place.dto.ts",
         "../src/modules/place/interfaces/place.interface.ts",
         "../src/modules/types.ts",
@@ -7810,6 +7812,7 @@
       ],
       "../src/modules/place/place.service.ts": [
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/place/dto/create-place.dto.ts",
         "../src/modules/place/interfaces/place.interface.ts",
         "../src/modules/types.ts"

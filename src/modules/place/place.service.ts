@@ -2,6 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Place } from './interfaces/place.interface';
+import { Customer } from '../customer/interfaces/customer.interface';
+
 import { CreatePlaceDTO } from './dto/create-place.dto';
 import { Coords } from '../types';
 import { isPlaceInRadius } from '../../utils/index';
@@ -10,6 +12,8 @@ import { isPlaceInRadius } from '../../utils/index';
 export class PlaceService {
   constructor(
     @InjectModel('Place') private readonly placeModel: Model<Place>,
+    @InjectModel('Customer') private readonly customerModel: Model<Customer>,
+
   ) {}
 
   async getAllPlaces(): Promise<Place[]> {
@@ -38,6 +42,10 @@ export class PlaceService {
 
   async createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place> {
     const newPlace = await new this.placeModel(createPlaceDTO).save();
+    const updatedCustomer = await this.customerModel.findById(createPlaceDTO.ownerId);
+    updatedCustomer.ownedPlaces.push(newPlace)
+    updatedCustomer.save();
+    
     return newPlace;
   }
 }

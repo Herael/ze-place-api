@@ -18,5 +18,6 @@ exports.CustomerSchema = new Schema({
     historyCode: [String],
     favorites: [place_schema_1.PlaceSchema],
     customerId: String,
+    ownedPlaces: [place_schema_1.PlaceSchema],
 });
 //# sourceMappingURL=customer.schema.js.map

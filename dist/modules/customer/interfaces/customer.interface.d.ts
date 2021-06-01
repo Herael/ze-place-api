@@ -14,4 +14,5 @@ export interface Customer extends Document {
     readonly historyCode: [string];
     favorites: Place[];
     customerId: string;
+    ownedPlaces: Place[];
 }
