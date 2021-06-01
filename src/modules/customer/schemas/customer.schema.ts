@@ -16,4 +16,5 @@ export const CustomerSchema = new Schema({
   promoCode: [String],
   historyCode: [String],
   favorites: [PlaceSchema],
+  ownedPlaces: [PlaceSchema],
 });

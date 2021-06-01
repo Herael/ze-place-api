@@ -26,6 +26,7 @@ export interface Place extends Document {
     readonly authorizeSmoking: boolean;
     readonly authorizeFire: boolean;
     readonly authorizeFoodAndDrink: boolean;
+    readonly ownerId: string;
     readonly rate: number;
     readonly reviews: Review[];
     readonly created_at: {
