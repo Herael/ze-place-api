@@ -27,6 +27,7 @@ export const PlaceSchema = new mongoose.Schema({
   authorizeSmoking: Boolean,
   authorizeFire: Boolean,
   authorizeFoodAndDrink: Boolean,
+  ownerId:String,
   rate: Number,
   reviews: [ReviewSchema],
   created_at: { type: Date, default: Date.now },

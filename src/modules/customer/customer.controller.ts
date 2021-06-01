@@ -10,11 +10,15 @@ import {
   Delete,
   Param,
   Logger,
+  Request,
   Post,
+  UseGuards,
+  Req,
 } from '@nestjs/common';
 import { CustomerService } from './customer.service';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
 import { Place } from '../place/interfaces/place.interface';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Controller('customers')
 export class CustomerController {
@@ -52,14 +56,10 @@ export class CustomerController {
     });
   }
 
-  //Add a place to the favorite list
+  @UseGuards(JwtAuthGuard)
   @Post('/favorite/create')
-  async addFavorite(
-    @Res() res,
-    @Query('customerID') customerID,
-    @Body() place: Place,
-  ) {
-    const customer = await this.customerService.addFavorite(customerID, place);
+  async addFavorite(@Request() req, @Res() res, @Body() place: Place) {
+    const customer = await this.customerService.addFavorite(req.user.id, place);
     if (!customer) throw new NotFoundException('Customer does not exist!');
     return res.status(HttpStatus.OK).json({
       message: 'Favorite has been successfully added',
@@ -67,21 +67,12 @@ export class CustomerController {
     });
   }
 
-  //Delete a place to the favorite list
-  @Post('/favorite/delete')
-  async deleteFavorite(
-    @Res() res,
-    @Query('customerID') customerID,
-    @Body() place: Place,
-  ) {
-    const customer = await this.customerService.deleteFavorite(
-      customerID,
-      place,
-    );
-    if (!customer) throw new NotFoundException('Customer does not exist!');
+  @UseGuards(JwtAuthGuard)
+  @Delete('/favorite/delete/:placeID')
+  async deleteFavorite(@Request() req, @Res() res, @Param('placeID') placeID) {
+    await this.customerService.deleteFavorite(req.user.id, placeID);
     return res.status(HttpStatus.OK).json({
       message: 'Favorite has been successfully deleted',
-      customer,
     });
   }
 
@@ -93,6 +84,24 @@ export class CustomerController {
     return res.status(HttpStatus.OK).json({
       message: 'Customer has been deleted',
       customer,
+    });
+  }
+
+  @Post('/addPromoCode')
+  async addPromoCode(
+    @Res() res,
+    @Request() req,
+    @Query('customerID') customerID,
+  ) {
+    console.log(req.body);
+    const result = await this.customerService.addPromoCode(
+      req.body,
+      customerID,
+    );
+    console.log(result);
+
+    return res.status(HttpStatus.OK).json({
+      data: result,
     });
   }
 }

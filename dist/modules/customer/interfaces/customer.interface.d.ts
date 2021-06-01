@@ -10,5 +10,8 @@ export interface Customer extends Document {
     password: string;
     readonly description: string;
     readonly created_at: Date;
-    readonly favorites: Place[];
+    readonly promoCode: [string];
+    readonly historyCode: [string];
+    favorites: Place[];
+    ownedPlaces: Place[];
 }

@@ -1,15 +1,17 @@
 import { Injectable } from '@nestjs/common';
-import { Model, ObjectId } from 'mongoose';
+import mongoose, { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Customer } from './interfaces/customer.interface';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
 import { hash } from 'bcrypt';
+import { Promo } from 'src/promo/interfaces/promo.interface';
 import { Place } from '../place/interfaces/place.interface';
 
 @Injectable()
 export class CustomerService {
   constructor(
     @InjectModel('Customer') private readonly customerModel: Model<Customer>,
+    @InjectModel('Promo') private readonly promoModel: Model<Promo>,
   ) {}
 
   async getAllCustomer(): Promise<Customer[]> {
@@ -18,11 +20,7 @@ export class CustomerService {
   }
 
   async findById(customerID: string): Promise<Customer> {
-    const customer = await this.customerModel.findById(customerID).populate({
-      path: 'favorites',
-      model: 'Place',
-      // select: '_id title price',
-    });
+    const customer = await this.customerModel.findById(customerID).exec();
     return customer;
   }
 
@@ -56,24 +54,56 @@ export class CustomerService {
     return deletedCustomer;
   }
 
+  async addPromoCode(promoCodeName: Promo, customerID: string): Promise<any> {
+    const code = await this.promoModel
+      .findOne({ name: promoCodeName.name })
+      .exec();
+    const custo = await this.customerModel.findById(customerID).exec();
+    console.log(code._id);
+
+    if (code != undefined) {
+      if (code.user_limit > 0) {
+        if (code.end_date > new Date()) {
+          if (
+            !custo.promoCode.includes(promoCodeName.name) &&
+            !custo.historyCode.includes(promoCodeName.name)
+          ) {
+            const customer = await this.customerModel
+              .findOneAndUpdate(
+                { _id: customerID },
+                { $push: { promoCode: code._id } },
+              )
+              .exec();
+            const promo = await this.promoModel.findOneAndUpdate(
+              { _id: code._id },
+              { user_limit: code.user_limit - 1 },
+            );
+            return customer;
+          } else {
+            return 'vous avez deja ce code promo actif';
+          }
+        } else {
+          return "La date d'activité du code est depassé";
+        }
+      } else {
+        return 'Le code a deja rassemblé tout ses utilisateur';
+      }
+    } else {
+      return "Le code n'existe pas ";
+    }
+  }
+
   async addFavorite(customerID: string, place: Place): Promise<Customer> {
     const updatedCustomer = await this.customerModel.findById(customerID);
     updatedCustomer.favorites.push(place);
-    console.log(
-      'User.favorite after added treatment : ' + updatedCustomer.favorites,
-    );
     updatedCustomer.save();
     return updatedCustomer;
   }
 
-  async deleteFavorite(customerID: string, place: Place): Promise<Customer> {
+  async deleteFavorite(customerID: string, placeId: string): Promise<Customer> {
     const updatedCustomer = await this.customerModel.findById(customerID);
-    const index = updatedCustomer.favorites.indexOf(place._id);
-    if (index > -1) {
-      updatedCustomer.favorites.splice(index, 1);
-    }
-    console.log(
-      'User.favorite after deleted treatment : ' + updatedCustomer.favorites,
+    updatedCustomer.favorites = updatedCustomer.favorites.filter(
+      (item) => item._id.toString() !== placeId,
     );
     updatedCustomer.save();
     return updatedCustomer;

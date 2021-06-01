@@ -57,8 +57,12 @@ export class CreatePlaceDTO {
   @IsBoolean()
   readonly authorizeFire: boolean;
 
+
   @IsBoolean()
   readonly authorizeFoodAndDrink: boolean;
+
+  @IsString()
+  readonly ownerId: string;
 
   readonly rate: number;
 

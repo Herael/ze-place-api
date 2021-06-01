@@ -6,6 +6,8 @@ import { CustomerModule } from './modules/customer/customer.module';
 import { PlaceModule } from './modules/place/place.module';
 import { ReviewModule } from './modules/review/review.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { PromoModule } from './promo/promo.module';
+
 import { PlaceTypeModule } from './modules/place-type/place-type.module';
 import { FeatureModule } from './modules/feature/feature.module';
 import { AppGateway } from './app.gateway';
@@ -21,6 +23,7 @@ import { AppGateway } from './app.gateway';
     PlaceModule,
     ReviewModule,
     AuthModule,
+    PromoModule,
     PlaceTypeModule,
     FeatureModule,
   ],

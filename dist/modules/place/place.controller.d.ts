@@ -4,5 +4,6 @@ export declare class PlaceController {
     private placeService;
     constructor(placeService: PlaceService);
     getAllPlaces(res: any): Promise<any>;
+    getPlacesNearbyCoordinates(res: any, data: any): Promise<any>;
     createPlace(res: any, createPlaceDTO: CreatePlaceDTO): Promise<any>;
 }

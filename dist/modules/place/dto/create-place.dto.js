@@ -73,6 +73,10 @@ __decorate([
     __metadata("design:type", Boolean)
 ], CreatePlaceDTO.prototype, "authorizeFoodAndDrink", void 0);
 __decorate([
+    class_validator_1.IsString(),
+    __metadata("design:type", String)
+], CreatePlaceDTO.prototype, "ownerId", void 0);
+__decorate([
     class_validator_1.IsDefined(),
     __metadata("design:type", Array)
 ], CreatePlaceDTO.prototype, "reviews", void 0);

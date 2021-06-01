@@ -15,6 +15,7 @@ const customer_module_1 = require("./modules/customer/customer.module");
 const place_module_1 = require("./modules/place/place.module");
 const review_module_1 = require("./modules/review/review.module");
 const auth_module_1 = require("./modules/auth/auth.module");
+const promo_module_1 = require("./promo/promo.module");
 const place_type_module_1 = require("./modules/place-type/place-type.module");
 const feature_module_1 = require("./modules/feature/feature.module");
 const app_gateway_1 = require("./app.gateway");
@@ -28,6 +29,7 @@ AppModule = __decorate([
             place_module_1.PlaceModule,
             review_module_1.ReviewModule,
             auth_module_1.AuthModule,
+            promo_module_1.PromoModule,
             place_type_module_1.PlaceTypeModule,
             feature_module_1.FeatureModule,
         ],

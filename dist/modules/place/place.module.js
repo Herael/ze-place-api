@@ -12,15 +12,18 @@ const common_1 = require("@nestjs/common");
 const place_service_1 = require("./place.service");
 const place_controller_1 = require("./place.controller");
 const place_schema_1 = require("./schemas/place.schema");
+const customer_schema_1 = require("../customer/schemas/customer.schema");
 let PlaceModule = class PlaceModule {
 };
 PlaceModule = __decorate([
     common_1.Module({
         imports: [
             mongoose_1.MongooseModule.forFeature([{ name: 'Place', schema: place_schema_1.PlaceSchema }]),
+            mongoose_1.MongooseModule.forFeature([{ name: 'Customer', schema: customer_schema_1.CustomerSchema }]),
         ],
         controllers: [place_controller_1.PlaceController],
         providers: [place_service_1.PlaceService],
+        exports: [place_service_1.PlaceService],
     })
 ], PlaceModule);
 exports.PlaceModule = PlaceModule;
