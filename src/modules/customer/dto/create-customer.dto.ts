@@ -35,4 +35,6 @@ export class CreateCustomerDTO {
   readonly created_at: Date;
 
   readonly favorites: Place[];
+
+  readonly customerId: string = null;
 }

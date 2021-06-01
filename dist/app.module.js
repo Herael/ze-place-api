@@ -15,9 +15,10 @@ const customer_module_1 = require("./modules/customer/customer.module");
 const place_module_1 = require("./modules/place/place.module");
 const review_module_1 = require("./modules/review/review.module");
 const auth_module_1 = require("./modules/auth/auth.module");
-const promo_module_1 = require("./promo/promo.module");
+const promo_module_1 = require("./modules/promo/promo.module");
 const place_type_module_1 = require("./modules/place-type/place-type.module");
 const feature_module_1 = require("./modules/feature/feature.module");
+const payment_module_1 = require("./modules/payment/payment.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -31,6 +32,7 @@ AppModule = __decorate([
             promo_module_1.PromoModule,
             place_type_module_1.PlaceTypeModule,
             feature_module_1.FeatureModule,
+            payment_module_1.PaymentModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

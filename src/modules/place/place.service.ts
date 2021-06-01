@@ -17,7 +17,7 @@ export class PlaceService {
     return places;
   }
 
-  async  getPlacesNearbyCoordinates(
+  async getPlacesNearbyCoordinates(
     coords: Coords,
     distance: number,
   ): Promise<Place[]> {

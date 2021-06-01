@@ -17,7 +17,7 @@ const common_1 = require("@nestjs/common");
 const mongoose_1 = require("mongoose");
 const mongoose_2 = require("@nestjs/mongoose");
 const bcrypt_1 = require("bcrypt");
-const promo_interface_1 = require("../../promo/interfaces/promo.interface");
+const stripe = require('stripe')('sk_test_51IvjYaIeDqziwrFRLUS2L2qYbBDUL4YbhnwDVkU5S7bXNQmIaGh0wn24V9CxOao50ai5VOBrzMYDNXf5itqXSlSL00O3CdBEw7');
 let CustomerService = class CustomerService {
     constructor(customerModel, promoModel) {
         this.customerModel = customerModel;
@@ -36,8 +36,14 @@ let CustomerService = class CustomerService {
         return customer;
     }
     async addCustomer(customer) {
+        const stripeClient = await stripe.customers.create({
+            email: customer.email,
+            name: `${customer.first_name} ${customer.last_name}`,
+            phone: customer.phoneNumber,
+        });
         const passwordHash = await bcrypt_1.hash(customer.password, 10);
         customer.password = passwordHash;
+        customer.customerId = stripeClient.id;
         return await new this.customerModel(customer).save();
     }
     async updateCustomer(customerID, createCustomerDTO) {

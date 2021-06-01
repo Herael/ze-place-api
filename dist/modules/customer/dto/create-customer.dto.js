@@ -13,6 +13,9 @@ exports.CreateCustomerDTO = void 0;
 const class_validator_1 = require("class-validator");
 const place_interface_1 = require("../../place/interfaces/place.interface");
 class CreateCustomerDTO {
+    constructor() {
+        this.customerId = null;
+    }
 }
 __decorate([
     class_validator_1.IsString(),

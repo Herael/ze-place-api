@@ -2,14 +2,15 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
+
 import { CustomerModule } from './modules/customer/customer.module';
 import { PlaceModule } from './modules/place/place.module';
 import { ReviewModule } from './modules/review/review.module';
 import { AuthModule } from './modules/auth/auth.module';
-import { PromoModule } from './promo/promo.module';
-
+import { PromoModule } from './modules/promo/promo.module';
 import { PlaceTypeModule } from './modules/place-type/place-type.module';
 import { FeatureModule } from './modules/feature/feature.module';
+import { PaymentModule } from './modules/payment/payment.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { FeatureModule } from './modules/feature/feature.module';
     PromoModule,
     PlaceTypeModule,
     FeatureModule,
+    PaymentModule,
   ],
   controllers: [AppController],
   providers: [AppService],

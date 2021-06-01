@@ -1,11 +1,16 @@
 import { Injectable } from '@nestjs/common';
-import mongoose, { Model } from 'mongoose';
+import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Customer } from './interfaces/customer.interface';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
 import { hash } from 'bcrypt';
-import { Promo } from 'src/promo/interfaces/promo.interface';
+import { Promo } from '../promo/interfaces/promo.interface';
 import { Place } from '../place/interfaces/place.interface';
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const stripe = require('stripe')(
+  'sk_test_51IvjYaIeDqziwrFRLUS2L2qYbBDUL4YbhnwDVkU5S7bXNQmIaGh0wn24V9CxOao50ai5VOBrzMYDNXf5itqXSlSL00O3CdBEw7',
+);
 
 @Injectable()
 export class CustomerService {
@@ -30,8 +35,14 @@ export class CustomerService {
   }
 
   async addCustomer(customer: Customer): Promise<Customer> {
+    const stripeClient = await stripe.customers.create({
+      email: customer.email,
+      name: `${customer.first_name} ${customer.last_name}`,
+      phone: customer.phoneNumber,
+    });
     const passwordHash = await hash(customer.password, 10);
     customer.password = passwordHash;
+    customer.customerId = stripeClient.id;
     return await new this.customerModel(customer).save();
   }
 

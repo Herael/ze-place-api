@@ -17,5 +17,6 @@ exports.CustomerSchema = new Schema({
     promoCode: [String],
     historyCode: [String],
     favorites: [place_schema_1.PlaceSchema],
+    customerId: String,
 });
 //# sourceMappingURL=customer.schema.js.map
