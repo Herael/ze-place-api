@@ -11,6 +11,7 @@ import { PromoModule } from './modules/promo/promo.module';
 import { PlaceTypeModule } from './modules/place-type/place-type.module';
 import { FeatureModule } from './modules/feature/feature.module';
 import { PaymentModule } from './modules/payment/payment.module';
+import { BookingModule } from './modules/booking/booking.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { PaymentModule } from './modules/payment/payment.module';
     PlaceTypeModule,
     FeatureModule,
     PaymentModule,
+    BookingModule,
   ],
   controllers: [AppController],
   providers: [AppService],

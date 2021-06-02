@@ -1,3 +1,6 @@
+import { Customer } from 'src/modules/customer/interfaces/customer.interface';
+import { Feature } from './feature/interfaces/feature.interface';
+
 export type Image = {
   name: string;
   url: string;
@@ -15,4 +18,14 @@ export type Location = {
 export type Coords = {
   longitude: number;
   latitude: number;
+};
+
+export type BookingClient = {
+  features: Feature;
+  bookingPeriod: {
+    startDate?: string;
+    endDate?: string;
+    duration?: number;
+  };
+  description: string;
 };

@@ -1,3 +1,4 @@
+import { Feature } from './feature/interfaces/feature.interface';
 export declare type Image = {
     name: string;
     url: string;
@@ -13,4 +14,13 @@ export declare type Location = {
 export declare type Coords = {
     longitude: number;
     latitude: number;
+};
+export declare type BookingClient = {
+    features: Feature;
+    bookingPeriod: {
+        startDate?: string;
+        endDate?: string;
+        duration?: number;
+    };
+    description: string;
 };

@@ -1,11 +1,11 @@
 import {
   IsBoolean,
-  IsDefined,
   IsNotEmpty,
   IsNumber,
   IsString,
   Min,
 } from 'class-validator';
+import { Booking } from 'src/modules/booking/interfaces/booking.interface';
 import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 
 import { PlaceType } from 'src/modules/place-type/interfaces/place-type.interface';
@@ -57,7 +57,6 @@ export class CreatePlaceDTO {
   @IsBoolean()
   readonly authorizeFire: boolean;
 
-
   @IsBoolean()
   readonly authorizeFoodAndDrink: boolean;
 
@@ -66,8 +65,9 @@ export class CreatePlaceDTO {
 
   readonly rate: number;
 
-  @IsDefined()
   readonly reviews: Array<Review> = [];
+
+  readonly bookings: Array<Booking> = [];
 
   readonly created_at: Date;
 }

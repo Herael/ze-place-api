@@ -1,4 +1,5 @@
 import { Document } from 'mongoose';
+import { Booking } from 'src/modules/booking/interfaces/booking.interface';
 import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 import { PlaceType } from 'src/modules/place-type/interfaces/place-type.interface';
 import { Review } from 'src/modules/review/interfaces/review.interface';
@@ -29,6 +30,7 @@ export interface Place extends Document {
     readonly ownerId: string;
     readonly rate: number;
     readonly reviews: Review[];
+    readonly bookings: Booking[];
     readonly created_at: {
         readonly type: Date;
         readonly default: Date;

@@ -7,9 +7,9 @@ import {
   UseGuards,
   Request,
   Body,
-  Query,
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
+import { BookingDTO } from '../booking/dto/booking.dto';
 import { CreatePlaceDTO } from './dto/create-place.dto';
 import { PlaceService } from './place.service';
 
@@ -34,11 +34,24 @@ export class PlaceController {
 
   @UseGuards(JwtAuthGuard)
   @Post('/create')
-  async createPlace(@Res() res , @Body() createPlaceDTO: CreatePlaceDTO) {
-    
-    const place = await this.placeService.createPlace(createPlaceDTO,);
+  async createPlace(@Res() res, @Body() createPlaceDTO: CreatePlaceDTO) {
+    const place = await this.placeService.createPlace(createPlaceDTO);
     return res.status(HttpStatus.OK).json({
       message: 'Place has been created successfully',
+      place,
+    });
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/booking')
+  async booking(@Request() req, @Res() res, @Body() bookingDTO: BookingDTO) {
+    const place = await this.placeService.bookPlace(
+      req.user.id,
+      bookingDTO.placeId,
+      bookingDTO.booking,
+    );
+    return res.status(HttpStatus.OK).json({
+      message: 'Place has been booked successfully',
       place,
     });
   }

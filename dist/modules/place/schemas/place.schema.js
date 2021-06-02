@@ -6,6 +6,7 @@ const feature_schema_1 = require("../../feature/schemas/feature.schema");
 const place_type_schema_1 = require("../../place-type/schemas/place-type.schema");
 const review_schema_1 = require("../../review/schemas/review.schema");
 const schemas_1 = require("../../schemas");
+const booking_schema_1 = require("../../booking/schemas/booking.schema");
 exports.PlaceSchema = new mongoose.Schema({
     title: String,
     aboutUser: String,
@@ -32,6 +33,7 @@ exports.PlaceSchema = new mongoose.Schema({
     ownerId: String,
     rate: Number,
     reviews: [review_schema_1.ReviewSchema],
+    bookings: [booking_schema_1.BookingSchema],
     created_at: { type: Date, default: Date.now },
 });
 //# sourceMappingURL=place.schema.js.map

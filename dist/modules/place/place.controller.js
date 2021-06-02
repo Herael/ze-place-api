@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PlaceController = void 0;
 const common_1 = require("@nestjs/common");
 const jwt_auth_guard_1 = require("../auth/jwt-auth.guard");
+const booking_dto_1 = require("../booking/dto/booking.dto");
 const create_place_dto_1 = require("./dto/create-place.dto");
 const place_service_1 = require("./place.service");
 let PlaceController = class PlaceController {
@@ -33,6 +34,13 @@ let PlaceController = class PlaceController {
         const place = await this.placeService.createPlace(createPlaceDTO);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Place has been created successfully',
+            place,
+        });
+    }
+    async booking(req, res, bookingDTO) {
+        const place = await this.placeService.bookPlace(req.user.id, bookingDTO.placeId, bookingDTO.booking);
+        return res.status(common_1.HttpStatus.OK).json({
+            message: 'Place has been booked successfully',
             place,
         });
     }
@@ -59,6 +67,14 @@ __decorate([
     __metadata("design:paramtypes", [Object, create_place_dto_1.CreatePlaceDTO]),
     __metadata("design:returntype", Promise)
 ], PlaceController.prototype, "createPlace", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Post('/booking'),
+    __param(0, common_1.Request()), __param(1, common_1.Res()), __param(2, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object, booking_dto_1.BookingDTO]),
+    __metadata("design:returntype", Promise)
+], PlaceController.prototype, "booking", null);
 PlaceController = __decorate([
     common_1.Controller('places'),
     __metadata("design:paramtypes", [place_service_1.PlaceService])
