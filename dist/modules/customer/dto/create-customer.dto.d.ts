@@ -12,4 +12,6 @@ export declare class CreateCustomerDTO {
     readonly favorites: Place[];
     readonly customerId: string;
     readonly ownedPlaces: Place[];
+    readonly bookings: string[];
+    readonly pushToken: string;
 }

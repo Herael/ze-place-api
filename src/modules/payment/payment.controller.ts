@@ -18,6 +18,7 @@ export class PaymentController {
   @Post('/init')
   async init(@Res() res, @Req() req) {
     console.log(req.body);
+    console.log(req.user);
     const customer = await this.paymentService.createPaymentIntent(
       req.user,
       req.body.bookingPrice,

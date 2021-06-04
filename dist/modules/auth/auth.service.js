@@ -44,6 +44,7 @@ let AuthService = class AuthService {
         const payload = { email: user.email, id: user._id };
         return {
             access_token: this.jwtService.sign(payload),
+            userId: user._id,
         };
     }
     async register(customer) {
@@ -51,6 +52,7 @@ let AuthService = class AuthService {
         const payload = { email: user.email, id: user._id };
         return {
             access_token: this.jwtService.sign(payload),
+            userId: user._id,
         };
     }
     async getUser(credentials) {

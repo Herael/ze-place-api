@@ -15,4 +15,6 @@ export interface Customer extends Document {
     favorites: Place[];
     customerId: string;
     ownedPlaces: Place[];
+    bookings: string[];
+    pushToken: string;
 }

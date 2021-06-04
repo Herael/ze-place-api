@@ -5,7 +5,7 @@ import { Place } from './interfaces/place.interface';
 import { Customer } from '../customer/interfaces/customer.interface';
 
 import { CreatePlaceDTO } from './dto/create-place.dto';
-import { BookingClient, Coords } from '../types';
+import { Coords } from '../types';
 import { isPlaceInRadius } from '../../utils/index';
 import { Booking } from '../booking/interfaces/booking.interface';
 import { BookingDTO } from '../booking/dto/booking.dto';
@@ -46,25 +46,35 @@ export class PlaceService {
     return places;
   }
 
-  async bookPlace(
-    userId: string,
-    placeId: string,
-    booking: BookingDTO['booking'],
-  ) {
+  async bookPlace(userId: string, placeId: string, bookingDTO: BookingDTO) {
     const user = await this.customerModel.findById(userId);
-    const b = {
-      userId: user._id,
-      feature: booking.features[0],
-      bookingPeriod: {
-        startDate: booking?.bookingPeriod.startDate,
-        endDate: booking?.bookingPeriod.endDate,
-        duration: booking?.bookingPeriod.duration,
-      },
-      description: booking.description,
-    };
     const place = await this.findById(placeId);
-    place.bookings.push(b as Booking);
+    const booking = {
+      userId: user._id,
+      firstname: user.first_name,
+      lastname: user.last_name,
+      avatar: user.avatar,
+      ...bookingDTO,
+    };
+    const index = place.bookings.push(booking as Booking);
+    user.bookings.push(place.bookings[index]._id);
+    user.save();
     place.save();
+  }
+
+  async getBookings(placeId: string): Promise<Booking[]> {
+    const place = await this.findById(placeId);
+    return place.bookings;
+  }
+
+  async acceptBooking(placeId: string, bookingId): Promise<Booking[]> {
+    const place = await this.findById(placeId);
+    const booking = place.bookings.find(
+      (booking) => booking._id.toString() === bookingId.toString(),
+    );
+    booking.isAccepted = true;
+    place.save();
+    return place.bookings;
   }
 
   async createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place> {

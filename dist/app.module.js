@@ -26,6 +26,7 @@ AppModule = __decorate([
     common_1.Module({
         imports: [
             mongoose_1.MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost/ze-place-api', { useNewUrlParser: true, useFindAndModify: false }),
+            booking_module_1.BookingModule,
             customer_module_1.CustomerModule,
             place_module_1.PlaceModule,
             review_module_1.ReviewModule,
@@ -34,7 +35,6 @@ AppModule = __decorate([
             place_type_module_1.PlaceTypeModule,
             feature_module_1.FeatureModule,
             payment_module_1.PaymentModule,
-            booking_module_1.BookingModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

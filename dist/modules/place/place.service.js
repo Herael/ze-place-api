@@ -38,21 +38,25 @@ let PlaceService = class PlaceService {
         }, coords, distance) === true);
         return places;
     }
-    async bookPlace(userId, placeId, booking) {
+    async bookPlace(userId, placeId, bookingDTO) {
         const user = await this.customerModel.findById(userId);
-        const b = {
-            userId: user._id,
-            feature: booking.features[0],
-            bookingPeriod: {
-                startDate: booking === null || booking === void 0 ? void 0 : booking.bookingPeriod.startDate,
-                endDate: booking === null || booking === void 0 ? void 0 : booking.bookingPeriod.endDate,
-                duration: booking === null || booking === void 0 ? void 0 : booking.bookingPeriod.duration,
-            },
-            description: booking.description,
-        };
         const place = await this.findById(placeId);
-        place.bookings.push(b);
+        const booking = Object.assign({ userId: user._id, firstname: user.first_name, lastname: user.last_name, avatar: user.avatar }, bookingDTO);
+        const index = place.bookings.push(booking);
+        user.bookings.push(place.bookings[index]._id);
+        user.save();
         place.save();
+    }
+    async getBookings(placeId) {
+        const place = await this.findById(placeId);
+        return place.bookings;
+    }
+    async acceptBooking(placeId, bookingId) {
+        const place = await this.findById(placeId);
+        const booking = place.bookings.find((booking) => booking._id.toString() === bookingId.toString());
+        booking.isAccepted = true;
+        place.save();
+        return place.bookings;
     }
     async createPlace(createPlaceDTO) {
         const newPlace = await new this.placeModel(createPlaceDTO).save();

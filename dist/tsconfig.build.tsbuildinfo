@@ -1567,8 +1567,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/booking/interfaces/booking.interface.ts": {
-        "version": "31cb5213faeb85fb3f9e570d5e24619a5814f4fc8978a6b92bbbc832088290f9",
-        "signature": "60ebe92f041a4c52a5bbac90b0a03e445bc2eba2eb5bcf8b112e07fcf5d77389",
+        "version": "f271e16407eeba0f0533274cd38fcf4c8691106d82cb760ef443d770cd117cfd",
+        "signature": "ae27baa0d244f1cba1e5f62bec6472572ab73db3049618bacc727c5e7308b4f8",
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/interfaces/place-type.interface.ts": {
@@ -1592,8 +1592,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/interfaces/customer.interface.ts": {
-        "version": "49682f32a854aed917e19945ad2d35053f458689739a79487fd253a948c7c0a6",
-        "signature": "f72b0a1a64678210592ee26bcef9bb122da174d51b110f511ead556e8cd6290d",
+        "version": "85b423d4da3a8509ccc64cf5cedd9416a052f7a31cdc834b5955939155e07895",
+        "signature": "d69e61078bfbafdafd116bc7a7ecf3ed6a3ec954dbe91a19fc245777642ccd3a",
         "affectsGlobalScope": false
       },
       "../node_modules/class-validator/types/validation/validationerror.d.ts": {
@@ -2222,8 +2222,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/dto/create-customer.dto.ts": {
-        "version": "9cc6c6861089466fdb0cd73d73cd1372d95f38239499e73e3fef2d43a46ee1bd",
-        "signature": "f78a67d0a7c1a985c9038e448d4318fbc7c584a194263d3ea1f40c1dd6bed884",
+        "version": "73f7dd493449ad5017a1e8fd2a07360a7cb14549e981ac89461c84b8f1ec5066",
+        "signature": "9fc4bf5359096ff8d308577202180a77f0b126343acea0b1fe71e443d2c57d45",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/bcrypt/index.d.ts": {
@@ -2242,8 +2242,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.service.ts": {
-        "version": "19545d99ae05c3c78ae4ddfb3991bcda368a274329625ec98cbede33020c3ca9",
-        "signature": "008675388f3d4d7e329d3aa453cb51c7595d309783cce84f919f0460d6b2c576",
+        "version": "38ebda02c486795507b7d3fc0969c71a8d66de97acba658cad0b48b7d83f4ed6",
+        "signature": "04b95dedda66f4ec9a70d92c48885e50eadc1a52a6b41f98ec7e260ea8c34f8b",
         "affectsGlobalScope": false
       },
       "../src/app.controller.ts": {
@@ -2361,6 +2361,11 @@
         "signature": "f06ef335f0734e00a1b4490b4dbfa791a7ef89cc822e21924eb8594bd0b9a427",
         "affectsGlobalScope": false
       },
+      "../src/modules/booking/schemas/booking.schema.ts": {
+        "version": "cb00a13f55b06a6c8f8dfe41a03b6503242970cd33161129135a3ca5fec8c7d3",
+        "signature": "1e0bb72448e9366042ef672ecacd8bc89bcabe6bef47e398a8961b32e7cec1e3",
+        "affectsGlobalScope": false
+      },
       "../src/modules/place-type/schemas/place-type.schema.ts": {
         "version": "15fc659e1ef779c925d213faea9290677eda86cbabfce35b872a7598926f1c86",
         "signature": "c8eacaf4c72d12cc50fd05ecbca7de921c478c2f234c9e0e2ca405a519dbd075",
@@ -2376,18 +2381,13 @@
         "signature": "97b3968a06e9a6071a643cb8225212248a6eeb33c136e9d711f38a8f238b52f7",
         "affectsGlobalScope": false
       },
-      "../src/modules/booking/schemas/booking.schema.ts": {
-        "version": "f9926bcbce328d3a20700c4d971497448ad8c0eb70649d014469e448319dc9a1",
-        "signature": "1e0bb72448e9366042ef672ecacd8bc89bcabe6bef47e398a8961b32e7cec1e3",
-        "affectsGlobalScope": false
-      },
       "../src/modules/place/schemas/place.schema.ts": {
-        "version": "a87aa2fa568b3931426f62f1b3dee41ff38e24ff21183291254ef178ffc6ebab",
+        "version": "7b2a5ee6f88032b2534af76ceb3351be0414375af1ca06a517b2f8c53eaa7287",
         "signature": "b29d58e560e82ebd6eaeab2c411be4ab1c6d2a67eabb4aee61f7898e2071066d",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/schemas/customer.schema.ts": {
-        "version": "3c3195b8624df18d23e67390a66c6bd6305d38c453204093109adeaf462aee06",
+        "version": "04bb85d9dac79fb6523d58baafab88d5ce65096688df3aa040f49831218c1572",
         "signature": "4e0f49eb914132556be58be043c68fc4297e170d5d941b7c8446198f113afb86",
         "affectsGlobalScope": false
       },
@@ -2622,22 +2622,22 @@
         "affectsGlobalScope": false
       },
       "../src/modules/booking/dto/booking.dto.ts": {
-        "version": "1d9f5df7b3be6a2830ebdd5f08b8be74cc9b001eabc04bbf86e28ddc57882643",
-        "signature": "b89188fa322e368ec4f171c4703f2fcb9d6941bef72d371419c2ec74a9811e5e",
+        "version": "4bd05cb685983a6a6a821d9a9d0e4926e38b4415384d55864188962f3197a8f4",
+        "signature": "f557287671a520d0d52db78fac3d5041ae1880547a41795cbcb14eb17ef05726",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "61cdbb0186de79d6e555117a4e4e88b07e31fc316c0457625cc8806babec27f6",
-        "signature": "35444b99e6495b57b4692fea7035e16c8145d064bf9046a5381b72ebc8d66b3e",
+        "version": "2e21f410472954ee4d53cfe2730761d7e97091a8c2fc06042c0967ccdc534625",
+        "signature": "eac5280de0880e00959f744c63c7be6ca64a9746798d02e4388a45ee3810f863",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "d4fd06da7d7a468c9fc47b706d6e4c6289e6559d529f4d6bdcd2be79b06ab4bb",
-        "signature": "e0583150a15d4bf35b3833671cf8acf43130396399c363fdad61bb7535c0fb74",
+        "version": "8f49647abfdc7a4870fcc22e027373fd741152a873fb67eb3a482f4d14b03fbe",
+        "signature": "c4c3bd9b3c2ec879a168e1701f566f1020b912927be93dc3a3fe5aec6277a8dd",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.module.ts": {
-        "version": "558663b247e6faa81ea90db464a3ae8249731eb9cf057041b6b18c24164aef67",
+        "version": "59e2180f676b53584e3704ef400164410c7628b7e97a41fda3e3b7cb4484ed9a",
         "signature": "19d997ce27c99d6e74839ae37762f33da8cb45f4b60f73e7050b6c7bd71dd2b4",
         "affectsGlobalScope": false
       },
@@ -2697,8 +2697,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.controller.ts": {
-        "version": "e2cb9ee159b52fd5b8953e84c74c83f561438e07f60e63cc0a9b6e649b676528",
-        "signature": "694884795e9da2d25e31f0f9dfbaa885c88767520a96308560e82395b105b4d2",
+        "version": "cdca4164d629f9fe8c20ed2e9dd3361fc295da27626346320318350b94b41c47",
+        "signature": "0f6dc3d931ea80c28ad00a93cd9e63c08d99eace666c588b4958f709d6a8c8df",
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.module.ts": {
@@ -2752,12 +2752,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/payment/payment.service.ts": {
-        "version": "74f38ddec009ee7b79a166dcf0d13c7d743e0c92936dd2692d12ae377fa7874f",
+        "version": "0c2949d9080a011fccf779b556e3b81ea2a9c373657b1dec80fcf041c7202b84",
         "signature": "79248a979dde890b7651aa932ad871dc70906a49eea467fd19593a113e126a84",
         "affectsGlobalScope": false
       },
       "../src/modules/payment/payment.controller.ts": {
-        "version": "ff2b37551b376fc5bf5ea14171e11a39a6a5ac2a44dfc7554db09ff98a0a66a0",
+        "version": "335d1252c2d227429d0f9d87fd109b5d3e516334fae75af1ec102ee6e61d549c",
         "signature": "d716532f6721d541d10324b820c01f2e8e46a20acf1a86f6963cfd936f7ca37e",
         "affectsGlobalScope": false
       },
@@ -2766,23 +2766,23 @@
         "signature": "a3684909b502d2414d94ce06228f5d6dae72b658eac3f386843965e540b51834",
         "affectsGlobalScope": false
       },
-      "../src/modules/booking/booking.controller.ts": {
-        "version": "a70e9016dcd5a2224d7cf0f58207e7065be0167a5fece78fd216df64b147d55d",
-        "signature": "59e216ee350ab05eebe2c1381d0fa01a442e468d3160c2b0a9d5aec59705211c",
-        "affectsGlobalScope": false
-      },
       "../src/modules/booking/booking.service.ts": {
         "version": "152f87a4b5ed63e543fabe0c36ab98469f4e587841109888737f0f1ade2466f1",
         "signature": "5acb4ae228dc9714fef7ed0be19c4e8d1711a3683fa140c940b49b90b472049d",
         "affectsGlobalScope": false
       },
+      "../src/modules/booking/booking.controller.ts": {
+        "version": "65126d3f9b024f7cf104517ab4b710f15bb0c8bb3f82387537f5a147722bfad9",
+        "signature": "b33430abc7817f266ff0b3ca1a2293710106af4157cc3d1810f9baf2155ef93a",
+        "affectsGlobalScope": false
+      },
       "../src/modules/booking/booking.module.ts": {
-        "version": "0ce9440e53c3d118388fffd8902fd2d89028aa4d1ff4e69ab3107e9b0d092084",
+        "version": "abfa55c94b3a96a79f8f4e6324c133a2b2eaf56305f6efb56ecc7d970778dde1",
         "signature": "307da3f1f46926da44f7648eb8e50e8695fb098723e4ee7b33d6bb54573c7d81",
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "7cddd1eaeeecca17100d6be68bb911b47639a9a24e7ec6eb957384d956f39d41",
+        "version": "a573249acb51106e414fa4bfc0bc1d47a6901b44fa8e472dc99c49568d3b9e1a",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -5410,7 +5410,6 @@
       ],
       "../src/modules/auth/auth.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/jwt/index.d.ts",
         "../src/modules/auth/auth.service.ts",
         "../src/modules/auth/jwt-auth.guard.ts",
         "../src/modules/auth/local-auth.guard.ts"
@@ -5455,7 +5454,8 @@
         "../src/modules/customer/interfaces/customer.interface.ts"
       ],
       "../src/modules/booking/booking.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/booking/booking.service.ts"
       ],
       "../src/modules/booking/booking.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -5591,7 +5591,6 @@
       "../src/modules/place/place.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/modules/auth/jwt-auth.guard.ts",
-        "../src/modules/booking/dto/booking.dto.ts",
         "../src/modules/place/dto/create-place.dto.ts",
         "../src/modules/place/place.service.ts"
       ],
@@ -7816,6 +7815,9 @@
         "../src/modules/auth/auth.service.ts",
         "../src/modules/customer/interfaces/customer.interface.ts"
       ],
+      "../src/modules/booking/booking.controller.ts": [
+        "../src/modules/booking/booking.service.ts"
+      ],
       "../src/modules/booking/dto/booking.dto.ts": [
         "../src/modules/feature/interfaces/feature.interface.ts"
       ],
@@ -7882,13 +7884,13 @@
         "../src/modules/types.ts"
       ],
       "../src/modules/place/place.controller.ts": [
-        "../src/modules/booking/dto/booking.dto.ts",
         "../src/modules/place/dto/create-place.dto.ts",
         "../src/modules/place/place.service.ts"
       ],
       "../src/modules/place/place.service.ts": [
         "../node_modules/mongoose/index.d.ts",
         "../src/modules/booking/dto/booking.dto.ts",
+        "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/place/dto/create-place.dto.ts",
         "../src/modules/place/interfaces/place.interface.ts",

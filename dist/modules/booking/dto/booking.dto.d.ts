@@ -1,13 +1,10 @@
 import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 export declare class BookingDTO {
-    placeId: string;
-    booking: {
-        readonly features: Feature[];
-        readonly bookingPeriod: {
-            readonly startDate: string;
-            readonly endDate: string;
-            readonly duration: number;
-        };
-        readonly description: string;
-    };
+    readonly feature: Feature;
+    readonly startDate: string;
+    readonly endDate: string;
+    readonly duration: number;
+    readonly price: number;
+    readonly description: string;
+    readonly isAccepted: boolean;
 }
