@@ -25,6 +25,10 @@ let PlaceController = class PlaceController {
         const places = await this.placeService.getAllPlaces();
         return res.status(common_1.HttpStatus.OK).json(places);
     }
+    async getPlacesNearbyCoordinates(res, data) {
+        const places = await this.placeService.getPlacesNearbyCoordinates(data.coords, data.distance);
+        return res.status(common_1.HttpStatus.OK).json(places);
+    }
     async createPlace(res, createPlaceDTO) {
         const place = await this.placeService.createPlace(createPlaceDTO);
         return res.status(common_1.HttpStatus.OK).json({
@@ -32,9 +36,15 @@ let PlaceController = class PlaceController {
             place,
         });
     }
+    async similarPlaces(res, place) {
+        const places = await this.placeService.similarPlaces(place);
+        return res.status(common_1.HttpStatus.OK).json({
+            message: 'Similar places has been get successfully',
+            places,
+        });
+    }
 };
 __decorate([
-    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get(),
     __param(0, common_1.Res()),
     __metadata("design:type", Function),
@@ -42,12 +52,28 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], PlaceController.prototype, "getAllPlaces", null);
 __decorate([
+    common_1.Post(),
+    __param(0, common_1.Res()), __param(1, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PlaceController.prototype, "getPlacesNearbyCoordinates", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/create'),
     __param(0, common_1.Res()), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, create_place_dto_1.CreatePlaceDTO]),
     __metadata("design:returntype", Promise)
 ], PlaceController.prototype, "createPlace", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Get('/similarPlaces'),
+    __param(0, common_1.Res()), __param(1, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PlaceController.prototype, "similarPlaces", null);
 PlaceController = __decorate([
     common_1.Controller('places'),
     __metadata("design:paramtypes", [place_service_1.PlaceService])

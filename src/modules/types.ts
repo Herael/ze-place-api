@@ -8,6 +8,11 @@ export type Location = {
   postalCode?: string;
   city?: string;
   country?: string;
-  longitude?: string;
-  latitude?: string;
+  longitude?: number;
+  latitude?: number;
+};
+
+export type Coords = {
+  longitude: number;
+  latitude: number;
 };

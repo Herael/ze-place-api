@@ -1561,24 +1561,34 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
+      "../src/modules/feature/interfaces/feature.interface.ts": {
+        "version": "fa28e41c14aa3a7cb5d298f88f05495f808f276c0d241ea31090c78c568d88af",
+        "signature": "599395b622c7b880ec84a3412a1b7d61b42ba93df6b45253da22ddb344ce7471",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place-type/interfaces/place-type.interface.ts": {
+        "version": "cd367e7e40ec17e249fd970d01728ab80f50a9a2f685e38309f7d690f0b4c502",
+        "signature": "49ff79ceecc7dd6fe1c52f340fd74bd23d740598b106de7f690f466593b0b333",
+        "affectsGlobalScope": false
+      },
       "../src/modules/review/interfaces/review.interface.ts": {
         "version": "680e745b4b0c1b269fea6ad7fd24301a2d2d6abfabec6b072cc965522eac049b",
         "signature": "f4ded0bdbee123ca4d44a0ee14214a85ab6fcd758dd7344aa65230961db9d3d1",
         "affectsGlobalScope": false
       },
       "../src/modules/types.ts": {
-        "version": "b70910c86afa5a50765097435d3ee68a442c382e719b9d905de07f85820295f5",
-        "signature": "b0e9fcfed1b2ca4b4378f5be9321dafa21bf40621b6381168fe50d6aab13afba",
+        "version": "0b8699f24f1ec9e32fb48718e96be7a2148bcafa6333cc6acd0649f64e71359b",
+        "signature": "92feac25ac193b7737584d3fe02f141da59f87fd0b1e901d3bfcdf3eade403f5",
         "affectsGlobalScope": false
       },
       "../src/modules/place/interfaces/place.interface.ts": {
-        "version": "6681d943554885938e18239a049efef288bdf544c5d3509fb48bef6cf97970ab",
-        "signature": "546db2b70090d03294dd3671e30c004fcfbf1cc3281e3b20608e452787f9cf2c",
+        "version": "afe9e0c1c5612e25e0f5df4610a0211cfbdcd3522b0b5659b64907735339ee8c",
+        "signature": "d311140c423fe2a8d94980ec886b31cb141bfa175218d72c1cc8806a890c2761",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/interfaces/customer.interface.ts": {
-        "version": "c1eff49a8fd1205ec810c5f573418547c3975271be36b86cd16d008ef09b558f",
-        "signature": "6ea7906978aa620da5c8823f745488f82aa5d3e291f6d943085039be4fddefbd",
+        "version": "46e1e79996958faff3ba29441397a14581336749d593ac7b47445a8c2f00ef6f",
+        "signature": "1db4798451ef7c1353e5e781570f899c2a369812dd3ab91658eb5aec5c664146",
         "affectsGlobalScope": false
       },
       "../node_modules/class-validator/types/validation/validationerror.d.ts": {
@@ -2207,8 +2217,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/dto/create-customer.dto.ts": {
-        "version": "73312e17a34e54f0dfdee43a37b3cf60489dd1fa74439699b730219aed4ff243",
-        "signature": "e69a53009d8991eec88666939da5936827170ef97ad9dd27c32597b71915db51",
+        "version": "3769362624f88c4f3314fc4a2b45c9f09f86accbc970fbecfdb9f376b536ad26",
+        "signature": "cd235ba8b55bcc9a471a373c15af69ff5d3065719515fa31b1bd5d797f0573a3",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/bcrypt/index.d.ts": {
@@ -2216,9 +2226,14 @@
         "signature": "6c407a8b6e5cabde0c5e4ad2d1d0e18c4de012983e9a006fc5e3e121545552f1",
         "affectsGlobalScope": false
       },
+      "../src/promo/interfaces/promo.interface.ts": {
+        "version": "6bac3b705b40781517e7f98832107ba9e28f979b3c521b7a421ba6826dad89b8",
+        "signature": "31b5ace2c6186fd1ed8c1f0e91622df7274f2e534ef4b1c1fd0cb813fd3e1399",
+        "affectsGlobalScope": false
+      },
       "../src/modules/customer/customer.service.ts": {
-        "version": "5c32c3a45f629b1993ee674e3c7d56d42d2c6c7f38e10e496b88e083570d91b1",
-        "signature": "b530ac5b1ab8d44ffe8e0411af1a3a2743650f55534d4398ebbb3c050bfc49a5",
+        "version": "9e83960630238a97d7c09becf70dbc0a1be47a5444524585807eb2cd034ca5ae",
+        "signature": "6022c7ff328e2dcbb0f52e16c183611e44bd4371f25388b1e9bc316d5d42ef76",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/range-parser/index.d.ts": {
@@ -2356,44 +2371,139 @@
         "signature": "d4b883ddbaae02ec46e87fe48e370005274789c30846e88687e32771b6e65835",
         "affectsGlobalScope": false
       },
+      "../node_modules/@nestjs/websockets/adapters/ws-adapter.d.ts": {
+        "version": "7d2eed7cce648593302069d3fabed797a0a83c05f696e9ba92b1a8df2a0cbcf9",
+        "signature": "7d2eed7cce648593302069d3fabed797a0a83c05f696e9ba92b1a8df2a0cbcf9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/adapters/index.d.ts": {
+        "version": "6aac2c5ca00378e4d1421a03f614643dc1e9fd02279257cbf2e8e2a713b00907",
+        "signature": "6aac2c5ca00378e4d1421a03f614643dc1e9fd02279257cbf2e8e2a713b00907",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/decorators/connected-socket.decorator.d.ts": {
+        "version": "33dd63d5dbfd02cdfc4fc6d47750e619de2da36fe98176731ea2a291287ff4c4",
+        "signature": "33dd63d5dbfd02cdfc4fc6d47750e619de2da36fe98176731ea2a291287ff4c4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/decorators/gateway-server.decorator.d.ts": {
+        "version": "6ad4a01c7e7ebf90072bd6f3087abcf6a443fe41ebcb13b5a0bcfd742dd8ebd5",
+        "signature": "6ad4a01c7e7ebf90072bd6f3087abcf6a443fe41ebcb13b5a0bcfd742dd8ebd5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/decorators/message-body.decorator.d.ts": {
+        "version": "8a4de75e44a9943c4678d37601bc09517180ad3b9245e5f4b8531b33233f2281",
+        "signature": "8a4de75e44a9943c4678d37601bc09517180ad3b9245e5f4b8531b33233f2281",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/interfaces/gateway-metadata.interface.d.ts": {
+        "version": "516a8ada95f3f8e1bf4bcd6b6c59dce019583ca014a28fc44d11155440cc115a",
+        "signature": "516a8ada95f3f8e1bf4bcd6b6c59dce019583ca014a28fc44d11155440cc115a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-connection.interface.d.ts": {
+        "version": "93850d9e8a0e018eca4809c67df09547c4b6d482c55fd6eae3030847f1c4b9ee",
+        "signature": "93850d9e8a0e018eca4809c67df09547c4b6d482c55fd6eae3030847f1c4b9ee",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-disconnect.interface.d.ts": {
+        "version": "9a8e992b0199d6b032b6223a87050e3738671f2742794233649706438fe16724",
+        "signature": "9a8e992b0199d6b032b6223a87050e3738671f2742794233649706438fe16724",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-init.interface.d.ts": {
+        "version": "f60ccdb5672ab91d03afc4f24f402e5164a6c818bf15185f5361802523f86df7",
+        "signature": "f60ccdb5672ab91d03afc4f24f402e5164a6c818bf15185f5361802523f86df7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/interfaces/hooks/index.d.ts": {
+        "version": "931574e125523649902eee2db57c221a1b36417db4f2c4665bf38ce2170ea06e",
+        "signature": "931574e125523649902eee2db57c221a1b36417db4f2c4665bf38ce2170ea06e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/interfaces/socket-events-host.interface.d.ts": {
+        "version": "8507490941583b43ffa5f8becc19d90530e0619b08f0c2e8bc6e71ce75ef1c14",
+        "signature": "8507490941583b43ffa5f8becc19d90530e0619b08f0c2e8bc6e71ce75ef1c14",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/interfaces/web-socket-server.interface.d.ts": {
+        "version": "438b57c680914f2dd27b29789a5d8c169d3abcfb584b68a520e0df5c3ca3cef5",
+        "signature": "438b57c680914f2dd27b29789a5d8c169d3abcfb584b68a520e0df5c3ca3cef5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/interfaces/ws-response.interface.d.ts": {
+        "version": "510292e419065814acdc81c37a2d801efea1715951600cfbdc1b712f9da10451",
+        "signature": "510292e419065814acdc81c37a2d801efea1715951600cfbdc1b712f9da10451",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/interfaces/index.d.ts": {
+        "version": "552c721b49a127b5ccaa59ee7793c43deb530ef4434b59b801ada4368e6b1395",
+        "signature": "552c721b49a127b5ccaa59ee7793c43deb530ef4434b59b801ada4368e6b1395",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/decorators/socket-gateway.decorator.d.ts": {
+        "version": "af3919f1e15caad054071c209341804d85ab679b78979fdf1b1aac4a73dd634a",
+        "signature": "af3919f1e15caad054071c209341804d85ab679b78979fdf1b1aac4a73dd634a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/decorators/subscribe-message.decorator.d.ts": {
+        "version": "6aa893aa7bbf9ce05b51e9af8a72816fcb5d54ce0959998640da8d0fcfd8b529",
+        "signature": "6aa893aa7bbf9ce05b51e9af8a72816fcb5d54ce0959998640da8d0fcfd8b529",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/decorators/index.d.ts": {
+        "version": "877388f59a044fc4c4689637425d4f8762662b4c6dc86d55864ca8816382b69e",
+        "signature": "877388f59a044fc4c4689637425d4f8762662b4c6dc86d55864ca8816382b69e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/errors/ws-exception.d.ts": {
+        "version": "162ffbed80dad8ce0cf81c330c88dccaae85425fb457a6afcae0110419bdedfb",
+        "signature": "162ffbed80dad8ce0cf81c330c88dccaae85425fb457a6afcae0110419bdedfb",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/errors/index.d.ts": {
+        "version": "a85d6e7924c263fdb7a9e28a578401f2f96950ff9fd0e250c76f25de5ce3b9f2",
+        "signature": "a85d6e7924c263fdb7a9e28a578401f2f96950ff9fd0e250c76f25de5ce3b9f2",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/exceptions/base-ws-exception-filter.d.ts": {
+        "version": "8ad06cf401a920fbbea4b0436b80fb92f74bfea9e79312896179d3a6c8e9a3b0",
+        "signature": "8ad06cf401a920fbbea4b0436b80fb92f74bfea9e79312896179d3a6c8e9a3b0",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/exceptions/index.d.ts": {
+        "version": "57947d16b34a3811f854965fe668e81ccea9dd6321e412ea1a2c75d4fd2619c1",
+        "signature": "57947d16b34a3811f854965fe668e81ccea9dd6321e412ea1a2c75d4fd2619c1",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/core/metadata-scanner.d.ts": {
+        "version": "7cb9b6d5c1e3508fbc81e7bbab314eac54715f9326ac72fd0eb65f17a4393d50",
+        "signature": "7cb9b6d5c1e3508fbc81e7bbab314eac54715f9326ac72fd0eb65f17a4393d50",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/interfaces/nest-gateway.interface.d.ts": {
+        "version": "e52c9bb4a4e20ed2ed5cd0aa01d15261949691bffd4d7f5011e79bced9d14e5c",
+        "signature": "e52c9bb4a4e20ed2ed5cd0aa01d15261949691bffd4d7f5011e79bced9d14e5c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/gateway-metadata-explorer.d.ts": {
+        "version": "6c36e6a90dd3e1f5e488c56aede7168ea429589d0095285701b7b56f47262bbd",
+        "signature": "6c36e6a90dd3e1f5e488c56aede7168ea429589d0095285701b7b56f47262bbd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/websockets/index.d.ts": {
+        "version": "4bc4c7612f5cc6298b01f76f7a21674181ae6e199a0b07c518107c15bde32344",
+        "signature": "4bc4c7612f5cc6298b01f76f7a21674181ae6e199a0b07c518107c15bde32344",
+        "affectsGlobalScope": false
+      },
+      "../src/app.gateway.ts": {
+        "version": "c063114bbb4aa1649b7fad186bf123f889936bb84faa9f24892155cf1fefc1f5",
+        "signature": "2008846686ad66a8dd2d5391f892e825f3c750ce2b050dd8b592a7ff846f82e9",
+        "affectsGlobalScope": false
+      },
       "../src/modules/customer/customer.controller.ts": {
-        "version": "a5ea5c7a15e4fdfbd026ca2abc6c23252753f02ce16953b234037b603c66bdfd",
-        "signature": "c0e0897c58489a672abd2d305b948e256cc2ab106234912d2efde88e8730bafc",
-        "affectsGlobalScope": false
-      },
-      "../src/modules/customer/schemas/customer.schema.ts": {
-        "version": "74e8d08a4b28a2a6ec2a1c829ad74df4ab375707a5dc8cdb01d6957b4f8023a5",
-        "signature": "4e0f49eb914132556be58be043c68fc4297e170d5d941b7c8446198f113afb86",
-        "affectsGlobalScope": false
-      },
-      "../src/modules/customer/customer.module.ts": {
-        "version": "1150b2489c95ec94c0f27207fbfca129bf0690638f5cea5e5eee5d294b925c33",
-        "signature": "b16fc39c01bd9a1562b59fc5bc96d07fdbc1ba20d3858c20611132fbdeb485a9",
-        "affectsGlobalScope": false
-      },
-      "../src/modules/feature/interfaces/feature.interface.ts": {
-        "version": "fa28e41c14aa3a7cb5d298f88f05495f808f276c0d241ea31090c78c568d88af",
-        "signature": "599395b622c7b880ec84a3412a1b7d61b42ba93df6b45253da22ddb344ce7471",
-        "affectsGlobalScope": false
-      },
-      "../src/modules/place-type/interfaces/place-type.interface.ts": {
-        "version": "cd367e7e40ec17e249fd970d01728ab80f50a9a2f685e38309f7d690f0b4c502",
-        "signature": "49ff79ceecc7dd6fe1c52f340fd74bd23d740598b106de7f690f466593b0b333",
-        "affectsGlobalScope": false
-      },
-      "../src/modules/place/dto/create-place.dto.ts": {
-        "version": "c136c726dc789e8ac5649ac44eec69ad4470ad6044d54d88f6039b20b908a37d",
-        "signature": "daf07d4125c24049cd1718bac12b0d848fdd1b31f3952ab43a492f282d96ace3",
-        "affectsGlobalScope": false
-      },
-      "../src/modules/place/place.service.ts": {
-        "version": "0aaa231e71926f021973bb85f7a9a3162f67b2d37e3c681287a2b105a316800f",
-        "signature": "4ee040be4cc4927a8bc10835e0fb7af58c2ac92a8dd9d6936d95bf8fa87f2371",
-        "affectsGlobalScope": false
-      },
-      "../src/modules/place/place.controller.ts": {
-        "version": "38ff1e73a43f69782a26ab4c59407ed84ac04fce3f894e99e726b12e8b1e6687",
-        "signature": "7da606b23083536dcaee021da0c6907aca82f2b8f8d11c0424b0d36842eb5cdc",
+        "version": "c90084a08c38075c3bfc253a4f8a0106cc1c44a4ca579ac907b68ec7a5ec77cc",
+        "signature": "d211bf951c9c342934f355622f5b66dc28d214982da7d9317062dec848e8a63f",
         "affectsGlobalScope": false
       },
       "../src/modules/feature/schemas/feature.schema.ts": {
@@ -2407,7 +2517,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/review/schemas/review.schema.ts": {
-        "version": "460cf1f0e8e9993031360924462481b755542b66b28523e06586097a7cd220a8",
+        "version": "c4734ff051f2b9088c8eb986915073e0f56e1f53475291ba7703b58aca58f7e7",
         "signature": "feb373abb796ba5fa4ca6ecfbb6bbbb82b3fb0f09d1e1329420f2b1954d044eb",
         "affectsGlobalScope": false
       },
@@ -2417,12 +2527,257 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/schemas/place.schema.ts": {
-        "version": "8a4a57b6e798d8997c759b9451b1a650f2afec977fee98c07ff3e5d8961f0e32",
+        "version": "439f6fab2ece184a1f919082a9d03f06a9a99596ce63221e61336e3c3b941b0e",
         "signature": "b29d58e560e82ebd6eaeab2c411be4ab1c6d2a67eabb4aee61f7898e2071066d",
         "affectsGlobalScope": false
       },
+      "../src/modules/customer/schemas/customer.schema.ts": {
+        "version": "05fbcb1816d2217860ec13561dcad8429a900931dca6bfe12a61b6a31ad5d553",
+        "signature": "4e0f49eb914132556be58be043c68fc4297e170d5d941b7c8446198f113afb86",
+        "affectsGlobalScope": false
+      },
+      "../src/promo/schemas/promo.schema.ts": {
+        "version": "3eaf9ff9ef0a1ce8aa864f02a98be773eadd1d3a96f6ec28fc62c2a98008130c",
+        "signature": "5807f06abf65574ad10e42c35c655dad261c5f638b661e82d34d73f23b5b09d3",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/customer/customer.module.ts": {
+        "version": "f24a6c9ab21eb1dc536481bc8668778e2177060c9414dd961728a03896121a5a",
+        "signature": "b16fc39c01bd9a1562b59fc5bc96d07fdbc1ba20d3858c20611132fbdeb485a9",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place/dto/create-place.dto.ts": {
+        "version": "86845f5391bb36df6fb0f2b29141644a264771bea2599dc7c955043f130468f9",
+        "signature": "b97cb6696da531b55b6deba353ac8f0269acc28287afa2e7e388f6fabf1717b7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/types.d.ts": {
+        "version": "98bbf533543802cb2767155b7733c257d6a72f79c1ec8bc98ab0528a9c96eddf",
+        "signature": "98bbf533543802cb2767155b7733c257d6a72f79c1ec8bc98ab0528a9c96eddf",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/computedestinationpoint.d.ts": {
+        "version": "a1a456327161c9d125f1382a77255699a929ac0afcad1f9327f8ca3b48cef58a",
+        "signature": "a1a456327161c9d125f1382a77255699a929ac0afcad1f9327f8ca3b48cef58a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/convertarea.d.ts": {
+        "version": "9671c1c0e31e7ac3dcdd0e3abafbb5139ca8ca0374828968f04c960aee62d90d",
+        "signature": "9671c1c0e31e7ac3dcdd0e3abafbb5139ca8ca0374828968f04c960aee62d90d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/convertdistance.d.ts": {
+        "version": "8bd3ab008329c459b6409dba003efcce89ad2714456c669ca55bad1cf65296c6",
+        "signature": "8bd3ab008329c459b6409dba003efcce89ad2714456c669ca55bad1cf65296c6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/convertspeed.d.ts": {
+        "version": "ec283dd4c08931b8447b0a5cef09129fda5eb955f7fe0645e00b0a2e988057f8",
+        "signature": "ec283dd4c08931b8447b0a5cef09129fda5eb955f7fe0645e00b0a2e988057f8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/decimaltosexagesimal.d.ts": {
+        "version": "a080fd70a1925a1d85fca0dc23f678a902dfffaacf1215532752691a851ce25e",
+        "signature": "a080fd70a1925a1d85fca0dc23f678a902dfffaacf1215532752691a851ce25e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/findnearest.d.ts": {
+        "version": "f5a7b23697cfcbdbf81e2fb1d5e30dd677d70381d0e039ceaed7fb192858d4a3",
+        "signature": "f5a7b23697cfcbdbf81e2fb1d5e30dd677d70381d0e039ceaed7fb192858d4a3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getareaofpolygon.d.ts": {
+        "version": "fa795f995b9109d4a9d0b5896c432a190a4681b4e350ea9839d76b7eb18fcfc5",
+        "signature": "fa795f995b9109d4a9d0b5896c432a190a4681b4e350ea9839d76b7eb18fcfc5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getbounds.d.ts": {
+        "version": "5deadb02de94feeff149db1e03e5b8f8d9cfcedd8be3663c51a4524152acf822",
+        "signature": "5deadb02de94feeff149db1e03e5b8f8d9cfcedd8be3663c51a4524152acf822",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getboundsofdistance.d.ts": {
+        "version": "4af4a23586d62ba595a25df27c52fa24f17537356a9ed98bfe0c8578ab33c23e",
+        "signature": "4af4a23586d62ba595a25df27c52fa24f17537356a9ed98bfe0c8578ab33c23e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getcenter.d.ts": {
+        "version": "fadbf851b586ef59c76074ad10d07a3b4c0289dd9bd0843de07430b00e502449",
+        "signature": "fadbf851b586ef59c76074ad10d07a3b4c0289dd9bd0843de07430b00e502449",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getcenterofbounds.d.ts": {
+        "version": "5dc4bf6f0b20cb43ab0f1d362647827b96b903c4aa8315403de201fbec8d7606",
+        "signature": "5dc4bf6f0b20cb43ab0f1d362647827b96b903c4aa8315403de201fbec8d7606",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getcompassdirection.d.ts": {
+        "version": "860fef6437907e1d6d2e10b6e833f581269946aada6c46c182a72b9c5b2f9c20",
+        "signature": "860fef6437907e1d6d2e10b6e833f581269946aada6c46c182a72b9c5b2f9c20",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getcoordinatekey.d.ts": {
+        "version": "3afed5ac7f15a3255d024717d86da1f12dfbc23877f10ee4cb75ad95cc92fdf0",
+        "signature": "3afed5ac7f15a3255d024717d86da1f12dfbc23877f10ee4cb75ad95cc92fdf0",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getcoordinatekeys.d.ts": {
+        "version": "368c9dccee699a2e10d91f5b04c7dc359ae0e07cff73333a478a4bfe9496313e",
+        "signature": "368c9dccee699a2e10d91f5b04c7dc359ae0e07cff73333a478a4bfe9496313e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getdistance.d.ts": {
+        "version": "0c15c884a1a2c4dd1fa566e3983bd11552432cfc58a40127cb7ab44132bf9214",
+        "signature": "0c15c884a1a2c4dd1fa566e3983bd11552432cfc58a40127cb7ab44132bf9214",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getdistancefromline.d.ts": {
+        "version": "63cbabbe5bbc3482b7d76ff8ea7c0d11c19f90d00cf923943839ade6585c88ce",
+        "signature": "63cbabbe5bbc3482b7d76ff8ea7c0d11c19f90d00cf923943839ade6585c88ce",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getgreatcirclebearing.d.ts": {
+        "version": "b570b7326841fe39489ab4f67d2916c48ca3d27f3d3e55458f03a68b70430416",
+        "signature": "b570b7326841fe39489ab4f67d2916c48ca3d27f3d3e55458f03a68b70430416",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getlatitude.d.ts": {
+        "version": "9dfc0843a63f9e604d9224df3602fa42019d1a800da63adfaa31b1139f46a450",
+        "signature": "9dfc0843a63f9e604d9224df3602fa42019d1a800da63adfaa31b1139f46a450",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getlongitude.d.ts": {
+        "version": "125d099877efdbdd481fdc5586a1289c625c77f35b03d80264536323aa057e4d",
+        "signature": "125d099877efdbdd481fdc5586a1289c625c77f35b03d80264536323aa057e4d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getpathlength.d.ts": {
+        "version": "1ab33671f349b1c24439fde27ff2594c515fcd4110e863654673c63b548f67a8",
+        "signature": "1ab33671f349b1c24439fde27ff2594c515fcd4110e863654673c63b548f67a8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getprecisedistance.d.ts": {
+        "version": "1d40901e31908c6e80e1656ed37094f6925b1b369202f286c9fddaa926b9423d",
+        "signature": "1d40901e31908c6e80e1656ed37094f6925b1b369202f286c9fddaa926b9423d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getrhumblinebearing.d.ts": {
+        "version": "67808a8f20c0033de14affa973d61ea207e3cff7ec0364feb0823b9e28bda7ba",
+        "signature": "67808a8f20c0033de14affa973d61ea207e3cff7ec0364feb0823b9e28bda7ba",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getroughcompassdirection.d.ts": {
+        "version": "88a1722eab8263432e0884a4137b00d9f912f246d67206183e792eba9895c492",
+        "signature": "88a1722eab8263432e0884a4137b00d9f912f246d67206183e792eba9895c492",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getspeed.d.ts": {
+        "version": "572392828dcf0ad1a40d7a22a7c3cf570874450ae078a46b459fe9a6f05142a7",
+        "signature": "572392828dcf0ad1a40d7a22a7c3cf570874450ae078a46b459fe9a6f05142a7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/isdecimal.d.ts": {
+        "version": "e9cf31c962755cf6a669b8b10bb55a98a85bab0c01092c6e3062dc60624eb4a9",
+        "signature": "e9cf31c962755cf6a669b8b10bb55a98a85bab0c01092c6e3062dc60624eb4a9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/ispointinline.d.ts": {
+        "version": "df4a34bed60c4f1a84539b92ffafd3a1ec2738592da5ac3e04cb1bd3776478ee",
+        "signature": "df4a34bed60c4f1a84539b92ffafd3a1ec2738592da5ac3e04cb1bd3776478ee",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/ispointinpolygon.d.ts": {
+        "version": "d290f7dbd4ea7a41aee4f92d769bc27a2cd8f6206302782276c61cfdcde40d08",
+        "signature": "d290f7dbd4ea7a41aee4f92d769bc27a2cd8f6206302782276c61cfdcde40d08",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/ispointnearline.d.ts": {
+        "version": "0a4d286e982286be3471dbd22310c9486deed176f31d6d86966f46da4b5c842b",
+        "signature": "0a4d286e982286be3471dbd22310c9486deed176f31d6d86966f46da4b5c842b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/ispointwithinradius.d.ts": {
+        "version": "3628225154d7d50fc0edcfb741e0668ff0b440f15ff82e6bc70b355c11b1d2dc",
+        "signature": "3628225154d7d50fc0edcfb741e0668ff0b440f15ff82e6bc70b355c11b1d2dc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/issexagesimal.d.ts": {
+        "version": "51fbe52534cd93041eab08015983350f445d5fe3c7faec3e7c5f5ee3cba652af",
+        "signature": "51fbe52534cd93041eab08015983350f445d5fe3c7faec3e7c5f5ee3cba652af",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/isvalidcoordinate.d.ts": {
+        "version": "42c813c80c8ab167191fb6985b2863a2552e7565fade837c0e5f7e316c8d7c23",
+        "signature": "42c813c80c8ab167191fb6985b2863a2552e7565fade837c0e5f7e316c8d7c23",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/isvalidlatitude.d.ts": {
+        "version": "66c5261c7309bba04b5f1c9dae4cdae8dd44e38998434bfaa4049b1cc2d9b4af",
+        "signature": "66c5261c7309bba04b5f1c9dae4cdae8dd44e38998434bfaa4049b1cc2d9b4af",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/isvalidlongitude.d.ts": {
+        "version": "55b2857afdfe25a82bf1412d1b3a5018357e52c4080f2da51fc9e6c294fa2269",
+        "signature": "55b2857afdfe25a82bf1412d1b3a5018357e52c4080f2da51fc9e6c294fa2269",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/orderbydistance.d.ts": {
+        "version": "47419ec63702bd98f26ea6b4063369f0ac40db391f68565638a4d768da30397c",
+        "signature": "47419ec63702bd98f26ea6b4063369f0ac40db391f68565638a4d768da30397c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/sexagesimaltodecimal.d.ts": {
+        "version": "f4f031b17ccde8d38a80a6122263c2b3bcad5e3b5df77a79130c00614714737e",
+        "signature": "f4f031b17ccde8d38a80a6122263c2b3bcad5e3b5df77a79130c00614714737e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/todecimal.d.ts": {
+        "version": "bd138d4dcfc7a80b05f39e5c3cd39b52f5fa6f67019f6d13ab905599fa81e7e4",
+        "signature": "bd138d4dcfc7a80b05f39e5c3cd39b52f5fa6f67019f6d13ab905599fa81e7e4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/torad.d.ts": {
+        "version": "b9a4af82feb6a68db822e9f96981ad6fe4726b08e460a845febd369fe731607c",
+        "signature": "b9a4af82feb6a68db822e9f96981ad6fe4726b08e460a845febd369fe731607c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/todeg.d.ts": {
+        "version": "254c5c406cd28eaedb7f862bfd5416385eead82fad65cbe2efd6e452035179c4",
+        "signature": "254c5c406cd28eaedb7f862bfd5416385eead82fad65cbe2efd6e452035179c4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/wkttopolygon.d.ts": {
+        "version": "04761b581601486688e45c9d7c7eca75970c10542c90b197882b6263ec3ac5cd",
+        "signature": "04761b581601486688e45c9d7c7eca75970c10542c90b197882b6263ec3ac5cd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/constants.d.ts": {
+        "version": "60bbb86cad981aa817a04169874188b6b3b72251e2534b62c85bc3bbcdd3be0c",
+        "signature": "60bbb86cad981aa817a04169874188b6b3b72251e2534b62c85bc3bbcdd3be0c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/index.d.ts": {
+        "version": "d8c995451b0cdbf317ca463d8268160fe52260a91183232da998ff85c57ecdeb",
+        "signature": "d8c995451b0cdbf317ca463d8268160fe52260a91183232da998ff85c57ecdeb",
+        "affectsGlobalScope": false
+      },
+      "../src/utils/index.ts": {
+        "version": "293b67283ad20c9d50eb1fd47f3cee2a49b9d9876622724517306be9efbd2d53",
+        "signature": "4d41baa9b052f525333ac0d99d2e4a4df5b75ca3539463b1e8ef83d040faa0a5",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place/place.service.ts": {
+        "version": "37d5a083584dfdc6de9c5999491c1095c37341158f6535cdba4f2b16073994c4",
+        "signature": "4396c4c49895b25a22d3b61790ab50c0f3aa11bf402f557538674ac94d36278d",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/place/place.controller.ts": {
+        "version": "643d6d816ba7d8df26914ebee5d600cf03de8fe9b5ccbf8ffacbe0080b3b2199",
+        "signature": "a59f19ffda9badc408ef4cb8398c4a76df0c69506696f007d42a8a59d2cdb554",
+        "affectsGlobalScope": false
+      },
       "../src/modules/place/place.module.ts": {
-        "version": "f6478e951e2ec98c32b7e3de5370bc4b6d9bb4dc103c5082a6949ae1e3970c60",
+        "version": "558663b247e6faa81ea90db464a3ae8249731eb9cf057041b6b18c24164aef67",
         "signature": "19d997ce27c99d6e74839ae37762f33da8cb45f4b60f73e7050b6c7bd71dd2b4",
         "affectsGlobalScope": false
       },
@@ -2466,6 +2821,21 @@
         "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1",
         "affectsGlobalScope": false
       },
+      "../src/promo/promo.service.ts": {
+        "version": "acf6153beba235a6bcde1ce77f4dd1108b336fea21d96b5cc75c2a571a946a99",
+        "signature": "ec99180f3413ef9a38fb3c907eb00a6386c84a7a2142b3d000e22eb6e2eaf586",
+        "affectsGlobalScope": false
+      },
+      "../src/promo/promo.controller.ts": {
+        "version": "0ca0e63a9f2916e3da3ba463e3b6c52de816e54be1550ef9cd684f4d34f69d67",
+        "signature": "5cc60f4f97d566b2d32219b208f66c4fd7a8c9e9fd55e28e4be2eeb71c3f61fa",
+        "affectsGlobalScope": false
+      },
+      "../src/promo/promo.module.ts": {
+        "version": "7a3c5934419cedf66871353014d0fa1d59d8488132164c44723687a7dd287ed0",
+        "signature": "4e981f9bf50398f6a24608fa9c3b8304da8842b8c9f93a1b64fc089179955068",
+        "affectsGlobalScope": false
+      },
       "../src/modules/place-type/place-type.service.ts": {
         "version": "7b8df200a6f408b5d6128ef21e0772801a9136adbf7405c73b0912ece5a1fbb5",
         "signature": "3a24cc2d0be695537ae09e01d9223cecd87fcce2b771050a54f542d734f0b79c",
@@ -2497,7 +2867,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "2d50e2b087be384f78d7e5db0da258914bd58879b066240a8ddd29c09f0b3d74",
+        "version": "69ced25312edf26fb7a9e787992635367168bd37f42f7666eaccaaee9c5c6358",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -2606,11 +2976,6 @@
         "signature": "e99e3ad9035927f61b1d6b54c51fca01e46bdcaf861fd9484086d871e76d0aef",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/core/metadata-scanner.d.ts": {
-        "version": "7cb9b6d5c1e3508fbc81e7bbab314eac54715f9326ac72fd0eb65f17a4393d50",
-        "signature": "7cb9b6d5c1e3508fbc81e7bbab314eac54715f9326ac72fd0eb65f17a4393d50",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@nestjs/core/middleware/routes-mapper.d.ts": {
         "version": "5175a0f207a73df7426acc2bdc854b0c4bfab7434742f873816f0fc71f4fa2f5",
         "signature": "5175a0f207a73df7426acc2bdc854b0c4bfab7434742f873816f0fc71f4fa2f5",
@@ -2681,8 +3046,88 @@
         "signature": "7b5ed961a0e03965299591d73de8b8c41e8a68105ff4fc07a240b0dfb94a5a3d",
         "affectsGlobalScope": false
       },
+      "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts": {
+        "version": "b87682ddc9e2c3714ca66991cdd86ff7e18cae6fd010742a93bd612a07d19697",
+        "signature": "b87682ddc9e2c3714ca66991cdd86ff7e18cae6fd010742a93bd612a07d19697",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts": {
+        "version": "6b12a83a6198f2a6019f7e20f5362039095d4dae77ce9aec3e9a5351f74180f5",
+        "signature": "6b12a83a6198f2a6019f7e20f5362039095d4dae77ce9aec3e9a5351f74180f5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/adapters/index.d.ts": {
+        "version": "86bf2bfe29d0bc3fbc68e64c25ea6eab9bcb3c518ae941012ed75b1e87d391ae",
+        "signature": "86bf2bfe29d0bc3fbc68e64c25ea6eab9bcb3c518ae941012ed75b1e87d391ae",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts": {
+        "version": "c84f26d79f2c55c932ab7441fbaaceffb0ecb74aa01267ba8f3d65c3545f60ba",
+        "signature": "c84f26d79f2c55c932ab7441fbaaceffb0ecb74aa01267ba8f3d65c3545f60ba",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/interfaces/index.d.ts": {
+        "version": "68a330d1246e3f0ed055b931ab6f4f9505d7c2db0560515f68c722c06541dc0d",
+        "signature": "68a330d1246e3f0ed055b931ab6f4f9505d7c2db0560515f68c722c06541dc0d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts": {
+        "version": "8ae337fcd337d5ca179611dae780e7dbb45b3c0cbc6debc5067a4215e95cd873",
+        "signature": "8ae337fcd337d5ca179611dae780e7dbb45b3c0cbc6debc5067a4215e95cd873",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interceptors/any-files.interceptor.d.ts": {
+        "version": "00427e68be5cbfd0694c650ebf27dc9d5cb8ec62254ca5af0cd3e412595f8d09",
+        "signature": "00427e68be5cbfd0694c650ebf27dc9d5cb8ec62254ca5af0cd3e412595f8d09",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file-fields.interceptor.d.ts": {
+        "version": "6a013828e3333e21fde3a4d1c7da0c41e8ce0218a98ad8e71025c2d437a2458b",
+        "signature": "6a013828e3333e21fde3a4d1c7da0c41e8ce0218a98ad8e71025c2d437a2458b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file.interceptor.d.ts": {
+        "version": "fc1a967ceb559957a8fd153d364596d7c906440c401e9a1f0ef9cda62a92a937",
+        "signature": "fc1a967ceb559957a8fd153d364596d7c906440c401e9a1f0ef9cda62a92a937",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interceptors/files.interceptor.d.ts": {
+        "version": "fd09f594933708040bbab2ad98fdfd1f076209ff0d514cbc8ab50bc39f462619",
+        "signature": "fd09f594933708040bbab2ad98fdfd1f076209ff0d514cbc8ab50bc39f462619",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interceptors/index.d.ts": {
+        "version": "6db46ed9adeb732a2c46b05dd64a3fe85b2789065f1ef7668f583c61f1046a14",
+        "signature": "6db46ed9adeb732a2c46b05dd64a3fe85b2789065f1ef7668f583c61f1046a14",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts": {
+        "version": "7bb8a371f7790a421606678b50a943955bfc182beca2c42f8d1473cc2973fa12",
+        "signature": "7bb8a371f7790a421606678b50a943955bfc182beca2c42f8d1473cc2973fa12",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts": {
+        "version": "d8c1697db4bb3234ff3f8481545284992f1516bc712421b81ee3ef3f226ae112",
+        "signature": "d8c1697db4bb3234ff3f8481545284992f1516bc712421b81ee3ef3f226ae112",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts": {
+        "version": "549adfb8fb51148eeb2c0659941b3a508988ee0b00f325fbaae7e96bc4b3e4c9",
+        "signature": "549adfb8fb51148eeb2c0659941b3a508988ee0b00f325fbaae7e96bc4b3e4c9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/index.d.ts": {
+        "version": "e2c3c3ca3818d610599392a9431e60ec021c5d59262ecd616538484990f6e331",
+        "signature": "e2c3c3ca3818d610599392a9431e60ec021c5d59262ecd616538484990f6e331",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/index.d.ts": {
+        "version": "e3cd60be3c4f95c43420be67eaa21637585b7c1a8129f9b39983bbd294f9513c",
+        "signature": "e3cd60be3c4f95c43420be67eaa21637585b7c1a8129f9b39983bbd294f9513c",
+        "affectsGlobalScope": false
+      },
       "../src/main.ts": {
-        "version": "b60ae9d9f57f0e9fde4c253bee74effd37fed954e4fdc2133c85e452f437345c",
+        "version": "00c375d8ab4884753b2d06f996c2b8b228d1c80f2502c9db6862b662b809be09",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -2699,6 +3144,11 @@
       "../src/modules/review/dto/create-review.dto.ts": {
         "version": "47b6ea5de0de1420b6597ab738ffe85141eeafd266a5ae7fc32d8bfd61db47fe",
         "signature": "10c72662a95532da4d6bec18bdd3241ebcb6cd69ff918ec583142d743a4e6516",
+        "affectsGlobalScope": false
+      },
+      "../src/promo/dto/create-promo.dto.ts": {
+        "version": "f4a3525d432d87bbb1035943e8658bd5e621e8b728397f799e2e5a8c7a9d2d6d",
+        "signature": "ff1864c46e365bd2fe0799feb2c989358d49037876a24d2e09f4ee24fc5443ae",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -3738,6 +4188,129 @@
       "../node_modules/@nestjs/passport/index.d.ts": [
         "../node_modules/@nestjs/passport/dist/index.d.ts"
       ],
+      "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts",
+        "../node_modules/@nestjs/common/interfaces/nest-application-options.interface.d.ts",
+        "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
+        "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/adapters/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/adapters/index.d.ts",
+        "../node_modules/@nestjs/platform-express/interfaces/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/index.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/multer/interceptors/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/any-files.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file-fields.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/files.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/multer/interceptors/any-files.interceptor.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interceptors/file-fields.interceptor.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interceptors/file.interceptor.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interceptors/files.interceptor.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts": [
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/adapters/index.d.ts": [
+        "../node_modules/@nestjs/websockets/adapters/ws-adapter.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/adapters/ws-adapter.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../node_modules/rxjs/index.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/decorators/index.d.ts": [
+        "../node_modules/@nestjs/websockets/decorators/connected-socket.decorator.d.ts",
+        "../node_modules/@nestjs/websockets/decorators/gateway-server.decorator.d.ts",
+        "../node_modules/@nestjs/websockets/decorators/message-body.decorator.d.ts",
+        "../node_modules/@nestjs/websockets/decorators/socket-gateway.decorator.d.ts",
+        "../node_modules/@nestjs/websockets/decorators/subscribe-message.decorator.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/decorators/message-body.decorator.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/decorators/socket-gateway.decorator.d.ts": [
+        "../node_modules/@nestjs/websockets/interfaces/index.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/errors/index.d.ts": [
+        "../node_modules/@nestjs/websockets/errors/ws-exception.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/exceptions/base-ws-exception-filter.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/exceptions/index.d.ts": [
+        "../node_modules/@nestjs/websockets/exceptions/base-ws-exception-filter.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/gateway-metadata-explorer.d.ts": [
+        "../node_modules/@nestjs/core/metadata-scanner.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/nest-gateway.interface.d.ts",
+        "../node_modules/rxjs/index.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/index.d.ts": [
+        "../node_modules/@nestjs/websockets/adapters/index.d.ts",
+        "../node_modules/@nestjs/websockets/decorators/index.d.ts",
+        "../node_modules/@nestjs/websockets/errors/index.d.ts",
+        "../node_modules/@nestjs/websockets/exceptions/index.d.ts",
+        "../node_modules/@nestjs/websockets/gateway-metadata-explorer.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/index.d.ts",
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/interfaces/hooks/index.d.ts": [
+        "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-connection.interface.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-disconnect.interface.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-init.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/websockets/interfaces/gateway-metadata.interface.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/hooks/index.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/socket-events-host.interface.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/web-socket-server.interface.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/ws-response.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/interfaces/socket-events-host.interface.d.ts": [
+        "../node_modules/rxjs/index.d.ts"
+      ],
       "../node_modules/@types/babel__core/index.d.ts": [
         "../node_modules/@babel/parser/typings/babel-parser.d.ts",
         "../node_modules/@babel/types/lib/index.d.ts",
@@ -4650,6 +5223,123 @@
       "../node_modules/class-validator/types/validation/validatorconstraintinterface.d.ts": [
         "../node_modules/class-validator/types/validation/validationarguments.d.ts"
       ],
+      "../node_modules/geolib/es/computedestinationpoint.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/constants.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/findnearest.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getareaofpolygon.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getboundsofdistance.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getcenter.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getcenterofbounds.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getcompassdirection.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getcoordinatekey.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getcoordinatekeys.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getdistance.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getdistancefromline.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getgreatcirclebearing.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getlatitude.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getlongitude.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getpathlength.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getprecisedistance.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getrhumblinebearing.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getspeed.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/index.d.ts": [
+        "../node_modules/geolib/es/computedestinationpoint.d.ts",
+        "../node_modules/geolib/es/constants.d.ts",
+        "../node_modules/geolib/es/convertarea.d.ts",
+        "../node_modules/geolib/es/convertdistance.d.ts",
+        "../node_modules/geolib/es/convertspeed.d.ts",
+        "../node_modules/geolib/es/decimaltosexagesimal.d.ts",
+        "../node_modules/geolib/es/findnearest.d.ts",
+        "../node_modules/geolib/es/getareaofpolygon.d.ts",
+        "../node_modules/geolib/es/getbounds.d.ts",
+        "../node_modules/geolib/es/getboundsofdistance.d.ts",
+        "../node_modules/geolib/es/getcenter.d.ts",
+        "../node_modules/geolib/es/getcenterofbounds.d.ts",
+        "../node_modules/geolib/es/getcompassdirection.d.ts",
+        "../node_modules/geolib/es/getcoordinatekey.d.ts",
+        "../node_modules/geolib/es/getcoordinatekeys.d.ts",
+        "../node_modules/geolib/es/getdistance.d.ts",
+        "../node_modules/geolib/es/getdistancefromline.d.ts",
+        "../node_modules/geolib/es/getgreatcirclebearing.d.ts",
+        "../node_modules/geolib/es/getlatitude.d.ts",
+        "../node_modules/geolib/es/getlongitude.d.ts",
+        "../node_modules/geolib/es/getpathlength.d.ts",
+        "../node_modules/geolib/es/getprecisedistance.d.ts",
+        "../node_modules/geolib/es/getrhumblinebearing.d.ts",
+        "../node_modules/geolib/es/getroughcompassdirection.d.ts",
+        "../node_modules/geolib/es/getspeed.d.ts",
+        "../node_modules/geolib/es/isdecimal.d.ts",
+        "../node_modules/geolib/es/ispointinline.d.ts",
+        "../node_modules/geolib/es/ispointinpolygon.d.ts",
+        "../node_modules/geolib/es/ispointnearline.d.ts",
+        "../node_modules/geolib/es/ispointwithinradius.d.ts",
+        "../node_modules/geolib/es/issexagesimal.d.ts",
+        "../node_modules/geolib/es/isvalidcoordinate.d.ts",
+        "../node_modules/geolib/es/isvalidlatitude.d.ts",
+        "../node_modules/geolib/es/isvalidlongitude.d.ts",
+        "../node_modules/geolib/es/orderbydistance.d.ts",
+        "../node_modules/geolib/es/sexagesimaltodecimal.d.ts",
+        "../node_modules/geolib/es/todecimal.d.ts",
+        "../node_modules/geolib/es/todeg.d.ts",
+        "../node_modules/geolib/es/torad.d.ts",
+        "../node_modules/geolib/es/wkttopolygon.d.ts"
+      ],
+      "../node_modules/geolib/es/ispointinline.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/ispointinpolygon.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/ispointnearline.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/ispointwithinradius.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/isvalidcoordinate.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/orderbydistance.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
       "../node_modules/jest-diff/build/difflines.d.ts": [
         "../node_modules/jest-diff/build/cleanupsemantic.d.ts",
         "../node_modules/jest-diff/build/types.d.ts"
@@ -4978,17 +5668,23 @@
         "../src/app.service.ts",
         "../src/modules/auth/auth.service.ts"
       ],
+      "../src/app.gateway.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/websockets/index.d.ts"
+      ],
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../src/app.controller.ts",
+        "../src/app.gateway.ts",
         "../src/app.service.ts",
         "../src/modules/auth/auth.module.ts",
         "../src/modules/customer/customer.module.ts",
         "../src/modules/feature/feature.module.ts",
         "../src/modules/place-type/place-type.module.ts",
         "../src/modules/place/place.module.ts",
-        "../src/modules/review/review.module.ts"
+        "../src/modules/review/review.module.ts",
+        "../src/promo/promo.module.ts"
       ],
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
@@ -4996,6 +5692,8 @@
       "../src/main.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/core/index.d.ts",
+        "../node_modules/@nestjs/platform-express/index.d.ts",
+        "../node_modules/@types/node/path.d.ts",
         "../src/app.module.ts"
       ],
       "../src/modules/auth/auth.controller.ts": [
@@ -5048,6 +5746,7 @@
       ],
       "../src/modules/customer/customer.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/auth/jwt-auth.guard.ts",
         "../src/modules/customer/customer.service.ts",
         "../src/modules/customer/dto/create-customer.dto.ts",
         "../src/modules/place/interfaces/place.interface.ts"
@@ -5057,7 +5756,8 @@
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../src/modules/customer/customer.controller.ts",
         "../src/modules/customer/customer.service.ts",
-        "../src/modules/customer/schemas/customer.schema.ts"
+        "../src/modules/customer/schemas/customer.schema.ts",
+        "../src/promo/schemas/promo.schema.ts"
       ],
       "../src/modules/customer/customer.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -5066,7 +5766,8 @@
         "../node_modules/mongoose/index.d.ts",
         "../src/modules/customer/dto/create-customer.dto.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
-        "../src/modules/place/interfaces/place.interface.ts"
+        "../src/modules/place/interfaces/place.interface.ts",
+        "../src/promo/interfaces/promo.interface.ts"
       ],
       "../src/modules/customer/dto/create-customer.dto.ts": [
         "../node_modules/class-validator/types/index.d.ts",
@@ -5078,7 +5779,8 @@
         "../src/modules/place/interfaces/place.interface.ts"
       ],
       "../src/modules/customer/schemas/customer.schema.ts": [
-        "../node_modules/mongoose/index.d.ts"
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/place/schemas/place.schema.ts"
       ],
       "../src/modules/feature/dto/create-feature.dto.ts": [
         "../node_modules/class-validator/types/index.d.ts"
@@ -5130,6 +5832,8 @@
       ],
       "../src/modules/place/interfaces/place.interface.ts": [
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/feature/interfaces/feature.interface.ts",
+        "../src/modules/place-type/interfaces/place-type.interface.ts",
         "../src/modules/review/interfaces/review.interface.ts",
         "../src/modules/types.ts"
       ],
@@ -5137,11 +5841,13 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/modules/auth/jwt-auth.guard.ts",
         "../src/modules/place/dto/create-place.dto.ts",
+        "../src/modules/place/interfaces/place.interface.ts",
         "../src/modules/place/place.service.ts"
       ],
       "../src/modules/place/place.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/modules/customer/schemas/customer.schema.ts",
         "../src/modules/place/place.controller.ts",
         "../src/modules/place/place.service.ts",
         "../src/modules/place/schemas/place.schema.ts"
@@ -5150,8 +5856,11 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/place/dto/create-place.dto.ts",
-        "../src/modules/place/interfaces/place.interface.ts"
+        "../src/modules/place/interfaces/place.interface.ts",
+        "../src/modules/types.ts",
+        "../src/utils/index.ts"
       ],
       "../src/modules/place/schemas/place.schema.ts": [
         "../node_modules/mongoose/index.d.ts",
@@ -5185,6 +5894,37 @@
       ],
       "../src/modules/schemas.ts": [
         "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/promo/dto/create-promo.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
+      "../src/promo/interfaces/promo.interface.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/promo/promo.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/rxjs/index.d.ts",
+        "../src/promo/promo.service.ts"
+      ],
+      "../src/promo/promo.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/promo/promo.controller.ts",
+        "../src/promo/promo.service.ts",
+        "../src/promo/schemas/promo.schema.ts"
+      ],
+      "../src/promo/promo.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/mongoose/index.d.ts",
+        "../src/promo/interfaces/promo.interface.ts"
+      ],
+      "../src/promo/schemas/promo.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/utils/index.ts": [
+        "../node_modules/geolib/es/index.d.ts",
+        "../src/modules/types.ts"
       ]
     },
     "exportedModulesMap": {
@@ -5939,6 +6679,129 @@
       "../node_modules/@nestjs/passport/index.d.ts": [
         "../node_modules/@nestjs/passport/dist/index.d.ts"
       ],
+      "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts",
+        "../node_modules/@nestjs/common/interfaces/nest-application-options.interface.d.ts",
+        "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
+        "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/adapters/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/adapters/index.d.ts",
+        "../node_modules/@nestjs/platform-express/interfaces/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/index.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/multer/interceptors/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/any-files.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file-fields.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/files.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/multer/interceptors/any-files.interceptor.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interceptors/file-fields.interceptor.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interceptors/file.interceptor.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interceptors/files.interceptor.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts": [
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/adapters/index.d.ts": [
+        "../node_modules/@nestjs/websockets/adapters/ws-adapter.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/adapters/ws-adapter.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../node_modules/rxjs/index.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/decorators/index.d.ts": [
+        "../node_modules/@nestjs/websockets/decorators/connected-socket.decorator.d.ts",
+        "../node_modules/@nestjs/websockets/decorators/gateway-server.decorator.d.ts",
+        "../node_modules/@nestjs/websockets/decorators/message-body.decorator.d.ts",
+        "../node_modules/@nestjs/websockets/decorators/socket-gateway.decorator.d.ts",
+        "../node_modules/@nestjs/websockets/decorators/subscribe-message.decorator.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/decorators/message-body.decorator.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/decorators/socket-gateway.decorator.d.ts": [
+        "../node_modules/@nestjs/websockets/interfaces/index.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/errors/index.d.ts": [
+        "../node_modules/@nestjs/websockets/errors/ws-exception.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/exceptions/base-ws-exception-filter.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/exceptions/index.d.ts": [
+        "../node_modules/@nestjs/websockets/exceptions/base-ws-exception-filter.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/gateway-metadata-explorer.d.ts": [
+        "../node_modules/@nestjs/core/metadata-scanner.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/nest-gateway.interface.d.ts",
+        "../node_modules/rxjs/index.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/index.d.ts": [
+        "../node_modules/@nestjs/websockets/adapters/index.d.ts",
+        "../node_modules/@nestjs/websockets/decorators/index.d.ts",
+        "../node_modules/@nestjs/websockets/errors/index.d.ts",
+        "../node_modules/@nestjs/websockets/exceptions/index.d.ts",
+        "../node_modules/@nestjs/websockets/gateway-metadata-explorer.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/index.d.ts",
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/interfaces/hooks/index.d.ts": [
+        "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-connection.interface.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-disconnect.interface.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-init.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/websockets/interfaces/gateway-metadata.interface.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/hooks/index.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/socket-events-host.interface.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/web-socket-server.interface.d.ts",
+        "../node_modules/@nestjs/websockets/interfaces/ws-response.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/websockets/interfaces/socket-events-host.interface.d.ts": [
+        "../node_modules/rxjs/index.d.ts"
+      ],
       "../node_modules/@types/babel__core/index.d.ts": [
         "../node_modules/@babel/parser/typings/babel-parser.d.ts",
         "../node_modules/@babel/types/lib/index.d.ts",
@@ -6851,6 +7714,123 @@
       "../node_modules/class-validator/types/validation/validatorconstraintinterface.d.ts": [
         "../node_modules/class-validator/types/validation/validationarguments.d.ts"
       ],
+      "../node_modules/geolib/es/computedestinationpoint.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/constants.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/findnearest.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getareaofpolygon.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getboundsofdistance.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getcenter.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getcenterofbounds.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getcompassdirection.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getcoordinatekey.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getcoordinatekeys.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getdistance.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getdistancefromline.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getgreatcirclebearing.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getlatitude.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getlongitude.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getpathlength.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getprecisedistance.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getrhumblinebearing.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/getspeed.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/index.d.ts": [
+        "../node_modules/geolib/es/computedestinationpoint.d.ts",
+        "../node_modules/geolib/es/constants.d.ts",
+        "../node_modules/geolib/es/convertarea.d.ts",
+        "../node_modules/geolib/es/convertdistance.d.ts",
+        "../node_modules/geolib/es/convertspeed.d.ts",
+        "../node_modules/geolib/es/decimaltosexagesimal.d.ts",
+        "../node_modules/geolib/es/findnearest.d.ts",
+        "../node_modules/geolib/es/getareaofpolygon.d.ts",
+        "../node_modules/geolib/es/getbounds.d.ts",
+        "../node_modules/geolib/es/getboundsofdistance.d.ts",
+        "../node_modules/geolib/es/getcenter.d.ts",
+        "../node_modules/geolib/es/getcenterofbounds.d.ts",
+        "../node_modules/geolib/es/getcompassdirection.d.ts",
+        "../node_modules/geolib/es/getcoordinatekey.d.ts",
+        "../node_modules/geolib/es/getcoordinatekeys.d.ts",
+        "../node_modules/geolib/es/getdistance.d.ts",
+        "../node_modules/geolib/es/getdistancefromline.d.ts",
+        "../node_modules/geolib/es/getgreatcirclebearing.d.ts",
+        "../node_modules/geolib/es/getlatitude.d.ts",
+        "../node_modules/geolib/es/getlongitude.d.ts",
+        "../node_modules/geolib/es/getpathlength.d.ts",
+        "../node_modules/geolib/es/getprecisedistance.d.ts",
+        "../node_modules/geolib/es/getrhumblinebearing.d.ts",
+        "../node_modules/geolib/es/getroughcompassdirection.d.ts",
+        "../node_modules/geolib/es/getspeed.d.ts",
+        "../node_modules/geolib/es/isdecimal.d.ts",
+        "../node_modules/geolib/es/ispointinline.d.ts",
+        "../node_modules/geolib/es/ispointinpolygon.d.ts",
+        "../node_modules/geolib/es/ispointnearline.d.ts",
+        "../node_modules/geolib/es/ispointwithinradius.d.ts",
+        "../node_modules/geolib/es/issexagesimal.d.ts",
+        "../node_modules/geolib/es/isvalidcoordinate.d.ts",
+        "../node_modules/geolib/es/isvalidlatitude.d.ts",
+        "../node_modules/geolib/es/isvalidlongitude.d.ts",
+        "../node_modules/geolib/es/orderbydistance.d.ts",
+        "../node_modules/geolib/es/sexagesimaltodecimal.d.ts",
+        "../node_modules/geolib/es/todecimal.d.ts",
+        "../node_modules/geolib/es/todeg.d.ts",
+        "../node_modules/geolib/es/torad.d.ts",
+        "../node_modules/geolib/es/wkttopolygon.d.ts"
+      ],
+      "../node_modules/geolib/es/ispointinline.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/ispointinpolygon.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/ispointnearline.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/ispointwithinradius.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/isvalidcoordinate.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
+      "../node_modules/geolib/es/orderbydistance.d.ts": [
+        "../node_modules/geolib/es/types.d.ts"
+      ],
       "../node_modules/jest-diff/build/difflines.d.ts": [
         "../node_modules/jest-diff/build/cleanupsemantic.d.ts",
         "../node_modules/jest-diff/build/types.d.ts"
@@ -7178,6 +8158,9 @@
         "../src/app.service.ts",
         "../src/modules/auth/auth.service.ts"
       ],
+      "../src/app.gateway.ts": [
+        "../node_modules/@nestjs/websockets/index.d.ts"
+      ],
       "../src/modules/auth/auth.controller.ts": [
         "../src/modules/auth/auth.service.ts",
         "../src/modules/customer/interfaces/customer.interface.ts"
@@ -7210,7 +8193,8 @@
         "../node_modules/mongoose/index.d.ts",
         "../src/modules/customer/dto/create-customer.dto.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
-        "../src/modules/place/interfaces/place.interface.ts"
+        "../src/modules/place/interfaces/place.interface.ts",
+        "../src/promo/interfaces/promo.interface.ts"
       ],
       "../src/modules/customer/dto/create-customer.dto.ts": [
         "../src/modules/place/interfaces/place.interface.ts"
@@ -7242,17 +8226,22 @@
       ],
       "../src/modules/place/interfaces/place.interface.ts": [
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/feature/interfaces/feature.interface.ts",
+        "../src/modules/place-type/interfaces/place-type.interface.ts",
         "../src/modules/review/interfaces/review.interface.ts",
         "../src/modules/types.ts"
       ],
       "../src/modules/place/place.controller.ts": [
         "../src/modules/place/dto/create-place.dto.ts",
+        "../src/modules/place/interfaces/place.interface.ts",
         "../src/modules/place/place.service.ts"
       ],
       "../src/modules/place/place.service.ts": [
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/place/dto/create-place.dto.ts",
-        "../src/modules/place/interfaces/place.interface.ts"
+        "../src/modules/place/interfaces/place.interface.ts",
+        "../src/modules/types.ts"
       ],
       "../src/modules/place/schemas/place.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
@@ -7269,6 +8258,23 @@
       ],
       "../src/modules/schemas.ts": [
         "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/promo/interfaces/promo.interface.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/promo/promo.controller.ts": [
+        "../src/promo/interfaces/promo.interface.ts",
+        "../src/promo/promo.service.ts"
+      ],
+      "../src/promo/promo.service.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/promo/interfaces/promo.interface.ts"
+      ],
+      "../src/promo/schemas/promo.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/utils/index.ts": [
+        "../src/modules/types.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -7484,6 +8490,46 @@
       "../node_modules/@nestjs/passport/dist/passport/passport.serializer.d.ts",
       "../node_modules/@nestjs/passport/dist/passport/passport.strategy.d.ts",
       "../node_modules/@nestjs/passport/index.d.ts",
+      "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts",
+      "../node_modules/@nestjs/platform-express/adapters/index.d.ts",
+      "../node_modules/@nestjs/platform-express/index.d.ts",
+      "../node_modules/@nestjs/platform-express/interfaces/index.d.ts",
+      "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts",
+      "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts",
+      "../node_modules/@nestjs/platform-express/multer/index.d.ts",
+      "../node_modules/@nestjs/platform-express/multer/interceptors/any-files.interceptor.d.ts",
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file-fields.interceptor.d.ts",
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file.interceptor.d.ts",
+      "../node_modules/@nestjs/platform-express/multer/interceptors/files.interceptor.d.ts",
+      "../node_modules/@nestjs/platform-express/multer/interceptors/index.d.ts",
+      "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts",
+      "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts",
+      "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
+      "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts",
+      "../node_modules/@nestjs/websockets/adapters/index.d.ts",
+      "../node_modules/@nestjs/websockets/adapters/ws-adapter.d.ts",
+      "../node_modules/@nestjs/websockets/decorators/connected-socket.decorator.d.ts",
+      "../node_modules/@nestjs/websockets/decorators/gateway-server.decorator.d.ts",
+      "../node_modules/@nestjs/websockets/decorators/index.d.ts",
+      "../node_modules/@nestjs/websockets/decorators/message-body.decorator.d.ts",
+      "../node_modules/@nestjs/websockets/decorators/socket-gateway.decorator.d.ts",
+      "../node_modules/@nestjs/websockets/decorators/subscribe-message.decorator.d.ts",
+      "../node_modules/@nestjs/websockets/errors/index.d.ts",
+      "../node_modules/@nestjs/websockets/errors/ws-exception.d.ts",
+      "../node_modules/@nestjs/websockets/exceptions/base-ws-exception-filter.d.ts",
+      "../node_modules/@nestjs/websockets/exceptions/index.d.ts",
+      "../node_modules/@nestjs/websockets/gateway-metadata-explorer.d.ts",
+      "../node_modules/@nestjs/websockets/index.d.ts",
+      "../node_modules/@nestjs/websockets/interfaces/gateway-metadata.interface.d.ts",
+      "../node_modules/@nestjs/websockets/interfaces/hooks/index.d.ts",
+      "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-connection.interface.d.ts",
+      "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-disconnect.interface.d.ts",
+      "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-init.interface.d.ts",
+      "../node_modules/@nestjs/websockets/interfaces/index.d.ts",
+      "../node_modules/@nestjs/websockets/interfaces/nest-gateway.interface.d.ts",
+      "../node_modules/@nestjs/websockets/interfaces/socket-events-host.interface.d.ts",
+      "../node_modules/@nestjs/websockets/interfaces/web-socket-server.interface.d.ts",
+      "../node_modules/@nestjs/websockets/interfaces/ws-response.interface.d.ts",
       "../node_modules/@types/anymatch/index.d.ts",
       "../node_modules/@types/babel__core/index.d.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
@@ -7714,6 +8760,48 @@
       "../node_modules/class-validator/types/validation/validator.d.ts",
       "../node_modules/class-validator/types/validation/validatorconstraintinterface.d.ts",
       "../node_modules/class-validator/types/validation/validatoroptions.d.ts",
+      "../node_modules/geolib/es/computedestinationpoint.d.ts",
+      "../node_modules/geolib/es/constants.d.ts",
+      "../node_modules/geolib/es/convertarea.d.ts",
+      "../node_modules/geolib/es/convertdistance.d.ts",
+      "../node_modules/geolib/es/convertspeed.d.ts",
+      "../node_modules/geolib/es/decimaltosexagesimal.d.ts",
+      "../node_modules/geolib/es/findnearest.d.ts",
+      "../node_modules/geolib/es/getareaofpolygon.d.ts",
+      "../node_modules/geolib/es/getbounds.d.ts",
+      "../node_modules/geolib/es/getboundsofdistance.d.ts",
+      "../node_modules/geolib/es/getcenter.d.ts",
+      "../node_modules/geolib/es/getcenterofbounds.d.ts",
+      "../node_modules/geolib/es/getcompassdirection.d.ts",
+      "../node_modules/geolib/es/getcoordinatekey.d.ts",
+      "../node_modules/geolib/es/getcoordinatekeys.d.ts",
+      "../node_modules/geolib/es/getdistance.d.ts",
+      "../node_modules/geolib/es/getdistancefromline.d.ts",
+      "../node_modules/geolib/es/getgreatcirclebearing.d.ts",
+      "../node_modules/geolib/es/getlatitude.d.ts",
+      "../node_modules/geolib/es/getlongitude.d.ts",
+      "../node_modules/geolib/es/getpathlength.d.ts",
+      "../node_modules/geolib/es/getprecisedistance.d.ts",
+      "../node_modules/geolib/es/getrhumblinebearing.d.ts",
+      "../node_modules/geolib/es/getroughcompassdirection.d.ts",
+      "../node_modules/geolib/es/getspeed.d.ts",
+      "../node_modules/geolib/es/index.d.ts",
+      "../node_modules/geolib/es/isdecimal.d.ts",
+      "../node_modules/geolib/es/ispointinline.d.ts",
+      "../node_modules/geolib/es/ispointinpolygon.d.ts",
+      "../node_modules/geolib/es/ispointnearline.d.ts",
+      "../node_modules/geolib/es/ispointwithinradius.d.ts",
+      "../node_modules/geolib/es/issexagesimal.d.ts",
+      "../node_modules/geolib/es/isvalidcoordinate.d.ts",
+      "../node_modules/geolib/es/isvalidlatitude.d.ts",
+      "../node_modules/geolib/es/isvalidlongitude.d.ts",
+      "../node_modules/geolib/es/orderbydistance.d.ts",
+      "../node_modules/geolib/es/sexagesimaltodecimal.d.ts",
+      "../node_modules/geolib/es/todecimal.d.ts",
+      "../node_modules/geolib/es/todeg.d.ts",
+      "../node_modules/geolib/es/torad.d.ts",
+      "../node_modules/geolib/es/types.d.ts",
+      "../node_modules/geolib/es/wkttopolygon.d.ts",
       "../node_modules/jest-diff/build/cleanupsemantic.d.ts",
       "../node_modules/jest-diff/build/difflines.d.ts",
       "../node_modules/jest-diff/build/index.d.ts",
@@ -7823,6 +8911,7 @@
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "../src/app.controller.ts",
+      "../src/app.gateway.ts",
       "../src/app.module.ts",
       "../src/app.service.ts",
       "../src/main.ts",
@@ -7865,7 +8954,14 @@
       "../src/modules/review/review.service.ts",
       "../src/modules/review/schemas/review.schema.ts",
       "../src/modules/schemas.ts",
-      "../src/modules/types.ts"
+      "../src/modules/types.ts",
+      "../src/promo/dto/create-promo.dto.ts",
+      "../src/promo/interfaces/promo.interface.ts",
+      "../src/promo/promo.controller.ts",
+      "../src/promo/promo.module.ts",
+      "../src/promo/promo.service.ts",
+      "../src/promo/schemas/promo.schema.ts",
+      "../src/utils/index.ts"
     ]
   },
   "version": "4.2.3"

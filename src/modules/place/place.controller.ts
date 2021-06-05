@@ -4,31 +4,52 @@ import {
   Res,
   HttpStatus,
   Post,
-  Body,
   UseGuards,
-  Logger,
+  Request,
+  Body,
+  Query,
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
 import { CreatePlaceDTO } from './dto/create-place.dto';
+import { Place } from './interfaces/place.interface';
 import { PlaceService } from './place.service';
 
 @Controller('places')
 export class PlaceController {
   constructor(private placeService: PlaceService) {}
 
-  @UseGuards(JwtAuthGuard)
   @Get()
   async getAllPlaces(@Res() res) {
     const places = await this.placeService.getAllPlaces();
     return res.status(HttpStatus.OK).json(places);
   }
 
+  @Post()
+  async getPlacesNearbyCoordinates(@Res() res, @Body() data) {
+    const places = await this.placeService.getPlacesNearbyCoordinates(
+      data.coords,
+      data.distance,
+    );
+    return res.status(HttpStatus.OK).json(places);
+  }
+
+  @UseGuards(JwtAuthGuard)
   @Post('/create')
   async createPlace(@Res() res, @Body() createPlaceDTO: CreatePlaceDTO) {
-    const place = await this.placeService.createPlace(createPlaceDTO);
+    const place = await this.placeService.createPlace(createPlaceDTO,);
     return res.status(HttpStatus.OK).json({
       message: 'Place has been created successfully',
       place,
+    });
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Get('/similarPlaces')
+  async similarPlaces(@Res() res, @Body() place: Place) {
+    const places = await this.placeService.similarPlaces(place);
+    return res.status(HttpStatus.OK).json({
+      message: 'Similar places has been get successfully',
+      places,
     });
   }
 }

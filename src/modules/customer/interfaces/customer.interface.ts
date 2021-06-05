@@ -1,4 +1,4 @@
-import { Document, ObjectId } from 'mongoose';
+import { Document } from 'mongoose';
 import { Place } from 'src/modules/place/interfaces/place.interface';
 
 export interface Customer extends Document {
@@ -11,5 +11,8 @@ export interface Customer extends Document {
   password: string;
   readonly description: string;
   readonly created_at: Date;
-  readonly favorites: Place[];
+  readonly promoCode: [string];
+  readonly historyCode: [string];
+  favorites: Place[];
+  ownedPlaces: Place[];
 }
