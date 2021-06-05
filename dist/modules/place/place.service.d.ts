@@ -10,4 +10,5 @@ export declare class PlaceService {
     getAllPlaces(): Promise<Place[]>;
     getPlacesNearbyCoordinates(coords: Coords, distance: number): Promise<Place[]>;
     createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;
+    similarPlaces(place: Place): Promise<Place[]>;
 }

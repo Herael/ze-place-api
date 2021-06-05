@@ -20,7 +20,7 @@ let AppGateway = class AppGateway {
     }
     handleMessage(client, payload) {
         console.log('payload socket : ' + payload);
-        this.server.emit('msgToClient', payload);
+        this.server.emit('msgToClient', 'Hey from the server !');
     }
     afterInit(server) {
         this.logger.log('Init');
