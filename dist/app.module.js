@@ -18,9 +18,9 @@ const auth_module_1 = require("./modules/auth/auth.module");
 const promo_module_1 = require("./modules/promo/promo.module");
 const place_type_module_1 = require("./modules/place-type/place-type.module");
 const feature_module_1 = require("./modules/feature/feature.module");
-const app_gateway_1 = require("./app.gateway");
 const payment_module_1 = require("./modules/payment/payment.module");
 const booking_module_1 = require("./modules/booking/booking.module");
+const app_gateway_1 = require("./app.gateway");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
