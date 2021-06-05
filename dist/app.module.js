@@ -20,6 +20,7 @@ const place_type_module_1 = require("./modules/place-type/place-type.module");
 const feature_module_1 = require("./modules/feature/feature.module");
 const payment_module_1 = require("./modules/payment/payment.module");
 const booking_module_1 = require("./modules/booking/booking.module");
+const app_gateway_1 = require("./app.gateway");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -37,7 +38,7 @@ AppModule = __decorate([
             payment_module_1.PaymentModule,
         ],
         controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        providers: [app_service_1.AppService, app_gateway_1.AppGateway],
     })
 ], AppModule);
 exports.AppModule = AppModule;
