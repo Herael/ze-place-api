@@ -1,7 +1,7 @@
 import { Model } from 'mongoose';
 import { Customer } from './interfaces/customer.interface';
 import { CreateCustomerDTO } from './dto/create-customer.dto';
-import { Promo } from 'src/promo/interfaces/promo.interface';
+import { Promo } from '../promo/interfaces/promo.interface';
 import { Place } from '../place/interfaces/place.interface';
 export declare class CustomerService {
     private readonly customerModel;

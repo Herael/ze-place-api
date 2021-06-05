@@ -1,4 +1,6 @@
 import * as mongoose from 'mongoose';
+
+import { BookingSchema } from 'src/modules/booking/schemas/booking.schema';
 import { FeatureSchema } from 'src/modules/feature/schemas/feature.schema';
 import { PlaceTypeSchema } from 'src/modules/place-type/schemas/place-type.schema';
 import { ReviewSchema } from 'src/modules/review/schemas/review.schema';
@@ -27,8 +29,9 @@ export const PlaceSchema = new mongoose.Schema({
   authorizeSmoking: Boolean,
   authorizeFire: Boolean,
   authorizeFoodAndDrink: Boolean,
-  ownerId:String,
+  ownerId: String,
   rate: Number,
   reviews: [ReviewSchema],
+  bookings: [BookingSchema],
   created_at: { type: Date, default: Date.now },
 });

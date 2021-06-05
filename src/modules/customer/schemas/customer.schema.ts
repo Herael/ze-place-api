@@ -1,9 +1,7 @@
 import * as mongoose from 'mongoose';
 import { PlaceSchema } from 'src/modules/place/schemas/place.schema';
 
-const Schema = mongoose.Schema;
-
-export const CustomerSchema = new Schema({
+export const CustomerSchema = new mongoose.Schema({
   avatar: String,
   first_name: String,
   last_name: String,
@@ -12,9 +10,12 @@ export const CustomerSchema = new Schema({
   email: String,
   password: String,
   description: String,
-  created_at: { type: Date, default: Date.now },
   promoCode: [String],
   historyCode: [String],
   favorites: [PlaceSchema],
+  customerId: String,
   ownedPlaces: [PlaceSchema],
+  bookings: [String],
+  pushToken: String,
+  created_at: { type: Date, default: Date.now },
 });

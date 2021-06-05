@@ -26,6 +26,10 @@ let PlaceService = class PlaceService {
         const places = await this.placeModel.find().exec();
         return places;
     }
+    async findById(placeId) {
+        const place = await this.placeModel.findById(placeId).exec();
+        return place;
+    }
     async getPlacesNearbyCoordinates(coords, distance) {
         let places = await this.placeModel.find().exec();
         places = places.filter((place) => index_1.isPlaceInRadius({
@@ -33,6 +37,26 @@ let PlaceService = class PlaceService {
             latitude: place.location.latitude,
         }, coords, distance) === true);
         return places;
+    }
+    async bookPlace(userId, placeId, bookingDTO) {
+        const user = await this.customerModel.findById(userId);
+        const place = await this.findById(placeId);
+        const booking = Object.assign({ userId: user._id, firstname: user.first_name, lastname: user.last_name, avatar: user.avatar }, bookingDTO);
+        const index = place.bookings.push(booking);
+        user.bookings.push(place.bookings[index]._id);
+        user.save();
+        place.save();
+    }
+    async getBookings(placeId) {
+        const place = await this.findById(placeId);
+        return place.bookings;
+    }
+    async acceptBooking(placeId, bookingId) {
+        const place = await this.findById(placeId);
+        const booking = place.bookings.find((booking) => booking._id.toString() === bookingId.toString());
+        booking.isAccepted = true;
+        place.save();
+        return place.bookings;
     }
     async createPlace(createPlaceDTO) {
         const newPlace = await new this.placeModel(createPlaceDTO).save();

@@ -10,5 +10,8 @@ export declare class CreateCustomerDTO {
     readonly description: string;
     readonly created_at: Date;
     readonly favorites: Place[];
+    readonly customerId: string;
     readonly ownedPlaces: Place[];
+    readonly bookings: string[];
+    readonly pushToken: string;
 }

@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreatePlaceDTO = void 0;
 const class_validator_1 = require("class-validator");
+const booking_interface_1 = require("../../booking/interfaces/booking.interface");
 const feature_interface_1 = require("../../feature/interfaces/feature.interface");
 const place_type_interface_1 = require("../../place-type/interfaces/place-type.interface");
 const review_interface_1 = require("../../review/interfaces/review.interface");
@@ -20,6 +21,7 @@ class CreatePlaceDTO {
         this.features = [];
         this.images = [];
         this.reviews = [];
+        this.bookings = [];
     }
 }
 __decorate([
@@ -76,9 +78,5 @@ __decorate([
     class_validator_1.IsString(),
     __metadata("design:type", String)
 ], CreatePlaceDTO.prototype, "ownerId", void 0);
-__decorate([
-    class_validator_1.IsDefined(),
-    __metadata("design:type", Array)
-], CreatePlaceDTO.prototype, "reviews", void 0);
 exports.CreatePlaceDTO = CreatePlaceDTO;
 //# sourceMappingURL=create-place.dto.js.map

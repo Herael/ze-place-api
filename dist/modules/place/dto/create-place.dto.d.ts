@@ -1,3 +1,4 @@
+import { Booking } from 'src/modules/booking/interfaces/booking.interface';
 import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 import { PlaceType } from 'src/modules/place-type/interfaces/place-type.interface';
 import { Review } from 'src/modules/review/interfaces/review.interface';
@@ -21,5 +22,6 @@ export declare class CreatePlaceDTO {
     readonly ownerId: string;
     readonly rate: number;
     readonly reviews: Array<Review>;
+    readonly bookings: Array<Booking>;
     readonly created_at: Date;
 }

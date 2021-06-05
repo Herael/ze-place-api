@@ -1566,6 +1566,11 @@
         "signature": "599395b622c7b880ec84a3412a1b7d61b42ba93df6b45253da22ddb344ce7471",
         "affectsGlobalScope": false
       },
+      "../src/modules/booking/interfaces/booking.interface.ts": {
+        "version": "f271e16407eeba0f0533274cd38fcf4c8691106d82cb760ef443d770cd117cfd",
+        "signature": "ae27baa0d244f1cba1e5f62bec6472572ab73db3049618bacc727c5e7308b4f8",
+        "affectsGlobalScope": false
+      },
       "../src/modules/place-type/interfaces/place-type.interface.ts": {
         "version": "cd367e7e40ec17e249fd970d01728ab80f50a9a2f685e38309f7d690f0b4c502",
         "signature": "49ff79ceecc7dd6fe1c52f340fd74bd23d740598b106de7f690f466593b0b333",
@@ -1577,18 +1582,18 @@
         "affectsGlobalScope": false
       },
       "../src/modules/types.ts": {
-        "version": "0b8699f24f1ec9e32fb48718e96be7a2148bcafa6333cc6acd0649f64e71359b",
-        "signature": "92feac25ac193b7737584d3fe02f141da59f87fd0b1e901d3bfcdf3eade403f5",
+        "version": "4118f9b1e1a0ecf48d2eeb9e14007bcf0acbe3b58afc1b88cf0b9085b80d72da",
+        "signature": "b8db0d129f179c2ba7063ae3f36855df28e69d67a20079234a9e2c2f9bdb338b",
         "affectsGlobalScope": false
       },
       "../src/modules/place/interfaces/place.interface.ts": {
-        "version": "afe9e0c1c5612e25e0f5df4610a0211cfbdcd3522b0b5659b64907735339ee8c",
-        "signature": "d311140c423fe2a8d94980ec886b31cb141bfa175218d72c1cc8806a890c2761",
+        "version": "23efea001b213a372e16d7f215bf665f0d047d9598c4f9358b242334535f600c",
+        "signature": "864d30d60b95b0ebe3efcb2d8b21b4988359037c90514378a58b7facf6bb578e",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/interfaces/customer.interface.ts": {
-        "version": "46e1e79996958faff3ba29441397a14581336749d593ac7b47445a8c2f00ef6f",
-        "signature": "1db4798451ef7c1353e5e781570f899c2a369812dd3ab91658eb5aec5c664146",
+        "version": "85b423d4da3a8509ccc64cf5cedd9416a052f7a31cdc834b5955939155e07895",
+        "signature": "d69e61078bfbafdafd116bc7a7ecf3ed6a3ec954dbe91a19fc245777642ccd3a",
         "affectsGlobalScope": false
       },
       "../node_modules/class-validator/types/validation/validationerror.d.ts": {
@@ -2217,8 +2222,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/dto/create-customer.dto.ts": {
-        "version": "3769362624f88c4f3314fc4a2b45c9f09f86accbc970fbecfdb9f376b536ad26",
-        "signature": "cd235ba8b55bcc9a471a373c15af69ff5d3065719515fa31b1bd5d797f0573a3",
+        "version": "73f7dd493449ad5017a1e8fd2a07360a7cb14549e981ac89461c84b8f1ec5066",
+        "signature": "9fc4bf5359096ff8d308577202180a77f0b126343acea0b1fe71e443d2c57d45",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/bcrypt/index.d.ts": {
@@ -2226,14 +2231,54 @@
         "signature": "6c407a8b6e5cabde0c5e4ad2d1d0e18c4de012983e9a006fc5e3e121545552f1",
         "affectsGlobalScope": false
       },
-      "../src/promo/interfaces/promo.interface.ts": {
-        "version": "6bac3b705b40781517e7f98832107ba9e28f979b3c521b7a421ba6826dad89b8",
+      "../src/modules/promo/interfaces/promo.interface.ts": {
+        "version": "a54d9bfe41472929b2d1a2a45096eab3912f1255ffb9fdd95c7c7d48ae113f0f",
         "signature": "31b5ace2c6186fd1ed8c1f0e91622df7274f2e534ef4b1c1fd0cb813fd3e1399",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/customer.service.ts": {
-        "version": "9e83960630238a97d7c09becf70dbc0a1be47a5444524585807eb2cd034ca5ae",
-        "signature": "6022c7ff328e2dcbb0f52e16c183611e44bd4371f25388b1e9bc316d5d42ef76",
+        "version": "3ea24d15219db4436b20f141393b1dbe1d3430e49a453282909a368ac52c5aaa",
+        "signature": "e9001e169798b9f61411e42f35a5b1371593b00af20ff6f752d78531bfaedf0e",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/auth/auth.service.ts": {
+        "version": "38ebda02c486795507b7d3fc0969c71a8d66de97acba658cad0b48b7d83f4ed6",
+        "signature": "04b95dedda66f4ec9a70d92c48885e50eadc1a52a6b41f98ec7e260ea8c34f8b",
+        "affectsGlobalScope": false
+      },
+      "../src/app.controller.ts": {
+        "version": "d1a3d71f1d462c54c830a84c82eaefe0762c384e43af32fc51ebdab4751c71ba",
+        "signature": "d4b883ddbaae02ec46e87fe48e370005274789c30846e88687e32771b6e65835",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/passport/dist/abstract.strategy.d.ts": {
+        "version": "ba63131c5e91f797736444933af16ffa42f9f8c150d859ec65f568f037a416ea",
+        "signature": "ba63131c5e91f797736444933af16ffa42f9f8c150d859ec65f568f037a416ea",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/passport/dist/interfaces/auth-module.options.d.ts": {
+        "version": "142e2e1abd8603dfdeaa1c88d73003a7912aa949b3a19234fa91f729ebfa2fcc",
+        "signature": "142e2e1abd8603dfdeaa1c88d73003a7912aa949b3a19234fa91f729ebfa2fcc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/passport/dist/interfaces/type.interface.d.ts": {
+        "version": "340a45cd77b41d8a6deda248167fa23d3dc67ec798d411bd282f7b3d555b1695",
+        "signature": "340a45cd77b41d8a6deda248167fa23d3dc67ec798d411bd282f7b3d555b1695",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/passport/dist/interfaces/index.d.ts": {
+        "version": "0e9aa853b5eb2ca09e0e3e3eb94cbd1d5fb3d682ab69817d4d11fe225953fc57",
+        "signature": "0e9aa853b5eb2ca09e0e3e3eb94cbd1d5fb3d682ab69817d4d11fe225953fc57",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/passport/dist/auth.guard.d.ts": {
+        "version": "ffa1885ad546522fa1046644db93b17de7a29191a547edeeac57391909a73846",
+        "signature": "ffa1885ad546522fa1046644db93b17de7a29191a547edeeac57391909a73846",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/passport/dist/passport.module.d.ts": {
+        "version": "793c353144f16601da994fa4e62c09b7525836ce999c44f69c28929072ca206a",
+        "signature": "793c353144f16601da994fa4e62c09b7525836ce999c44f69c28929072ca206a",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/range-parser/index.d.ts": {
@@ -2281,51 +2326,6 @@
         "signature": "d504adcb8e0c47a5e8863da80db139e680b349842bd7c9d4518d2a1019c140a7",
         "affectsGlobalScope": true
       },
-      "../node_modules/@types/passport-strategy/index.d.ts": {
-        "version": "29d59e921bc723594bbfc98230d24f38f0d5a669f28fcf989b7468f4f95b7c52",
-        "signature": "29d59e921bc723594bbfc98230d24f38f0d5a669f28fcf989b7468f4f95b7c52",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@types/jsonwebtoken/index.d.ts": {
-        "version": "82cffc446a000271c34cdf657c5aaa397c87183762431efe5e09660979cce586",
-        "signature": "82cffc446a000271c34cdf657c5aaa397c87183762431efe5e09660979cce586",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@types/passport-jwt/index.d.ts": {
-        "version": "991f4413ebcec9e96a13c02f596e9b75dca9c618ac8a3a2466e054b33632bf01",
-        "signature": "991f4413ebcec9e96a13c02f596e9b75dca9c618ac8a3a2466e054b33632bf01",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/passport/dist/abstract.strategy.d.ts": {
-        "version": "ba63131c5e91f797736444933af16ffa42f9f8c150d859ec65f568f037a416ea",
-        "signature": "ba63131c5e91f797736444933af16ffa42f9f8c150d859ec65f568f037a416ea",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/passport/dist/interfaces/auth-module.options.d.ts": {
-        "version": "142e2e1abd8603dfdeaa1c88d73003a7912aa949b3a19234fa91f729ebfa2fcc",
-        "signature": "142e2e1abd8603dfdeaa1c88d73003a7912aa949b3a19234fa91f729ebfa2fcc",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/passport/dist/interfaces/type.interface.d.ts": {
-        "version": "340a45cd77b41d8a6deda248167fa23d3dc67ec798d411bd282f7b3d555b1695",
-        "signature": "340a45cd77b41d8a6deda248167fa23d3dc67ec798d411bd282f7b3d555b1695",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/passport/dist/interfaces/index.d.ts": {
-        "version": "0e9aa853b5eb2ca09e0e3e3eb94cbd1d5fb3d682ab69817d4d11fe225953fc57",
-        "signature": "0e9aa853b5eb2ca09e0e3e3eb94cbd1d5fb3d682ab69817d4d11fe225953fc57",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/passport/dist/auth.guard.d.ts": {
-        "version": "ffa1885ad546522fa1046644db93b17de7a29191a547edeeac57391909a73846",
-        "signature": "ffa1885ad546522fa1046644db93b17de7a29191a547edeeac57391909a73846",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/passport/dist/passport.module.d.ts": {
-        "version": "793c353144f16601da994fa4e62c09b7525836ce999c44f69c28929072ca206a",
-        "signature": "793c353144f16601da994fa4e62c09b7525836ce999c44f69c28929072ca206a",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@nestjs/passport/dist/passport/passport.serializer.d.ts": {
         "version": "599ac4a84b7aa6a298731179ec1663a623ff8ac324cdc1dabb9c73c1259dc854",
         "signature": "599ac4a84b7aa6a298731179ec1663a623ff8ac324cdc1dabb9c73c1259dc854",
@@ -2344,16 +2344,6 @@
       "../node_modules/@nestjs/passport/index.d.ts": {
         "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
-        "affectsGlobalScope": false
-      },
-      "../src/modules/auth/constants.ts": {
-        "version": "535e4849884348d20f72b9988781370f2e2a003cde2ec85dbc1982abf7ac8c8f",
-        "signature": "a9a6d1ac7d8e1b27ed750995232ec31127a73624abfe24dcf9111d466d1dff17",
-        "affectsGlobalScope": false
-      },
-      "../src/modules/auth/jwt.strategy.ts": {
-        "version": "ae4de6b3ed073134ace6bb96766e85c066e9bd6a63cad98b8c62067f1b4f6855",
-        "signature": "727b9697a7105e1cecba99f35b1f0c35077aa9a2fc44f2f3e6fd1cfb46f2e213",
         "affectsGlobalScope": false
       },
       "../src/modules/auth/jwt-auth.guard.ts": {
@@ -2511,6 +2501,11 @@
         "signature": "f06ef335f0734e00a1b4490b4dbfa791a7ef89cc822e21924eb8594bd0b9a427",
         "affectsGlobalScope": false
       },
+      "../src/modules/booking/schemas/booking.schema.ts": {
+        "version": "cb00a13f55b06a6c8f8dfe41a03b6503242970cd33161129135a3ca5fec8c7d3",
+        "signature": "1e0bb72448e9366042ef672ecacd8bc89bcabe6bef47e398a8961b32e7cec1e3",
+        "affectsGlobalScope": false
+      },
       "../src/modules/place-type/schemas/place-type.schema.ts": {
         "version": "15fc659e1ef779c925d213faea9290677eda86cbabfce35b872a7598926f1c86",
         "signature": "c8eacaf4c72d12cc50fd05ecbca7de921c478c2f234c9e0e2ca405a519dbd075",
@@ -2527,28 +2522,28 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/schemas/place.schema.ts": {
-        "version": "439f6fab2ece184a1f919082a9d03f06a9a99596ce63221e61336e3c3b941b0e",
+        "version": "7b2a5ee6f88032b2534af76ceb3351be0414375af1ca06a517b2f8c53eaa7287",
         "signature": "b29d58e560e82ebd6eaeab2c411be4ab1c6d2a67eabb4aee61f7898e2071066d",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/schemas/customer.schema.ts": {
-        "version": "05fbcb1816d2217860ec13561dcad8429a900931dca6bfe12a61b6a31ad5d553",
+        "version": "04bb85d9dac79fb6523d58baafab88d5ce65096688df3aa040f49831218c1572",
         "signature": "4e0f49eb914132556be58be043c68fc4297e170d5d941b7c8446198f113afb86",
         "affectsGlobalScope": false
       },
-      "../src/promo/schemas/promo.schema.ts": {
-        "version": "3eaf9ff9ef0a1ce8aa864f02a98be773eadd1d3a96f6ec28fc62c2a98008130c",
+      "../src/modules/promo/schemas/promo.schema.ts": {
+        "version": "02e693baaf3551ea5e4e7da3e7bf051ba6c02b901ed2e7526c66936b2f92431f",
         "signature": "5807f06abf65574ad10e42c35c655dad261c5f638b661e82d34d73f23b5b09d3",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/customer.module.ts": {
-        "version": "f24a6c9ab21eb1dc536481bc8668778e2177060c9414dd961728a03896121a5a",
+        "version": "6371098daa9ba623fb84659128b8a4251ee607b53e4545448240f69f988d3f01",
         "signature": "b16fc39c01bd9a1562b59fc5bc96d07fdbc1ba20d3858c20611132fbdeb485a9",
         "affectsGlobalScope": false
       },
       "../src/modules/place/dto/create-place.dto.ts": {
-        "version": "86845f5391bb36df6fb0f2b29141644a264771bea2599dc7c955043f130468f9",
-        "signature": "b97cb6696da531b55b6deba353ac8f0269acc28287afa2e7e388f6fabf1717b7",
+        "version": "b7fbcdd00c4b428141c83ff96219a648248dbf992404de0d31cdd063079e49d6",
+        "signature": "d1a44ae133c4676bab0b97d91dd6c4acdef435411247a4f1f2524b8df266b711",
         "affectsGlobalScope": false
       },
       "../node_modules/geolib/es/types.d.ts": {
@@ -2766,18 +2761,27 @@
         "signature": "4d41baa9b052f525333ac0d99d2e4a4df5b75ca3539463b1e8ef83d040faa0a5",
         "affectsGlobalScope": false
       },
+      "../src/modules/booking/dto/booking.dto.ts": {
+        "version": "4bd05cb685983a6a6a821d9a9d0e4926e38b4415384d55864188962f3197a8f4",
+        "signature": "f557287671a520d0d52db78fac3d5041ae1880547a41795cbcb14eb17ef05726",
+        "affectsGlobalScope": false
+      },
       "../src/modules/place/place.service.ts": {
         "version": "37d5a083584dfdc6de9c5999491c1095c37341158f6535cdba4f2b16073994c4",
         "signature": "4396c4c49895b25a22d3b61790ab50c0f3aa11bf402f557538674ac94d36278d",
+        "version": "2e21f410472954ee4d53cfe2730761d7e97091a8c2fc06042c0967ccdc534625",
+        "signature": "eac5280de0880e00959f744c63c7be6ca64a9746798d02e4388a45ee3810f863",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
         "version": "643d6d816ba7d8df26914ebee5d600cf03de8fe9b5ccbf8ffacbe0080b3b2199",
         "signature": "a59f19ffda9badc408ef4cb8398c4a76df0c69506696f007d42a8a59d2cdb554",
+        "version": "8f49647abfdc7a4870fcc22e027373fd741152a873fb67eb3a482f4d14b03fbe",
+        "signature": "c4c3bd9b3c2ec879a168e1701f566f1020b912927be93dc3a3fe5aec6277a8dd",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.module.ts": {
-        "version": "558663b247e6faa81ea90db464a3ae8249731eb9cf057041b6b18c24164aef67",
+        "version": "59e2180f676b53584e3704ef400164410c7628b7e97a41fda3e3b7cb4484ed9a",
         "signature": "19d997ce27c99d6e74839ae37762f33da8cb45f4b60f73e7050b6c7bd71dd2b4",
         "affectsGlobalScope": false
       },
@@ -2796,6 +2800,11 @@
         "signature": "145b36f59e42572f72a955b9b8c9077e4160a41f680f82f75d48a84af9fdc5fb",
         "affectsGlobalScope": false
       },
+      "../node_modules/@types/passport-strategy/index.d.ts": {
+        "version": "29d59e921bc723594bbfc98230d24f38f0d5a669f28fcf989b7468f4f95b7c52",
+        "signature": "29d59e921bc723594bbfc98230d24f38f0d5a669f28fcf989b7468f4f95b7c52",
+        "affectsGlobalScope": false
+      },
       "../node_modules/@types/passport-local/index.d.ts": {
         "version": "e50f9ae34bb92232533e3a32848970dd04f874a8f64d3ae48980e062b6489f26",
         "signature": "e50f9ae34bb92232533e3a32848970dd04f874a8f64d3ae48980e062b6489f26",
@@ -2806,14 +2815,34 @@
         "signature": "88b50147344fb775ce8b97d9d1a0d49e1e77974ae78b0b3c8103e56c526711af",
         "affectsGlobalScope": false
       },
+      "../src/modules/auth/constants.ts": {
+        "version": "535e4849884348d20f72b9988781370f2e2a003cde2ec85dbc1982abf7ac8c8f",
+        "signature": "a9a6d1ac7d8e1b27ed750995232ec31127a73624abfe24dcf9111d466d1dff17",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/jsonwebtoken/index.d.ts": {
+        "version": "82cffc446a000271c34cdf657c5aaa397c87183762431efe5e09660979cce586",
+        "signature": "82cffc446a000271c34cdf657c5aaa397c87183762431efe5e09660979cce586",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/passport-jwt/index.d.ts": {
+        "version": "991f4413ebcec9e96a13c02f596e9b75dca9c618ac8a3a2466e054b33632bf01",
+        "signature": "991f4413ebcec9e96a13c02f596e9b75dca9c618ac8a3a2466e054b33632bf01",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/auth/jwt.strategy.ts": {
+        "version": "ae4de6b3ed073134ace6bb96766e85c066e9bd6a63cad98b8c62067f1b4f6855",
+        "signature": "727b9697a7105e1cecba99f35b1f0c35077aa9a2fc44f2f3e6fd1cfb46f2e213",
+        "affectsGlobalScope": false
+      },
       "../src/modules/auth/local-auth.guard.ts": {
         "version": "398e0969b109e6eae52778ca73bb9fba44ffccfa97cf1679631d21c8b29d6e3e",
         "signature": "9116cbf32650ce234338c6f8395ecb044d06f6d939f2f6ca6d21335f4e663b71",
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.controller.ts": {
-        "version": "e2cb9ee159b52fd5b8953e84c74c83f561438e07f60e63cc0a9b6e649b676528",
-        "signature": "694884795e9da2d25e31f0f9dfbaa885c88767520a96308560e82395b105b4d2",
+        "version": "cdca4164d629f9fe8c20ed2e9dd3361fc295da27626346320318350b94b41c47",
+        "signature": "0f6dc3d931ea80c28ad00a93cd9e63c08d99eace666c588b4958f709d6a8c8df",
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.module.ts": {
@@ -2821,17 +2850,17 @@
         "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1",
         "affectsGlobalScope": false
       },
-      "../src/promo/promo.service.ts": {
+      "../src/modules/promo/promo.service.ts": {
         "version": "acf6153beba235a6bcde1ce77f4dd1108b336fea21d96b5cc75c2a571a946a99",
         "signature": "ec99180f3413ef9a38fb3c907eb00a6386c84a7a2142b3d000e22eb6e2eaf586",
         "affectsGlobalScope": false
       },
-      "../src/promo/promo.controller.ts": {
+      "../src/modules/promo/promo.controller.ts": {
         "version": "0ca0e63a9f2916e3da3ba463e3b6c52de816e54be1550ef9cd684f4d34f69d67",
         "signature": "5cc60f4f97d566b2d32219b208f66c4fd7a8c9e9fd55e28e4be2eeb71c3f61fa",
         "affectsGlobalScope": false
       },
-      "../src/promo/promo.module.ts": {
+      "../src/modules/promo/promo.module.ts": {
         "version": "7a3c5934419cedf66871353014d0fa1d59d8488132164c44723687a7dd287ed0",
         "signature": "4e981f9bf50398f6a24608fa9c3b8304da8842b8c9f93a1b64fc089179955068",
         "affectsGlobalScope": false
@@ -2866,8 +2895,39 @@
         "signature": "852aa9ddd23c4fae3a712234e2016e119e2ca34a55038bedb9ff3755957b366d",
         "affectsGlobalScope": false
       },
+      "../src/modules/payment/payment.service.ts": {
+        "version": "0c2949d9080a011fccf779b556e3b81ea2a9c373657b1dec80fcf041c7202b84",
+        "signature": "79248a979dde890b7651aa932ad871dc70906a49eea467fd19593a113e126a84",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/payment/payment.controller.ts": {
+        "version": "335d1252c2d227429d0f9d87fd109b5d3e516334fae75af1ec102ee6e61d549c",
+        "signature": "d716532f6721d541d10324b820c01f2e8e46a20acf1a86f6963cfd936f7ca37e",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/payment/payment.module.ts": {
+        "version": "3b04e01ae32e0c68a9ad037229d2919718c981136fb5cd416a4d7606dd645490",
+        "signature": "a3684909b502d2414d94ce06228f5d6dae72b658eac3f386843965e540b51834",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/booking/booking.service.ts": {
+        "version": "152f87a4b5ed63e543fabe0c36ab98469f4e587841109888737f0f1ade2466f1",
+        "signature": "5acb4ae228dc9714fef7ed0be19c4e8d1711a3683fa140c940b49b90b472049d",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/booking/booking.controller.ts": {
+        "version": "65126d3f9b024f7cf104517ab4b710f15bb0c8bb3f82387537f5a147722bfad9",
+        "signature": "b33430abc7817f266ff0b3ca1a2293710106af4157cc3d1810f9baf2155ef93a",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/booking/booking.module.ts": {
+        "version": "abfa55c94b3a96a79f8f4e6324c133a2b2eaf56305f6efb56ecc7d970778dde1",
+        "signature": "307da3f1f46926da44f7648eb8e50e8695fb098723e4ee7b33d6bb54573c7d81",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
         "version": "69ced25312edf26fb7a9e787992635367168bd37f42f7666eaccaaee9c5c6358",
+        "version": "a573249acb51106e414fa4bfc0bc1d47a6901b44fa8e472dc99c49568d3b9e1a",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -3141,14 +3201,14 @@
         "signature": "f919d75ec5c88e05bdc3ab2662f91005460bd562357c643262da125c1e88dc45",
         "affectsGlobalScope": false
       },
+      "../src/modules/promo/dto/create-promo.dto.ts": {
+        "version": "86c40d1ad9132b7fa69172e91cc3c9671612ea64a4b5613fa39a4d50d42f9dac",
+        "signature": "0be74d6ecfd17cc6a998f1ca3ae5c300be8fe280d1a5c5288e78bd8972bddaa1",
+        "affectsGlobalScope": false
+      },
       "../src/modules/review/dto/create-review.dto.ts": {
         "version": "47b6ea5de0de1420b6597ab738ffe85141eeafd266a5ae7fc32d8bfd61db47fe",
         "signature": "10c72662a95532da4d6bec18bdd3241ebcb6cd69ff918ec583142d743a4e6516",
-        "affectsGlobalScope": false
-      },
-      "../src/promo/dto/create-promo.dto.ts": {
-        "version": "f4a3525d432d87bbb1035943e8658bd5e621e8b728397f799e2e5a8c7a9d2d6d",
-        "signature": "ff1864c46e365bd2fe0799feb2c989358d49037876a24d2e09f4ee24fc5443ae",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -5679,12 +5739,14 @@
         "../src/app.gateway.ts",
         "../src/app.service.ts",
         "../src/modules/auth/auth.module.ts",
+        "../src/modules/booking/booking.module.ts",
         "../src/modules/customer/customer.module.ts",
         "../src/modules/feature/feature.module.ts",
+        "../src/modules/payment/payment.module.ts",
         "../src/modules/place-type/place-type.module.ts",
         "../src/modules/place/place.module.ts",
-        "../src/modules/review/review.module.ts",
-        "../src/promo/promo.module.ts"
+        "../src/modules/promo/promo.module.ts",
+        "../src/modules/review/review.module.ts"
       ],
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
@@ -5698,7 +5760,6 @@
       ],
       "../src/modules/auth/auth.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/jwt/index.d.ts",
         "../src/modules/auth/auth.service.ts",
         "../src/modules/auth/jwt-auth.guard.ts",
         "../src/modules/auth/local-auth.guard.ts"
@@ -5718,8 +5779,6 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/jwt/index.d.ts",
         "../node_modules/@types/bcrypt/index.d.ts",
-        "../src/modules/auth/jwt-auth.guard.ts",
-        "../src/modules/auth/jwt.strategy.ts",
         "../src/modules/customer/customer.service.ts",
         "../src/modules/customer/interfaces/customer.interface.ts"
       ],
@@ -5744,6 +5803,29 @@
         "../src/modules/auth/auth.service.ts",
         "../src/modules/customer/interfaces/customer.interface.ts"
       ],
+      "../src/modules/booking/booking.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/booking/booking.service.ts"
+      ],
+      "../src/modules/booking/booking.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/booking/booking.controller.ts",
+        "../src/modules/booking/booking.service.ts"
+      ],
+      "../src/modules/booking/booking.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/modules/booking/dto/booking.dto.ts": [
+        "../src/modules/feature/interfaces/feature.interface.ts"
+      ],
+      "../src/modules/booking/interfaces/booking.interface.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/feature/interfaces/feature.interface.ts"
+      ],
+      "../src/modules/booking/schemas/booking.schema.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/feature/schemas/feature.schema.ts"
+      ],
       "../src/modules/customer/customer.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/modules/auth/jwt-auth.guard.ts",
@@ -5757,7 +5839,7 @@
         "../src/modules/customer/customer.controller.ts",
         "../src/modules/customer/customer.service.ts",
         "../src/modules/customer/schemas/customer.schema.ts",
-        "../src/promo/schemas/promo.schema.ts"
+        "../src/modules/promo/schemas/promo.schema.ts"
       ],
       "../src/modules/customer/customer.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -5767,7 +5849,7 @@
         "../src/modules/customer/dto/create-customer.dto.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/place/interfaces/place.interface.ts",
-        "../src/promo/interfaces/promo.interface.ts"
+        "../src/modules/promo/interfaces/promo.interface.ts"
       ],
       "../src/modules/customer/dto/create-customer.dto.ts": [
         "../node_modules/class-validator/types/index.d.ts",
@@ -5802,6 +5884,23 @@
       "../src/modules/feature/schemas/feature.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
+      "../src/modules/payment/payment.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/auth/jwt-auth.guard.ts",
+        "../src/modules/payment/payment.service.ts"
+      ],
+      "../src/modules/payment/payment.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/customer/customer.module.ts",
+        "../src/modules/customer/customer.service.ts",
+        "../src/modules/payment/payment.controller.ts",
+        "../src/modules/payment/payment.service.ts"
+      ],
+      "../src/modules/payment/payment.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/customer/customer.service.ts",
+        "../src/modules/customer/interfaces/customer.interface.ts"
+      ],
       "../src/modules/place-type/dto/create-place-type.dto.ts": [
         "../node_modules/class-validator/types/index.d.ts"
       ],
@@ -5825,6 +5924,7 @@
       ],
       "../src/modules/place/dto/create-place.dto.ts": [
         "../node_modules/class-validator/types/index.d.ts",
+        "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/feature/interfaces/feature.interface.ts",
         "../src/modules/place-type/interfaces/place-type.interface.ts",
         "../src/modules/review/interfaces/review.interface.ts",
@@ -5832,6 +5932,7 @@
       ],
       "../src/modules/place/interfaces/place.interface.ts": [
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/feature/interfaces/feature.interface.ts",
         "../src/modules/place-type/interfaces/place-type.interface.ts",
         "../src/modules/review/interfaces/review.interface.ts",
@@ -5856,6 +5957,8 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/booking/dto/booking.dto.ts",
+        "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/place/dto/create-place.dto.ts",
         "../src/modules/place/interfaces/place.interface.ts",
@@ -5864,10 +5967,38 @@
       ],
       "../src/modules/place/schemas/place.schema.ts": [
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/booking/schemas/booking.schema.ts",
         "../src/modules/feature/schemas/feature.schema.ts",
         "../src/modules/place-type/schemas/place-type.schema.ts",
         "../src/modules/review/schemas/review.schema.ts",
         "../src/modules/schemas.ts"
+      ],
+      "../src/modules/promo/dto/create-promo.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
+      "../src/modules/promo/interfaces/promo.interface.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/promo/promo.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/rxjs/index.d.ts",
+        "../src/modules/promo/promo.service.ts"
+      ],
+      "../src/modules/promo/promo.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/modules/promo/promo.controller.ts",
+        "../src/modules/promo/promo.service.ts",
+        "../src/modules/promo/schemas/promo.schema.ts"
+      ],
+      "../src/modules/promo/promo.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/promo/interfaces/promo.interface.ts"
+      ],
+      "../src/modules/promo/schemas/promo.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
       ],
       "../src/modules/review/dto/create-review.dto.ts": [
         "../node_modules/class-validator/types/index.d.ts",
@@ -5895,32 +6026,9 @@
       "../src/modules/schemas.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
-      "../src/promo/dto/create-promo.dto.ts": [
-        "../node_modules/class-validator/types/index.d.ts"
-      ],
-      "../src/promo/interfaces/promo.interface.ts": [
-        "../node_modules/mongoose/index.d.ts"
-      ],
-      "../src/promo/promo.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/rxjs/index.d.ts",
-        "../src/promo/promo.service.ts"
-      ],
-      "../src/promo/promo.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/mongoose/index.d.ts",
-        "../src/promo/promo.controller.ts",
-        "../src/promo/promo.service.ts",
-        "../src/promo/schemas/promo.schema.ts"
-      ],
-      "../src/promo/promo.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/mongoose/index.d.ts",
-        "../node_modules/mongoose/index.d.ts",
-        "../src/promo/interfaces/promo.interface.ts"
-      ],
-      "../src/promo/schemas/promo.schema.ts": [
-        "../node_modules/mongoose/index.d.ts"
+      "../src/modules/types.ts": [
+        "../src/modules/customer/interfaces/customer.interface.ts",
+        "../src/modules/feature/interfaces/feature.interface.ts"
       ],
       "../src/utils/index.ts": [
         "../node_modules/geolib/es/index.d.ts",
@@ -8184,6 +8292,19 @@
         "../src/modules/auth/auth.service.ts",
         "../src/modules/customer/interfaces/customer.interface.ts"
       ],
+      "../src/modules/booking/booking.controller.ts": [
+        "../src/modules/booking/booking.service.ts"
+      ],
+      "../src/modules/booking/dto/booking.dto.ts": [
+        "../src/modules/feature/interfaces/feature.interface.ts"
+      ],
+      "../src/modules/booking/interfaces/booking.interface.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/feature/interfaces/feature.interface.ts"
+      ],
+      "../src/modules/booking/schemas/booking.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
       "../src/modules/customer/customer.controller.ts": [
         "../src/modules/customer/customer.service.ts",
         "../src/modules/customer/dto/create-customer.dto.ts",
@@ -8194,7 +8315,7 @@
         "../src/modules/customer/dto/create-customer.dto.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/place/interfaces/place.interface.ts",
-        "../src/promo/interfaces/promo.interface.ts"
+        "../src/modules/promo/interfaces/promo.interface.ts"
       ],
       "../src/modules/customer/dto/create-customer.dto.ts": [
         "../src/modules/place/interfaces/place.interface.ts"
@@ -8212,6 +8333,12 @@
       "../src/modules/feature/schemas/feature.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
+      "../src/modules/payment/payment.controller.ts": [
+        "../src/modules/payment/payment.service.ts"
+      ],
+      "../src/modules/payment/payment.service.ts": [
+        "../src/modules/customer/customer.service.ts"
+      ],
       "../src/modules/place-type/interfaces/place-type.interface.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
@@ -8219,6 +8346,7 @@
         "../node_modules/mongoose/index.d.ts"
       ],
       "../src/modules/place/dto/create-place.dto.ts": [
+        "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/feature/interfaces/feature.interface.ts",
         "../src/modules/place-type/interfaces/place-type.interface.ts",
         "../src/modules/review/interfaces/review.interface.ts",
@@ -8226,6 +8354,7 @@
       ],
       "../src/modules/place/interfaces/place.interface.ts": [
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/feature/interfaces/feature.interface.ts",
         "../src/modules/place-type/interfaces/place-type.interface.ts",
         "../src/modules/review/interfaces/review.interface.ts",
@@ -8238,12 +8367,28 @@
       ],
       "../src/modules/place/place.service.ts": [
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/booking/dto/booking.dto.ts",
+        "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/place/dto/create-place.dto.ts",
         "../src/modules/place/interfaces/place.interface.ts",
         "../src/modules/types.ts"
       ],
       "../src/modules/place/schemas/place.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/promo/interfaces/promo.interface.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/promo/promo.controller.ts": [
+        "../src/modules/promo/interfaces/promo.interface.ts",
+        "../src/modules/promo/promo.service.ts"
+      ],
+      "../src/modules/promo/promo.service.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/promo/interfaces/promo.interface.ts"
+      ],
+      "../src/modules/promo/schemas/promo.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
       "../src/modules/review/dto/create-review.dto.ts": [
@@ -8259,19 +8404,8 @@
       "../src/modules/schemas.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
-      "../src/promo/interfaces/promo.interface.ts": [
-        "../node_modules/mongoose/index.d.ts"
-      ],
-      "../src/promo/promo.controller.ts": [
-        "../src/promo/interfaces/promo.interface.ts",
-        "../src/promo/promo.service.ts"
-      ],
-      "../src/promo/promo.service.ts": [
-        "../node_modules/mongoose/index.d.ts",
-        "../src/promo/interfaces/promo.interface.ts"
-      ],
-      "../src/promo/schemas/promo.schema.ts": [
-        "../node_modules/mongoose/index.d.ts"
+      "../src/modules/types.ts": [
+        "../src/modules/feature/interfaces/feature.interface.ts"
       ],
       "../src/utils/index.ts": [
         "../src/modules/types.ts"
@@ -8961,6 +9095,660 @@
       "../src/promo/promo.module.ts",
       "../src/promo/promo.service.ts",
       "../src/promo/schemas/promo.schema.ts",
+      "../src/utils/index.ts"
+    ]
+    "semanticDiagnosticsPerFile": [
+      "../node_modules/@babel/parser/typings/babel-parser.d.ts",
+      "../node_modules/@babel/types/lib/index.d.ts",
+      "../node_modules/@nestjs/common/cache/cache.constants.d.ts",
+      "../node_modules/@nestjs/common/cache/cache.module.d.ts",
+      "../node_modules/@nestjs/common/cache/decorators/cache-key.decorator.d.ts",
+      "../node_modules/@nestjs/common/cache/decorators/cache-ttl.decorator.d.ts",
+      "../node_modules/@nestjs/common/cache/decorators/index.d.ts",
+      "../node_modules/@nestjs/common/cache/index.d.ts",
+      "../node_modules/@nestjs/common/cache/interceptors/cache.interceptor.d.ts",
+      "../node_modules/@nestjs/common/cache/interceptors/index.d.ts",
+      "../node_modules/@nestjs/common/cache/interfaces/cache-manager.interface.d.ts",
+      "../node_modules/@nestjs/common/cache/interfaces/cache-module.interface.d.ts",
+      "../node_modules/@nestjs/common/cache/interfaces/index.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/apply-decorators.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/bind.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/catch.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/controller.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/dependencies.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/exception-filters.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/index.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/inject.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/injectable.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/optional.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/set-metadata.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/use-guards.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/use-interceptors.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/core/use-pipes.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/http/create-route-param-metadata.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/http/header.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/http/http-code.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/http/index.d.ts",
+      "../node_modules/@nestjs/common/decorators/http/redirect.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/http/render.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/http/request-mapping.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/http/route-params.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/http/sse.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/index.d.ts",
+      "../node_modules/@nestjs/common/decorators/modules/global.decorator.d.ts",
+      "../node_modules/@nestjs/common/decorators/modules/index.d.ts",
+      "../node_modules/@nestjs/common/decorators/modules/module.decorator.d.ts",
+      "../node_modules/@nestjs/common/enums/http-status.enum.d.ts",
+      "../node_modules/@nestjs/common/enums/index.d.ts",
+      "../node_modules/@nestjs/common/enums/request-method.enum.d.ts",
+      "../node_modules/@nestjs/common/enums/shutdown-signal.enum.d.ts",
+      "../node_modules/@nestjs/common/exceptions/bad-gateway.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/bad-request.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/conflict.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/forbidden.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/gateway-timeout.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/gone.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/http-version-not-supported.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/im-a-teapot.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/index.d.ts",
+      "../node_modules/@nestjs/common/exceptions/internal-server-error.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/method-not-allowed.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/misdirected.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/not-acceptable.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/not-found.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/not-implemented.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/payload-too-large.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/precondition-failed.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/request-timeout.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/service-unavailable.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/unauthorized.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/unprocessable-entity.exception.d.ts",
+      "../node_modules/@nestjs/common/exceptions/unsupported-media-type.exception.d.ts",
+      "../node_modules/@nestjs/common/http/http.module.d.ts",
+      "../node_modules/@nestjs/common/http/http.service.d.ts",
+      "../node_modules/@nestjs/common/http/index.d.ts",
+      "../node_modules/@nestjs/common/http/interfaces/http-module.interface.d.ts",
+      "../node_modules/@nestjs/common/http/interfaces/index.d.ts",
+      "../node_modules/@nestjs/common/index.d.ts",
+      "../node_modules/@nestjs/common/interfaces/abstract.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/controllers/controller-metadata.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/controllers/controller.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/exceptions/exception-filter.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/exceptions/rpc-exception-filter.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/exceptions/ws-exception-filter.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/external/class-transform-options.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/external/https-options.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/external/validation-error.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/external/validator-options.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/features/arguments-host.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/features/can-activate.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/features/custom-route-param-factory.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/features/execution-context.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/features/nest-interceptor.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/features/paramtype.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/hooks/before-application-shutdown.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/hooks/index.d.ts",
+      "../node_modules/@nestjs/common/interfaces/hooks/on-application-bootstrap.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/hooks/on-application-shutdown.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/hooks/on-destroy.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/hooks/on-init.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/http/http-server.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/http/index.d.ts",
+      "../node_modules/@nestjs/common/interfaces/http/message-event.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/index.d.ts",
+      "../node_modules/@nestjs/common/interfaces/injectable.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/microservices/nest-hybrid-application-options.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/microservices/nest-microservice-options.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/middleware/index.d.ts",
+      "../node_modules/@nestjs/common/interfaces/middleware/middleware-config-proxy.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/middleware/middleware-configuration.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/middleware/middleware-consumer.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/middleware/nest-middleware.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/modules/dynamic-module.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/modules/forward-reference.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/modules/index.d.ts",
+      "../node_modules/@nestjs/common/interfaces/modules/introspection-result.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/modules/module-metadata.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/modules/nest-module.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/modules/provider.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/nest-application-context-options.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/nest-application-context.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/nest-application-options.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/nest-application.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/nest-microservice.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/scope-options.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
+      "../node_modules/@nestjs/common/interfaces/websockets/web-socket-adapter.interface.d.ts",
+      "../node_modules/@nestjs/common/pipes/default-value.pipe.d.ts",
+      "../node_modules/@nestjs/common/pipes/index.d.ts",
+      "../node_modules/@nestjs/common/pipes/parse-array.pipe.d.ts",
+      "../node_modules/@nestjs/common/pipes/parse-bool.pipe.d.ts",
+      "../node_modules/@nestjs/common/pipes/parse-int.pipe.d.ts",
+      "../node_modules/@nestjs/common/pipes/parse-uuid.pipe.d.ts",
+      "../node_modules/@nestjs/common/pipes/validation.pipe.d.ts",
+      "../node_modules/@nestjs/common/serializer/class-serializer.interceptor.d.ts",
+      "../node_modules/@nestjs/common/serializer/decorators/index.d.ts",
+      "../node_modules/@nestjs/common/serializer/decorators/serialize-options.decorator.d.ts",
+      "../node_modules/@nestjs/common/serializer/index.d.ts",
+      "../node_modules/@nestjs/common/services/index.d.ts",
+      "../node_modules/@nestjs/common/services/logger.service.d.ts",
+      "../node_modules/@nestjs/common/utils/forward-ref.util.d.ts",
+      "../node_modules/@nestjs/common/utils/http-error-by-code.util.d.ts",
+      "../node_modules/@nestjs/common/utils/index.d.ts",
+      "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
+      "../node_modules/@nestjs/core/adapters/index.d.ts",
+      "../node_modules/@nestjs/core/application-config.d.ts",
+      "../node_modules/@nestjs/core/constants.d.ts",
+      "../node_modules/@nestjs/core/discovery/discovery-module.d.ts",
+      "../node_modules/@nestjs/core/discovery/discovery-service.d.ts",
+      "../node_modules/@nestjs/core/discovery/index.d.ts",
+      "../node_modules/@nestjs/core/exceptions/base-exception-filter.d.ts",
+      "../node_modules/@nestjs/core/exceptions/index.d.ts",
+      "../node_modules/@nestjs/core/helpers/context-id-factory.d.ts",
+      "../node_modules/@nestjs/core/helpers/http-adapter-host.d.ts",
+      "../node_modules/@nestjs/core/helpers/index.d.ts",
+      "../node_modules/@nestjs/core/index.d.ts",
+      "../node_modules/@nestjs/core/injector/container.d.ts",
+      "../node_modules/@nestjs/core/injector/index.d.ts",
+      "../node_modules/@nestjs/core/injector/injector.d.ts",
+      "../node_modules/@nestjs/core/injector/inquirer/index.d.ts",
+      "../node_modules/@nestjs/core/injector/inquirer/inquirer-constants.d.ts",
+      "../node_modules/@nestjs/core/injector/instance-wrapper.d.ts",
+      "../node_modules/@nestjs/core/injector/module-ref.d.ts",
+      "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
+      "../node_modules/@nestjs/core/injector/module.d.ts",
+      "../node_modules/@nestjs/core/injector/modules-container.d.ts",
+      "../node_modules/@nestjs/core/metadata-scanner.d.ts",
+      "../node_modules/@nestjs/core/middleware/builder.d.ts",
+      "../node_modules/@nestjs/core/middleware/index.d.ts",
+      "../node_modules/@nestjs/core/middleware/routes-mapper.d.ts",
+      "../node_modules/@nestjs/core/nest-application-context.d.ts",
+      "../node_modules/@nestjs/core/nest-application.d.ts",
+      "../node_modules/@nestjs/core/nest-factory.d.ts",
+      "../node_modules/@nestjs/core/router/index.d.ts",
+      "../node_modules/@nestjs/core/router/request/index.d.ts",
+      "../node_modules/@nestjs/core/router/request/request-constants.d.ts",
+      "../node_modules/@nestjs/core/services/index.d.ts",
+      "../node_modules/@nestjs/core/services/reflector.service.d.ts",
+      "../node_modules/@nestjs/jwt/dist/index.d.ts",
+      "../node_modules/@nestjs/jwt/dist/interfaces/index.d.ts",
+      "../node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts",
+      "../node_modules/@nestjs/jwt/dist/jwt.module.d.ts",
+      "../node_modules/@nestjs/jwt/dist/jwt.service.d.ts",
+      "../node_modules/@nestjs/jwt/index.d.ts",
+      "../node_modules/@nestjs/jwt/node_modules/@types/jsonwebtoken/index.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/common/index.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/common/mongoose.utils.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/decorators/index.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/decorators/prop.decorator.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/decorators/schema.decorator.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/errors/cannot-determine-type.error.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/errors/index.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/factories/definitions.factory.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/factories/index.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/factories/schema.factory.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/index.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/interfaces/async-model-factory.interface.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/interfaces/index.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/interfaces/model-definition.interface.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/interfaces/mongoose-options.interface.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/mongoose.module.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/utils/index.d.ts",
+      "../node_modules/@nestjs/mongoose/dist/utils/raw.util.d.ts",
+      "../node_modules/@nestjs/mongoose/index.d.ts",
+      "../node_modules/@nestjs/passport/dist/abstract.strategy.d.ts",
+      "../node_modules/@nestjs/passport/dist/auth.guard.d.ts",
+      "../node_modules/@nestjs/passport/dist/index.d.ts",
+      "../node_modules/@nestjs/passport/dist/interfaces/auth-module.options.d.ts",
+      "../node_modules/@nestjs/passport/dist/interfaces/index.d.ts",
+      "../node_modules/@nestjs/passport/dist/interfaces/type.interface.d.ts",
+      "../node_modules/@nestjs/passport/dist/passport.module.d.ts",
+      "../node_modules/@nestjs/passport/dist/passport/passport.serializer.d.ts",
+      "../node_modules/@nestjs/passport/dist/passport/passport.strategy.d.ts",
+      "../node_modules/@nestjs/passport/index.d.ts",
+      "../node_modules/@types/anymatch/index.d.ts",
+      "../node_modules/@types/babel__core/index.d.ts",
+      "../node_modules/@types/babel__generator/index.d.ts",
+      "../node_modules/@types/babel__template/index.d.ts",
+      "../node_modules/@types/babel__traverse/index.d.ts",
+      "../node_modules/@types/bcrypt/index.d.ts",
+      "../node_modules/@types/body-parser/index.d.ts",
+      "../node_modules/@types/bson/index.d.ts",
+      "../node_modules/@types/connect/index.d.ts",
+      "../node_modules/@types/cookiejar/index.d.ts",
+      "../node_modules/@types/eslint-scope/index.d.ts",
+      "../node_modules/@types/eslint/helpers.d.ts",
+      "../node_modules/@types/eslint/index.d.ts",
+      "../node_modules/@types/estree/index.d.ts",
+      "../node_modules/@types/express-serve-static-core/index.d.ts",
+      "../node_modules/@types/express/index.d.ts",
+      "../node_modules/@types/graceful-fs/index.d.ts",
+      "../node_modules/@types/istanbul-lib-coverage/index.d.ts",
+      "../node_modules/@types/istanbul-lib-report/index.d.ts",
+      "../node_modules/@types/istanbul-reports/index.d.ts",
+      "../node_modules/@types/jest/index.d.ts",
+      "../node_modules/@types/json-schema/index.d.ts",
+      "../node_modules/@types/json5/index.d.ts",
+      "../node_modules/@types/jsonwebtoken/index.d.ts",
+      "../node_modules/@types/mime/index.d.ts",
+      "../node_modules/@types/mongodb/index.d.ts",
+      "../node_modules/@types/node/assert.d.ts",
+      "../node_modules/@types/node/async_hooks.d.ts",
+      "../node_modules/@types/node/base.d.ts",
+      "../node_modules/@types/node/buffer.d.ts",
+      "../node_modules/@types/node/child_process.d.ts",
+      "../node_modules/@types/node/cluster.d.ts",
+      "../node_modules/@types/node/console.d.ts",
+      "../node_modules/@types/node/constants.d.ts",
+      "../node_modules/@types/node/crypto.d.ts",
+      "../node_modules/@types/node/dgram.d.ts",
+      "../node_modules/@types/node/dns.d.ts",
+      "../node_modules/@types/node/domain.d.ts",
+      "../node_modules/@types/node/events.d.ts",
+      "../node_modules/@types/node/fs.d.ts",
+      "../node_modules/@types/node/fs/promises.d.ts",
+      "../node_modules/@types/node/globals.d.ts",
+      "../node_modules/@types/node/globals.global.d.ts",
+      "../node_modules/@types/node/http.d.ts",
+      "../node_modules/@types/node/http2.d.ts",
+      "../node_modules/@types/node/https.d.ts",
+      "../node_modules/@types/node/index.d.ts",
+      "../node_modules/@types/node/inspector.d.ts",
+      "../node_modules/@types/node/module.d.ts",
+      "../node_modules/@types/node/net.d.ts",
+      "../node_modules/@types/node/os.d.ts",
+      "../node_modules/@types/node/path.d.ts",
+      "../node_modules/@types/node/perf_hooks.d.ts",
+      "../node_modules/@types/node/process.d.ts",
+      "../node_modules/@types/node/punycode.d.ts",
+      "../node_modules/@types/node/querystring.d.ts",
+      "../node_modules/@types/node/readline.d.ts",
+      "../node_modules/@types/node/repl.d.ts",
+      "../node_modules/@types/node/stream.d.ts",
+      "../node_modules/@types/node/string_decoder.d.ts",
+      "../node_modules/@types/node/timers.d.ts",
+      "../node_modules/@types/node/tls.d.ts",
+      "../node_modules/@types/node/trace_events.d.ts",
+      "../node_modules/@types/node/ts3.6/base.d.ts",
+      "../node_modules/@types/node/tty.d.ts",
+      "../node_modules/@types/node/url.d.ts",
+      "../node_modules/@types/node/util.d.ts",
+      "../node_modules/@types/node/v8.d.ts",
+      "../node_modules/@types/node/vm.d.ts",
+      "../node_modules/@types/node/wasi.d.ts",
+      "../node_modules/@types/node/worker_threads.d.ts",
+      "../node_modules/@types/node/zlib.d.ts",
+      "../node_modules/@types/normalize-package-data/index.d.ts",
+      "../node_modules/@types/parse-json/index.d.ts",
+      "../node_modules/@types/passport-jwt/index.d.ts",
+      "../node_modules/@types/passport-local/index.d.ts",
+      "../node_modules/@types/passport-strategy/index.d.ts",
+      "../node_modules/@types/passport/index.d.ts",
+      "../node_modules/@types/prettier/index.d.ts",
+      "../node_modules/@types/qs/index.d.ts",
+      "../node_modules/@types/range-parser/index.d.ts",
+      "../node_modules/@types/serve-static/index.d.ts",
+      "../node_modules/@types/source-list-map/index.d.ts",
+      "../node_modules/@types/stack-utils/index.d.ts",
+      "../node_modules/@types/superagent/index.d.ts",
+      "../node_modules/@types/supertest/index.d.ts",
+      "../node_modules/@types/tapable/index.d.ts",
+      "../node_modules/@types/uglify-js/index.d.ts",
+      "../node_modules/@types/uglify-js/node_modules/source-map/source-map.d.ts",
+      "../node_modules/@types/validator/index.d.ts",
+      "../node_modules/@types/webpack-sources/index.d.ts",
+      "../node_modules/@types/webpack-sources/lib/cachedsource.d.ts",
+      "../node_modules/@types/webpack-sources/lib/compatsource.d.ts",
+      "../node_modules/@types/webpack-sources/lib/concatsource.d.ts",
+      "../node_modules/@types/webpack-sources/lib/index.d.ts",
+      "../node_modules/@types/webpack-sources/lib/originalsource.d.ts",
+      "../node_modules/@types/webpack-sources/lib/prefixsource.d.ts",
+      "../node_modules/@types/webpack-sources/lib/rawsource.d.ts",
+      "../node_modules/@types/webpack-sources/lib/replacesource.d.ts",
+      "../node_modules/@types/webpack-sources/lib/sizeonlysource.d.ts",
+      "../node_modules/@types/webpack-sources/lib/source.d.ts",
+      "../node_modules/@types/webpack-sources/lib/sourcemapsource.d.ts",
+      "../node_modules/@types/webpack/index.d.ts",
+      "../node_modules/@types/webpack/node_modules/source-map/source-map.d.ts",
+      "../node_modules/@types/yargs-parser/index.d.ts",
+      "../node_modules/@types/yargs/index.d.ts",
+      "../node_modules/anymatch/index.d.ts",
+      "../node_modules/axios/index.d.ts",
+      "../node_modules/class-validator/types/container.d.ts",
+      "../node_modules/class-validator/types/decorator/array/arraycontains.d.ts",
+      "../node_modules/class-validator/types/decorator/array/arraymaxsize.d.ts",
+      "../node_modules/class-validator/types/decorator/array/arrayminsize.d.ts",
+      "../node_modules/class-validator/types/decorator/array/arraynotcontains.d.ts",
+      "../node_modules/class-validator/types/decorator/array/arraynotempty.d.ts",
+      "../node_modules/class-validator/types/decorator/array/arrayunique.d.ts",
+      "../node_modules/class-validator/types/decorator/common/allow.d.ts",
+      "../node_modules/class-validator/types/decorator/common/equals.d.ts",
+      "../node_modules/class-validator/types/decorator/common/isdefined.d.ts",
+      "../node_modules/class-validator/types/decorator/common/isempty.d.ts",
+      "../node_modules/class-validator/types/decorator/common/isin.d.ts",
+      "../node_modules/class-validator/types/decorator/common/islatitude.d.ts",
+      "../node_modules/class-validator/types/decorator/common/islatlong.d.ts",
+      "../node_modules/class-validator/types/decorator/common/islongitude.d.ts",
+      "../node_modules/class-validator/types/decorator/common/isnotempty.d.ts",
+      "../node_modules/class-validator/types/decorator/common/isnotin.d.ts",
+      "../node_modules/class-validator/types/decorator/common/isoptional.d.ts",
+      "../node_modules/class-validator/types/decorator/common/notequals.d.ts",
+      "../node_modules/class-validator/types/decorator/common/validate.d.ts",
+      "../node_modules/class-validator/types/decorator/common/validateby.d.ts",
+      "../node_modules/class-validator/types/decorator/common/validateif.d.ts",
+      "../node_modules/class-validator/types/decorator/common/validatenested.d.ts",
+      "../node_modules/class-validator/types/decorator/common/validatepromise.d.ts",
+      "../node_modules/class-validator/types/decorator/date/maxdate.d.ts",
+      "../node_modules/class-validator/types/decorator/date/mindate.d.ts",
+      "../node_modules/class-validator/types/decorator/decorators.d.ts",
+      "../node_modules/class-validator/types/decorator/number/isdivisibleby.d.ts",
+      "../node_modules/class-validator/types/decorator/number/isnegative.d.ts",
+      "../node_modules/class-validator/types/decorator/number/ispositive.d.ts",
+      "../node_modules/class-validator/types/decorator/number/max.d.ts",
+      "../node_modules/class-validator/types/decorator/number/min.d.ts",
+      "../node_modules/class-validator/types/decorator/object/isinstance.d.ts",
+      "../node_modules/class-validator/types/decorator/object/isnotemptyobject.d.ts",
+      "../node_modules/class-validator/types/decorator/string/contains.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isalpha.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isalphanumeric.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isascii.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isbase32.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isbase64.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isbic.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isbooleanstring.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isbtcaddress.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isbytelength.d.ts",
+      "../node_modules/class-validator/types/decorator/string/iscreditcard.d.ts",
+      "../node_modules/class-validator/types/decorator/string/iscurrency.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isdatauri.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isdatestring.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isdecimal.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isean.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isemail.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isethereumaddress.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isfirebasepushid.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isfqdn.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isfullwidth.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ishalfwidth.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ishash.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ishexadecimal.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ishexcolor.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ishsl.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isiban.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isidentitycard.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isip.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isisbn.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isisin.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isiso31661alpha2.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isiso31661alpha3.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isiso8601.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isisrc.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isissn.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isjson.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isjwt.d.ts",
+      "../node_modules/class-validator/types/decorator/string/islocale.d.ts",
+      "../node_modules/class-validator/types/decorator/string/islowercase.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ismacaddress.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ismagneturi.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ismilitarytime.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ismimetype.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ismobilephone.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ismongoid.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ismultibyte.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isnumberstring.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isoctal.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ispassportnumber.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isphonenumber.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isport.d.ts",
+      "../node_modules/class-validator/types/decorator/string/ispostalcode.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isrfc3339.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isrgbcolor.d.ts",
+      "../node_modules/class-validator/types/decorator/string/issemver.d.ts",
+      "../node_modules/class-validator/types/decorator/string/issurrogatepair.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isuppercase.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isurl.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isuuid.d.ts",
+      "../node_modules/class-validator/types/decorator/string/isvariablewidth.d.ts",
+      "../node_modules/class-validator/types/decorator/string/length.d.ts",
+      "../node_modules/class-validator/types/decorator/string/matches.d.ts",
+      "../node_modules/class-validator/types/decorator/string/maxlength.d.ts",
+      "../node_modules/class-validator/types/decorator/string/minlength.d.ts",
+      "../node_modules/class-validator/types/decorator/string/notcontains.d.ts",
+      "../node_modules/class-validator/types/decorator/typechecker/isarray.d.ts",
+      "../node_modules/class-validator/types/decorator/typechecker/isboolean.d.ts",
+      "../node_modules/class-validator/types/decorator/typechecker/isdate.d.ts",
+      "../node_modules/class-validator/types/decorator/typechecker/isenum.d.ts",
+      "../node_modules/class-validator/types/decorator/typechecker/isint.d.ts",
+      "../node_modules/class-validator/types/decorator/typechecker/isnumber.d.ts",
+      "../node_modules/class-validator/types/decorator/typechecker/isobject.d.ts",
+      "../node_modules/class-validator/types/decorator/typechecker/isstring.d.ts",
+      "../node_modules/class-validator/types/decorator/validationoptions.d.ts",
+      "../node_modules/class-validator/types/index.d.ts",
+      "../node_modules/class-validator/types/metadata/constraintmetadata.d.ts",
+      "../node_modules/class-validator/types/metadata/metadatastorage.d.ts",
+      "../node_modules/class-validator/types/metadata/validationmetadata.d.ts",
+      "../node_modules/class-validator/types/metadata/validationmetadataargs.d.ts",
+      "../node_modules/class-validator/types/register-decorator.d.ts",
+      "../node_modules/class-validator/types/validation-schema/validationschema.d.ts",
+      "../node_modules/class-validator/types/validation/validationarguments.d.ts",
+      "../node_modules/class-validator/types/validation/validationerror.d.ts",
+      "../node_modules/class-validator/types/validation/validationtypes.d.ts",
+      "../node_modules/class-validator/types/validation/validator.d.ts",
+      "../node_modules/class-validator/types/validation/validatorconstraintinterface.d.ts",
+      "../node_modules/class-validator/types/validation/validatoroptions.d.ts",
+      "../node_modules/geolib/es/computedestinationpoint.d.ts",
+      "../node_modules/geolib/es/constants.d.ts",
+      "../node_modules/geolib/es/convertarea.d.ts",
+      "../node_modules/geolib/es/convertdistance.d.ts",
+      "../node_modules/geolib/es/convertspeed.d.ts",
+      "../node_modules/geolib/es/decimaltosexagesimal.d.ts",
+      "../node_modules/geolib/es/findnearest.d.ts",
+      "../node_modules/geolib/es/getareaofpolygon.d.ts",
+      "../node_modules/geolib/es/getbounds.d.ts",
+      "../node_modules/geolib/es/getboundsofdistance.d.ts",
+      "../node_modules/geolib/es/getcenter.d.ts",
+      "../node_modules/geolib/es/getcenterofbounds.d.ts",
+      "../node_modules/geolib/es/getcompassdirection.d.ts",
+      "../node_modules/geolib/es/getcoordinatekey.d.ts",
+      "../node_modules/geolib/es/getcoordinatekeys.d.ts",
+      "../node_modules/geolib/es/getdistance.d.ts",
+      "../node_modules/geolib/es/getdistancefromline.d.ts",
+      "../node_modules/geolib/es/getgreatcirclebearing.d.ts",
+      "../node_modules/geolib/es/getlatitude.d.ts",
+      "../node_modules/geolib/es/getlongitude.d.ts",
+      "../node_modules/geolib/es/getpathlength.d.ts",
+      "../node_modules/geolib/es/getprecisedistance.d.ts",
+      "../node_modules/geolib/es/getrhumblinebearing.d.ts",
+      "../node_modules/geolib/es/getroughcompassdirection.d.ts",
+      "../node_modules/geolib/es/getspeed.d.ts",
+      "../node_modules/geolib/es/index.d.ts",
+      "../node_modules/geolib/es/isdecimal.d.ts",
+      "../node_modules/geolib/es/ispointinline.d.ts",
+      "../node_modules/geolib/es/ispointinpolygon.d.ts",
+      "../node_modules/geolib/es/ispointnearline.d.ts",
+      "../node_modules/geolib/es/ispointwithinradius.d.ts",
+      "../node_modules/geolib/es/issexagesimal.d.ts",
+      "../node_modules/geolib/es/isvalidcoordinate.d.ts",
+      "../node_modules/geolib/es/isvalidlatitude.d.ts",
+      "../node_modules/geolib/es/isvalidlongitude.d.ts",
+      "../node_modules/geolib/es/orderbydistance.d.ts",
+      "../node_modules/geolib/es/sexagesimaltodecimal.d.ts",
+      "../node_modules/geolib/es/todecimal.d.ts",
+      "../node_modules/geolib/es/todeg.d.ts",
+      "../node_modules/geolib/es/torad.d.ts",
+      "../node_modules/geolib/es/types.d.ts",
+      "../node_modules/geolib/es/wkttopolygon.d.ts",
+      "../node_modules/jest-diff/build/cleanupsemantic.d.ts",
+      "../node_modules/jest-diff/build/difflines.d.ts",
+      "../node_modules/jest-diff/build/index.d.ts",
+      "../node_modules/jest-diff/build/printdiffs.d.ts",
+      "../node_modules/jest-diff/build/types.d.ts",
+      "../node_modules/libphonenumber-js/index.d.ts",
+      "../node_modules/libphonenumber-js/types.d.ts",
+      "../node_modules/mongoose/index.d.ts",
+      "../node_modules/pretty-format/build/index.d.ts",
+      "../node_modules/pretty-format/build/types.d.ts",
+      "../node_modules/reflect-metadata/index.d.ts",
+      "../node_modules/rxjs/index.d.ts",
+      "../node_modules/rxjs/internal/asyncsubject.d.ts",
+      "../node_modules/rxjs/internal/behaviorsubject.d.ts",
+      "../node_modules/rxjs/internal/config.d.ts",
+      "../node_modules/rxjs/internal/innersubscriber.d.ts",
+      "../node_modules/rxjs/internal/notification.d.ts",
+      "../node_modules/rxjs/internal/observable.d.ts",
+      "../node_modules/rxjs/internal/observable/bindcallback.d.ts",
+      "../node_modules/rxjs/internal/observable/bindnodecallback.d.ts",
+      "../node_modules/rxjs/internal/observable/combinelatest.d.ts",
+      "../node_modules/rxjs/internal/observable/concat.d.ts",
+      "../node_modules/rxjs/internal/observable/connectableobservable.d.ts",
+      "../node_modules/rxjs/internal/observable/defer.d.ts",
+      "../node_modules/rxjs/internal/observable/empty.d.ts",
+      "../node_modules/rxjs/internal/observable/forkjoin.d.ts",
+      "../node_modules/rxjs/internal/observable/from.d.ts",
+      "../node_modules/rxjs/internal/observable/fromevent.d.ts",
+      "../node_modules/rxjs/internal/observable/fromeventpattern.d.ts",
+      "../node_modules/rxjs/internal/observable/generate.d.ts",
+      "../node_modules/rxjs/internal/observable/iif.d.ts",
+      "../node_modules/rxjs/internal/observable/interval.d.ts",
+      "../node_modules/rxjs/internal/observable/merge.d.ts",
+      "../node_modules/rxjs/internal/observable/never.d.ts",
+      "../node_modules/rxjs/internal/observable/of.d.ts",
+      "../node_modules/rxjs/internal/observable/onerrorresumenext.d.ts",
+      "../node_modules/rxjs/internal/observable/pairs.d.ts",
+      "../node_modules/rxjs/internal/observable/partition.d.ts",
+      "../node_modules/rxjs/internal/observable/race.d.ts",
+      "../node_modules/rxjs/internal/observable/range.d.ts",
+      "../node_modules/rxjs/internal/observable/throwerror.d.ts",
+      "../node_modules/rxjs/internal/observable/timer.d.ts",
+      "../node_modules/rxjs/internal/observable/using.d.ts",
+      "../node_modules/rxjs/internal/observable/zip.d.ts",
+      "../node_modules/rxjs/internal/operator.d.ts",
+      "../node_modules/rxjs/internal/operators/groupby.d.ts",
+      "../node_modules/rxjs/internal/outersubscriber.d.ts",
+      "../node_modules/rxjs/internal/replaysubject.d.ts",
+      "../node_modules/rxjs/internal/scheduled/scheduled.d.ts",
+      "../node_modules/rxjs/internal/scheduler.d.ts",
+      "../node_modules/rxjs/internal/scheduler/action.d.ts",
+      "../node_modules/rxjs/internal/scheduler/animationframe.d.ts",
+      "../node_modules/rxjs/internal/scheduler/animationframescheduler.d.ts",
+      "../node_modules/rxjs/internal/scheduler/asap.d.ts",
+      "../node_modules/rxjs/internal/scheduler/asapscheduler.d.ts",
+      "../node_modules/rxjs/internal/scheduler/async.d.ts",
+      "../node_modules/rxjs/internal/scheduler/asyncaction.d.ts",
+      "../node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts",
+      "../node_modules/rxjs/internal/scheduler/queue.d.ts",
+      "../node_modules/rxjs/internal/scheduler/queuescheduler.d.ts",
+      "../node_modules/rxjs/internal/scheduler/virtualtimescheduler.d.ts",
+      "../node_modules/rxjs/internal/subject.d.ts",
+      "../node_modules/rxjs/internal/subscriber.d.ts",
+      "../node_modules/rxjs/internal/subscription.d.ts",
+      "../node_modules/rxjs/internal/symbol/observable.d.ts",
+      "../node_modules/rxjs/internal/types.d.ts",
+      "../node_modules/rxjs/internal/util/argumentoutofrangeerror.d.ts",
+      "../node_modules/rxjs/internal/util/emptyerror.d.ts",
+      "../node_modules/rxjs/internal/util/identity.d.ts",
+      "../node_modules/rxjs/internal/util/isobservable.d.ts",
+      "../node_modules/rxjs/internal/util/noop.d.ts",
+      "../node_modules/rxjs/internal/util/objectunsubscribederror.d.ts",
+      "../node_modules/rxjs/internal/util/pipe.d.ts",
+      "../node_modules/rxjs/internal/util/timeouterror.d.ts",
+      "../node_modules/rxjs/internal/util/unsubscriptionerror.d.ts",
+      "../node_modules/source-map/source-map.d.ts",
+      "../node_modules/typescript/lib/lib.dom.d.ts",
+      "../node_modules/typescript/lib/lib.dom.iterable.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "../node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "../node_modules/typescript/lib/lib.es2016.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.full.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "../node_modules/typescript/lib/lib.es2020.bigint.d.ts",
+      "../node_modules/typescript/lib/lib.es5.d.ts",
+      "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
+      "../node_modules/typescript/lib/lib.scripthost.d.ts",
+      "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "../src/app.controller.ts",
+      "../src/app.module.ts",
+      "../src/app.service.ts",
+      "../src/main.ts",
+      "../src/modules/auth/auth.controller.ts",
+      "../src/modules/auth/auth.module.ts",
+      "../src/modules/auth/auth.service.ts",
+      "../src/modules/auth/constants.ts",
+      "../src/modules/auth/jwt-auth.guard.ts",
+      "../src/modules/auth/jwt.strategy.ts",
+      "../src/modules/auth/local-auth.guard.ts",
+      "../src/modules/auth/local.strategy.ts",
+      "../src/modules/booking/booking.controller.ts",
+      "../src/modules/booking/booking.module.ts",
+      "../src/modules/booking/booking.service.ts",
+      "../src/modules/booking/dto/booking.dto.ts",
+      "../src/modules/booking/interfaces/booking.interface.ts",
+      "../src/modules/booking/schemas/booking.schema.ts",
+      "../src/modules/customer/customer.controller.ts",
+      "../src/modules/customer/customer.module.ts",
+      "../src/modules/customer/customer.service.ts",
+      "../src/modules/customer/dto/create-customer.dto.ts",
+      "../src/modules/customer/interfaces/customer.interface.ts",
+      "../src/modules/customer/schemas/customer.schema.ts",
+      "../src/modules/feature/dto/create-feature.dto.ts",
+      "../src/modules/feature/feature.controller.ts",
+      "../src/modules/feature/feature.module.ts",
+      "../src/modules/feature/feature.service.ts",
+      "../src/modules/feature/interfaces/feature.interface.ts",
+      "../src/modules/feature/schemas/feature.schema.ts",
+      "../src/modules/payment/payment.controller.ts",
+      "../src/modules/payment/payment.module.ts",
+      "../src/modules/payment/payment.service.ts",
+      "../src/modules/place-type/dto/create-place-type.dto.ts",
+      "../src/modules/place-type/interfaces/place-type.interface.ts",
+      "../src/modules/place-type/place-type.controller.ts",
+      "../src/modules/place-type/place-type.module.ts",
+      "../src/modules/place-type/place-type.service.ts",
+      "../src/modules/place-type/schemas/place-type.schema.ts",
+      "../src/modules/place/dto/create-place.dto.ts",
+      "../src/modules/place/interfaces/place.interface.ts",
+      "../src/modules/place/place.controller.ts",
+      "../src/modules/place/place.module.ts",
+      "../src/modules/place/place.service.ts",
+      "../src/modules/place/schemas/place.schema.ts",
+      "../src/modules/promo/dto/create-promo.dto.ts",
+      "../src/modules/promo/interfaces/promo.interface.ts",
+      "../src/modules/promo/promo.controller.ts",
+      "../src/modules/promo/promo.module.ts",
+      "../src/modules/promo/promo.service.ts",
+      "../src/modules/promo/schemas/promo.schema.ts",
+      "../src/modules/review/dto/create-review.dto.ts",
+      "../src/modules/review/interfaces/review.interface.ts",
+      "../src/modules/review/review.controller.ts",
+      "../src/modules/review/review.module.ts",
+      "../src/modules/review/review.service.ts",
+      "../src/modules/review/schemas/review.schema.ts",
+      "../src/modules/schemas.ts",
+      "../src/modules/types.ts",
       "../src/utils/index.ts"
     ]
   },
