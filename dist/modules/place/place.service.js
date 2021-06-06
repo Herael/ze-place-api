@@ -66,26 +66,18 @@ let PlaceService = class PlaceService {
         return newPlace;
     }
     async similarPlaces(place) {
-        console.log(place._id);
         const priceDif = 0.1;
         let priceType = 1;
         const distance = 5000;
+        const finalPlaces = [];
         if (place.rentingDuration == 'week') {
             priceType = 7;
         }
         else if (place.rentingDuration == 'month') {
             priceType = 30;
         }
-        console.log('Original price : ' + place.price);
-        console.log('Place type : ' + place.rentingDuration);
-        console.log('divider value : ' + priceType);
-        console.log('price : ' + place.price / priceType);
-        console.log('10% more : ' +
-            (place.price / priceType +
-                (place.price / priceType) * priceDif).toString());
-        console.log('10% less : ' +
-            (place.price / priceType -
-                (place.price / priceType) * priceDif).toString());
+        const minDayPrice = place.price / priceType - (place.price / priceType) * priceDif;
+        const maxDayPrice = place.price / priceType + (place.price / priceType) * priceDif;
         const coords = {
             latitude: place.location.latitude,
             longitude: place.location.longitude,
@@ -94,25 +86,27 @@ let PlaceService = class PlaceService {
             .find({
             _id: { $ne: place._id },
             placeType: { $elemMatch: { name: place.placeType[0].name } },
-            $or: [
-                {
-                    price: {
-                        $lte: place.price / priceType + (place.price / priceType) * priceDif,
-                    },
-                },
-                {
-                    price: {
-                        $gte: place.price / priceType - (place.price / priceType) * priceDif,
-                    },
-                },
-            ],
         })
             .exec();
         const nearbyPlaces = places.filter((place) => index_1.isPlaceInRadius({
             longitude: place.location.longitude,
             latitude: place.location.latitude,
         }, coords, distance) === true);
-        return nearbyPlaces;
+        nearbyPlaces.forEach(function (place) {
+            console.log(place._id);
+            let placeType = 1;
+            if (place.rentingDuration == 'week') {
+                placeType = 7;
+            }
+            else if (place.rentingDuration == 'month') {
+                placeType = 30;
+            }
+            const price = place.price / placeType;
+            if (price <= maxDayPrice && price >= minDayPrice) {
+                finalPlaces.push(place);
+            }
+        });
+        return finalPlaces;
     }
 };
 PlaceService = __decorate([
