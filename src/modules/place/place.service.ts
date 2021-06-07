@@ -142,8 +142,8 @@ export class PlaceService {
 
     /* Ranking : 
       1- placeType
-      2 - Price
-      3- location (calculer la distance longitude latitude)
+      2- location (calculer la distance longitude latitude)
+      3- Price
       4- features (Lunch / Party / Camping / ...)
       5- authorizeBoolean (Animals, Music, Smoking, Fire, FoodAndDrink)
     */
