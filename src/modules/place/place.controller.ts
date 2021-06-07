@@ -87,6 +87,9 @@ export class PlaceController {
   @Post('/similarPlaces')
   async similarPlaces(@Res() res, @Body() place: Place) {
     console.log('Place : ' + place);
+    console.log('Place.price : ' + place.price);
+    console.log('Place.location : ' + place.location);
+    console.log('Place.location.latitude : ' + place.location.latitude);
     const places = await this.placeService.similarPlaces(place);
     return res.status(HttpStatus.OK).json({
       message: 'Similar places has been get successfully',

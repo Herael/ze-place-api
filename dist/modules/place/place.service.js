@@ -66,6 +66,11 @@ let PlaceService = class PlaceService {
         return newPlace;
     }
     async similarPlaces(place) {
+        console.log('Place : ' + place);
+        console.log('Place.price : ' + place.price);
+        console.log('Place.location : ' + place.location);
+        console.log('Place.location.latitude : ' + place.location.latitude);
+        
         const priceDif = 0.1;
         let priceType = 1;
         const distance = 5000;
