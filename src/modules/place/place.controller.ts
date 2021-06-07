@@ -86,6 +86,7 @@ export class PlaceController {
   @UseGuards(JwtAuthGuard)
   @Post('/similarPlaces')
   async similarPlaces(@Res() res, @Body() place: Place) {
+    console.log('Place : ' + place);
     const places = await this.placeService.similarPlaces(place);
     return res.status(HttpStatus.OK).json({
       message: 'Similar places has been get successfully',

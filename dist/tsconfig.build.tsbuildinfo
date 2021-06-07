@@ -2762,7 +2762,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "f5a9e8932880afc527729badcc3805e54bfbed2a343fc945e01172459c79152d",
+        "version": "b83171c55bcf5e3ee871636bfd52648d094c716888d1b89104d5e93be502a6a0",
         "signature": "b2cc5b6ed24782930f6d6a8782c2cbba87c2eb24a7115561e40725e511a1f581",
         "affectsGlobalScope": false
       },
