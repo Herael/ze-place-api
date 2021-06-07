@@ -65,15 +65,11 @@ let PlaceService = class PlaceService {
         updatedCustomer.save();
         return newPlace;
     }
-    async similarPlaces(place) {
-        console.log('Place : ' + place);
-        console.log('Place.price : ' + place.price);
-        console.log('Place.location : ' + place.location);
-        console.log('Place.location.latitude : ' + place.location.latitude);
-        
+    async similarPlaces(placeID) {
+        const place = await this.placeModel.findById(placeID);
         const priceDif = 0.1;
         let priceType = 1;
-        const distance = 5000;
+        const distance = 5000000;
         const finalPlaces = [];
         if (place.rentingDuration == 'week') {
             priceType = 7;

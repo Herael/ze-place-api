@@ -88,10 +88,11 @@ export class PlaceService {
     return newPlace;
   }
 
-  async similarPlaces(place: Place): Promise<Place[]> {
+  async similarPlaces(placeID: string): Promise<Place[]> {
+    const place = await this.placeModel.findById(placeID);
     const priceDif = 0.1;
     let priceType = 1;
-    const distance = 5000;
+    const distance = 5000000;
     const finalPlaces = [];
     if (place.rentingDuration == 'week') {
       priceType = 7;

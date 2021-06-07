@@ -64,9 +64,8 @@ let PlaceController = class PlaceController {
             bookings: bookings,
         });
     }
-    async similarPlaces(res, place) {
-        console.log('Place : ' + place);
-        const places = await this.placeService.similarPlaces(place);
+    async similarPlaces(res, body) {
+        const places = await this.placeService.similarPlaces(body.placeID);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Similar places has been get successfully',
             places,
