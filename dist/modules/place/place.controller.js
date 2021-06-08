@@ -64,8 +64,8 @@ let PlaceController = class PlaceController {
             bookings: bookings,
         });
     }
-    async similarPlaces(res, place) {
-        const places = await this.placeService.similarPlaces(place);
+    async similarPlaces(res, body) {
+        const places = await this.placeService.similarPlaces(body.placeID);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Similar places has been get successfully',
             places,
@@ -120,7 +120,7 @@ __decorate([
 ], PlaceController.prototype, "acceptBooking", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
-    common_1.Get('/similarPlaces'),
+    common_1.Post('/similarPlaces'),
     __param(0, common_1.Res()), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),

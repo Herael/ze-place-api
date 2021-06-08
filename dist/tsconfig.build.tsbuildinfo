@@ -2757,13 +2757,13 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "b63cff5a91fc9f1b3ede67f8236aa354443632aaca32117713a6d4b79d0dda66",
-        "signature": "0bdff3b9a3bcfe3ea839a61a25462b50b1b8ad987928cc46aace92c2f1c6d71a",
+        "version": "d576cf5a23d1022cb7c1c5b63caac1ff3c7080a863400a1362f8c44d9f4dbc1f",
+        "signature": "08619ebc4779de77f2034216ab72849e941196fc7e5580332eea6932ee6ff1c2",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "d14cb3956043a19eedea40ac7bf8af91d6cbd238b2803289bce8f8fbe391c3ea",
-        "signature": "b2cc5b6ed24782930f6d6a8782c2cbba87c2eb24a7115561e40725e511a1f581",
+        "version": "94ed6aadcc4a334ff601f072999a255bd4a23df8bdf194ec8683d18179be782f",
+        "signature": "a7ae5b73700643b401fa666f9b96c5a7c6154cd555f696210c2183bdbcb59752",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.module.ts": {
@@ -8347,7 +8347,6 @@
       ],
       "../src/modules/place/place.controller.ts": [
         "../src/modules/place/dto/create-place.dto.ts",
-        "../src/modules/place/interfaces/place.interface.ts",
         "../src/modules/place/place.service.ts"
       ],
       "../src/modules/place/place.service.ts": [
