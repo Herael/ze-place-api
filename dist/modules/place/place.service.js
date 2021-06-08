@@ -65,6 +65,50 @@ let PlaceService = class PlaceService {
         updatedCustomer.save();
         return newPlace;
     }
+    async similarPlaces(placeID) {
+        const place = await this.placeModel.findById(placeID);
+        const priceDif = 0.2;
+        let priceType = 1;
+        const distance = 20000;
+        const finalPlaces = [];
+        if (place.rentingDuration == 'week') {
+            priceType = 7;
+        }
+        else if (place.rentingDuration == 'month') {
+            priceType = 30;
+        }
+        const minDayPrice = place.price / priceType - (place.price / priceType) * priceDif;
+        const maxDayPrice = place.price / priceType + (place.price / priceType) * priceDif;
+        const coords = {
+            latitude: place.location.latitude,
+            longitude: place.location.longitude,
+        };
+        const places = await this.placeModel
+            .find({
+            _id: { $ne: place._id },
+            placeType: { $elemMatch: { name: place.placeType[0].name } },
+        })
+            .exec();
+        const nearbyPlaces = places.filter((place) => index_1.isPlaceInRadius({
+            longitude: place.location.longitude,
+            latitude: place.location.latitude,
+        }, coords, distance) === true);
+        nearbyPlaces.forEach(function (place) {
+            console.log(place._id);
+            let placeType = 1;
+            if (place.rentingDuration == 'week') {
+                placeType = 7;
+            }
+            else if (place.rentingDuration == 'month') {
+                placeType = 30;
+            }
+            const price = place.price / placeType;
+            if (price <= maxDayPrice && price >= minDayPrice) {
+                finalPlaces.push(place);
+            }
+        });
+        return finalPlaces;
+    }
 };
 PlaceService = __decorate([
     common_1.Injectable(),

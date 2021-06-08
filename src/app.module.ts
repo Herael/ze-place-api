@@ -12,6 +12,7 @@ import { PlaceTypeModule } from './modules/place-type/place-type.module';
 import { FeatureModule } from './modules/feature/feature.module';
 import { PaymentModule } from './modules/payment/payment.module';
 import { BookingModule } from './modules/booking/booking.module';
+import { AppGateway } from './app.gateway';
 
 @Module({
   imports: [
@@ -31,6 +32,6 @@ import { BookingModule } from './modules/booking/booking.module';
     PaymentModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, AppGateway],
 })
 export class AppModule {}

@@ -87,4 +87,68 @@ export class PlaceService {
 
     return newPlace;
   }
+
+  async similarPlaces(placeID: string): Promise<Place[]> {
+    const place = await this.placeModel.findById(placeID);
+    const priceDif = 0.2;
+    let priceType = 1;
+    const distance = 20000;
+    const finalPlaces = [];
+    if (place.rentingDuration == 'week') {
+      priceType = 7;
+    } else if (place.rentingDuration == 'month') {
+      priceType = 30;
+    }
+    const minDayPrice =
+      place.price / priceType - (place.price / priceType) * priceDif;
+    const maxDayPrice =
+      place.price / priceType + (place.price / priceType) * priceDif;
+
+    const coords = {
+      latitude: place.location.latitude,
+      longitude: place.location.longitude,
+    };
+    const places = await this.placeModel
+      .find({
+        _id: { $ne: place._id },
+        placeType: { $elemMatch: { name: place.placeType[0].name } }, //PlaceType.name fit with my origin place
+      })
+      .exec();
+
+    const nearbyPlaces = places.filter(
+      (place: Place) =>
+        isPlaceInRadius(
+          {
+            longitude: place.location.longitude,
+            latitude: place.location.latitude,
+          },
+          coords,
+          distance,
+        ) === true,
+    );
+
+    nearbyPlaces.forEach(function (place) {
+      console.log(place._id);
+      let placeType = 1;
+      if (place.rentingDuration == 'week') {
+        placeType = 7;
+      } else if (place.rentingDuration == 'month') {
+        placeType = 30;
+      }
+      const price = place.price / placeType;
+      if (price <= maxDayPrice && price >= minDayPrice) {
+        finalPlaces.push(place);
+      }
+    });
+
+    /* Ranking : 
+      1- placeType
+      2- location (calculer la distance longitude latitude)
+      3- Price
+      4- features (Lunch / Party / Camping / ...)
+      5- authorizeBoolean (Animals, Music, Smoking, Fire, FoodAndDrink)
+    */
+
+    return finalPlaces;
+  }
 }

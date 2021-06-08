@@ -11,6 +11,7 @@ import {
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
 import { CreatePlaceDTO } from './dto/create-place.dto';
+import { Place } from './interfaces/place.interface';
 import { PlaceService } from './place.service';
 
 @Controller('places')
@@ -79,6 +80,16 @@ export class PlaceController {
     return res.status(HttpStatus.OK).json({
       message: 'Booking has been accepted',
       bookings: bookings,
+    });
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/similarPlaces')
+  async similarPlaces(@Res() res, @Body() body) {
+    const places = await this.placeService.similarPlaces(body.placeID);
+    return res.status(HttpStatus.OK).json({
+      message: 'Similar places has been get successfully',
+      places,
     });
   }
 }
