@@ -56,10 +56,10 @@ export class PlaceService {
       avatar: user.avatar,
       ...bookingDTO,
     };
-    const index = place.bookings.push(booking as Booking);
-    user.bookings.push(place.bookings[index]._id);
-    user.save();
+    place.bookings.push(booking as Booking);
     place.save();
+    user.bookings.push(place);
+    user.save();
   }
 
   async getBookings(placeId: string): Promise<Booking[]> {

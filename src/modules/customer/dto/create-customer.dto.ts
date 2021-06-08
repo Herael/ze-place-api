@@ -38,9 +38,9 @@ export class CreateCustomerDTO {
 
   readonly customerId: string = null;
 
-  readonly ownedPlaces: Place[];
+  readonly ownedPlaces: Place[] = [];
 
-  readonly bookings: string[] = [];
+  readonly bookings: Place[] = [];
 
   readonly pushToken: string = null;
 }

@@ -76,7 +76,7 @@ export class CustomerController {
     });
   }
 
-  // Delete a customer
+  @UseGuards(JwtAuthGuard)
   @Delete('/delete')
   async deleteCustomer(@Res() res, @Query('customerID') customerID) {
     const customer = await this.customerService.deleteCustomer(customerID);
@@ -87,6 +87,7 @@ export class CustomerController {
     });
   }
 
+  @UseGuards(JwtAuthGuard)
   @Post('/addPromoCode')
   async addPromoCode(
     @Res() res,

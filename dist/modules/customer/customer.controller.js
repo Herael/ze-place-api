@@ -114,6 +114,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], CustomerController.prototype, "deleteFavorite", null);
 __decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Delete('/delete'),
     __param(0, common_1.Res()), __param(1, common_1.Query('customerID')),
     __metadata("design:type", Function),
@@ -121,6 +122,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], CustomerController.prototype, "deleteCustomer", null);
 __decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/addPromoCode'),
     __param(0, common_1.Res()),
     __param(1, common_1.Request()),
