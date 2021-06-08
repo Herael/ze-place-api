@@ -1587,8 +1587,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/interfaces/place.interface.ts": {
-        "version": "23efea001b213a372e16d7f215bf665f0d047d9598c4f9358b242334535f600c",
-        "signature": "864d30d60b95b0ebe3efcb2d8b21b4988359037c90514378a58b7facf6bb578e",
+        "version": "edb52dec474b8f5d27d678bc77d039e8a2ae7b2c95377ce3d96e141c1c34ac52",
+        "signature": "46f9c6a7a971b16f6c675a4cfee2e22c9532eaccb01a650773be2bbbc27a7bf1",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/interfaces/customer.interface.ts": {
@@ -2512,7 +2512,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/schemas/place.schema.ts": {
-        "version": "7b2a5ee6f88032b2534af76ceb3351be0414375af1ca06a517b2f8c53eaa7287",
+        "version": "b569f3230a599c390063cf28c2be729e957f28397b797efbf7528568180329ee",
         "signature": "b29d58e560e82ebd6eaeab2c411be4ab1c6d2a67eabb4aee61f7898e2071066d",
         "affectsGlobalScope": false
       },
@@ -2532,8 +2532,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/dto/create-place.dto.ts": {
-        "version": "b7fbcdd00c4b428141c83ff96219a648248dbf992404de0d31cdd063079e49d6",
-        "signature": "d1a44ae133c4676bab0b97d91dd6c4acdef435411247a4f1f2524b8df266b711",
+        "version": "ee8c45349db7dfa1df1ae4ac343ed6c1bad1a182310a9ecf48e03de82f1c40f3",
+        "signature": "79158ba6deb0807879d59bdf77f5276f8fadef17f5de5ea01411d038da092f40",
         "affectsGlobalScope": false
       },
       "../node_modules/geolib/es/types.d.ts": {
@@ -2747,8 +2747,8 @@
         "affectsGlobalScope": false
       },
       "../src/utils/index.ts": {
-        "version": "293b67283ad20c9d50eb1fd47f3cee2a49b9d9876622724517306be9efbd2d53",
-        "signature": "4d41baa9b052f525333ac0d99d2e4a4df5b75ca3539463b1e8ef83d040faa0a5",
+        "version": "2a18a77c0dfbd366a4f93f5237233ab4cfb499335762df91ec37c55727238eca",
+        "signature": "15c9a18ea82aecaaeb319a337f366822484d7eb36dc5d9d582150e5ba02cb79f",
         "affectsGlobalScope": false
       },
       "../src/modules/booking/dto/booking.dto.ts": {
@@ -2757,13 +2757,13 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "d576cf5a23d1022cb7c1c5b63caac1ff3c7080a863400a1362f8c44d9f4dbc1f",
-        "signature": "08619ebc4779de77f2034216ab72849e941196fc7e5580332eea6932ee6ff1c2",
+        "version": "4590f43eddb878c06507886f00f19d380f852892ff33db55528773e32c9e5ebb",
+        "signature": "8c40027dee650ed75baf96177af19ee689c3ea8e9137b024df9b0f72a1d86ce6",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "94ed6aadcc4a334ff601f072999a255bd4a23df8bdf194ec8683d18179be782f",
-        "signature": "a7ae5b73700643b401fa666f9b96c5a7c6154cd555f696210c2183bdbcb59752",
+        "version": "1aa7052002029d6bad3df0ce01442feba223a64eb51db21a788d76573510a863",
+        "signature": "e93de83d1dede7597237a1bb35d934436b1f2d3c8db00cc5db8022ce84936a27",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.module.ts": {
@@ -5945,6 +5945,8 @@
         "../src/modules/booking/dto/booking.dto.ts",
         "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
+        "../src/modules/feature/interfaces/feature.interface.ts",
+        "../src/modules/place-type/interfaces/place-type.interface.ts",
         "../src/modules/place/dto/create-place.dto.ts",
         "../src/modules/place/interfaces/place.interface.ts",
         "../src/modules/types.ts",
@@ -8354,6 +8356,7 @@
         "../src/modules/booking/dto/booking.dto.ts",
         "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
+        "../src/modules/feature/interfaces/feature.interface.ts",
         "../src/modules/place/dto/create-place.dto.ts",
         "../src/modules/place/interfaces/place.interface.ts",
         "../src/modules/types.ts"

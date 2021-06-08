@@ -5,10 +5,12 @@ import { Place } from './interfaces/place.interface';
 import { Customer } from '../customer/interfaces/customer.interface';
 
 import { CreatePlaceDTO } from './dto/create-place.dto';
-import { Coords } from '../types';
-import { isPlaceInRadius } from '../../utils/index';
+import { Coords, Location } from '../types';
+import { isHigherPrice, isInRangePrice, isPlaceInRadius } from '../../utils/index';
 import { Booking } from '../booking/interfaces/booking.interface';
 import { BookingDTO } from '../booking/dto/booking.dto';
+import { PlaceType } from '../place-type/interfaces/place-type.interface';
+import { Feature } from '../feature/interfaces/feature.interface';
 
 @Injectable()
 export class PlaceService {
@@ -91,31 +93,28 @@ export class PlaceService {
   async similarPlaces(placeID: string): Promise<Place[]> {
     const place = await this.placeModel.findById(placeID);
     const priceDif = 0.2;
-    let priceType = 1;
+    let price = place.price;
     const distance = 20000;
-    const finalPlaces = [];
-    if (place.rentingDuration == 'week') {
-      priceType = 7;
-    } else if (place.rentingDuration == 'month') {
-      priceType = 30;
-    }
-    const minDayPrice =
-      place.price / priceType - (place.price / priceType) * priceDif;
-    const maxDayPrice =
-      place.price / priceType + (place.price / priceType) * priceDif;
-
     const coords = {
       latitude: place.location.latitude,
       longitude: place.location.longitude,
     };
-    const places = await this.placeModel
+
+    //Temp renting duration mode
+    if (place.rentingDuration == 'week') {
+      price /= 7;
+    } else if (place.rentingDuration == 'month') {
+      price /= 30;
+    }
+
+    let places = await this.placeModel
       .find({
         _id: { $ne: place._id },
         placeType: { $elemMatch: { name: place.placeType[0].name } }, //PlaceType.name fit with my origin place
       })
       .exec();
 
-    const nearbyPlaces = places.filter(
+    places = places.filter(
       (place: Place) =>
         isPlaceInRadius(
           {
@@ -127,28 +126,77 @@ export class PlaceService {
         ) === true,
     );
 
-    nearbyPlaces.forEach(function (place) {
-      console.log(place._id);
-      let placeType = 1;
-      if (place.rentingDuration == 'week') {
-        placeType = 7;
-      } else if (place.rentingDuration == 'month') {
-        placeType = 30;
-      }
-      const price = place.price / placeType;
-      if (price <= maxDayPrice && price >= minDayPrice) {
-        finalPlaces.push(place);
-      }
-    });
+    places = places.filter(
+      (placeElement: Place) =>
+        isInRangePrice(
+          price,
+          placeElement.price,
+          placeElement.rentingDuration,
+          priceDif,
+        ) === true,
+    );
 
-    /* Ranking : 
-      1- placeType
-      2- location (calculer la distance longitude latitude)
-      3- Price
-      4- features (Lunch / Party / Camping / ...)
-      5- authorizeBoolean (Animals, Music, Smoking, Fire, FoodAndDrink)
-    */
+    return places;
+  }
 
-    return finalPlaces;
+  async searchPlaces(
+    placeTypeName: string,
+    price: number,
+    surface: string,
+    feature: Feature[],
+    location: Location,
+  ): Promise<Place[]> {
+    const distance = 20000;
+    let places = [];
+    const surfaceNumber: number = +surface;
+
+    if (placeTypeName && surface) {
+      places = await this.placeModel
+        .find({
+          placeType: { $elemMatch: { name: placeTypeName } },
+          surface: { $gte: surfaceNumber },
+        })
+        .exec();
+    } else if (placeTypeName) {
+      places = await this.placeModel
+        .find({
+          placeType: { $elemMatch: { name: placeTypeName } },
+        })
+        .exec();
+    } else if (surface) {
+      places = await this.placeModel
+        .find({
+          surface: { $gte: surfaceNumber },
+        })
+        .exec();
+    } else {
+      return [];
+    }
+
+    if (location) {
+      const coords = {
+        latitude: location.latitude,
+        longitude: location.longitude,
+      };
+      places = places.filter(
+        (place: Place) =>
+          isPlaceInRadius(
+            {
+              longitude: place.location.longitude,
+              latitude: place.location.latitude,
+            },
+            coords,
+            distance,
+          ) === true,
+      );
+    }
+    if (price) {
+      places = places.filter(
+        (place: Place) =>
+          isHigherPrice(price, place.price, place.rentingDuration) === true,
+      );
+    }
+
+    return places;
   }
 }

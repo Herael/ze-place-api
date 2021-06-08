@@ -23,9 +23,9 @@ export class CreatePlaceDTO {
 
   readonly location: Location;
 
-  @IsString()
+  @IsNumber()
   @IsNotEmpty()
-  readonly surface: string;
+  readonly surface: number;
 
   readonly placeType: PlaceType;
 

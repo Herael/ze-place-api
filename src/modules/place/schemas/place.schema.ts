@@ -17,7 +17,7 @@ export const PlaceSchema = new mongoose.Schema({
     longitude: String,
     latitude: String,
   },
-  surface: String,
+  surface: Number,
   placeType: [PlaceTypeSchema],
   price: Number,
   rentingDuration: String,

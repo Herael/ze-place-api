@@ -10,4 +10,5 @@ export declare class PlaceController {
     bookings(res: any, req: any): Promise<any>;
     acceptBooking(res: any, body: any): Promise<any>;
     similarPlaces(res: any, body: any): Promise<any>;
+    searchPlaces(res: any, body: any): Promise<any>;
 }
