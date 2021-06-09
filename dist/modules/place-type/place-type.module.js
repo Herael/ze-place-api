@@ -10,12 +10,18 @@ exports.PlaceTypeModule = void 0;
 const common_1 = require("@nestjs/common");
 const place_type_service_1 = require("./place-type.service");
 const place_type_controller_1 = require("./place-type.controller");
+const place_type_schema_1 = require("./schemas/place-type.schema");
+const mongoose_1 = require("@nestjs/mongoose");
 let PlaceTypeModule = class PlaceTypeModule {
 };
 PlaceTypeModule = __decorate([
-    common_1.Module({
+    common_1.Module({ imports: [
+            mongoose_1.MongooseModule.forFeature([{ name: 'Type', schema: place_type_schema_1.PlaceTypeSchema }]),
+            mongoose_1.MongooseModule.forFeature([{ name: 'Features', schema: place_type_schema_1.PlaceFeaturesSchema }]),
+        ],
+        controllers: [place_type_controller_1.PlaceTypeController],
         providers: [place_type_service_1.PlaceTypeService],
-        controllers: [place_type_controller_1.PlaceTypeController]
+        exports: [place_type_service_1.PlaceTypeService],
     })
 ], PlaceTypeModule);
 exports.PlaceTypeModule = PlaceTypeModule;
