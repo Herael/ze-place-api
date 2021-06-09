@@ -1587,8 +1587,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/interfaces/place.interface.ts": {
-        "version": "5197c5d8afe5b8344f31468d148d6fa096458118338c8bb55be93225adb61d05",
-        "signature": "b3ac5f4c9cf97f7524130f2767ccea08f54b039cbb6c20118a62946a0fb0d7d4",
+        "version": "1f3aa20436b171e9dde0c570e064a52c2e95b33c56547ea16dca2b1b461307c7",
+        "signature": "6ba3ac63ee048da259f10521e314bce21fa438d2eeb3da9e5e3e0306993ff17c",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/interfaces/customer.interface.ts": {
@@ -2242,7 +2242,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.service.ts": {
-        "version": "38ebda02c486795507b7d3fc0969c71a8d66de97acba658cad0b48b7d83f4ed6",
+        "version": "4e9429e02ac4ebb456e4968bb2ea56b92d6d17676912127b9a02d9afcefe79e8",
         "signature": "04b95dedda66f4ec9a70d92c48885e50eadc1a52a6b41f98ec7e260ea8c34f8b",
         "affectsGlobalScope": false
       },
@@ -2512,7 +2512,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/schemas/place.schema.ts": {
-        "version": "3f7a0558577f86d37f3739f1d7723fc605bd4d28038f3a8f6f4a8fca58f60a6b",
+        "version": "284354f526f0dafaa516c7de8df24a04cef8aca8c1a837473b2c4542d876cd6b",
         "signature": "b29d58e560e82ebd6eaeab2c411be4ab1c6d2a67eabb4aee61f7898e2071066d",
         "affectsGlobalScope": false
       },
@@ -2532,8 +2532,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/dto/create-place.dto.ts": {
-        "version": "ee297a5f373b546b5298b88baf21973024d4289aec3e81b901a025791431b1ec",
-        "signature": "180e7a8753dfc94d9e93252a5604ddb79884e8886b3d429945a18a0c54acb2fa",
+        "version": "8d2331752c4502925cb3a0e385ecb95e101bfb49ed2612788b203f20e0e80b8f",
+        "signature": "69ff647433673e09bb61d39a23ca5baec555cdf889ba371c5b93bfb977ae941c",
         "affectsGlobalScope": false
       },
       "../node_modules/geolib/es/types.d.ts": {
@@ -9051,16 +9051,25 @@
       "../src/app.module.ts",
       "../src/app.service.ts",
       "../src/main.ts",
+      "../src/modules/auth/auth.controller.ts",
+      "../src/modules/auth/auth.module.ts",
+      "../src/modules/auth/auth.service.ts",
       "../src/modules/auth/constants.ts",
       "../src/modules/auth/jwt-auth.guard.ts",
       "../src/modules/auth/jwt.strategy.ts",
       "../src/modules/auth/local-auth.guard.ts",
+      "../src/modules/auth/local.strategy.ts",
       "../src/modules/booking/booking.controller.ts",
       "../src/modules/booking/booking.module.ts",
       "../src/modules/booking/booking.service.ts",
       "../src/modules/booking/dto/booking.dto.ts",
       "../src/modules/booking/interfaces/booking.interface.ts",
       "../src/modules/booking/schemas/booking.schema.ts",
+      "../src/modules/customer/customer.controller.ts",
+      "../src/modules/customer/customer.module.ts",
+      "../src/modules/customer/customer.service.ts",
+      "../src/modules/customer/dto/create-customer.dto.ts",
+      "../src/modules/customer/interfaces/customer.interface.ts",
       "../src/modules/customer/schemas/customer.schema.ts",
       "../src/modules/feature/dto/create-feature.dto.ts",
       "../src/modules/feature/feature.controller.ts",
@@ -9068,17 +9077,35 @@
       "../src/modules/feature/feature.service.ts",
       "../src/modules/feature/interfaces/feature.interface.ts",
       "../src/modules/feature/schemas/feature.schema.ts",
+      "../src/modules/payment/payment.controller.ts",
+      "../src/modules/payment/payment.module.ts",
+      "../src/modules/payment/payment.service.ts",
+      "../src/modules/place-type/dto/create-place-type.dto.ts",
+      "../src/modules/place-type/interfaces/place-type.interface.ts",
+      "../src/modules/place-type/place-type.controller.ts",
+      "../src/modules/place-type/place-type.module.ts",
+      "../src/modules/place-type/place-type.service.ts",
+      "../src/modules/place-type/schemas/place-type.schema.ts",
+      "../src/modules/place/dto/create-place.dto.ts",
+      "../src/modules/place/interfaces/place.interface.ts",
+      "../src/modules/place/place.controller.ts",
+      "../src/modules/place/place.module.ts",
+      "../src/modules/place/place.service.ts",
+      "../src/modules/place/schemas/place.schema.ts",
       "../src/modules/promo/dto/create-promo.dto.ts",
       "../src/modules/promo/interfaces/promo.interface.ts",
       "../src/modules/promo/promo.controller.ts",
       "../src/modules/promo/promo.module.ts",
       "../src/modules/promo/promo.service.ts",
       "../src/modules/promo/schemas/promo.schema.ts",
+      "../src/modules/review/dto/create-review.dto.ts",
+      "../src/modules/review/interfaces/review.interface.ts",
       "../src/modules/review/review.controller.ts",
       "../src/modules/review/review.module.ts",
       "../src/modules/review/review.service.ts",
       "../src/modules/review/schemas/review.schema.ts",
       "../src/modules/schemas.ts",
+      "../src/modules/types.ts",
       "../src/utils/index.ts"
     ]
   },

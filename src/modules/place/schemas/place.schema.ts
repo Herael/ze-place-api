@@ -8,7 +8,6 @@ import { ImageSchema } from 'src/modules/schemas';
 
 export const PlaceSchema = new mongoose.Schema({
   title: String,
-  aboutUser: String,
   location: {
     address: String,
     postalCode: String,

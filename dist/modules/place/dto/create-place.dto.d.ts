@@ -5,7 +5,6 @@ import { Review } from 'src/modules/review/interfaces/review.interface';
 import { Image, Location } from 'src/modules/types';
 export declare class CreatePlaceDTO {
     readonly title: string;
-    readonly aboutUser: string;
     readonly location: Location;
     readonly surface: number;
     readonly placeType: PlaceType;

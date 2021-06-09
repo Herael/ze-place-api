@@ -9,7 +9,6 @@ const review_schema_1 = require("../../review/schemas/review.schema");
 const schemas_1 = require("../../schemas");
 exports.PlaceSchema = new mongoose.Schema({
     title: String,
-    aboutUser: String,
     location: {
         address: String,
         postalCode: String,

@@ -6,7 +6,6 @@ import { Review } from 'src/modules/review/interfaces/review.interface';
 import { Image } from 'src/modules/types';
 export interface Place extends Document {
     readonly title: string;
-    readonly aboutUser: string;
     readonly location: {
         readonly address: string;
         readonly postalCode: string;
