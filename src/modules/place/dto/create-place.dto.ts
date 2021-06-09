@@ -23,19 +23,15 @@ export class CreatePlaceDTO {
 
   readonly location: Location;
 
-  @IsString()
+  @IsNumber()
   @IsNotEmpty()
-  readonly surface: string;
+  readonly surface: number;
 
   readonly placeType: PlaceType;
 
   @IsNumber()
   @Min(0)
   readonly price: number;
-
-  @IsString()
-  @IsNotEmpty()
-  readonly rentingDuration: string;
 
   @IsString()
   @IsNotEmpty()

@@ -15,10 +15,9 @@ export interface Place extends Document {
         readonly longitude: number;
         readonly latitude: number;
     };
-    readonly surface: string;
+    readonly surface: number;
     readonly placeType: PlaceType[];
     readonly price: number;
-    readonly rentingDuration: string;
     readonly description: string;
     readonly features: Feature[];
     readonly images: Image[];

@@ -67,47 +67,69 @@ let PlaceService = class PlaceService {
     }
     async similarPlaces(placeID) {
         const place = await this.placeModel.findById(placeID);
-        const priceDif = 0.1;
-        let priceType = 1;
-        const distance = 5000000;
-        const finalPlaces = [];
-        if (place.rentingDuration == 'week') {
-            priceType = 7;
-        }
-        else if (place.rentingDuration == 'month') {
-            priceType = 30;
-        }
-        const minDayPrice = place.price / priceType - (place.price / priceType) * priceDif;
-        const maxDayPrice = place.price / priceType + (place.price / priceType) * priceDif;
+        const priceDif = 0.2;
+        const price = place.price;
+        const distance = 20000;
         const coords = {
             latitude: place.location.latitude,
             longitude: place.location.longitude,
         };
-        const places = await this.placeModel
+        let places = await this.placeModel
             .find({
             _id: { $ne: place._id },
             placeType: { $elemMatch: { name: place.placeType[0].name } },
         })
             .exec();
-        const nearbyPlaces = places.filter((place) => index_1.isPlaceInRadius({
+        places = places.filter((place) => index_1.isPlaceInRadius({
             longitude: place.location.longitude,
             latitude: place.location.latitude,
         }, coords, distance) === true);
-        nearbyPlaces.forEach(function (place) {
-            console.log(place._id);
-            let placeType = 1;
-            if (place.rentingDuration == 'week') {
-                placeType = 7;
-            }
-            else if (place.rentingDuration == 'month') {
-                placeType = 30;
-            }
-            const price = place.price / placeType;
-            if (price <= maxDayPrice && price >= minDayPrice) {
-                finalPlaces.push(place);
-            }
-        });
-        return finalPlaces;
+        places = places.filter((placeElement) => index_1.isInRangePrice(price, placeElement.price, priceDif) === true);
+        return places;
+    }
+    async searchPlaces(placeTypeName, price, surface, feature, location) {
+        const distance = 20000;
+        let places = [];
+        const surfaceNumber = +surface;
+        if (placeTypeName && surface) {
+            places = await this.placeModel
+                .find({
+                placeType: { $elemMatch: { name: placeTypeName } },
+                surface: { $gte: surfaceNumber },
+            })
+                .exec();
+        }
+        else if (placeTypeName) {
+            places = await this.placeModel
+                .find({
+                placeType: { $elemMatch: { name: placeTypeName } },
+            })
+                .exec();
+        }
+        else if (surface) {
+            places = await this.placeModel
+                .find({
+                surface: { $gte: surfaceNumber },
+            })
+                .exec();
+        }
+        else {
+            return [];
+        }
+        if (location) {
+            const coords = {
+                latitude: location.latitude,
+                longitude: location.longitude,
+            };
+            places = places.filter((place) => index_1.isPlaceInRadius({
+                longitude: place.location.longitude,
+                latitude: place.location.latitude,
+            }, coords, distance) === true);
+        }
+        if (price) {
+            places = places.filter((place) => index_1.isHigherPrice(price, place.price) === true);
+        }
+        return places;
     }
 };
 PlaceService = __decorate([

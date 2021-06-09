@@ -7,10 +7,9 @@ export declare class CreatePlaceDTO {
     readonly title: string;
     readonly aboutUser: string;
     readonly location: Location;
-    readonly surface: string;
+    readonly surface: number;
     readonly placeType: PlaceType;
     readonly price: number;
-    readonly rentingDuration: string;
     readonly description: string;
     readonly features: Array<Feature>;
     readonly images: Array<Image>;

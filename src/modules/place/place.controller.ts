@@ -92,4 +92,29 @@ export class PlaceController {
       places,
     });
   }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/searchPlaces')
+  async searchPlaces(@Res() res, @Body() body) {
+    const places = await this.placeService.searchPlaces(
+      body.placeTypeName,
+      body.price,
+      body.surface,
+      body.feartures,
+      body.location,
+    );
+    return res.status(HttpStatus.OK).json({
+      message: 'Search places has been get successfully',
+      places,
+    });
+  }
 }
+
+
+// searchPlaces(
+//   placeType: PlaceType,
+//   price: number,
+//   surface: number,
+//   feature: Feature,
+//   location: Location,
+// ): Promise<Place[]> {
