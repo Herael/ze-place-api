@@ -2747,8 +2747,8 @@
         "affectsGlobalScope": false
       },
       "../src/utils/index.ts": {
-        "version": "0585f30e45574a4fde4630f49fdf8c47ea9965ca6082e9aee935ef86493ea278",
-        "signature": "f0273357dee0ba67c5064c2770eb073b32ff5d59676b304b7d611da2ce4c0dd1",
+        "version": "4c13b835d5239047c0ee301c342ac7bbd797ae6d8d3e3f84ce38bc561174229a",
+        "signature": "6a6bb762a8babb1ad74aa217e725f88e07aecc57fe211fd0a128784e9a42b221",
         "affectsGlobalScope": false
       },
       "../src/modules/booking/dto/booking.dto.ts": {
@@ -2757,12 +2757,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "f8763553e543d77dc46627a5f9fc7c154ce5720b1bbf5846e4dafdbe5c30b5b3",
-        "signature": "8c40027dee650ed75baf96177af19ee689c3ea8e9137b024df9b0f72a1d86ce6",
+        "version": "8a8d90ab03b1827e32ce93654f313a56f8cfb750d14d449bd892b4ed195d9868",
+        "signature": "3c0fa49a2adff7e23ab56447fb555f226382c2c509fc433a073326be3d853ee7",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "1aa7052002029d6bad3df0ce01442feba223a64eb51db21a788d76573510a863",
+        "version": "5c3307c70e0d4d4ab3ca531f965b040b76f9a421a8781b78ffb4dc4ccb44bf59",
         "signature": "e93de83d1dede7597237a1bb35d934436b1f2d3c8db00cc5db8022ce84936a27",
         "affectsGlobalScope": false
       },
@@ -6026,6 +6026,7 @@
       ],
       "../src/utils/index.ts": [
         "../node_modules/geolib/es/index.d.ts",
+        "../src/modules/feature/interfaces/feature.interface.ts",
         "../src/modules/types.ts"
       ]
     },
@@ -8410,6 +8411,7 @@
         "../src/modules/feature/interfaces/feature.interface.ts"
       ],
       "../src/utils/index.ts": [
+        "../src/modules/feature/interfaces/feature.interface.ts",
         "../src/modules/types.ts"
       ]
     },

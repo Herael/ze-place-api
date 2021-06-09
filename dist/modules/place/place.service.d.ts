@@ -18,5 +18,5 @@ export declare class PlaceService {
     acceptBooking(placeId: string, bookingId: any): Promise<Booking[]>;
     createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;
     similarPlaces(placeID: string): Promise<Place[]>;
-    searchPlaces(placeTypeName: string, price: number, surface: string, feature: Feature[], location: Location): Promise<Place[]>;
+    searchPlaces(placeTypeName: string, price: number, surface: number, features: Feature[], location: Location): Promise<Place[]>;
 }
