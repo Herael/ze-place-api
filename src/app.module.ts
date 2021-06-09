@@ -12,6 +12,7 @@ import { PlaceTypeModule } from './modules/place-type/place-type.module';
 import { FeatureModule } from './modules/feature/feature.module';
 import { PaymentModule } from './modules/payment/payment.module';
 import { BookingModule } from './modules/booking/booking.module';
+import { AppGateway } from './app.gateway';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { BookingModule } from './modules/booking/booking.module';
       process.env.MONGODB_URI || 'mongodb://localhost/ze-place-api',
       { useNewUrlParser: true, useFindAndModify: false },
     ),
+    BookingModule,
     CustomerModule,
     PlaceModule,
     ReviewModule,
@@ -28,9 +30,8 @@ import { BookingModule } from './modules/booking/booking.module';
     PlaceTypeModule,
     FeatureModule,
     PaymentModule,
-    BookingModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, AppGateway],
 })
 export class AppModule {}

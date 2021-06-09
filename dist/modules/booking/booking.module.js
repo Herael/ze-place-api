@@ -15,7 +15,7 @@ let BookingModule = class BookingModule {
 BookingModule = __decorate([
     common_1.Module({
         controllers: [booking_controller_1.BookingController],
-        providers: [booking_service_1.BookingService]
+        providers: [booking_service_1.BookingService],
     })
 ], BookingModule);
 exports.BookingModule = BookingModule;

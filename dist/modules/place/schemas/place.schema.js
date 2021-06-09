@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PlaceSchema = void 0;
 const mongoose = require("mongoose");
+const booking_schema_1 = require("../../booking/schemas/booking.schema");
 const feature_schema_1 = require("../../feature/schemas/feature.schema");
 const place_type_schema_1 = require("../../place-type/schemas/place-type.schema");
 const review_schema_1 = require("../../review/schemas/review.schema");
 const schemas_1 = require("../../schemas");
-const booking_schema_1 = require("../../booking/schemas/booking.schema");
 exports.PlaceSchema = new mongoose.Schema({
     title: String,
     aboutUser: String,

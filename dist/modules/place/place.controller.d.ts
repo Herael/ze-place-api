@@ -1,4 +1,3 @@
-import { BookingDTO } from '../booking/dto/booking.dto';
 import { CreatePlaceDTO } from './dto/create-place.dto';
 import { PlaceService } from './place.service';
 export declare class PlaceController {
@@ -7,5 +6,8 @@ export declare class PlaceController {
     getAllPlaces(res: any): Promise<any>;
     getPlacesNearbyCoordinates(res: any, data: any): Promise<any>;
     createPlace(res: any, createPlaceDTO: CreatePlaceDTO): Promise<any>;
-    booking(req: any, res: any, bookingDTO: BookingDTO): Promise<any>;
+    booking(req: any, res: any, body: any): Promise<any>;
+    bookings(res: any, req: any): Promise<any>;
+    acceptBooking(res: any, body: any): Promise<any>;
+    similarPlaces(res: any, body: any): Promise<any>;
 }

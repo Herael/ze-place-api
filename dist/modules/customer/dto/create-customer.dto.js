@@ -15,6 +15,8 @@ const place_interface_1 = require("../../place/interfaces/place.interface");
 class CreateCustomerDTO {
     constructor() {
         this.customerId = null;
+        this.bookings = [];
+        this.pushToken = null;
     }
 }
 __decorate([

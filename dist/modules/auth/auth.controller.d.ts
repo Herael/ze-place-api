@@ -4,9 +4,11 @@ export declare class AuthController {
     constructor(authService: AuthService);
     login(req: any): Promise<{
         access_token: string;
+        userId: any;
     }>;
     register(req: any): Promise<{
         access_token: string;
+        userId: any;
     }>;
     me(req: any): Promise<import("../customer/interfaces/customer.interface").Customer>;
 }

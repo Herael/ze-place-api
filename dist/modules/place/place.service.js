@@ -38,21 +38,25 @@ let PlaceService = class PlaceService {
         }, coords, distance) === true);
         return places;
     }
-    async bookPlace(userId, placeId, booking) {
+    async bookPlace(userId, placeId, bookingDTO) {
         const user = await this.customerModel.findById(userId);
-        const b = {
-            userId: user._id,
-            feature: booking.features[0],
-            bookingPeriod: {
-                startDate: booking === null || booking === void 0 ? void 0 : booking.bookingPeriod.startDate,
-                endDate: booking === null || booking === void 0 ? void 0 : booking.bookingPeriod.endDate,
-                duration: booking === null || booking === void 0 ? void 0 : booking.bookingPeriod.duration,
-            },
-            description: booking.description,
-        };
         const place = await this.findById(placeId);
-        place.bookings.push(b);
+        const booking = Object.assign({ userId: user._id, firstname: user.first_name, lastname: user.last_name, avatar: user.avatar }, bookingDTO);
+        const index = place.bookings.push(booking);
+        user.bookings.push(place.bookings[index]._id);
+        user.save();
         place.save();
+    }
+    async getBookings(placeId) {
+        const place = await this.findById(placeId);
+        return place.bookings;
+    }
+    async acceptBooking(placeId, bookingId) {
+        const place = await this.findById(placeId);
+        const booking = place.bookings.find((booking) => booking._id.toString() === bookingId.toString());
+        booking.isAccepted = true;
+        place.save();
+        return place.bookings;
     }
     async createPlace(createPlaceDTO) {
         const newPlace = await new this.placeModel(createPlaceDTO).save();
@@ -60,6 +64,50 @@ let PlaceService = class PlaceService {
         updatedCustomer.ownedPlaces.push(newPlace);
         updatedCustomer.save();
         return newPlace;
+    }
+    async similarPlaces(placeID) {
+        const place = await this.placeModel.findById(placeID);
+        const priceDif = 0.1;
+        let priceType = 1;
+        const distance = 5000000;
+        const finalPlaces = [];
+        if (place.rentingDuration == 'week') {
+            priceType = 7;
+        }
+        else if (place.rentingDuration == 'month') {
+            priceType = 30;
+        }
+        const minDayPrice = place.price / priceType - (place.price / priceType) * priceDif;
+        const maxDayPrice = place.price / priceType + (place.price / priceType) * priceDif;
+        const coords = {
+            latitude: place.location.latitude,
+            longitude: place.location.longitude,
+        };
+        const places = await this.placeModel
+            .find({
+            _id: { $ne: place._id },
+            placeType: { $elemMatch: { name: place.placeType[0].name } },
+        })
+            .exec();
+        const nearbyPlaces = places.filter((place) => index_1.isPlaceInRadius({
+            longitude: place.location.longitude,
+            latitude: place.location.latitude,
+        }, coords, distance) === true);
+        nearbyPlaces.forEach(function (place) {
+            console.log(place._id);
+            let placeType = 1;
+            if (place.rentingDuration == 'week') {
+                placeType = 7;
+            }
+            else if (place.rentingDuration == 'month') {
+                placeType = 30;
+            }
+            const price = place.price / placeType;
+            if (price <= maxDayPrice && price >= minDayPrice) {
+                finalPlaces.push(place);
+            }
+        });
+        return finalPlaces;
     }
 };
 PlaceService = __decorate([
