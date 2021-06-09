@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreatePlaceTypeDTO = void 0;
+exports.CreatePlaceFeatureDTO = exports.CreatePlaceTypeDTO = void 0;
 const class_validator_1 = require("class-validator");
 class CreatePlaceTypeDTO {
 }
@@ -19,4 +19,17 @@ __decorate([
     __metadata("design:type", String)
 ], CreatePlaceTypeDTO.prototype, "name", void 0);
 exports.CreatePlaceTypeDTO = CreatePlaceTypeDTO;
+class CreatePlaceFeatureDTO {
+}
+__decorate([
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
+    __metadata("design:type", String)
+], CreatePlaceFeatureDTO.prototype, "name", void 0);
+__decorate([
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
+    __metadata("design:type", String)
+], CreatePlaceFeatureDTO.prototype, "image", void 0);
+exports.CreatePlaceFeatureDTO = CreatePlaceFeatureDTO;
 //# sourceMappingURL=create-place-type.dto.js.map

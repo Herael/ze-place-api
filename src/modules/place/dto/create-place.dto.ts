@@ -17,25 +17,17 @@ export class CreatePlaceDTO {
   @IsNotEmpty()
   readonly title: string;
 
-  @IsString()
-  @IsNotEmpty()
-  readonly aboutUser: string;
-
   readonly location: Location;
 
-  @IsString()
+  @IsNumber()
   @IsNotEmpty()
-  readonly surface: string;
+  readonly surface: number;
 
   readonly placeType: PlaceType;
 
   @IsNumber()
   @Min(0)
   readonly price: number;
-
-  @IsString()
-  @IsNotEmpty()
-  readonly rentingDuration: string;
 
   @IsString()
   @IsNotEmpty()

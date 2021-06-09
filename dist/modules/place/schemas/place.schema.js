@@ -9,7 +9,6 @@ const review_schema_1 = require("../../review/schemas/review.schema");
 const schemas_1 = require("../../schemas");
 exports.PlaceSchema = new mongoose.Schema({
     title: String,
-    aboutUser: String,
     location: {
         address: String,
         postalCode: String,
@@ -18,10 +17,9 @@ exports.PlaceSchema = new mongoose.Schema({
         longitude: String,
         latitude: String,
     },
-    surface: String,
+    surface: Number,
     placeType: [place_type_schema_1.PlaceTypeSchema],
     price: Number,
-    rentingDuration: String,
     description: String,
     features: [feature_schema_1.FeatureSchema],
     images: [schemas_1.ImageSchema],
