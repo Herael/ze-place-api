@@ -35,10 +35,6 @@ export class CreatePlaceDTO {
 
   @IsString()
   @IsNotEmpty()
-  readonly rentingDuration: string;
-
-  @IsString()
-  @IsNotEmpty()
   readonly description: string;
 
   readonly features: Array<Feature> = [];

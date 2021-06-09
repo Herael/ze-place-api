@@ -93,19 +93,12 @@ export class PlaceService {
   async similarPlaces(placeID: string): Promise<Place[]> {
     const place = await this.placeModel.findById(placeID);
     const priceDif = 0.2;
-    let price = place.price;
+    const price = place.price;
     const distance = 20000;
     const coords = {
       latitude: place.location.latitude,
       longitude: place.location.longitude,
     };
-
-    //Temp renting duration mode
-    if (place.rentingDuration == 'week') {
-      price /= 7;
-    } else if (place.rentingDuration == 'month') {
-      price /= 30;
-    }
 
     let places = await this.placeModel
       .find({
@@ -128,12 +121,7 @@ export class PlaceService {
 
     places = places.filter(
       (placeElement: Place) =>
-        isInRangePrice(
-          price,
-          placeElement.price,
-          placeElement.rentingDuration,
-          priceDif,
-        ) === true,
+        isInRangePrice(price, placeElement.price, priceDif) === true,
     );
 
     return places;
@@ -192,8 +180,7 @@ export class PlaceService {
     }
     if (price) {
       places = places.filter(
-        (place: Place) =>
-          isHigherPrice(price, place.price, place.rentingDuration) === true,
+        (place: Place) => isHigherPrice(price, place.price) === true,
       );
     }
 

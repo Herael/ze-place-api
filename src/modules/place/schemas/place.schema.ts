@@ -20,7 +20,6 @@ export const PlaceSchema = new mongoose.Schema({
   surface: Number,
   placeType: [PlaceTypeSchema],
   price: Number,
-  rentingDuration: String,
   description: String,
   features: [FeatureSchema],
   images: [ImageSchema],

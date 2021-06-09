@@ -21,7 +21,6 @@ exports.PlaceSchema = new mongoose.Schema({
     surface: Number,
     placeType: [place_type_schema_1.PlaceTypeSchema],
     price: Number,
-    rentingDuration: String,
     description: String,
     features: [feature_schema_1.FeatureSchema],
     images: [schemas_1.ImageSchema],
