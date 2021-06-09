@@ -17,10 +17,6 @@ export class CreatePlaceDTO {
   @IsNotEmpty()
   readonly title: string;
 
-  @IsString()
-  @IsNotEmpty()
-  readonly aboutUser: string;
-
   readonly location: Location;
 
   @IsNumber()

@@ -87,15 +87,14 @@ let PlaceService = class PlaceService {
         places = places.filter((placeElement) => index_1.isInRangePrice(price, placeElement.price, priceDif) === true);
         return places;
     }
-    async searchPlaces(placeTypeName, price, surface, feature, location) {
+    async searchPlaces(placeTypeName, price, surface, features, location) {
         const distance = 20000;
         let places = [];
-        const surfaceNumber = +surface;
         if (placeTypeName && surface) {
             places = await this.placeModel
                 .find({
                 placeType: { $elemMatch: { name: placeTypeName } },
-                surface: { $gte: surfaceNumber },
+                surface: { $gte: surface },
             })
                 .exec();
         }
@@ -109,7 +108,7 @@ let PlaceService = class PlaceService {
         else if (surface) {
             places = await this.placeModel
                 .find({
-                surface: { $gte: surfaceNumber },
+                surface: { $gte: surface },
             })
                 .exec();
         }
@@ -128,6 +127,9 @@ let PlaceService = class PlaceService {
         }
         if (price) {
             places = places.filter((place) => index_1.isHigherPrice(price, place.price) === true);
+        }
+        if (features && features.length > 0) {
+            places = places.filter((place) => index_1.isContainsFeatures(features, place.features) === true);
         }
         return places;
     }

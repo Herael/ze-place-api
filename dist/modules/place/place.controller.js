@@ -72,7 +72,7 @@ let PlaceController = class PlaceController {
         });
     }
     async searchPlaces(res, body) {
-        const places = await this.placeService.searchPlaces(body.placeTypeName, body.price, body.surface, body.feartures, body.location);
+        const places = await this.placeService.searchPlaces(body.placeTypeName, body.price, body.surface, body.features, body.location);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Search places has been get successfully',
             places,
