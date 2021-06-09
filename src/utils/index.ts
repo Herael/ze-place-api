@@ -1,4 +1,5 @@
 import * as geolib from 'geolib';
+import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 import { Coords } from 'src/modules/types';
 
 export const isPlaceInRadius = (
@@ -28,4 +29,20 @@ export const isInRangePrice = (
     return true;
   }
   return false;
+};
+
+export const isContainsFeatures = (
+  researchFeature: Feature[],
+  placeFeature: Feature[],
+) => {
+  let count = 0;
+  researchFeature.forEach(function (f) {
+    if (placeFeature.find((e) => e.name === f.name)) {
+      count++;
+    }
+  });
+  if (count != placeFeature.length) {
+    return false;
+  }
+  return true;
 };

@@ -6,7 +6,7 @@ import { Customer } from '../customer/interfaces/customer.interface';
 
 import { CreatePlaceDTO } from './dto/create-place.dto';
 import { Coords, Location } from '../types';
-import { isHigherPrice, isInRangePrice, isPlaceInRadius } from '../../utils/index';
+import { isContainsFeatures, isHigherPrice, isInRangePrice, isPlaceInRadius } from '../../utils/index';
 import { Booking } from '../booking/interfaces/booking.interface';
 import { BookingDTO } from '../booking/dto/booking.dto';
 import { PlaceType } from '../place-type/interfaces/place-type.interface';
@@ -130,19 +130,18 @@ export class PlaceService {
   async searchPlaces(
     placeTypeName: string,
     price: number,
-    surface: string,
-    feature: Feature[],
+    surface: number,
+    features: Feature[],
     location: Location,
   ): Promise<Place[]> {
     const distance = 20000;
     let places = [];
-    const surfaceNumber: number = +surface;
 
     if (placeTypeName && surface) {
       places = await this.placeModel
         .find({
           placeType: { $elemMatch: { name: placeTypeName } },
-          surface: { $gte: surfaceNumber },
+          surface: { $gte: surface },
         })
         .exec();
     } else if (placeTypeName) {
@@ -154,7 +153,7 @@ export class PlaceService {
     } else if (surface) {
       places = await this.placeModel
         .find({
-          surface: { $gte: surfaceNumber },
+          surface: { $gte: surface },
         })
         .exec();
     } else {
@@ -181,6 +180,11 @@ export class PlaceService {
     if (price) {
       places = places.filter(
         (place: Place) => isHigherPrice(price, place.price) === true,
+      );
+    }
+    if (features && features.length > 0) {
+      places = places.filter(
+        (place: Place) => isContainsFeatures(features, place.features) === true,
       );
     }
 

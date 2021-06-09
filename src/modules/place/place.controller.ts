@@ -100,7 +100,7 @@ export class PlaceController {
       body.placeTypeName,
       body.price,
       body.surface,
-      body.feartures,
+      body.features,
       body.location,
     );
     return res.status(HttpStatus.OK).json({
@@ -109,12 +109,3 @@ export class PlaceController {
     });
   }
 }
-
-
-// searchPlaces(
-//   placeType: PlaceType,
-//   price: number,
-//   surface: number,
-//   feature: Feature,
-//   location: Location,
-// ): Promise<Place[]> {
