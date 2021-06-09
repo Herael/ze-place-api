@@ -1572,8 +1572,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/interfaces/place-type.interface.ts": {
-        "version": "cd367e7e40ec17e249fd970d01728ab80f50a9a2f685e38309f7d690f0b4c502",
-        "signature": "49ff79ceecc7dd6fe1c52f340fd74bd23d740598b106de7f690f466593b0b333",
+        "version": "2a7052f4620816752e6c475ff7a6bf47dea8f47c7dd6bc74b171959ee5166b39",
+        "signature": "1a6afe8052508c7eb362734024bba4e5d6c235caab7bd125b6ba82324e7799b9",
         "affectsGlobalScope": false
       },
       "../src/modules/review/interfaces/review.interface.ts": {
@@ -2242,7 +2242,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.service.ts": {
-        "version": "19545d99ae05c3c78ae4ddfb3991bcda368a274329625ec98cbede33020c3ca9",
+        "version": "27cb423e2df8843b4c97af166da06d6172c23ef20fe5ba95a8bc74da53777dd5",
         "signature": "008675388f3d4d7e329d3aa453cb51c7595d309783cce84f919f0460d6b2c576",
         "affectsGlobalScope": false
       },
@@ -2362,8 +2362,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/schemas/place-type.schema.ts": {
-        "version": "15fc659e1ef779c925d213faea9290677eda86cbabfce35b872a7598926f1c86",
-        "signature": "c8eacaf4c72d12cc50fd05ecbca7de921c478c2f234c9e0e2ca405a519dbd075",
+        "version": "4d9ff284c081fdb57552f9e4f41dc1ef57cace570bf5b7845a2af9065ae39c8b",
+        "signature": "b30d9c4443e34473a71659c2ff92fc9d06d233d52f70b0f5640e20c34bd48fa6",
         "affectsGlobalScope": false
       },
       "../src/modules/review/schemas/review.schema.ts": {
@@ -2721,18 +2721,23 @@
         "signature": "4e981f9bf50398f6a24608fa9c3b8304da8842b8c9f93a1b64fc089179955068",
         "affectsGlobalScope": false
       },
+      "../src/modules/place-type/dto/create-place-type.dto.ts": {
+        "version": "82e11c7ff29b646c282e717b0592135fafaceed1bd43b2712c25d7f7878b010d",
+        "signature": "18db0a1a4cc56af9ae8ef6f731a597a6aa36147ed7938fe66474e54706929350",
+        "affectsGlobalScope": false
+      },
       "../src/modules/place-type/place-type.service.ts": {
-        "version": "7b8df200a6f408b5d6128ef21e0772801a9136adbf7405c73b0912ece5a1fbb5",
-        "signature": "3a24cc2d0be695537ae09e01d9223cecd87fcce2b771050a54f542d734f0b79c",
+        "version": "a07e9035528e489c910a35b9f60e4dd3d327417dca7cc8252302c9b5534dce9a",
+        "signature": "e18fd16501de6c5adc26c8fde45f30b4b195de8e42fdb40a4b2a05888ffbfff9",
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/place-type.controller.ts": {
-        "version": "892d7bfb553f52254680e702b27941794db695e2fa937be08b952d92f4f8af61",
-        "signature": "791b0abfbb1f48b1384242e1787cf5c8ab8c124a0b003744ebf116ab1c092144",
+        "version": "17fd60af620aebbda39c7d80aa82e21a35efed5c5a99fbde0647ab38d5d0574c",
+        "signature": "12e2c3ee46d6a84d7dc4a8f40f9a39ac4cb172513fb28d5fc69bd6a0c736fbfa",
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/place-type.module.ts": {
-        "version": "2dd469d2847f544119d92f21525f9cfb42f4e5a0241f66572b784b88bb1d2bda",
+        "version": "e77e24965d30fb54b3a8d2053dd27cd8a912fc787dc5856fd5fecab2ead33419",
         "signature": "3fd0f28ad4ee5e55056ccfba490bb6f46eee34442c54fe3e7d9ca7e63b9dc3d7",
         "affectsGlobalScope": false
       },
@@ -2974,11 +2979,6 @@
       "../src/modules/feature/dto/create-feature.dto.ts": {
         "version": "9c206e0035e71a1ca61c680ff3d6da64b6be2ad3583e94ee8dee8c3ddd5a2cdd",
         "signature": "27542cf22a0274a13cddfbb90ade416e76150cbd57e14f9be25441f6a1a65711",
-        "affectsGlobalScope": false
-      },
-      "../src/modules/place-type/dto/create-place-type.dto.ts": {
-        "version": "c97930058a5f6faf2c59a039f26e133b13e956276152c0cc58ca3d3cad3adf9d",
-        "signature": "f919d75ec5c88e05bdc3ab2662f91005460bd562357c643262da125c1e88dc45",
         "affectsGlobalScope": false
       },
       "../src/modules/promo/dto/create-promo.dto.ts": {
@@ -5559,15 +5559,22 @@
         "../src/modules/customer/interfaces/customer.interface.ts"
       ],
       "../src/modules/place-type/place-type.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/place-type/place-type.service.ts"
       ],
       "../src/modules/place-type/place-type.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
         "../src/modules/place-type/place-type.controller.ts",
-        "../src/modules/place-type/place-type.service.ts"
+        "../src/modules/place-type/place-type.service.ts",
+        "../src/modules/place-type/schemas/place-type.schema.ts"
       ],
       "../src/modules/place-type/place-type.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/place-type/dto/create-place-type.dto.ts",
+        "../src/modules/place-type/interfaces/place-type.interface.ts"
       ],
       "../src/modules/place-type/schemas/place-type.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
@@ -7863,6 +7870,14 @@
       "../src/modules/place-type/interfaces/place-type.interface.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
+      "../src/modules/place-type/place-type.controller.ts": [
+        "../src/modules/place-type/place-type.service.ts"
+      ],
+      "../src/modules/place-type/place-type.service.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/place-type/dto/create-place-type.dto.ts",
+        "../src/modules/place-type/interfaces/place-type.interface.ts"
+      ],
       "../src/modules/place-type/schemas/place-type.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
@@ -8524,29 +8539,18 @@
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
-      "../src/app.controller.ts",
-      "../src/app.module.ts",
       "../src/app.service.ts",
       "../src/main.ts",
-      "../src/modules/auth/auth.controller.ts",
-      "../src/modules/auth/auth.module.ts",
-      "../src/modules/auth/auth.service.ts",
       "../src/modules/auth/constants.ts",
       "../src/modules/auth/jwt-auth.guard.ts",
       "../src/modules/auth/jwt.strategy.ts",
       "../src/modules/auth/local-auth.guard.ts",
-      "../src/modules/auth/local.strategy.ts",
       "../src/modules/booking/booking.controller.ts",
       "../src/modules/booking/booking.module.ts",
       "../src/modules/booking/booking.service.ts",
       "../src/modules/booking/dto/booking.dto.ts",
       "../src/modules/booking/interfaces/booking.interface.ts",
       "../src/modules/booking/schemas/booking.schema.ts",
-      "../src/modules/customer/customer.controller.ts",
-      "../src/modules/customer/customer.module.ts",
-      "../src/modules/customer/customer.service.ts",
-      "../src/modules/customer/dto/create-customer.dto.ts",
-      "../src/modules/customer/interfaces/customer.interface.ts",
       "../src/modules/customer/schemas/customer.schema.ts",
       "../src/modules/feature/dto/create-feature.dto.ts",
       "../src/modules/feature/feature.controller.ts",
@@ -8554,35 +8558,17 @@
       "../src/modules/feature/feature.service.ts",
       "../src/modules/feature/interfaces/feature.interface.ts",
       "../src/modules/feature/schemas/feature.schema.ts",
-      "../src/modules/payment/payment.controller.ts",
-      "../src/modules/payment/payment.module.ts",
-      "../src/modules/payment/payment.service.ts",
-      "../src/modules/place-type/dto/create-place-type.dto.ts",
-      "../src/modules/place-type/interfaces/place-type.interface.ts",
-      "../src/modules/place-type/place-type.controller.ts",
-      "../src/modules/place-type/place-type.module.ts",
-      "../src/modules/place-type/place-type.service.ts",
-      "../src/modules/place-type/schemas/place-type.schema.ts",
-      "../src/modules/place/dto/create-place.dto.ts",
-      "../src/modules/place/interfaces/place.interface.ts",
-      "../src/modules/place/place.controller.ts",
-      "../src/modules/place/place.module.ts",
-      "../src/modules/place/place.service.ts",
-      "../src/modules/place/schemas/place.schema.ts",
       "../src/modules/promo/dto/create-promo.dto.ts",
       "../src/modules/promo/interfaces/promo.interface.ts",
       "../src/modules/promo/promo.controller.ts",
       "../src/modules/promo/promo.module.ts",
       "../src/modules/promo/promo.service.ts",
       "../src/modules/promo/schemas/promo.schema.ts",
-      "../src/modules/review/dto/create-review.dto.ts",
-      "../src/modules/review/interfaces/review.interface.ts",
       "../src/modules/review/review.controller.ts",
       "../src/modules/review/review.module.ts",
       "../src/modules/review/review.service.ts",
       "../src/modules/review/schemas/review.schema.ts",
       "../src/modules/schemas.ts",
-      "../src/modules/types.ts",
       "../src/utils/index.ts"
     ]
   },

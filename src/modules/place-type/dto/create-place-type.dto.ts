@@ -7,3 +7,15 @@ export class CreatePlaceTypeDTO {
 
   readonly created_at: Date;
 }
+
+export class CreatePlaceFeatureDTO {
+  @IsString()
+  @IsNotEmpty()
+  readonly name: string;
+
+  @IsString()
+  @IsNotEmpty()
+  readonly image: string;
+
+  readonly created_at: Date;
+}
