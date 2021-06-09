@@ -9043,12 +9043,9 @@
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
-<<<<<<< HEAD
-=======
       "../src/app.controller.ts",
       "../src/app.gateway.ts",
       "../src/app.module.ts",
->>>>>>> fda6e52c5a3bcc2a1e71b2075f45625ad7328e97
       "../src/app.service.ts",
       "../src/main.ts",
       "../src/modules/auth/constants.ts",
