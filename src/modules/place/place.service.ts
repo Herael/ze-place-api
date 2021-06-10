@@ -49,7 +49,13 @@ export class PlaceService {
   }
 
   async bookPlace(userId: string, placeId: string, bookingDTO: BookingDTO) {
+    console.log('user id : ', userId);
+    console.log('place id : ', placeId);
+
+    console.log(await this.customerModel.findById(userId));
+
     const user = await this.customerModel.findById(userId);
+    console.log('user from mongo : ', user);
     const place = await this.findById(placeId);
     const booking = {
       userId: user._id,
