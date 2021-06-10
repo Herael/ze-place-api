@@ -46,6 +46,7 @@ export class PlaceController {
   @UseGuards(JwtAuthGuard)
   @Post('/booking')
   async booking(@Request() req, @Res() res, @Body() body) {
+    console.log(req.user);
     await this.placeService.bookPlace(req.user.id, body.placeId, {
       feature: body.booking.features[0],
       startDate: body.booking.startDate,
