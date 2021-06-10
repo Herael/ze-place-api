@@ -41,7 +41,7 @@ export const isContainsFeatures = (
       count++;
     }
   });
-  if (count != placeFeature.length) {
+  if (count != researchFeature.length) {
     return false;
   }
   return true;
