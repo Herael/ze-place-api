@@ -4,6 +4,8 @@ exports.BookingSchema = void 0;
 const mongoose = require("mongoose");
 const feature_schema_1 = require("../../feature/schemas/feature.schema");
 exports.BookingSchema = new mongoose.Schema({
+    placeId: String,
+    ownerId: String,
     userId: String,
     firstname: String,
     lastname: String,
@@ -14,7 +16,9 @@ exports.BookingSchema = new mongoose.Schema({
     duration: Number,
     price: Number,
     description: String,
-    isAccepted: Boolean,
+    isAccepted: { type: Boolean, default: false },
+    isDenied: { type: Boolean, default: false },
+    isPast: { type: Boolean, default: false },
     created_at: { type: Date, default: Date.now },
 });
 //# sourceMappingURL=booking.schema.js.map

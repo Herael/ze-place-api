@@ -43,26 +43,6 @@ let PlaceService = class PlaceService {
         }, coords, distance) === true);
         return places;
     }
-    async bookPlace(userId, placeId, bookingDTO) {
-        const user = await this.customerModel.findById(userId);
-        const place = await this.findById(placeId);
-        const booking = Object.assign({ userId: user._id, firstname: user.first_name, lastname: user.last_name, avatar: user.avatar }, bookingDTO);
-        place.bookings.push(booking);
-        place.save();
-        user.bookings.push(place);
-        user.save();
-    }
-    async getBookings(placeId) {
-        const place = await this.findById(placeId);
-        return place.bookings;
-    }
-    async acceptBooking(placeId, bookingId) {
-        const place = await this.findById(placeId);
-        const booking = place.bookings.find((booking) => booking._id.toString() === bookingId.toString());
-        booking.isAccepted = true;
-        place.save();
-        return place.bookings;
-    }
     async createPlace(createPlaceDTO) {
         const newPlace = await new this.placeModel(createPlaceDTO).save();
         const updatedCustomer = await this.customerModel.findById(createPlaceDTO.ownerId);

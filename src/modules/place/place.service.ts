@@ -59,37 +59,6 @@ export class PlaceService {
     return places;
   }
 
-  async bookPlace(userId: string, placeId: string, bookingDTO: BookingDTO) {
-    const user = await this.customerModel.findById(userId);
-    const place = await this.findById(placeId);
-    const booking = {
-      userId: user._id,
-      firstname: user.first_name,
-      lastname: user.last_name,
-      avatar: user.avatar,
-      ...bookingDTO,
-    };
-    place.bookings.push(booking as Booking);
-    place.save();
-    user.bookings.push(place);
-    user.save();
-  }
-
-  async getBookings(placeId: string): Promise<Booking[]> {
-    const place = await this.findById(placeId);
-    return place.bookings;
-  }
-
-  async acceptBooking(placeId: string, bookingId): Promise<Booking[]> {
-    const place = await this.findById(placeId);
-    const booking = place.bookings.find(
-      (booking) => booking._id.toString() === bookingId.toString(),
-    );
-    booking.isAccepted = true;
-    place.save();
-    return place.bookings;
-  }
-
   async createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place> {
     const newPlace = await new this.placeModel(createPlaceDTO).save();
     const updatedCustomer = await this.customerModel.findById(
