@@ -37,6 +37,7 @@ let PlaceController = class PlaceController {
         });
     }
     async booking(req, res, body) {
+        console.log(req.user);
         await this.placeService.bookPlace(req.user.id, body.placeId, {
             feature: body.booking.features[0],
             startDate: body.booking.startDate,
