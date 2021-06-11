@@ -31,5 +31,6 @@ export const PlaceSchema = new mongoose.Schema({
   rate: Number,
   reviews: [ReviewSchema],
   bookings: [BookingSchema],
+  isFavorite: Boolean,
   created_at: { type: Date, default: Date.now },
 });

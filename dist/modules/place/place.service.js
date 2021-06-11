@@ -22,9 +22,14 @@ let PlaceService = class PlaceService {
         this.placeModel = placeModel;
         this.customerModel = customerModel;
     }
-    async getAllPlaces() {
+    async getAllPlaces(userId) {
+        const user = await this.customerModel.findById(userId);
         const places = await this.placeModel.find().exec();
-        return places;
+        const formattedPlaces = places.map((place) => {
+            place.isFavorite = Boolean(user.favorites.find((p) => p._id.toString() === place._id.toString()));
+            return place;
+        });
+        return formattedPlaces;
     }
     async findById(placeId) {
         const place = await this.placeModel.findById(placeId).exec();

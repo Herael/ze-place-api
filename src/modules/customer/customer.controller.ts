@@ -27,7 +27,6 @@ export class CustomerController {
   @Get()
   async getAllCustomer(@Res() res) {
     const customers = await this.customerService.getAllCustomer();
-    Logger.warn(customers);
     return res.status(HttpStatus.OK).json(customers);
   }
 
@@ -59,11 +58,9 @@ export class CustomerController {
   @UseGuards(JwtAuthGuard)
   @Post('/favorite/create')
   async addFavorite(@Request() req, @Res() res, @Body() place: Place) {
-    const customer = await this.customerService.addFavorite(req.user.id, place);
-    if (!customer) throw new NotFoundException('Customer does not exist!');
+    await this.customerService.addFavorite(req.user.id, place);
     return res.status(HttpStatus.OK).json({
       message: 'Favorite has been successfully added',
-      customer,
     });
   }
 

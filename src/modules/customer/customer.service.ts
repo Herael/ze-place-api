@@ -104,19 +104,17 @@ export class CustomerService {
     }
   }
 
-  async addFavorite(customerID: string, place: Place): Promise<Customer> {
+  async addFavorite(customerID: string, place: Place){
     const updatedCustomer = await this.customerModel.findById(customerID);
     updatedCustomer.favorites.push(place);
     updatedCustomer.save();
-    return updatedCustomer;
   }
 
-  async deleteFavorite(customerID: string, placeId: string): Promise<Customer> {
+  async deleteFavorite(customerID: string, placeId: string) {
     const updatedCustomer = await this.customerModel.findById(customerID);
     updatedCustomer.favorites = updatedCustomer.favorites.filter(
       (item) => item._id.toString() !== placeId,
     );
     updatedCustomer.save();
-    return updatedCustomer;
   }
 }

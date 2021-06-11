@@ -6,10 +6,14 @@ import { Customer } from '../customer/interfaces/customer.interface';
 
 import { CreatePlaceDTO } from './dto/create-place.dto';
 import { Coords, Location } from '../types';
-import { isContainsFeatures, isHigherPrice, isInRangePrice, isPlaceInRadius } from '../../utils/index';
+import {
+  isContainsFeatures,
+  isHigherPrice,
+  isInRangePrice,
+  isPlaceInRadius,
+} from '../../utils/index';
 import { Booking } from '../booking/interfaces/booking.interface';
 import { BookingDTO } from '../booking/dto/booking.dto';
-import { PlaceType } from '../place-type/interfaces/place-type.interface';
 import { Feature } from '../feature/interfaces/feature.interface';
 
 @Injectable()
@@ -19,9 +23,16 @@ export class PlaceService {
     @InjectModel('Customer') private readonly customerModel: Model<Customer>,
   ) {}
 
-  async getAllPlaces(): Promise<Place[]> {
+  async getAllPlaces(userId: string) {
+    const user = await this.customerModel.findById(userId);
     const places = await this.placeModel.find().exec();
-    return places;
+    const formattedPlaces = places.map((place) => {
+      place.isFavorite = Boolean(
+        user.favorites.find((p) => p._id.toString() === place._id.toString()),
+      );
+      return place;
+    });
+    return formattedPlaces;
   }
 
   async findById(placeId: string): Promise<Place> {

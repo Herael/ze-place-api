@@ -18,9 +18,10 @@ import { PlaceService } from './place.service';
 export class PlaceController {
   constructor(private placeService: PlaceService) {}
 
+  @UseGuards(JwtAuthGuard)
   @Get()
-  async getAllPlaces(@Res() res) {
-    const places = await this.placeService.getAllPlaces();
+  async getAllPlaces(@Request() req, @Res() res) {
+    const places = await this.placeService.getAllPlaces(req.user.id);
     return res.status(HttpStatus.OK).json(places);
   }
 

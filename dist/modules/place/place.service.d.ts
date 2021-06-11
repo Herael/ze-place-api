@@ -10,7 +10,7 @@ export declare class PlaceService {
     private readonly placeModel;
     private readonly customerModel;
     constructor(placeModel: Model<Place>, customerModel: Model<Customer>);
-    getAllPlaces(): Promise<Place[]>;
+    getAllPlaces(userId: string): Promise<Place[]>;
     findById(placeId: string): Promise<Place>;
     getPlacesNearbyCoordinates(coords: Coords, distance: number): Promise<Place[]>;
     bookPlace(userId: string, placeId: string, bookingDTO: BookingDTO): Promise<void>;

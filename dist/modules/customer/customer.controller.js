@@ -23,7 +23,6 @@ let CustomerController = class CustomerController {
     }
     async getAllCustomer(res) {
         const customers = await this.customerService.getAllCustomer();
-        common_1.Logger.warn(customers);
         return res.status(common_1.HttpStatus.OK).json(customers);
     }
     async getCustomer(res, customerID) {
@@ -42,12 +41,9 @@ let CustomerController = class CustomerController {
         });
     }
     async addFavorite(req, res, place) {
-        const customer = await this.customerService.addFavorite(req.user.id, place);
-        if (!customer)
-            throw new common_1.NotFoundException('Customer does not exist!');
+        await this.customerService.addFavorite(req.user.id, place);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Favorite has been successfully added',
-            customer,
         });
     }
     async deleteFavorite(req, res, placeID) {

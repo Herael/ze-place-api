@@ -30,6 +30,7 @@ export interface Place extends Document {
   readonly rate: number;
   readonly reviews: Review[];
   readonly bookings: Booking[];
+  isFavorite: boolean;
   readonly created_at: {
     readonly type: Date;
     readonly default: Date;

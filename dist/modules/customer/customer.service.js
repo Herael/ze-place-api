@@ -91,13 +91,11 @@ let CustomerService = class CustomerService {
         const updatedCustomer = await this.customerModel.findById(customerID);
         updatedCustomer.favorites.push(place);
         updatedCustomer.save();
-        return updatedCustomer;
     }
     async deleteFavorite(customerID, placeId) {
         const updatedCustomer = await this.customerModel.findById(customerID);
         updatedCustomer.favorites = updatedCustomer.favorites.filter((item) => item._id.toString() !== placeId);
         updatedCustomer.save();
-        return updatedCustomer;
     }
 };
 CustomerService = __decorate([
