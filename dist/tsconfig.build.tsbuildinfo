@@ -1587,13 +1587,13 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/interfaces/place.interface.ts": {
-        "version": "1f3aa20436b171e9dde0c570e064a52c2e95b33c56547ea16dca2b1b461307c7",
-        "signature": "6ba3ac63ee048da259f10521e314bce21fa438d2eeb3da9e5e3e0306993ff17c",
+        "version": "3d39652c1b74f705686bef62544ee6c222f004cf549d8d13cb01865f7855ddc9",
+        "signature": "4c10a243ece28c9721e960dc0c5b7d8be78db0ed8a539423b7479b5b997abecc",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/interfaces/customer.interface.ts": {
-        "version": "85b423d4da3a8509ccc64cf5cedd9416a052f7a31cdc834b5955939155e07895",
-        "signature": "d69e61078bfbafdafd116bc7a7ecf3ed6a3ec954dbe91a19fc245777642ccd3a",
+        "version": "bee32d824e77a0008247f0c9ffb442b8fe45c03f3f17c4c508596f0a40890888",
+        "signature": "413c9aa7500a1f5c3f9de2a32071f7621729e228078f01dd6d1d613e2dbfdbcf",
         "affectsGlobalScope": false
       },
       "../node_modules/class-validator/types/validation/validationerror.d.ts": {
@@ -2222,8 +2222,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/dto/create-customer.dto.ts": {
-        "version": "73f7dd493449ad5017a1e8fd2a07360a7cb14549e981ac89461c84b8f1ec5066",
-        "signature": "9fc4bf5359096ff8d308577202180a77f0b126343acea0b1fe71e443d2c57d45",
+        "version": "e1972d6d840c8dbb674f08c15977a2f879ebb7324bb6da6b4448339657d7348e",
+        "signature": "fe156b619a0979d235ff76a5638f62c8586efd34cdcd30c982f96a606155bbbd",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/bcrypt/index.d.ts": {
@@ -2237,8 +2237,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/customer.service.ts": {
-        "version": "3ea24d15219db4436b20f141393b1dbe1d3430e49a453282909a368ac52c5aaa",
-        "signature": "e9001e169798b9f61411e42f35a5b1371593b00af20ff6f752d78531bfaedf0e",
+        "version": "a6b1ca6a1a49e758dbcdf2fd402027d11eb872c2309c457d9a1ab4b36fa51815",
+        "signature": "16efd756ffc87d71c3c0209a9769f60535c1e65cf25e843491c08355096d4805",
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.service.ts": {
@@ -2482,7 +2482,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/customer.controller.ts": {
-        "version": "c90084a08c38075c3bfc253a4f8a0106cc1c44a4ca579ac907b68ec7a5ec77cc",
+        "version": "94899780269f2a309b756cfdb8c3c4c808a7d2404f81abdfa34ebe186f456171",
         "signature": "d211bf951c9c342934f355622f5b66dc28d214982da7d9317062dec848e8a63f",
         "affectsGlobalScope": false
       },
@@ -2512,12 +2512,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/schemas/place.schema.ts": {
-        "version": "284354f526f0dafaa516c7de8df24a04cef8aca8c1a837473b2c4542d876cd6b",
+        "version": "c6bfe7ed1dcf78317a0638a101470e17698df55e4600142c7c09edc80f26d4e8",
         "signature": "b29d58e560e82ebd6eaeab2c411be4ab1c6d2a67eabb4aee61f7898e2071066d",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/schemas/customer.schema.ts": {
-        "version": "04bb85d9dac79fb6523d58baafab88d5ce65096688df3aa040f49831218c1572",
+        "version": "bafb8c6de5f896cf5f960a6446807f4e2727aef8cd400c2cead4aed5c52285dc",
         "signature": "4e0f49eb914132556be58be043c68fc4297e170d5d941b7c8446198f113afb86",
         "affectsGlobalScope": false
       },
@@ -2532,8 +2532,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/dto/create-place.dto.ts": {
-        "version": "8d2331752c4502925cb3a0e385ecb95e101bfb49ed2612788b203f20e0e80b8f",
-        "signature": "69ff647433673e09bb61d39a23ca5baec555cdf889ba371c5b93bfb977ae941c",
+        "version": "a44e407a62c20c90be57c14998ebf6ace4afa2f519dcbe21d6c48a8e0aa1ab59",
+        "signature": "7c2131a4460421507c63c984dd756279f8b8312fad19bbd8edee35708461c496",
         "affectsGlobalScope": false
       },
       "../node_modules/geolib/es/types.d.ts": {
@@ -2757,13 +2757,13 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "8a8d90ab03b1827e32ce93654f313a56f8cfb750d14d449bd892b4ed195d9868",
-        "signature": "3c0fa49a2adff7e23ab56447fb555f226382c2c509fc433a073326be3d853ee7",
+        "version": "cea4c65a4583e5ad0e7cf39414406f68930542bbec2e53e851d921526b4c4813",
+        "signature": "690cfc5715e407c6544344efa5c0e4dfa3bd73a12d9a431b6d45282e853ad44f",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "5c3307c70e0d4d4ab3ca531f965b040b76f9a421a8781b78ffb4dc4ccb44bf59",
-        "signature": "e93de83d1dede7597237a1bb35d934436b1f2d3c8db00cc5db8022ce84936a27",
+        "version": "39a91132f5eeaa559a3a3de0c9da67bcd696ef9294033d39a6a0cb9a8f1d351c",
+        "signature": "a1a473569c6b056d16fea24d34e2351f79ad24065978ec85979ef8cbb6cbe550",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.module.ts": {
@@ -2892,7 +2892,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/payment/payment.controller.ts": {
-        "version": "335d1252c2d227429d0f9d87fd109b5d3e516334fae75af1ec102ee6e61d549c",
+        "version": "edc97488fe326ecde9a50418365fd8272f6f36abbbf7b1cdc699295703c5de98",
         "signature": "d716532f6721d541d10324b820c01f2e8e46a20acf1a86f6963cfd936f7ca37e",
         "affectsGlobalScope": false
       },
@@ -5953,7 +5953,6 @@
         "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/feature/interfaces/feature.interface.ts",
-        "../src/modules/place-type/interfaces/place-type.interface.ts",
         "../src/modules/place/dto/create-place.dto.ts",
         "../src/modules/place/interfaces/place.interface.ts",
         "../src/modules/types.ts",

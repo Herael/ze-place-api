@@ -17,7 +17,7 @@ exports.CustomerSchema = new mongoose.Schema({
     favorites: [place_schema_1.PlaceSchema],
     customerId: String,
     ownedPlaces: [place_schema_1.PlaceSchema],
-    bookings: [String],
+    bookings: [place_schema_1.PlaceSchema],
     pushToken: String,
     created_at: { type: Date, default: Date.now },
 });

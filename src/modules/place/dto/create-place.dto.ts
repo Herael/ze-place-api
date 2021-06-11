@@ -61,5 +61,7 @@ export class CreatePlaceDTO {
 
   readonly bookings: Array<Booking> = [];
 
+  readonly isFavorite: boolean;
+
   readonly created_at: Date;
 }

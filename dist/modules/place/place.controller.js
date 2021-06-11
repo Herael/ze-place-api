@@ -21,8 +21,8 @@ let PlaceController = class PlaceController {
     constructor(placeService) {
         this.placeService = placeService;
     }
-    async getAllPlaces(res) {
-        const places = await this.placeService.getAllPlaces();
+    async getAllPlaces(req, res) {
+        const places = await this.placeService.getAllPlaces(req.user.id);
         return res.status(common_1.HttpStatus.OK).json(places);
     }
     async getPlacesNearbyCoordinates(res, data) {
@@ -37,6 +37,7 @@ let PlaceController = class PlaceController {
         });
     }
     async booking(req, res, body) {
+        console.log(req.user);
         await this.placeService.bookPlace(req.user.id, body.placeId, {
             feature: body.booking.features[0],
             startDate: body.booking.startDate,
@@ -80,10 +81,11 @@ let PlaceController = class PlaceController {
     }
 };
 __decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get(),
-    __param(0, common_1.Res()),
+    __param(0, common_1.Request()), __param(1, common_1.Res()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PlaceController.prototype, "getAllPlaces", null);
 __decorate([

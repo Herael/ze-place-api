@@ -21,5 +21,6 @@ export declare class CreatePlaceDTO {
     readonly rate: number;
     readonly reviews: Array<Review>;
     readonly bookings: Array<Booking>;
+    readonly isFavorite: boolean;
     readonly created_at: Date;
 }

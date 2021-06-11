@@ -22,9 +22,14 @@ let PlaceService = class PlaceService {
         this.placeModel = placeModel;
         this.customerModel = customerModel;
     }
-    async getAllPlaces() {
+    async getAllPlaces(userId) {
+        const user = await this.customerModel.findById(userId);
         const places = await this.placeModel.find().exec();
-        return places;
+        const formattedPlaces = places.map((place) => {
+            place.isFavorite = Boolean(user.favorites.find((p) => p._id.toString() === place._id.toString()));
+            return place;
+        });
+        return formattedPlaces;
     }
     async findById(placeId) {
         const place = await this.placeModel.findById(placeId).exec();
@@ -42,10 +47,10 @@ let PlaceService = class PlaceService {
         const user = await this.customerModel.findById(userId);
         const place = await this.findById(placeId);
         const booking = Object.assign({ userId: user._id, firstname: user.first_name, lastname: user.last_name, avatar: user.avatar }, bookingDTO);
-        const index = place.bookings.push(booking);
-        user.bookings.push(place.bookings[index]._id);
-        user.save();
+        place.bookings.push(booking);
         place.save();
+        user.bookings.push(place);
+        user.save();
     }
     async getBookings(placeId) {
         const place = await this.findById(placeId);

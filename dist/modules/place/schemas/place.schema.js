@@ -32,6 +32,7 @@ exports.PlaceSchema = new mongoose.Schema({
     rate: Number,
     reviews: [review_schema_1.ReviewSchema],
     bookings: [booking_schema_1.BookingSchema],
+    isFavorite: Boolean,
     created_at: { type: Date, default: Date.now },
 });
 //# sourceMappingURL=place.schema.js.map
