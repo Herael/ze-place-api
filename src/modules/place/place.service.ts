@@ -58,8 +58,8 @@ export class PlaceService {
       avatar: user.avatar,
       ...bookingDTO,
     };
-    const index = place.bookings.push(booking as Booking);
-    user.bookings.push(place.bookings[index]._id);
+    place.bookings.push(booking as Booking);
+    user.bookings.push(place.bookings[place.bookings.length - 1]._id);
     user.save();
     place.save();
   }
