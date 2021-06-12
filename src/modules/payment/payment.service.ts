@@ -38,10 +38,10 @@ export class PaymentService {
       { apiVersion: '2020-08-27' },
     );
 
-    const paymentIntent = await stripe.payout.create({
+    const paymentIntent = await stripe.payouts.create({
       amount: bookingPrice,
       currency: 'eur',
-      customer: user.customerId,
+      destination: user.customerId,
     });
 
     return {
