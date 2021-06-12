@@ -7,4 +7,9 @@ export declare class PaymentService {
         ephemeralKey: any;
         customer: string;
     }>;
+    createPayout(token: any, bookingPrice: number): Promise<{
+        paymentIntent: any;
+        ephemeralKey: any;
+        customer: string;
+    }>;
 }

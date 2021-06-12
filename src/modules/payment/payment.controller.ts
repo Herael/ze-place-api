@@ -23,4 +23,14 @@ export class PaymentController {
     );
     return res.status(HttpStatus.OK).json(customer);
   }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/payout')
+  async payout(@Res() res, @Req() req) {
+    const customer = await this.paymentService.createPayout(
+      req.user,
+      req.body.bookingPrice,
+    );
+    return res.status(HttpStatus.OK).json(customer);
+  }
 }

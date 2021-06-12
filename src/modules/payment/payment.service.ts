@@ -29,4 +29,25 @@ export class PaymentService {
       customer: user.customerId,
     };
   }
+
+  async createPayout(token, bookingPrice: number) {
+    const user: Customer = await this.customerService.findByEmail(token.email);
+
+    const ephemeralKey = await stripe.ephemeralKeys.create(
+      { customer: user.customerId },
+      { apiVersion: '2020-08-27' },
+    );
+
+    const paymentIntent = await stripe.payout.create({
+      amount: bookingPrice,
+      currency: 'eur',
+      customer: user.customerId,
+    });
+
+    return {
+      paymentIntent: paymentIntent.client_secret,
+      ephemeralKey: ephemeralKey.secret,
+      customer: user.customerId,
+    };
+  }
 }
