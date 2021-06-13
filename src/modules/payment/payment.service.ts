@@ -41,7 +41,7 @@ export class PaymentService {
     const paymentIntent = await stripe.payouts.create({
       amount: bookingPrice,
       currency: 'eur',
-      destination: user.customerId,
+      // destination: user.customerId,
     });
 
     return {
