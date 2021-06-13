@@ -43,7 +43,7 @@ export class PaymentService {
       currency: 'eur',
       // destination: user.customerId,
     });
-
+    console.log(paymentIntent);
     return {
       paymentIntent: paymentIntent.client_secret,
       ephemeralKey: ephemeralKey.secret,
