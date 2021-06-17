@@ -67,8 +67,7 @@ __decorate([
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get('/:id'),
-    __param(0, common_1.Request()),
-    __param(1, common_1.Res()),
+    __param(0, common_1.Request()), __param(1, common_1.Res()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
