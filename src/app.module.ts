@@ -13,6 +13,8 @@ import { FeatureModule } from './modules/feature/feature.module';
 import { PaymentModule } from './modules/payment/payment.module';
 import { BookingModule } from './modules/booking/booking.module';
 import { AppGateway } from './app.gateway';
+import { BugTicketModule } from './modules/bug-ticket/bug-ticket.module';
+import { BugTicketService } from './modules/bug-ticket/bug-ticket.service';
 
 @Module({
   imports: [
@@ -30,6 +32,7 @@ import { AppGateway } from './app.gateway';
     PlaceTypeModule,
     FeatureModule,
     PaymentModule,
+    BugTicketModule,
   ],
   controllers: [AppController],
   providers: [AppService, AppGateway],
