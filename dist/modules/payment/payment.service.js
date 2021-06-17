@@ -34,10 +34,10 @@ let PaymentService = class PaymentService {
     async createPayout(token, bookingPrice) {
         const user = await this.customerService.findByEmail(token.email);
         const ephemeralKey = await stripe.ephemeralKeys.create({ customer: user.customerId }, { apiVersion: '2020-08-27' });
-        const paymentIntent = await stripe.payout.create({
+        const paymentIntent = await stripe.payouts.create({
             amount: bookingPrice,
             currency: 'eur',
-            customer: user.customerId,
+            destination: user.customerId,
         });
         return {
             paymentIntent: paymentIntent.client_secret,

@@ -2887,7 +2887,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/payment/payment.service.ts": {
-        "version": "894c063be9d6f3e9b29e9a2228313fd53a858c833abf96bfb6754104418e7ab8",
+        "version": "58787e122eb93c65035063da87c5e8cc004e8f73661f58c2f0ba912dd27f27be",
         "signature": "db16fe4c9834c3dd5bda26e906b02908b34018dc3c3c758e3c5675648e62889c",
         "affectsGlobalScope": false
       },
@@ -2916,8 +2916,33 @@
         "signature": "307da3f1f46926da44f7648eb8e50e8695fb098723e4ee7b33d6bb54573c7d81",
         "affectsGlobalScope": false
       },
+      "../src/modules/bug-ticket/interfaces/ticket.interface.ts": {
+        "version": "f7bc23c458f4a4db2bf81908d2ed1bf480734e23a8bfc15512f1bcbb7ab14830",
+        "signature": "e8bd0a78a2c53f985ca15fd4443687ffcdc2e5962fd1697659efc8c2ac61107d",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/bug-ticket/bug-ticket.service.ts": {
+        "version": "27ed7c092efd27b0c1f25d07042779d57097ba2dd911cd69caf9e7ca5245800d",
+        "signature": "d0d51f89bb30fb0a0de2a15447608f8a741f5e68bc18bd5bbe2b818a66f76dfa",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/bug-ticket/bug-ticket.controller.ts": {
+        "version": "dbeb5afebeffb98c0370ea2ee72703e10e7b354c443d1f862aa87ac9167184e2",
+        "signature": "af140c714cea4d8fab7f5fa4ba9b2b545016548cc5f0beec4a76b15bcfa51645",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/bug-ticket/schemas/ticket.schema.ts": {
+        "version": "b845d0b5c007f96cf347992c119220b9abdacea3cd96ab2de6872569d6ee09a4",
+        "signature": "df2ef1d7936782eb109309d9433fdf5a11f98b65b5f26169e9415efa8ffcd54a",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/bug-ticket/bug-ticket.module.ts": {
+        "version": "2a028b0357e187d886f1ed3bd512ee5067a920af6c911667ba48bc1e9acc3594",
+        "signature": "56cb6003bd503af8146e755e727cc482ea327f09a868694a324d832c4636a190",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "f9ffb53cdf3c55619c98169d758e407bd4cf90a38998b3ee756a857bf9609e6a",
+        "version": "9cb702f6fc2158dc182a9f66eee1ca1dc18813ad5a0075ed7db1e3f696180e93",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -3179,6 +3204,11 @@
       "../src/main.ts": {
         "version": "00c375d8ab4884753b2d06f996c2b8b228d1c80f2502c9db6862b662b809be09",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/bug-ticket/dto/create-ticket.dto.ts": {
+        "version": "d0b5c972e65e41a8717170939e386d43f7111d26dd7661812809c47a31fceacb",
+        "signature": "9be3bc43992e110b1f6c3fc20f7736f8e90ba9418517b9ebb77a2864e3439134",
         "affectsGlobalScope": false
       },
       "../src/modules/feature/dto/create-feature.dto.ts": {
@@ -5725,6 +5755,8 @@
         "../src/app.service.ts",
         "../src/modules/auth/auth.module.ts",
         "../src/modules/booking/booking.module.ts",
+        "../src/modules/bug-ticket/bug-ticket.module.ts",
+        "../src/modules/bug-ticket/bug-ticket.service.ts",
         "../src/modules/customer/customer.module.ts",
         "../src/modules/feature/feature.module.ts",
         "../src/modules/payment/payment.module.ts",
@@ -5821,6 +5853,34 @@
       "../src/modules/booking/schemas/booking.schema.ts": [
         "../node_modules/mongoose/index.d.ts",
         "../src/modules/feature/schemas/feature.schema.ts"
+      ],
+      "../src/modules/bug-ticket/bug-ticket.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/auth/jwt-auth.guard.ts",
+        "../src/modules/bug-ticket/bug-ticket.service.ts"
+      ],
+      "../src/modules/bug-ticket/bug-ticket.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/modules/bug-ticket/bug-ticket.controller.ts",
+        "../src/modules/bug-ticket/bug-ticket.service.ts",
+        "../src/modules/bug-ticket/schemas/ticket.schema.ts"
+      ],
+      "../src/modules/bug-ticket/bug-ticket.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/bug-ticket/interfaces/ticket.interface.ts"
+      ],
+      "../src/modules/bug-ticket/dto/create-ticket.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
+      "../src/modules/bug-ticket/interfaces/ticket.interface.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/bug-ticket/schemas/ticket.schema.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/place/schemas/place.schema.ts"
       ],
       "../src/modules/customer/customer.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -8313,6 +8373,18 @@
       "../src/modules/booking/schemas/booking.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
+      "../src/modules/bug-ticket/bug-ticket.controller.ts": [
+        "../src/modules/bug-ticket/bug-ticket.service.ts"
+      ],
+      "../src/modules/bug-ticket/bug-ticket.service.ts": [
+        "../src/modules/bug-ticket/interfaces/ticket.interface.ts"
+      ],
+      "../src/modules/bug-ticket/interfaces/ticket.interface.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/bug-ticket/schemas/ticket.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
       "../src/modules/customer/customer.controller.ts": [
         "../src/modules/customer/customer.service.ts",
         "../src/modules/customer/dto/create-customer.dto.ts",
@@ -8655,30 +8727,6 @@
       "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts",
       "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
       "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts",
-      "../node_modules/@nestjs/websockets/adapters/index.d.ts",
-      "../node_modules/@nestjs/websockets/adapters/ws-adapter.d.ts",
-      "../node_modules/@nestjs/websockets/decorators/connected-socket.decorator.d.ts",
-      "../node_modules/@nestjs/websockets/decorators/gateway-server.decorator.d.ts",
-      "../node_modules/@nestjs/websockets/decorators/index.d.ts",
-      "../node_modules/@nestjs/websockets/decorators/message-body.decorator.d.ts",
-      "../node_modules/@nestjs/websockets/decorators/socket-gateway.decorator.d.ts",
-      "../node_modules/@nestjs/websockets/decorators/subscribe-message.decorator.d.ts",
-      "../node_modules/@nestjs/websockets/errors/index.d.ts",
-      "../node_modules/@nestjs/websockets/errors/ws-exception.d.ts",
-      "../node_modules/@nestjs/websockets/exceptions/base-ws-exception-filter.d.ts",
-      "../node_modules/@nestjs/websockets/exceptions/index.d.ts",
-      "../node_modules/@nestjs/websockets/gateway-metadata-explorer.d.ts",
-      "../node_modules/@nestjs/websockets/index.d.ts",
-      "../node_modules/@nestjs/websockets/interfaces/gateway-metadata.interface.d.ts",
-      "../node_modules/@nestjs/websockets/interfaces/hooks/index.d.ts",
-      "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-connection.interface.d.ts",
-      "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-disconnect.interface.d.ts",
-      "../node_modules/@nestjs/websockets/interfaces/hooks/on-gateway-init.interface.d.ts",
-      "../node_modules/@nestjs/websockets/interfaces/index.d.ts",
-      "../node_modules/@nestjs/websockets/interfaces/nest-gateway.interface.d.ts",
-      "../node_modules/@nestjs/websockets/interfaces/socket-events-host.interface.d.ts",
-      "../node_modules/@nestjs/websockets/interfaces/web-socket-server.interface.d.ts",
-      "../node_modules/@nestjs/websockets/interfaces/ws-response.interface.d.ts",
       "../node_modules/@types/anymatch/index.d.ts",
       "../node_modules/@types/babel__core/index.d.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
@@ -9060,10 +9108,7 @@
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "../src/app.controller.ts",
-      "../src/app.gateway.ts",
-      "../src/app.module.ts",
       "../src/app.service.ts",
-      "../src/main.ts",
       "../src/modules/auth/auth.controller.ts",
       "../src/modules/auth/auth.module.ts",
       "../src/modules/auth/auth.service.ts",
@@ -9092,7 +9137,6 @@
       "../src/modules/feature/schemas/feature.schema.ts",
       "../src/modules/payment/payment.controller.ts",
       "../src/modules/payment/payment.module.ts",
-      "../src/modules/payment/payment.service.ts",
       "../src/modules/place-type/dto/create-place-type.dto.ts",
       "../src/modules/place-type/interfaces/place-type.interface.ts",
       "../src/modules/place-type/place-type.controller.ts",
