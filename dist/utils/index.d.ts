@@ -4,3 +4,8 @@ export declare const isPlaceInRadius: (origin: Coords, center: Coords, distance:
 export declare const isHigherPrice: (originPrice: number, placePrice: number) => boolean;
 export declare const isInRangePrice: (originPrice: number, placePrice: number, percentage: number) => boolean;
 export declare const isContainsFeatures: (researchFeature: Feature[], placeFeature: Feature[]) => boolean;
+export declare const sendPushNotifications: ({ pushId, title, description }: {
+    pushId: any;
+    title: any;
+    description: any;
+}) => Promise<any>;

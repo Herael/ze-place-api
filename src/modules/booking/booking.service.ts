@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { sendPushNotifications } from 'src/utils';
 import { Customer } from '../customer/interfaces/customer.interface';
 import { Place } from '../place/interfaces/place.interface';
 import { BookingDTO } from './dto/booking.dto';
@@ -56,6 +57,18 @@ export class BookingService {
 
   async acceptBooking(bookingId: string): Promise<Booking> {
     const booking = await this.bookingModel.findById(bookingId);
+    const user = await this.customerModel.findById(booking.userId);
+    const owner = await this.customerModel.findById(booking.ownerId);
+    sendPushNotifications({
+      pushId: owner.pushToken,
+      title: 'Test',
+      description: 'test',
+    });
+    sendPushNotifications({
+      pushId: user.pushToken,
+      title: 'Test',
+      description: 'test',
+    });
     booking.isAccepted = true;
     booking.isPast = true;
     booking.save();
@@ -64,6 +77,18 @@ export class BookingService {
 
   async denyBooking(userId: string, bookingId: string): Promise<Booking> {
     const booking = await this.bookingModel.findById(bookingId);
+    const user = await this.customerModel.findById(booking.userId);
+    const owner = await this.customerModel.findById(booking.ownerId);
+    sendPushNotifications({
+      pushId: user.pushToken,
+      title: 'Test',
+      description: 'test',
+    });
+    sendPushNotifications({
+      pushId: owner.pushToken,
+      title: 'Test',
+      description: 'test',
+    });
     booking.isDenied = true;
     booking.isPast = true;
     booking.save();

@@ -30,8 +30,6 @@ export class AuthService {
   }
 
   async register(customer: Customer) {
-    console.log(customer.avatar);
-    
     const user = await this.customerService.addCustomer(customer);
     const payload = { email: user.email, id: user._id };
     return {

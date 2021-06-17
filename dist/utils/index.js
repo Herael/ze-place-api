@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isContainsFeatures = exports.isInRangePrice = exports.isHigherPrice = exports.isPlaceInRadius = void 0;
+exports.sendPushNotifications = exports.isContainsFeatures = exports.isInRangePrice = exports.isHigherPrice = exports.isPlaceInRadius = void 0;
 const geolib = require("geolib");
+const axios_1 = require("axios");
 const feature_interface_1 = require("../modules/feature/interfaces/feature.interface");
 const types_1 = require("../modules/types");
 const isPlaceInRadius = (origin, center, distance) => {
@@ -36,4 +37,19 @@ const isContainsFeatures = (researchFeature, placeFeature) => {
     return true;
 };
 exports.isContainsFeatures = isContainsFeatures;
+const sendPushNotifications = async ({ pushId, title, description }) => {
+    return await axios_1.default
+        .post('https://exp.host/--/api/v2/push/send', {
+        to: pushId,
+        title: title,
+        body: description,
+    })
+        .then((response) => {
+        return response.data;
+    })
+        .catch((err) => {
+        return Promise.reject(err);
+    });
+};
+exports.sendPushNotifications = sendPushNotifications;
 //# sourceMappingURL=index.js.map
