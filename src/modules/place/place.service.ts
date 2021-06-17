@@ -72,7 +72,7 @@ export class PlaceService {
 
   async similarPlaces(placeID: string): Promise<Place[]> {
     const place = await this.placeModel.findById(placeID);
-    const priceDif = 0.2;
+    const priceDif = 0.4;
     const price = place.price;
     const distance = 20000;
     const coords = {

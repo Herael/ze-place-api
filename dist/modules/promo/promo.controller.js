@@ -49,8 +49,7 @@ __decorate([
 ], PromoController.prototype, "getCode", null);
 __decorate([
     common_1.Post('/getSevralCode'),
-    __param(0, common_1.Res()),
-    __param(1, common_1.Request()),
+    __param(0, common_1.Res()), __param(1, common_1.Request()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)

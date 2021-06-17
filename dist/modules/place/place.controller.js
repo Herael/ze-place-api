@@ -54,16 +54,14 @@ let PlaceController = class PlaceController {
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get(),
-    __param(0, common_1.Request()),
-    __param(1, common_1.Res()),
+    __param(0, common_1.Request()), __param(1, common_1.Res()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PlaceController.prototype, "getAllPlaces", null);
 __decorate([
     common_1.Post(),
-    __param(0, common_1.Res()),
-    __param(1, common_1.Body()),
+    __param(0, common_1.Res()), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
@@ -71,8 +69,7 @@ __decorate([
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/create'),
-    __param(0, common_1.Res()),
-    __param(1, common_1.Body()),
+    __param(0, common_1.Res()), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, create_place_dto_1.CreatePlaceDTO]),
     __metadata("design:returntype", Promise)
@@ -80,8 +77,7 @@ __decorate([
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/similarPlaces'),
-    __param(0, common_1.Res()),
-    __param(1, common_1.Body()),
+    __param(0, common_1.Res()), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
@@ -89,8 +85,7 @@ __decorate([
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/searchPlaces'),
-    __param(0, common_1.Res()),
-    __param(1, common_1.Body()),
+    __param(0, common_1.Res()), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
