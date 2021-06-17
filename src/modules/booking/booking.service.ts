@@ -57,6 +57,7 @@ export class BookingService {
   async acceptBooking(bookingId: string): Promise<Booking> {
     const booking = await this.bookingModel.findById(bookingId);
     booking.isAccepted = true;
+    booking.isPast = true;
     booking.save();
     return booking;
   }
@@ -64,6 +65,7 @@ export class BookingService {
   async denyBooking(userId: string, bookingId: string): Promise<Booking> {
     const booking = await this.bookingModel.findById(bookingId);
     booking.isDenied = true;
+    booking.isPast = true;
     booking.save();
     return booking;
   }

@@ -32,7 +32,8 @@ let PaymentController = class PaymentController {
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/init'),
-    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __param(0, common_1.Res()),
+    __param(1, common_1.Req()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
@@ -40,7 +41,8 @@ __decorate([
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/payout'),
-    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __param(0, common_1.Res()),
+    __param(1, common_1.Req()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)

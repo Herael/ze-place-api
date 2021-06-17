@@ -82,7 +82,9 @@ let BookingController = class BookingController {
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/create'),
-    __param(0, common_1.Req()), __param(1, common_1.Res()), __param(2, common_1.Body()),
+    __param(0, common_1.Req()),
+    __param(1, common_1.Res()),
+    __param(2, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", Promise)
@@ -90,7 +92,8 @@ __decorate([
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get('/:placeId/user'),
-    __param(0, common_1.Req()), __param(1, common_1.Res()),
+    __param(0, common_1.Req()),
+    __param(1, common_1.Res()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
@@ -98,7 +101,8 @@ __decorate([
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get('/user'),
-    __param(0, common_1.Req()), __param(1, common_1.Res()),
+    __param(0, common_1.Req()),
+    __param(1, common_1.Res()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
@@ -106,7 +110,8 @@ __decorate([
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get('/owner'),
-    __param(0, common_1.Req()), __param(1, common_1.Res()),
+    __param(0, common_1.Req()),
+    __param(1, common_1.Res()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
@@ -114,7 +119,8 @@ __decorate([
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get('/:placeId'),
-    __param(0, common_1.Req()), __param(1, common_1.Res()),
+    __param(0, common_1.Req()),
+    __param(1, common_1.Res()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
@@ -122,7 +128,8 @@ __decorate([
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get('/:bookingId/accept'),
-    __param(0, common_1.Req()), __param(1, common_1.Res()),
+    __param(0, common_1.Req()),
+    __param(1, common_1.Res()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
@@ -130,7 +137,8 @@ __decorate([
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get('/:bookingId/deny'),
-    __param(0, common_1.Req()), __param(1, common_1.Res()),
+    __param(0, common_1.Req()),
+    __param(1, common_1.Res()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)

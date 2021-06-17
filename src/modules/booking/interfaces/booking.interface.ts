@@ -14,4 +14,5 @@ export interface Booking extends Document {
   readonly price: number;
   isAccepted: boolean;
   isDenied: boolean;
+  isPast: boolean;
 }

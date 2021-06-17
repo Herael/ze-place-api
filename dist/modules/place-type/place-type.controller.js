@@ -32,14 +32,16 @@ let PlaceTypeController = class PlaceTypeController {
 };
 __decorate([
     common_1.Post(),
-    __param(0, common_1.Res()), __param(1, common_1.Body()),
+    __param(0, common_1.Res()),
+    __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PlaceTypeController.prototype, "createType", null);
 __decorate([
     common_1.Post('/features'),
-    __param(0, common_1.Res()), __param(1, common_1.Body()),
+    __param(0, common_1.Res()),
+    __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)

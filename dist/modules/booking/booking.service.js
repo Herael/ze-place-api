@@ -50,12 +50,14 @@ let BookingService = class BookingService {
     async acceptBooking(bookingId) {
         const booking = await this.bookingModel.findById(bookingId);
         booking.isAccepted = true;
+        booking.isPast = true;
         booking.save();
         return booking;
     }
     async denyBooking(userId, bookingId) {
         const booking = await this.bookingModel.findById(bookingId);
         booking.isDenied = true;
+        booking.isPast = true;
         booking.save();
         return booking;
     }
