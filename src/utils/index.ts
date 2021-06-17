@@ -1,4 +1,5 @@
 import * as geolib from 'geolib';
+import axios, { AxiosResponse } from 'axios';
 import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 import { Coords } from 'src/modules/types';
 
@@ -45,4 +46,19 @@ export const isContainsFeatures = (
     return false;
   }
   return true;
+};
+
+export const sendPushNotifications = async ({ pushId, title, description }) => {
+  return await axios
+    .post('https://exp.host/--/api/v2/push/send', {
+      to: pushId,
+      title: title,
+      body: description,
+    })
+    .then((response: AxiosResponse<any>) => {
+      return response.data;
+    })
+    .catch((err) => {
+      return Promise.reject(err);
+    });
 };

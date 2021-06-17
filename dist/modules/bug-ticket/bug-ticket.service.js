@@ -26,7 +26,6 @@ let BugTicketService = class BugTicketService {
     async changeTag(data) {
         console.log('tag');
         const ticket = await this.ticketModel.findByIdAndUpdate(data.id, { tag: data.tag });
-        console.log(ticket);
         return ticket;
     }
 };

@@ -16,6 +16,7 @@ exports.BookingService = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
+const utils_1 = require("../../utils");
 let BookingService = class BookingService {
     constructor(bookingModel, customerModel, placeModel) {
         this.bookingModel = bookingModel;
@@ -49,13 +50,39 @@ let BookingService = class BookingService {
     }
     async acceptBooking(bookingId) {
         const booking = await this.bookingModel.findById(bookingId);
+        const user = await this.customerModel.findById(booking.userId);
+        const owner = await this.customerModel.findById(booking.ownerId);
+        utils_1.sendPushNotifications({
+            pushId: owner.pushToken,
+            title: 'Test',
+            description: 'test',
+        });
+        utils_1.sendPushNotifications({
+            pushId: user.pushToken,
+            title: 'Test',
+            description: 'test',
+        });
         booking.isAccepted = true;
+        booking.isPast = true;
         booking.save();
         return booking;
     }
     async denyBooking(userId, bookingId) {
         const booking = await this.bookingModel.findById(bookingId);
+        const user = await this.customerModel.findById(booking.userId);
+        const owner = await this.customerModel.findById(booking.ownerId);
+        utils_1.sendPushNotifications({
+            pushId: user.pushToken,
+            title: 'Test',
+            description: 'test',
+        });
+        utils_1.sendPushNotifications({
+            pushId: owner.pushToken,
+            title: 'Test',
+            description: 'test',
+        });
         booking.isDenied = true;
+        booking.isPast = true;
         booking.save();
         return booking;
     }

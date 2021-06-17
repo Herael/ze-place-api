@@ -38,12 +38,12 @@ export class PaymentService {
       { apiVersion: '2020-08-27' },
     );
 
-    const paymentIntent = await stripe.payouts.create({
+    const paymentIntent = await stripe.transfers.create({
       amount: bookingPrice,
       currency: 'eur',
-      destination: user.customerId,
+      destination: "pm_1J0R4LIeDqziwrFRjV9rH4V0",
     });
-
+    console.log(paymentIntent);
     return {
       paymentIntent: paymentIntent.client_secret,
       ephemeralKey: ephemeralKey.secret,
