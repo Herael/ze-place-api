@@ -49,16 +49,18 @@ export const isContainsFeatures = (
 };
 
 export const sendPushNotifications = async ({ pushId, title, description }) => {
-  return await axios
-    .post('https://exp.host/--/api/v2/push/send', {
-      to: pushId,
-      title: title,
-      body: description,
-    })
-    .then((response: AxiosResponse<any>) => {
-      return response.data;
-    })
-    .catch((err) => {
-      return Promise.reject(err);
-    });
+  if (pushId) {
+    return await axios
+      .post('https://exp.host/--/api/v2/push/send', {
+        to: pushId,
+        title: title,
+        body: description,
+      })
+      .then((response: AxiosResponse<any>) => {
+        return response.data;
+      })
+      .catch((err) => {
+        return Promise.reject(err);
+      });
+  }
 };

@@ -18,16 +18,24 @@ export class BookingService {
   async bookPlace(userId: string, bookingDTO: BookingDTO) {
     const user = await this.customerModel.findById(userId);
     const place = await this.placeModel.findById(bookingDTO.placeId);
+    const owner = await this.customerModel.findById(place.ownerId);
     const booking = {
       userId: user._id,
       firstname: user.first_name,
       lastname: user.last_name,
       avatar: user.avatar,
+      placeCover: place.images[0].url,
+      placeTitle: place.title,
       ...bookingDTO,
     };
     const newPlace = await new this.bookingModel(booking).save();
     place.bookings.push(newPlace._id);
     place.save();
+    sendPushNotifications({
+      pushId: owner.pushToken,
+      title: 'Your place has been booked !',
+      description: 'Check',
+    });
   }
 
   async getBookingsByPlaceAndUser(
@@ -36,23 +44,33 @@ export class BookingService {
   ): Promise<Booking[]> {
     return await this.bookingModel
       .find({ userId, placeId, isPast: false })
+      .sort({ created_at: -1 })
       .exec();
   }
 
   async getBookingsByUser(userId: string): Promise<Booking[]> {
-    return await this.bookingModel.find({ userId: userId }).exec();
+    return await this.bookingModel
+      .find({ userId: userId })
+      .sort({ created_at: -1 })
+      .exec();
   }
 
   async getBookingsByOwner(userId: string): Promise<Booking[]> {
-    return await this.bookingModel.find({ ownerId: userId }).exec();
+    return await this.bookingModel
+      .find({ ownerId: userId })
+      .sort({ created_at: -1 })
+      .exec();
   }
 
   async getBookingsByPlace(placeId: string): Promise<Booking[]> {
-    return await this.bookingModel.find({ placeId: placeId }).exec();
+    return await this.bookingModel
+      .find({ placeId: placeId })
+      .sort({ created_at: -1 })
+      .exec();
   }
 
   async getBookings(): Promise<Booking[]> {
-    return await this.bookingModel.find();
+    return await this.bookingModel.find().sort({ created_at: -1 });
   }
 
   async acceptBooking(bookingId: string): Promise<Booking> {

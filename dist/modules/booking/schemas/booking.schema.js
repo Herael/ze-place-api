@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const feature_schema_1 = require("../../feature/schemas/feature.schema");
 exports.BookingSchema = new mongoose.Schema({
     placeId: String,
+    placeCover: String,
+    placeTitle: String,
     ownerId: String,
     userId: String,
     firstname: String,
