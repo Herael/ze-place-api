@@ -67,11 +67,14 @@ let AuthService = class AuthService {
         };
     }
     async createToken(customer) {
-        console.log(customer.birthdate);
         try {
             const token = await stripe.tokens.create({
                 account: {
                     business_type: 'individual',
+                    business_profile: {
+                        url: '',
+                        mcc: '6513',
+                    },
                     individual: {
                         first_name: customer.first_name,
                         last_name: customer.last_name,
@@ -83,12 +86,18 @@ let AuthService = class AuthService {
                             line1: customer.location.address,
                         },
                         dob: {
-                            day: 25,
-                            month: 12,
-                            year: 1995,
+                            day: customer.birthdate.getDay(),
+                            month: customer.birthdate.getMonth(),
+                            year: customer.birthdate.getFullYear(),
                         },
                         gender: customer.gender,
                         phone: `+33${customer.phoneNumber.substring(1)}`,
+                        verification: {
+                            document: {
+                                back: customer.IDVerso,
+                                front: customer.IDRecto,
+                            },
+                        },
                     },
                     tos_shown_and_accepted: true,
                 },

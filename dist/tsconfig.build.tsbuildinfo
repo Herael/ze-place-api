@@ -2242,7 +2242,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.service.ts": {
-        "version": "fe466f9c9bc056248725d8f676862720be1b02367030b510373ca38e6a5e10a8",
+        "version": "700ae1380ad23fe2e7959a6ccc84ea0e976ce0e87670353d96cc3eba6325a8ec",
         "signature": "eb40a2a2f8af4468e186904ef768023d4eea026162e2fefa9d5bbcf4416aedf2",
         "affectsGlobalScope": false
       },
