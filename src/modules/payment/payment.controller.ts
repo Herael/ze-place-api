@@ -25,12 +25,33 @@ export class PaymentController {
   }
 
   @UseGuards(JwtAuthGuard)
-  @Post('/payout')
-  async payout(@Res() res, @Req() req) {
-    const customer = await this.paymentService.createPayout(
+  @Post('/paymentMethod/add')
+  async confirm(@Res() res, @Req() req) {
+    const customer = await this.paymentService.addPaymentMethod(
       req.user,
-      req.body.bookingPrice,
+      req.body.cardToken,
     );
     return res.status(HttpStatus.OK).json(customer);
   }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/bankAccount/new')
+  async createBankAccount(@Res() res, @Req() req) {
+    const customer = await this.paymentService.createBankAccount(req.user, {
+      firstname: req.body.firstname,
+      lastname: req.body.lastname,
+      bank_name: req.body.bank_name,
+      country: req.body.country,
+      currency: req.body.currency,
+      account_number: req.body.account_number,
+    });
+    return res.status(HttpStatus.OK).json(customer);
+  }
+
+  // @UseGuards(JwtAuthGuard)
+  // @Post('/token')
+  // async payout(@Res() res, @Req() req) {
+  //   const token = await this.paymentService.createToken();
+  //   return res.status(HttpStatus.OK).json(token);
+  // }
 }

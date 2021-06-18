@@ -22,32 +22,48 @@ export class PaymentService {
       currency: 'eur',
       customer: user.customerId,
     });
-
     return {
-      paymentIntent: paymentIntent.client_secret,
+      paymentIntent: paymentIntent,
       ephemeralKey: ephemeralKey.secret,
       customer: user.customerId,
     };
   }
 
-  async createPayout(token, bookingPrice: number) {
-    const user: Customer = await this.customerService.findByEmail(token.email);
-
-    const ephemeralKey = await stripe.ephemeralKeys.create(
-      { customer: user.customerId },
-      { apiVersion: '2020-08-27' },
-    );
-
-    const paymentIntent = await stripe.transfers.create({
-      amount: bookingPrice,
-      currency: 'eur',
-      destination: "pm_1J0R4LIeDqziwrFRjV9rH4V0",
+  async createBankAccount(userId: string, data) {
+    const token = await stripe.tokens.create({
+      bank_account: {
+        country: 'FR',
+        currency: 'eur',
+        account_holder_name: `${data.firstname} ${data.lastname}`,
+        account_holder_type: 'individual',
+        account_number: data.account_number,
+      },
     });
-    console.log(paymentIntent);
-    return {
-      paymentIntent: paymentIntent.client_secret,
-      ephemeralKey: ephemeralKey.secret,
-      customer: user.customerId,
-    };
+
+    await stripe.accounts.createExternalAccount('acct_1J3gp8RDio72fPDz', {
+      external_account: token.id,
+    });
+  }
+
+  async addPaymentMethod(stripeAccountId: string, cardToken: string) {
+    const card = await stripe.accounts.createExternalAccount(
+      'acct_1J3gp8RDio72fPDz',
+      {
+        external_account: cardToken,
+      },
+    );
+    // console.log('CARD', card);
+    // // const payout = await stripe.payouts.create({
+    // //   amount: 1000,
+    // //   currency: 'eur',
+    // //   method: 'instant',
+    // // }, {
+    // //   stripeAccount: 'acct_1J3dsmRHm1vUa4tU',
+    // });
+    // stripe.transfers.create({
+    //   amount: 400,
+    //   currency: 'eur',
+    //   destination: 'acct_1J3gp8RDio72fPDz',
+    // });
   }
 }

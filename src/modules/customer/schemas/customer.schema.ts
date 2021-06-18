@@ -17,5 +17,17 @@ export const CustomerSchema = new mongoose.Schema({
   ownedPlaces: [PlaceSchema],
   bookings: [PlaceSchema],
   pushToken: String,
+  stripeAccount: String,
+  gender: String,
+  IDRecto: String,
+  IDVerso: String,
+  location: {
+    address: String,
+    postalCode: String,
+    city: String,
+    country: String,
+    longitude: Number,
+    latitude: Number,
+  },
   created_at: { type: Date, default: Date.now },
 });

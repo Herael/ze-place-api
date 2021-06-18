@@ -24,8 +24,19 @@ let PaymentController = class PaymentController {
         const customer = await this.paymentService.createPaymentIntent(req.user, req.body.bookingPrice);
         return res.status(common_1.HttpStatus.OK).json(customer);
     }
-    async payout(res, req) {
-        const customer = await this.paymentService.createPayout(req.user, req.body.bookingPrice);
+    async confirm(res, req) {
+        const customer = await this.paymentService.addPaymentMethod(req.user, req.body.cardToken);
+        return res.status(common_1.HttpStatus.OK).json(customer);
+    }
+    async createBankAccount(res, req) {
+        const customer = await this.paymentService.createBankAccount(req.user, {
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            bank_name: req.body.bank_name,
+            country: req.body.country,
+            currency: req.body.currency,
+            account_number: req.body.account_number,
+        });
         return res.status(common_1.HttpStatus.OK).json(customer);
     }
 };
@@ -39,12 +50,20 @@ __decorate([
 ], PaymentController.prototype, "init", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
-    common_1.Post('/payout'),
+    common_1.Post('/paymentMethod/add'),
     __param(0, common_1.Res()), __param(1, common_1.Req()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
-], PaymentController.prototype, "payout", null);
+], PaymentController.prototype, "confirm", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Post('/bankAccount/new'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PaymentController.prototype, "createBankAccount", null);
 PaymentController = __decorate([
     common_1.Controller('payment'),
     __metadata("design:paramtypes", [payment_service_1.PaymentService])

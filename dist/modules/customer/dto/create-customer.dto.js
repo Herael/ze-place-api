@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateCustomerDTO = void 0;
 const class_validator_1 = require("class-validator");
 const place_interface_1 = require("../../place/interfaces/place.interface");
+const types_1 = require("../../types");
 class CreateCustomerDTO {
     constructor() {
         this.customerId = null;
@@ -54,5 +55,25 @@ __decorate([
     class_validator_1.IsString(),
     __metadata("design:type", String)
 ], CreateCustomerDTO.prototype, "description", void 0);
+__decorate([
+    class_validator_1.IsString(),
+    __metadata("design:type", String)
+], CreateCustomerDTO.prototype, "customerId", void 0);
+__decorate([
+    class_validator_1.IsNotEmpty(),
+    __metadata("design:type", String)
+], CreateCustomerDTO.prototype, "gender", void 0);
+__decorate([
+    class_validator_1.IsNotEmpty(),
+    __metadata("design:type", String)
+], CreateCustomerDTO.prototype, "IDRecto", void 0);
+__decorate([
+    class_validator_1.IsNotEmpty(),
+    __metadata("design:type", String)
+], CreateCustomerDTO.prototype, "IDVerso", void 0);
+__decorate([
+    class_validator_1.IsNotEmpty(),
+    __metadata("design:type", Object)
+], CreateCustomerDTO.prototype, "location", void 0);
 exports.CreateCustomerDTO = CreateCustomerDTO;
 //# sourceMappingURL=create-customer.dto.js.map

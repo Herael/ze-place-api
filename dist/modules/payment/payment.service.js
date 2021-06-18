@@ -26,25 +26,29 @@ let PaymentService = class PaymentService {
             customer: user.customerId,
         });
         return {
-            paymentIntent: paymentIntent.client_secret,
+            paymentIntent: paymentIntent,
             ephemeralKey: ephemeralKey.secret,
             customer: user.customerId,
         };
     }
-    async createPayout(token, bookingPrice) {
-        const user = await this.customerService.findByEmail(token.email);
-        const ephemeralKey = await stripe.ephemeralKeys.create({ customer: user.customerId }, { apiVersion: '2020-08-27' });
-        const paymentIntent = await stripe.transfers.create({
-            amount: bookingPrice,
-            currency: 'eur',
-            destination: "pm_1J0R4LIeDqziwrFRjV9rH4V0",
+    async createBankAccount(userId, data) {
+        const token = await stripe.tokens.create({
+            bank_account: {
+                country: 'FR',
+                currency: 'eur',
+                account_holder_name: `${data.firstname} ${data.lastname}`,
+                account_holder_type: 'individual',
+                account_number: data.account_number,
+            },
         });
-        console.log(paymentIntent);
-        return {
-            paymentIntent: paymentIntent.client_secret,
-            ephemeralKey: ephemeralKey.secret,
-            customer: user.customerId,
-        };
+        await stripe.accounts.createExternalAccount('acct_1J3gp8RDio72fPDz', {
+            external_account: token.id,
+        });
+    }
+    async addPaymentMethod(stripeAccountId, cardToken) {
+        const card = await stripe.accounts.createExternalAccount('acct_1J3gp8RDio72fPDz', {
+            external_account: cardToken,
+        });
     }
 };
 PaymentService = __decorate([

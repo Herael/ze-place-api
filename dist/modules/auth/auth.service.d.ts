@@ -14,5 +14,6 @@ export declare class AuthService {
         access_token: string;
         userId: any;
     }>;
+    createToken(customer: Customer): Promise<any>;
     getUser(credentials: any): Promise<Customer>;
 }

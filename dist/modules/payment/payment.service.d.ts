@@ -7,9 +7,6 @@ export declare class PaymentService {
         ephemeralKey: any;
         customer: string;
     }>;
-    createPayout(token: any, bookingPrice: number): Promise<{
-        paymentIntent: any;
-        ephemeralKey: any;
-        customer: string;
-    }>;
+    createBankAccount(userId: string, data: any): Promise<void>;
+    addPaymentMethod(stripeAccountId: string, cardToken: string): Promise<void>;
 }

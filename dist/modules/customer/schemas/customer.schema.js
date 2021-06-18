@@ -19,6 +19,18 @@ exports.CustomerSchema = new mongoose.Schema({
     ownedPlaces: [place_schema_1.PlaceSchema],
     bookings: [place_schema_1.PlaceSchema],
     pushToken: String,
+    stripeAccount: String,
+    gender: String,
+    IDRecto: String,
+    IDVerso: String,
+    location: {
+        address: String,
+        postalCode: String,
+        city: String,
+        country: String,
+        longitude: Number,
+        latitude: Number,
+    },
     created_at: { type: Date, default: Date.now },
 });
 //# sourceMappingURL=customer.schema.js.map
