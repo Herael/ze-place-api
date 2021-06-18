@@ -56,6 +56,11 @@ let AuthService = class AuthService {
                 card_payments: { requested: true },
                 transfers: { requested: true },
             },
+            business_profile: {
+                support_url: 'www.google.com',
+                url: 'www.google.com',
+                mcc: '6513',
+            },
             account_token: token.id,
         });
         customer.stripeAccount = account.id;
@@ -67,14 +72,11 @@ let AuthService = class AuthService {
         };
     }
     async createToken(customer) {
+        const birthdate = customer.birthdate.toString().split('-');
         try {
             const token = await stripe.tokens.create({
                 account: {
                     business_type: 'individual',
-                    business_profile: {
-                        url: '',
-                        mcc: '6513',
-                    },
                     individual: {
                         first_name: customer.first_name,
                         last_name: customer.last_name,
@@ -86,9 +88,9 @@ let AuthService = class AuthService {
                             line1: customer.location.address,
                         },
                         dob: {
-                            day: customer.birthdate.getDay(),
-                            month: customer.birthdate.getMonth(),
-                            year: customer.birthdate.getFullYear(),
+                            day: birthdate[2].substr(0, 2),
+                            month: birthdate[1],
+                            year: birthdate[0],
                         },
                         gender: customer.gender,
                         phone: `+33${customer.phoneNumber.substring(1)}`,
