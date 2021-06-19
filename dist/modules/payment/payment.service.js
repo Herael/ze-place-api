@@ -31,19 +31,33 @@ let PaymentService = class PaymentService {
             customer: user.customerId,
         };
     }
-    async createBankAccount(userId, data) {
+    async createBankAccount(accountId, data) {
         const token = await stripe.tokens.create({
             bank_account: {
                 country: 'FR',
                 currency: 'eur',
-                account_holder_name: `${data.firstname} ${data.lastname}`,
+                account_holder_name: data.holderName,
                 account_holder_type: 'individual',
                 account_number: data.account_number,
             },
         });
-        await stripe.accounts.createExternalAccount('acct_1J3gp8RDio72fPDz', {
+        await stripe.accounts.createExternalAccount(accountId, {
             external_account: token.id,
         });
+        return this.getBankAccount(accountId);
+    }
+    async updateDefaultBankAccount(accountId, bankAccountId) {
+        await stripe.accounts.updateExternalAccount(accountId, bankAccountId, {
+            default_for_currency: true,
+        });
+        return this.getBankAccount(accountId);
+    }
+    async removeBankAccount(accountId, bankAccountId) {
+        await stripe.accounts.deleteExternalAccount(accountId, bankAccountId);
+        return this.getBankAccount(accountId);
+    }
+    async getBankAccount(accountId) {
+        return await stripe.accounts.retrieve(accountId);
     }
     async addPaymentMethod(stripeAccountId, cardToken) {
         const card = await stripe.accounts.createExternalAccount('acct_1J3gp8RDio72fPDz', {

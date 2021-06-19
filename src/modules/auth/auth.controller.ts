@@ -1,4 +1,5 @@
-import { Controller, Request, Post, UseGuards, Get } from '@nestjs/common';
+import { Controller, Request, Post, UseGuards, Get, UseInterceptors, UploadedFile, UploadedFiles } from '@nestjs/common';
+import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
 import { AuthService } from './auth.service';
 import { JwtAuthGuard } from './jwt-auth.guard';
 import { LocalAuthGuard } from './local-auth.guard';
@@ -16,6 +17,12 @@ export class AuthController {
   @Post('/register')
   async register(@Request() req) {
     return this.authService.register(req.body);
+  }
+
+  @UseInterceptors(FilesInterceptor('Files'))
+  @Post('/uploadID')
+  async uploadID(@Request() req, @UploadedFiles() files) {
+    return this.authService.uploadID(files);
   }
 
   @UseGuards(JwtAuthGuard)

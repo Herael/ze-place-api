@@ -29,20 +29,37 @@ export class PaymentService {
     };
   }
 
-  async createBankAccount(userId: string, data) {
+  async createBankAccount(accountId: string, data) {
     const token = await stripe.tokens.create({
       bank_account: {
         country: 'FR',
         currency: 'eur',
-        account_holder_name: `${data.firstname} ${data.lastname}`,
+        account_holder_name: data.holderName,
         account_holder_type: 'individual',
         account_number: data.account_number,
       },
     });
 
-    await stripe.accounts.createExternalAccount('acct_1J3gp8RDio72fPDz', {
+    await stripe.accounts.createExternalAccount(accountId, {
       external_account: token.id,
     });
+    return this.getBankAccount(accountId);
+  }
+
+  async updateDefaultBankAccount(accountId: string, bankAccountId: string) {
+    await stripe.accounts.updateExternalAccount(accountId, bankAccountId, {
+      default_for_currency: true,
+    });
+    return this.getBankAccount(accountId);
+  }
+
+  async removeBankAccount(accountId: string, bankAccountId: string) {
+    await stripe.accounts.deleteExternalAccount(accountId, bankAccountId);
+    return this.getBankAccount(accountId);
+  }
+
+  async getBankAccount(accountId: string) {
+    return await stripe.accounts.retrieve(accountId);
   }
 
   async addPaymentMethod(stripeAccountId: string, cardToken: string) {

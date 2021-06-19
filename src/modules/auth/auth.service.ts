@@ -29,8 +29,28 @@ export class AuthService {
     const payload = { email: user.email, id: user._id };
     return {
       access_token: this.jwtService.sign(payload),
-      userId: user._id,
+      user: user,
     };
+  }
+
+  async uploadID(data) {
+    const IDRecto = await stripe.files.create({
+      purpose: 'identity_document',
+      file: {
+        data: data[0].buffer,
+        name: data[0].originalName,
+        type: 'application/octet-stream',
+      },
+    });
+    const IDVerso = await stripe.files.create({
+      purpose: 'identity_document',
+      file: {
+        data: data[1].buffer,
+        name: data[1].originalName,
+        type: 'application/octet-stream',
+      },
+    });
+    return [IDRecto.id, IDVerso.id];
   }
 
   async register(customer: Customer) {
@@ -53,7 +73,7 @@ export class AuthService {
     const payload = { email: user.email, id: user._id };
     return {
       access_token: this.jwtService.sign(payload),
-      userId: user._id,
+      userId: user,
     };
   }
 
@@ -85,6 +105,10 @@ export class AuthService {
                 back: customer.IDVerso,
                 front: customer.IDRecto,
               },
+              additional_document: {
+                back: customer.IDVerso,
+                front: customer.IDRecto,
+              }
             },
           },
           tos_shown_and_accepted: true,

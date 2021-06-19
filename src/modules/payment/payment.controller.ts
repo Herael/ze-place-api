@@ -37,15 +37,42 @@ export class PaymentController {
   @UseGuards(JwtAuthGuard)
   @Post('/bankAccount/new')
   async createBankAccount(@Res() res, @Req() req) {
-    const customer = await this.paymentService.createBankAccount(req.user, {
-      firstname: req.body.firstname,
-      lastname: req.body.lastname,
-      bank_name: req.body.bank_name,
-      country: req.body.country,
-      currency: req.body.currency,
-      account_number: req.body.account_number,
-    });
-    return res.status(HttpStatus.OK).json(customer);
+    const bankAccount = await this.paymentService.createBankAccount(
+      req.body.accountId,
+      {
+        holderName: req.body.holderName,
+        bank_name: req.body.bank_name,
+        account_number: req.body.account_number,
+      },
+    );
+    return res.status(HttpStatus.OK).json(bankAccount);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/bankAccount/update')
+  async updateDefaultBankAccount(@Res() res, @Req() req) {
+    const bankAccount = await this.paymentService.updateDefaultBankAccount(
+      req.body.accountId,
+      req.body.bankAccountId,
+    );
+    return res.status(HttpStatus.OK).json(bankAccount);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/bankAccount/remove')
+  async removeBankAccount(@Res() res, @Req() req) {
+    const bankAccount = await this.paymentService.removeBankAccount(
+      req.body.accountId,
+      req.body.bankAccountId,
+    );
+    return res.status(HttpStatus.OK).json(bankAccount);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Get('/bankAccount/:id')
+  async getBankAccount(@Res() res, @Req() req) {
+    const bankAccount = await this.paymentService.getBankAccount(req.params.id);
+    return res.status(HttpStatus.OK).json(bankAccount);
   }
 
   // @UseGuards(JwtAuthGuard)

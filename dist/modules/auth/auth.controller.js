@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthController = void 0;
 const common_1 = require("@nestjs/common");
+const platform_express_1 = require("@nestjs/platform-express");
 const auth_service_1 = require("./auth.service");
 const jwt_auth_guard_1 = require("./jwt-auth.guard");
 const local_auth_guard_1 = require("./local-auth.guard");
@@ -26,6 +27,9 @@ let AuthController = class AuthController {
     }
     async register(req) {
         return this.authService.register(req.body);
+    }
+    async uploadID(req, files) {
+        return this.authService.uploadID(files);
     }
     async me(req) {
         return this.authService.getUser(req.user);
@@ -46,6 +50,14 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "register", null);
+__decorate([
+    common_1.UseInterceptors(platform_express_1.FilesInterceptor('Files')),
+    common_1.Post('/uploadID'),
+    __param(0, common_1.Request()), __param(1, common_1.UploadedFiles()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], AuthController.prototype, "uploadID", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get('/me'),
