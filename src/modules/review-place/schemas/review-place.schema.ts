@@ -1,8 +1,11 @@
 import * as mongoose from 'mongoose';
 import { CustomerSchema } from 'src/modules/customer/schemas/customer.schema';
 
-export const ReviewSchema = new mongoose.Schema({
-  text: String,
-  rate: Number,
+export const ReviewPlaceSchema = new mongoose.Schema({
+   name: String,
+   description: String,
+   writerId: String,
+   placeId: String,
+   rate: Number,
   created_at: { type: Date, default: Date.now },
 });

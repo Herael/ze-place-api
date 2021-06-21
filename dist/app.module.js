@@ -13,7 +13,7 @@ const app_service_1 = require("./app.service");
 const mongoose_1 = require("@nestjs/mongoose");
 const customer_module_1 = require("./modules/customer/customer.module");
 const place_module_1 = require("./modules/place/place.module");
-const review_module_1 = require("./modules/review/review.module");
+const review_place_module_1 = require("./modules/review-place/review-place.module");
 const auth_module_1 = require("./modules/auth/auth.module");
 const promo_module_1 = require("./modules/promo/promo.module");
 const place_type_module_1 = require("./modules/place-type/place-type.module");
@@ -31,7 +31,7 @@ AppModule = __decorate([
             booking_module_1.BookingModule,
             customer_module_1.CustomerModule,
             place_module_1.PlaceModule,
-            review_module_1.ReviewModule,
+            review_place_module_1.ReviewPLaceModule,
             auth_module_1.AuthModule,
             promo_module_1.PromoModule,
             place_type_module_1.PlaceTypeModule,

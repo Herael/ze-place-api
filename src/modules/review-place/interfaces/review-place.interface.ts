@@ -1,9 +1,12 @@
 import { Document } from 'mongoose';
 import { Customer } from 'src/modules/customer/interfaces/customer.interface';
 
-export interface Review extends Document {
-  readonly from: Customer;
-  readonly text: string;
+export interface ReviewPlace extends Document {
+
+  readonly name: string;
+  readonly description: string;
+  readonly writerId: string;
+  readonly placeId: string;
   readonly rate: number;
   readonly created_at: Date;
 }
