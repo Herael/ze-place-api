@@ -26,27 +26,43 @@ let BookingService = class BookingService {
     async bookPlace(userId, bookingDTO) {
         const user = await this.customerModel.findById(userId);
         const place = await this.placeModel.findById(bookingDTO.placeId);
-        const booking = Object.assign({ userId: user._id, firstname: user.first_name, lastname: user.last_name, avatar: user.avatar }, bookingDTO);
+        const owner = await this.customerModel.findById(place.ownerId);
+        const booking = Object.assign({ userId: user._id, firstname: user.first_name, lastname: user.last_name, avatar: user.avatar, placeCover: place.images[0].url, placeTitle: place.title }, bookingDTO);
         const newPlace = await new this.bookingModel(booking).save();
         place.bookings.push(newPlace._id);
         place.save();
+        utils_1.sendPushNotifications({
+            pushId: owner.pushToken,
+            title: 'Your place has been booked !',
+            description: 'Check',
+        });
     }
     async getBookingsByPlaceAndUser(userId, placeId) {
         return await this.bookingModel
             .find({ userId, placeId, isPast: false })
+            .sort({ created_at: -1 })
             .exec();
     }
     async getBookingsByUser(userId) {
-        return await this.bookingModel.find({ userId: userId }).exec();
+        return await this.bookingModel
+            .find({ userId: userId })
+            .sort({ created_at: -1 })
+            .exec();
     }
     async getBookingsByOwner(userId) {
-        return await this.bookingModel.find({ ownerId: userId }).exec();
+        return await this.bookingModel
+            .find({ ownerId: userId })
+            .sort({ created_at: -1 })
+            .exec();
     }
     async getBookingsByPlace(placeId) {
-        return await this.bookingModel.find({ placeId: placeId }).exec();
+        return await this.bookingModel
+            .find({ placeId: placeId })
+            .sort({ created_at: -1 })
+            .exec();
     }
     async getBookings() {
-        return await this.bookingModel.find();
+        return await this.bookingModel.find().sort({ created_at: -1 });
     }
     async acceptBooking(bookingId) {
         const booking = await this.bookingModel.findById(bookingId);

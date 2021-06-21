@@ -15,6 +15,7 @@ import { BookingModule } from './modules/booking/booking.module';
 import { AppGateway } from './app.gateway';
 import { BugTicketModule } from './modules/bug-ticket/bug-ticket.module';
 import { BugTicketService } from './modules/bug-ticket/bug-ticket.service';
+import { ConversationModule } from './modules/conversation/conversation.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { BugTicketService } from './modules/bug-ticket/bug-ticket.service';
     FeatureModule,
     PaymentModule,
     BugTicketModule,
+    ConversationModule,
   ],
   controllers: [AppController],
   providers: [AppService, AppGateway],

@@ -3,6 +3,8 @@ import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 
 export interface Booking extends Document {
   readonly placeId: string;
+  readonly placeCover: string;
+  readonly placeTitle: string;
   readonly ownerId: string;
   readonly userId: string;
   readonly firstname: string;

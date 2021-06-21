@@ -38,18 +38,20 @@ const isContainsFeatures = (researchFeature, placeFeature) => {
 };
 exports.isContainsFeatures = isContainsFeatures;
 const sendPushNotifications = async ({ pushId, title, description }) => {
-    return await axios_1.default
-        .post('https://exp.host/--/api/v2/push/send', {
-        to: pushId,
-        title: title,
-        body: description,
-    })
-        .then((response) => {
-        return response.data;
-    })
-        .catch((err) => {
-        return Promise.reject(err);
-    });
+    if (pushId) {
+        return await axios_1.default
+            .post('https://exp.host/--/api/v2/push/send', {
+            to: pushId,
+            title: title,
+            body: description,
+        })
+            .then((response) => {
+            return response.data;
+        })
+            .catch((err) => {
+            return Promise.reject(err);
+        });
+    }
 };
 exports.sendPushNotifications = sendPushNotifications;
 //# sourceMappingURL=index.js.map

@@ -4,6 +4,8 @@ import { FeatureSchema } from 'src/modules/feature/schemas/feature.schema';
 
 export const BookingSchema = new mongoose.Schema({
   placeId: String,
+  placeCover: String,
+  placeTitle: String,
   ownerId: String,
   userId: String,
   firstname: String,

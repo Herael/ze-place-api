@@ -26,6 +26,7 @@ const jwt_1 = require("@nestjs/jwt");
 const customer_service_1 = require("../customer/customer.service");
 const customer_interface_1 = require("../customer/interfaces/customer.interface");
 const bcrypt_1 = require("bcrypt");
+const stripe = require('stripe')('sk_test_51IvjYaIeDqziwrFRLUS2L2qYbBDUL4YbhnwDVkU5S7bXNQmIaGh0wn24V9CxOao50ai5VOBrzMYDNXf5itqXSlSL00O3CdBEw7');
 let AuthService = class AuthService {
     constructor(customerService, jwtService) {
         this.customerService = customerService;
@@ -44,16 +45,93 @@ let AuthService = class AuthService {
         const payload = { email: user.email, id: user._id };
         return {
             access_token: this.jwtService.sign(payload),
-            userId: user._id,
+            user: user,
         };
     }
+    async uploadID(data) {
+        const IDRecto = await stripe.files.create({
+            purpose: 'identity_document',
+            file: {
+                data: data[0].buffer,
+                name: data[0].originalName,
+                type: 'application/octet-stream',
+            },
+        });
+        const IDVerso = await stripe.files.create({
+            purpose: 'identity_document',
+            file: {
+                data: data[1].buffer,
+                name: data[1].originalName,
+                type: 'application/octet-stream',
+            },
+        });
+        return [IDRecto.id, IDVerso.id];
+    }
     async register(customer) {
+        const token = await this.createToken(customer);
+        const account = await stripe.accounts.create({
+            type: 'custom',
+            capabilities: {
+                card_payments: { requested: true },
+                transfers: { requested: true },
+            },
+            business_profile: {
+                support_url: 'www.google.com',
+                url: 'www.google.com',
+                mcc: '6513',
+            },
+            account_token: token.id,
+        });
+        customer.stripeAccount = account.id;
         const user = await this.customerService.addCustomer(customer);
         const payload = { email: user.email, id: user._id };
         return {
             access_token: this.jwtService.sign(payload),
-            userId: user._id,
+            userId: user,
         };
+    }
+    async createToken(customer) {
+        const birthdate = customer.birthdate.toString().split('-');
+        try {
+            const token = await stripe.tokens.create({
+                account: {
+                    business_type: 'individual',
+                    individual: {
+                        first_name: customer.first_name,
+                        last_name: customer.last_name,
+                        email: customer.email,
+                        address: {
+                            city: customer.location.city,
+                            country: 'FR',
+                            postal_code: customer.location.postalCode,
+                            line1: customer.location.address,
+                        },
+                        dob: {
+                            day: birthdate[2].substr(0, 2),
+                            month: birthdate[1],
+                            year: birthdate[0],
+                        },
+                        gender: customer.gender,
+                        phone: `+33${customer.phoneNumber.substring(1)}`,
+                        verification: {
+                            document: {
+                                back: customer.IDVerso,
+                                front: customer.IDRecto,
+                            },
+                            additional_document: {
+                                back: customer.IDVerso,
+                                front: customer.IDRecto,
+                            }
+                        },
+                    },
+                    tos_shown_and_accepted: true,
+                },
+            });
+            return token;
+        }
+        catch (err) {
+            console.log(err);
+        }
     }
     async getUser(credentials) {
         return await this.customerService.findById(credentials.id);

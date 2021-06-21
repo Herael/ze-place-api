@@ -23,6 +23,14 @@ export class PlaceController {
     return res.status(HttpStatus.OK).json(places);
   }
 
+  @UseGuards(JwtAuthGuard)
+  @Get('/:id')
+  async getPlaceById(@Request() req, @Res() res) {
+    console.log(req.params);
+    const places = await this.placeService.findById(req.params.id);
+    return res.status(HttpStatus.OK).json(places);
+  }
+
   @Post()
   async getPlacesNearbyCoordinates(@Res() res, @Body() data) {
     const places = await this.placeService.getPlacesNearbyCoordinates(
