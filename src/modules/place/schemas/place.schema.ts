@@ -3,7 +3,7 @@ import * as mongoose from 'mongoose';
 import { BookingSchema } from 'src/modules/booking/schemas/booking.schema';
 import { FeatureSchema } from 'src/modules/feature/schemas/feature.schema';
 import { PlaceTypeSchema } from 'src/modules/place-type/schemas/place-type.schema';
-import { ReviewSchema } from 'src/modules/review/schemas/review.schema';
+import { ReviewPlaceSchema } from 'src/modules/review-place/schemas/review-place.schema';
 import { ImageSchema } from 'src/modules/schemas';
 
 export const PlaceSchema = new mongoose.Schema({
@@ -29,7 +29,7 @@ export const PlaceSchema = new mongoose.Schema({
   authorizeFoodAndDrink: Boolean,
   ownerId: String,
   rate: Number,
-  reviews: [ReviewSchema],
+  reviews: [ReviewPlaceSchema],
   bookings: [BookingSchema],
   isFavorite: Boolean,
   created_at: { type: Date, default: Date.now },

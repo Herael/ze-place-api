@@ -9,7 +9,7 @@ import { Booking } from 'src/modules/booking/interfaces/booking.interface';
 import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 
 import { PlaceType } from 'src/modules/place-type/interfaces/place-type.interface';
-import { Review } from 'src/modules/review/interfaces/review.interface';
+import { ReviewPlace } from 'src/modules/review-place/interfaces/review-place.interface';
 import { Image, Location } from 'src/modules/types';
 
 export class CreatePlaceDTO {
@@ -57,7 +57,7 @@ export class CreatePlaceDTO {
 
   readonly rate: number;
 
-  readonly reviews: Array<Review> = [];
+  readonly reviews: Array<ReviewPlace> = [];
 
   readonly bookings: Array<Booking> = [];
 

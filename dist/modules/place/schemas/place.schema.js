@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const booking_schema_1 = require("../../booking/schemas/booking.schema");
 const feature_schema_1 = require("../../feature/schemas/feature.schema");
 const place_type_schema_1 = require("../../place-type/schemas/place-type.schema");
-const review_schema_1 = require("../../review/schemas/review.schema");
+const review_place_schema_1 = require("../../review-place/schemas/review-place.schema");
 const schemas_1 = require("../../schemas");
 exports.PlaceSchema = new mongoose.Schema({
     title: String,
@@ -30,7 +30,7 @@ exports.PlaceSchema = new mongoose.Schema({
     authorizeFoodAndDrink: Boolean,
     ownerId: String,
     rate: Number,
-    reviews: [review_schema_1.ReviewSchema],
+    reviews: [review_place_schema_1.ReviewPlaceSchema],
     bookings: [booking_schema_1.BookingSchema],
     isFavorite: Boolean,
     created_at: { type: Date, default: Date.now },
