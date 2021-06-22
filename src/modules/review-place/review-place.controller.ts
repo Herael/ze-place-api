@@ -22,7 +22,7 @@ export class ReviewPlaceController {
         data:review
       }); 
     }
-    @Get('/getByUser')
+    @Post('/getByUser')
     async getReviewBuser(@Req() req, @Res() res, @Body() body){
         console.log(body);
         const review = await this.reviewPlaceService.getReviewBuser(body)
