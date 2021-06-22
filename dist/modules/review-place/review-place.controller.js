@@ -33,6 +33,13 @@ let ReviewPlaceController = class ReviewPlaceController {
             data: review
         });
     }
+    async getReviewBuser(req, res, body) {
+        console.log(body);
+        const review = await this.reviewPlaceService.getReviewBuser(body);
+        return res.status(common_1.HttpStatus.OK).json({
+            data: review
+        });
+    }
     async getAllReview(req, res) {
         const review = await this.reviewPlaceService.getAllReview();
         return res.status(common_1.HttpStatus.OK).json({
@@ -54,6 +61,13 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", Promise)
 ], ReviewPlaceController.prototype, "getReview", null);
+__decorate([
+    common_1.Get('/getByUser'),
+    __param(0, common_1.Req()), __param(1, common_1.Res()), __param(2, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object, Object]),
+    __metadata("design:returntype", Promise)
+], ReviewPlaceController.prototype, "getReviewBuser", null);
 __decorate([
     common_1.Get('/getAll'),
     __param(0, common_1.Req()), __param(1, common_1.Res()),

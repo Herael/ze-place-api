@@ -8,5 +8,6 @@ export declare class ReviewPlaceService {
     constructor(reviewModel: Model<ReviewPlace>, placeModel: Model<Place>);
     createReview(body: CreateReviewPlaceDTO): Promise<ReviewPlace>;
     getReview(body: any): Promise<ReviewPlace[]>;
+    getReviewBuser(body: any): Promise<ReviewPlace[]>;
     getAllReview(): Promise<ReviewPlace[]>;
 }
