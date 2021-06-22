@@ -22,6 +22,14 @@ export class ReviewPlaceController {
         data:review
       }); 
     }
+    @Get('/getByUser')
+    async getReviewBuser(@Req() req, @Res() res, @Body() body){
+        console.log(body);
+        const review = await this.reviewPlaceService.getReviewBuser(body)
+       return res.status(HttpStatus.OK).json({
+        data:review
+      }); 
+    }
     @Get('/getAll')
     async getAllReview(@Req() req, @Res() res){
         const review = await this.reviewPlaceService.getAllReview()

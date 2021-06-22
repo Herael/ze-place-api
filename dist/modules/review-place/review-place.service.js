@@ -39,6 +39,10 @@ let ReviewPlaceService = class ReviewPlaceService {
         const reviews = await this.reviewModel.find({ placeId: body.placeId });
         return reviews;
     }
+    async getReviewBuser(body) {
+        const reviews = await this.reviewModel.find({ placeId: body.placeId, writerId: body.writerId });
+        return reviews;
+    }
     async getAllReview() {
         const reviews = await this.reviewModel.find();
         return reviews;
