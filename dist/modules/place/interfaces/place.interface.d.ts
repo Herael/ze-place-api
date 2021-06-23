@@ -2,8 +2,8 @@ import { Document } from 'mongoose';
 import { Booking } from 'src/modules/booking/interfaces/booking.interface';
 import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 import { PlaceType } from 'src/modules/place-type/interfaces/place-type.interface';
-import { Review } from 'src/modules/review/interfaces/review.interface';
-import { Availability, Image } from 'src/modules/types';
+import { ReviewPlace } from 'src/modules/review-place/interfaces/review-place.interface';
+import { Image, Availability } from 'src/modules/types';
 export interface Place extends Document {
     readonly title: string;
     readonly location: {
@@ -26,8 +26,8 @@ export interface Place extends Document {
     readonly authorizeFire: boolean;
     readonly authorizeFoodAndDrink: boolean;
     readonly ownerId: string;
-    readonly rate: number;
-    readonly reviews: Review[];
+    rate: number;
+    readonly reviews: ReviewPlace[];
     readonly bookings: Booking[];
     availabilities: Availability[];
     isFavorite: boolean;

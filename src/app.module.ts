@@ -5,7 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 import { CustomerModule } from './modules/customer/customer.module';
 import { PlaceModule } from './modules/place/place.module';
-import { ReviewModule } from './modules/review/review.module';
+import { ReviewPLaceModule } from './modules/review-place/review-place.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { PromoModule } from './modules/promo/promo.module';
 import { PlaceTypeModule } from './modules/place-type/place-type.module';
@@ -27,7 +27,7 @@ import { ConversationModule } from './modules/conversation/conversation.module';
     BookingModule,
     CustomerModule,
     PlaceModule,
-    ReviewModule,
+    ReviewPLaceModule,
     AuthModule,
     PromoModule,
     PlaceTypeModule,
