@@ -2,7 +2,7 @@ import { Booking } from 'src/modules/booking/interfaces/booking.interface';
 import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 import { PlaceType } from 'src/modules/place-type/interfaces/place-type.interface';
 import { Review } from 'src/modules/review/interfaces/review.interface';
-import { Image, Location } from 'src/modules/types';
+import { Availability, Image, Location } from 'src/modules/types';
 export declare class CreatePlaceDTO {
     readonly title: string;
     readonly location: Location;
@@ -23,4 +23,5 @@ export declare class CreatePlaceDTO {
     readonly bookings: Array<Booking>;
     readonly isFavorite: boolean;
     readonly created_at: Date;
+    availabilities: Array<Availability>;
 }

@@ -9,6 +9,7 @@ export declare class BookingService {
     private readonly placeModel;
     constructor(bookingModel: Model<Booking>, customerModel: Model<Customer>, placeModel: Model<Place>);
     bookPlace(userId: string, bookingDTO: BookingDTO): Promise<void>;
+    getBookingsOfTheDay(userId: string, placeId: string): Promise<Booking[]>;
     getBookingsByPlaceAndUser(userId: string, placeId: string): Promise<Booking[]>;
     getBookingsByUser(userId: string): Promise<Booking[]>;
     getBookingsByOwner(userId: string): Promise<Booking[]>;

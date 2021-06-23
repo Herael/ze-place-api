@@ -3,7 +3,7 @@ import { Booking } from 'src/modules/booking/interfaces/booking.interface';
 import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 import { PlaceType } from 'src/modules/place-type/interfaces/place-type.interface';
 import { Review } from 'src/modules/review/interfaces/review.interface';
-import { Image } from 'src/modules/types';
+import { Availability, Image } from 'src/modules/types';
 
 export interface Place extends Document {
   readonly title: string;
@@ -30,6 +30,7 @@ export interface Place extends Document {
   readonly rate: number;
   readonly reviews: Review[];
   readonly bookings: Booking[];
+  availabilities: Availability[];
   isFavorite: boolean;
   readonly created_at: {
     readonly type: Date;

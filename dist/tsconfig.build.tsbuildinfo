@@ -1567,8 +1567,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/booking/interfaces/booking.interface.ts": {
-        "version": "d7b542f17db2f40319012dd7d748debcd2283a32fe86a0ac17ef914736f3ec6a",
-        "signature": "1aee8e537594d73db58bd8e786dd3633814112328b9d3bc7a657b480cb2265c2",
+        "version": "e0b19077e9dc288eb6e22305c683a3deb197ac32204440f16cda8cdce58136ac",
+        "signature": "5a3b401b447c0f909e85061833186a3f0cfaaa8be66589bba1506cbc96c1955b",
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/interfaces/place-type.interface.ts": {
@@ -1582,13 +1582,13 @@
         "affectsGlobalScope": false
       },
       "../src/modules/types.ts": {
-        "version": "4118f9b1e1a0ecf48d2eeb9e14007bcf0acbe3b58afc1b88cf0b9085b80d72da",
-        "signature": "b8db0d129f179c2ba7063ae3f36855df28e69d67a20079234a9e2c2f9bdb338b",
+        "version": "d13b9273476fa7aa2628ce2f4fb0e1f159965f76fcc4e8d72741621846a28990",
+        "signature": "30248be75a2fdabeaed937bd7a7bb67271960dc578d0975c0e9ba3061c677adc",
         "affectsGlobalScope": false
       },
       "../src/modules/place/interfaces/place.interface.ts": {
-        "version": "3d39652c1b74f705686bef62544ee6c222f004cf549d8d13cb01865f7855ddc9",
-        "signature": "4c10a243ece28c9721e960dc0c5b7d8be78db0ed8a539423b7479b5b997abecc",
+        "version": "e12d36f9a431443140a4ddded89ed3d117166a36643e1612a436dbae9ee6064e",
+        "signature": "5909c28f38dd7d6939997b3199c1f587418bfebdeabc841f30824c9fae54ceea",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/interfaces/customer.interface.ts": {
@@ -2492,7 +2492,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/booking/schemas/booking.schema.ts": {
-        "version": "4f69aac4fdedd9caa0096a868407ad7c18c0772f70b93faa5783f46e348b4cde",
+        "version": "17eb62f3e34ceafa92302c39ef8a7a2160d11d688874dc80fad861b72a01e9d7",
         "signature": "1e0bb72448e9366042ef672ecacd8bc89bcabe6bef47e398a8961b32e7cec1e3",
         "affectsGlobalScope": false
       },
@@ -2507,12 +2507,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/schemas.ts": {
-        "version": "af184ac5fcb78a9672978f67479abe0c1afeb8a265269d293cf916df59828635",
-        "signature": "97b3968a06e9a6071a643cb8225212248a6eeb33c136e9d711f38a8f238b52f7",
+        "version": "23734761778b4ed5be0340ea3b58ebe8dac697e3ff18945c727df1c29903043c",
+        "signature": "529b8a9fff3c9c30e2762a545ff991b15c872411040ee1682c3a141c927cdc42",
         "affectsGlobalScope": false
       },
       "../src/modules/place/schemas/place.schema.ts": {
-        "version": "c6bfe7ed1dcf78317a0638a101470e17698df55e4600142c7c09edc80f26d4e8",
+        "version": "974709643c9b0bd426febbdb9db0f41b976d061e326c2361be48720b2d862fbf",
         "signature": "b29d58e560e82ebd6eaeab2c411be4ab1c6d2a67eabb4aee61f7898e2071066d",
         "affectsGlobalScope": false
       },
@@ -2532,8 +2532,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/dto/create-place.dto.ts": {
-        "version": "a44e407a62c20c90be57c14998ebf6ace4afa2f519dcbe21d6c48a8e0aa1ab59",
-        "signature": "7c2131a4460421507c63c984dd756279f8b8312fad19bbd8edee35708461c496",
+        "version": "407d22610878cb3a895a51dea348179a42fb95b2556cb67dcfc07adce0bba48d",
+        "signature": "37d6e3a39eda1c043100ae2d61b9aa3fa8741c60511ddaea755d04b79272c66d",
         "affectsGlobalScope": false
       },
       "../node_modules/geolib/es/types.d.ts": {
@@ -2746,14 +2746,24 @@
         "signature": "d8c995451b0cdbf317ca463d8268160fe52260a91183232da998ff85c57ecdeb",
         "affectsGlobalScope": false
       },
+      "../node_modules/moment/ts3.1-typings/moment.d.ts": {
+        "version": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
+        "signature": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/moment-range/dist/moment-range.d.ts": {
+        "version": "793ffe38009341aa72a64d21d55891d0d6b5d5dbd87ac05af6fbdb2d2b8d9d52",
+        "signature": "793ffe38009341aa72a64d21d55891d0d6b5d5dbd87ac05af6fbdb2d2b8d9d52",
+        "affectsGlobalScope": false
+      },
       "../src/utils/index.ts": {
-        "version": "0c9fcc552cdf4848fa9c714b6b8e5aea843307faf42904b11d7681810a7fd46a",
-        "signature": "fc91d93bf235a9578283359caadeaee99069ef757458efaa867e1a403a710088",
+        "version": "d60f9659154c96ff26815615a175fc2370dfa9f0775c73340f8c680fe6a4b0c4",
+        "signature": "dc463ee456c71f3054ae8fe0bd33592d2d89c47b4ea3e420a7e00152052127de",
         "affectsGlobalScope": false
       },
       "../src/modules/booking/dto/booking.dto.ts": {
-        "version": "54b5c4977c9a6f33f8eaba0ddae6d155dff9aaacabac61046b633faa9a8dce18",
-        "signature": "4d52ae2f6124a518b1042e0352e55100ad1caf64390c8919ef4c78c3caccddbe",
+        "version": "98ca7ef562463bbcd4aa8ae7e39545ccc3fcd70fe07efebaed71031711d4a7df",
+        "signature": "752295ac22c9b79f0c707d75b230e0fd8d57709ff0209231125bff7d766aefd1",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
@@ -2987,12 +2997,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/booking/booking.service.ts": {
-        "version": "a1f7c976a7ac7b7daa04165e01a97e2aa856b8fcdfbac73230682966ddf97348",
-        "signature": "6bc6bc35f5f155a752db822b6389fa8112d13cc37da3e9e8c66f92ed56ee38b3",
+        "version": "3f770ef8db0129c769aa7a22688fbe0135606bc8cefb1335caa6bfef59d7b381",
+        "signature": "e03cd8e285a114d9528edf40c24dbc414d992139ef400cb54b3d129ab1b57973",
         "affectsGlobalScope": false
       },
       "../src/modules/booking/booking.controller.ts": {
-        "version": "777a4987c313c35b20df1eff2414f28970ae63b9a4cb8d415e2f7f5f79173146",
+        "version": "66d31f083636ad88fbbcf93508b0d386e690c3e5b78da87e7e071b1d32fd6c7d",
         "signature": "cb83c8aaf207dd60cf5183eef96b214add89cebb7359c16aba7ac4cb14970f8d",
         "affectsGlobalScope": false
       },
@@ -5457,6 +5467,9 @@
       "../node_modules/libphonenumber-js/index.d.ts": [
         "../node_modules/libphonenumber-js/types.d.ts"
       ],
+      "../node_modules/moment-range/dist/moment-range.d.ts": [
+        "../node_modules/moment/ts3.1-typings/moment.d.ts"
+      ],
       "../node_modules/mongoose/index.d.ts": [
         "../node_modules/@types/mongodb/index.d.ts",
         "../node_modules/@types/node/events.d.ts",
@@ -6152,6 +6165,8 @@
       "../src/utils/index.ts": [
         "../node_modules/axios/index.d.ts",
         "../node_modules/geolib/es/index.d.ts",
+        "../node_modules/moment-range/dist/moment-range.d.ts",
+        "../node_modules/moment/ts3.1-typings/moment.d.ts",
         "../src/modules/feature/interfaces/feature.interface.ts",
         "../src/modules/types.ts"
       ]
@@ -8077,6 +8092,9 @@
       "../node_modules/libphonenumber-js/index.d.ts": [
         "../node_modules/libphonenumber-js/types.d.ts"
       ],
+      "../node_modules/moment-range/dist/moment-range.d.ts": [
+        "../node_modules/moment/ts3.1-typings/moment.d.ts"
+      ],
       "../node_modules/mongoose/index.d.ts": [
         "../node_modules/@types/mongodb/index.d.ts",
         "../node_modules/@types/node/events.d.ts",
@@ -9106,6 +9124,8 @@
       "../node_modules/jest-diff/build/types.d.ts",
       "../node_modules/libphonenumber-js/index.d.ts",
       "../node_modules/libphonenumber-js/types.d.ts",
+      "../node_modules/moment-range/dist/moment-range.d.ts",
+      "../node_modules/moment/ts3.1-typings/moment.d.ts",
       "../node_modules/mongoose/index.d.ts",
       "../node_modules/pretty-format/build/index.d.ts",
       "../node_modules/pretty-format/build/types.d.ts",

@@ -22,6 +22,7 @@ let BookingController = class BookingController {
     }
     async booking(req, res, body) {
         const booking = await this.bookingService.bookPlace(req.user.id, {
+            paymentId: body.booking.paymentId,
             ownerId: body.booking.ownerId,
             placeId: body.booking.placeId,
             feature: body.booking.features[0],
