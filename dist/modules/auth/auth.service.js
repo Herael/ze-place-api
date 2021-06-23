@@ -121,7 +121,7 @@ let AuthService = class AuthService {
                             additional_document: {
                                 back: customer.IDVerso,
                                 front: customer.IDRecto,
-                            }
+                            },
                         },
                     },
                     tos_shown_and_accepted: true,
@@ -135,6 +135,14 @@ let AuthService = class AuthService {
     }
     async getUser(credentials) {
         return await this.customerService.findById(credentials.id);
+    }
+    async runPython() {
+        const options = {
+            mode: 'text',
+            pythonPath: 'path/to/python',
+            pythonOptions: ['-u'],
+            scriptPath: './script.py',
+        };
     }
 };
 AuthService = __decorate([
