@@ -2782,7 +2782,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/review-place/review-place.controller.ts": {
-        "version": "7dd08c13ccb26a2f05c91eac559294771136af72c79e05aae00bdfc671e01daa",
+        "version": "207692d7248ea696f58ed9f39a7ef09008ad86c24392ba5fb4d7f23a82beb5a9",
         "signature": "0315c912356b7702788c35ba2467071e59f2595c3ccd71db5b73ac37257e30f2",
         "affectsGlobalScope": false
       },
@@ -2947,13 +2947,13 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/place-type.service.ts": {
-        "version": "a07e9035528e489c910a35b9f60e4dd3d327417dca7cc8252302c9b5534dce9a",
-        "signature": "e18fd16501de6c5adc26c8fde45f30b4b195de8e42fdb40a4b2a05888ffbfff9",
+        "version": "bc2a90be2d0181e1a9f4ef8e0ab7bca5848f4e3c3bfc6baaf23012400a675282",
+        "signature": "a18b520a4454f7ea7d9d791c53e7e9bf91dffaea703554738180e919ab5f66a1",
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/place-type.controller.ts": {
-        "version": "17fd60af620aebbda39c7d80aa82e21a35efed5c5a99fbde0647ab38d5d0574c",
-        "signature": "12e2c3ee46d6a84d7dc4a8f40f9a39ac4cb172513fb28d5fc69bd6a0c736fbfa",
+        "version": "c37bc5315f6fa02b012618a11d710fc082b2fd505c3f70eea053e3003ff92a6b",
+        "signature": "488c4c8fb53e0faa7a129519121f66c375ea197537e3243dd0623c6a5c7b0e30",
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/place-type.module.ts": {

@@ -29,6 +29,16 @@ let PlaceTypeService = class PlaceTypeService {
         const newPlace = await new this.featuresModel(createPlaceFeatureDTO).save();
         return newPlace;
     }
+    async getType() {
+        console.log('log');
+        const newType = await this.typeModel.find();
+        return newType;
+    }
+    async getFeatures() {
+        console.log('log');
+        const newType = await this.featuresModel.find();
+        return newType;
+    }
 };
 PlaceTypeService = __decorate([
     common_1.Injectable(),

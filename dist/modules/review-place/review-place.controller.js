@@ -62,7 +62,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ReviewPlaceController.prototype, "getReview", null);
 __decorate([
-    common_1.Get('/getByUser'),
+    common_1.Post('/getByUser'),
     __param(0, common_1.Req()), __param(1, common_1.Res()), __param(2, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object, Object]),
