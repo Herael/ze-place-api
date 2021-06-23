@@ -18,6 +18,7 @@ exports.BookingSchema = new mongoose.Schema({
     duration: Number,
     price: Number,
     description: String,
+    paymentId: String,
     isAccepted: { type: Boolean, default: false },
     isDenied: { type: Boolean, default: false },
     isPast: { type: Boolean, default: false },

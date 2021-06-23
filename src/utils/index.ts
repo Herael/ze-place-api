@@ -2,6 +2,8 @@ import * as geolib from 'geolib';
 import axios, { AxiosResponse } from 'axios';
 import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 import { Coords } from 'src/modules/types';
+import Moment from 'moment';
+import MomentRange from 'moment-range';
 
 export const isPlaceInRadius = (
   origin: Coords,
@@ -63,4 +65,44 @@ export const sendPushNotifications = async ({ pushId, title, description }) => {
         return Promise.reject(err);
       });
   }
+};
+
+export const getDates = (startDate, endDate) => {
+  let dates = [],
+    currentDate = startDate,
+    addDays = function (days) {
+      const date = new Date(this.valueOf());
+      date.setDate(date.getDate() + days);
+      return date;
+    };
+  while (currentDate <= endDate) {
+    dates.push(currentDate);
+    currentDate = addDays.call(currentDate, 1);
+  }
+  return dates;
+};
+
+export const dateToAvailabilities = (startDate: Date, endDate: Date) => {
+  const dates = [];
+  let currentDate: Date = startDate,
+    addDays = function (days) {
+      const date = new Date(this.valueOf());
+      date.setDate(date.getDate() + days);
+      return date;
+    };
+  while (currentDate <= endDate) {
+    const month = `${currentDate.getMonth() < 10 ? '0' : ''}${
+      currentDate.getMonth() + 1
+    }`;
+    const day = `${
+      currentDate.getDate() < 10 ? '0' : ''
+    }${currentDate.getDate()}`;
+    const formatDate = `${currentDate.getFullYear()}-${month}-${day}`;
+    dates.push({
+      date: formatDate,
+      disabled: true,
+    });
+    currentDate = addDays.call(currentDate, 1);
+  }
+  return dates as [{ readonly date: string; readonly disabled: boolean }];
 };

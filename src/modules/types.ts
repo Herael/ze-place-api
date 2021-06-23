@@ -29,3 +29,8 @@ export type BookingClient = {
   };
   description: string;
 };
+
+export type Availability = {
+  date: string;
+  disabled: boolean;
+};

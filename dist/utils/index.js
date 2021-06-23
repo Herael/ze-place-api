@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendPushNotifications = exports.isContainsFeatures = exports.isInRangePrice = exports.isHigherPrice = exports.isPlaceInRadius = void 0;
+exports.dateToAvailabilities = exports.getDates = exports.sendPushNotifications = exports.isContainsFeatures = exports.isInRangePrice = exports.isHigherPrice = exports.isPlaceInRadius = void 0;
 const geolib = require("geolib");
 const axios_1 = require("axios");
 const feature_interface_1 = require("../modules/feature/interfaces/feature.interface");
@@ -54,4 +54,37 @@ const sendPushNotifications = async ({ pushId, title, description }) => {
     }
 };
 exports.sendPushNotifications = sendPushNotifications;
+const getDates = (startDate, endDate) => {
+    let dates = [], currentDate = startDate, addDays = function (days) {
+        const date = new Date(this.valueOf());
+        date.setDate(date.getDate() + days);
+        return date;
+    };
+    while (currentDate <= endDate) {
+        dates.push(currentDate);
+        currentDate = addDays.call(currentDate, 1);
+    }
+    return dates;
+};
+exports.getDates = getDates;
+const dateToAvailabilities = (startDate, endDate) => {
+    const dates = [];
+    let currentDate = startDate, addDays = function (days) {
+        const date = new Date(this.valueOf());
+        date.setDate(date.getDate() + days);
+        return date;
+    };
+    while (currentDate <= endDate) {
+        const month = `${currentDate.getMonth() < 10 ? '0' : ''}${currentDate.getMonth() + 1}`;
+        const day = `${currentDate.getDate() < 10 ? '0' : ''}${currentDate.getDate()}`;
+        const formatDate = `${currentDate.getFullYear()}-${month}-${day}`;
+        dates.push({
+            date: formatDate,
+            disabled: true,
+        });
+        currentDate = addDays.call(currentDate, 1);
+    }
+    return dates;
+};
+exports.dateToAvailabilities = dateToAvailabilities;
 //# sourceMappingURL=index.js.map

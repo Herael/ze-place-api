@@ -1,11 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { sendPushNotifications } from 'src/utils';
+import { dateToAvailabilities, sendPushNotifications } from 'src/utils';
 import { Customer } from '../customer/interfaces/customer.interface';
 import { Place } from '../place/interfaces/place.interface';
 import { BookingDTO } from './dto/booking.dto';
 import { Booking } from './interfaces/booking.interface';
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const stripe = require('stripe')(
+  'sk_test_51IvjYaIeDqziwrFRLUS2L2qYbBDUL4YbhnwDVkU5S7bXNQmIaGh0wn24V9CxOao50ai5VOBrzMYDNXf5itqXSlSL00O3CdBEw7',
+);
 
 @Injectable()
 export class BookingService {
@@ -30,12 +35,27 @@ export class BookingService {
     };
     const newPlace = await new this.bookingModel(booking).save();
     place.bookings.push(newPlace._id);
+    const dates = dateToAvailabilities(
+      new Date(booking.startDate),
+      new Date(booking.endDate),
+    );
+    place.availabilities = [...place.availabilities, ...dates];
     place.save();
     sendPushNotifications({
       pushId: owner.pushToken,
       title: 'Your place has been booked !',
       description: 'Check',
     });
+  }
+
+  async getBookingsOfTheDay(
+    userId: string,
+    placeId: string,
+  ): Promise<Booking[]> {
+    return await this.bookingModel
+      .find({ userId, placeId, isPast: false })
+      .sort({ created_at: -1 })
+      .exec();
   }
 
   async getBookingsByPlaceAndUser(
@@ -76,12 +96,6 @@ export class BookingService {
   async acceptBooking(bookingId: string): Promise<Booking> {
     const booking = await this.bookingModel.findById(bookingId);
     const user = await this.customerModel.findById(booking.userId);
-    const owner = await this.customerModel.findById(booking.ownerId);
-    sendPushNotifications({
-      pushId: owner.pushToken,
-      title: 'Test',
-      description: 'test',
-    });
     sendPushNotifications({
       pushId: user.pushToken,
       title: 'Test',
@@ -97,16 +111,22 @@ export class BookingService {
     const booking = await this.bookingModel.findById(bookingId);
     const user = await this.customerModel.findById(booking.userId);
     const owner = await this.customerModel.findById(booking.ownerId);
-    sendPushNotifications({
-      pushId: user.pushToken,
-      title: 'Test',
-      description: 'test',
+    await stripe.refunds.create({
+      payment_intent: booking.paymentId,
     });
-    sendPushNotifications({
-      pushId: owner.pushToken,
-      title: 'Test',
-      description: 'test',
-    });
+    if (userId === booking.userId) {
+      sendPushNotifications({
+        pushId: owner.pushToken,
+        title: 'Annulation de réservation',
+        description: `${user.first_name} a annulé sa réservation pour ${booking.placeTitle}`,
+      });
+    } else {
+      sendPushNotifications({
+        pushId: user.pushToken,
+        title: 'Annulation de réservation',
+        description: `${owner.first_name} a annulé votre réservation pour ${booking.placeTitle}`,
+      });
+    }
     booking.isDenied = true;
     booking.isPast = true;
     booking.save();

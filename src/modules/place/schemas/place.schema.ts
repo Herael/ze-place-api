@@ -4,7 +4,7 @@ import { BookingSchema } from 'src/modules/booking/schemas/booking.schema';
 import { FeatureSchema } from 'src/modules/feature/schemas/feature.schema';
 import { PlaceTypeSchema } from 'src/modules/place-type/schemas/place-type.schema';
 import { ReviewPlaceSchema } from 'src/modules/review-place/schemas/review-place.schema';
-import { ImageSchema } from 'src/modules/schemas';
+import { ImageSchema, AvailabilitySchema } from 'src/modules/schemas';
 
 export const PlaceSchema = new mongoose.Schema({
   title: String,
@@ -32,5 +32,6 @@ export const PlaceSchema = new mongoose.Schema({
   reviews: [ReviewPlaceSchema],
   bookings: [BookingSchema],
   isFavorite: Boolean,
+  availabilities: [AvailabilitySchema],
   created_at: { type: Date, default: Date.now },
 });

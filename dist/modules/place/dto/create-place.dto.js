@@ -22,6 +22,7 @@ class CreatePlaceDTO {
         this.images = [];
         this.reviews = [];
         this.bookings = [];
+        this.availabilities = [];
     }
 }
 __decorate([

@@ -1,6 +1,7 @@
 import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 
 export class BookingDTO {
+  readonly paymentId: string;
   readonly ownerId: string;
   readonly placeId: string;
   readonly feature: Feature;

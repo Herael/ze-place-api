@@ -10,7 +10,7 @@ import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 
 import { PlaceType } from 'src/modules/place-type/interfaces/place-type.interface';
 import { ReviewPlace } from 'src/modules/review-place/interfaces/review-place.interface';
-import { Image, Location } from 'src/modules/types';
+import { Image, Location, Availability } from 'src/modules/types';
 
 export class CreatePlaceDTO {
   @IsString()
@@ -64,4 +64,6 @@ export class CreatePlaceDTO {
   readonly isFavorite: boolean;
 
   readonly created_at: Date;
+
+  availabilities: Array<Availability> = [];
 }
