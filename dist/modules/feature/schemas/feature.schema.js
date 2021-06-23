@@ -4,6 +4,7 @@ exports.FeatureSchema = void 0;
 const mongoose = require("mongoose");
 exports.FeatureSchema = new mongoose.Schema({
     name: String,
+    imgage: String,
     created_at: { type: Date, default: Date.now },
 });
 //# sourceMappingURL=feature.schema.js.map
