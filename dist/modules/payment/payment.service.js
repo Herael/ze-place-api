@@ -18,7 +18,7 @@ let PaymentService = class PaymentService {
         this.customerService = customerService;
     }
     async createPaymentIntent(token, bookingPrice) {
-        const user = await this.customerService.findByEmail(token.email);
+        const user = await this.customerService.findById(token.id);
         const ephemeralKey = await stripe.ephemeralKeys.create({ customer: user.customerId }, { apiVersion: '2020-08-27' });
         const paymentIntent = await stripe.paymentIntents.create({
             amount: bookingPrice,

@@ -12,7 +12,7 @@ export class PaymentService {
   constructor(private customerService: CustomerService) {}
 
   async createPaymentIntent(token, bookingPrice: number) {
-    const user: Customer = await this.customerService.findByEmail(token.email);
+    const user: Customer = await this.customerService.findById(token.id);
     const ephemeralKey = await stripe.ephemeralKeys.create(
       { customer: user.customerId },
       { apiVersion: '2020-08-27' },

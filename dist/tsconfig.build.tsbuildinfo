@@ -2241,14 +2241,9 @@
         "signature": "16efd756ffc87d71c3c0209a9769f60535c1e65cf25e843491c08355096d4805",
         "affectsGlobalScope": false
       },
-      "../node_modules/python-shell/index.d.ts": {
-        "version": "eb7b29168183fb25cc8e352c882a51bcffd4a7cfc2c76fc7d38d2215af98ba20",
-        "signature": "eb7b29168183fb25cc8e352c882a51bcffd4a7cfc2c76fc7d38d2215af98ba20",
-        "affectsGlobalScope": false
-      },
       "../src/modules/auth/auth.service.ts": {
-        "version": "00eb15981eb89e6ce5f0d2f9a360cb879e22556a380ebdd4331c24d4c75fe4fc",
-        "signature": "9c914618be68f2afd6e4a0a5c2f9fad8826f153822809167e3b47ceaf23bfd06",
+        "version": "ae40ff6d3625c3e8b7a6807a205b6d67a09909279eafd11aa23b7e10b661a1ff",
+        "signature": "12b8ca28b552576d95a6c0fc0263c4fc05e40bebff313ea27381bd138f473515",
         "affectsGlobalScope": false
       },
       "../src/app.controller.ts": {
@@ -2992,7 +2987,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/payment/payment.service.ts": {
-        "version": "79914ef9e49ca6698acfc047c6da693b7f5aabc465fb08edc2a41ed466a3a58f",
+        "version": "7c72501662e616d499253b3e46e08900e043970b8d612d3e7da1302e57cbf7e3",
         "signature": "b60c098266aaa77dd5fefa064bb4f1f42be0b3dbd474c0b471ba97dfdc514eca",
         "affectsGlobalScope": false
       },
@@ -5484,12 +5479,6 @@
       "../node_modules/pretty-format/build/index.d.ts": [
         "../node_modules/pretty-format/build/types.d.ts"
       ],
-      "../node_modules/python-shell/index.d.ts": [
-        "../node_modules/@types/node/child_process.d.ts",
-        "../node_modules/@types/node/events.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/stream.d.ts"
-      ],
       "../node_modules/rxjs/index.d.ts": [
         "../node_modules/rxjs/internal/asyncsubject.d.ts",
         "../node_modules/rxjs/internal/behaviorsubject.d.ts",
@@ -5847,8 +5836,6 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/jwt/index.d.ts",
         "../node_modules/@types/bcrypt/index.d.ts",
-        "../node_modules/@types/node/vm.d.ts",
-        "../node_modules/python-shell/index.d.ts",
         "../src/modules/customer/customer.service.ts",
         "../src/modules/customer/interfaces/customer.interface.ts"
       ],
@@ -8125,12 +8112,6 @@
       "../node_modules/pretty-format/build/index.d.ts": [
         "../node_modules/pretty-format/build/types.d.ts"
       ],
-      "../node_modules/python-shell/index.d.ts": [
-        "../node_modules/@types/node/child_process.d.ts",
-        "../node_modules/@types/node/events.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/stream.d.ts"
-      ],
       "../node_modules/rxjs/index.d.ts": [
         "../node_modules/rxjs/internal/asyncsubject.d.ts",
         "../node_modules/rxjs/internal/behaviorsubject.d.ts",
@@ -9161,7 +9142,6 @@
       "../node_modules/mongoose/index.d.ts",
       "../node_modules/pretty-format/build/index.d.ts",
       "../node_modules/pretty-format/build/types.d.ts",
-      "../node_modules/python-shell/index.d.ts",
       "../node_modules/reflect-metadata/index.d.ts",
       "../node_modules/rxjs/index.d.ts",
       "../node_modules/rxjs/internal/asyncsubject.d.ts",
