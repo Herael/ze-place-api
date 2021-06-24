@@ -42,33 +42,35 @@ def resizer(pictureArray, pathFrom, pathDestination, desired):
 
 if __name__ == "__main__":
 
+    path = "./ml/"
     csvName = "shot"
-    initCsv(csvName)
+    initCsv(path+csvName)
     files = []
-    shot = os.listdir("_shot_id")
-
-    resizer(shot, "_shot_id/", "_resized_shot_id/", 999)
+    # print(os.getcwd())
+    shot = os.listdir(path+"_shot_id")
+    
+    resizer(shot, path+"_shot_id/", path+"_resized_shot_id/", 999)
 
     for file in files:
-        csvWriter(csvName, file[0], file[1])
+        csvWriter(path+csvName, file[0], file[1])
 
     # print(shot)
     print(f"__SHOT__")
-    f_shot = open("shot.csv")
+    f_shot = open(path+"shot.csv")
     data_shot = np.loadtxt(f_shot, delimiter=',')
     inputs_shot = data_shot[:, :-1]
     desired_shot = data_shot[:, -1]
     inputs_shot /= 255.0
 
-    file = open("id_card_model_94.mlp", 'rb')
+    file = open(path+"id_card_model_94.mlp", 'rb')
     model = pickle.load(file)
     file.close()
 
     test_shot = model.predict(inputs_shot)
-    print(test_shot)
+    print(test_shot[2:])
     for image in shot:
         if(image != "id.jpeg" and image != "no id.jpeg"):
-            os.remove("./_shot_id/"+image)
-            os.remove("./_resized_shot_id/"+image)
+            os.remove(path+"_shot_id/"+image)
+            os.remove(path+"_resized_shot_id/"+image)
 
     # print(shot)

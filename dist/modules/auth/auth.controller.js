@@ -34,6 +34,9 @@ let AuthController = class AuthController {
     async me(req) {
         return this.authService.getUser(req.user);
     }
+    async runPyhon() {
+        return this.authService.runPython();
+    }
 };
 __decorate([
     common_1.UseGuards(local_auth_guard_1.LocalAuthGuard),
@@ -66,6 +69,12 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "me", null);
+__decorate([
+    common_1.Get('/runPython'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], AuthController.prototype, "runPyhon", null);
 AuthController = __decorate([
     common_1.Controller('auth'),
     __metadata("design:paramtypes", [auth_service_1.AuthService])
