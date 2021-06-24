@@ -22,6 +22,11 @@ export class PlaceController {
     const places = await this.placeService.getAllPlaces(req.user.id);
     return res.status(HttpStatus.OK).json(places);
   }
+  @Get('/admin')
+  async getAllPlacesAdmin(@Request() req, @Res() res) {
+    const places = await this.placeService.getAllPlaces(req.user.id);
+    return res.status(HttpStatus.OK).json(places);
+  }
 
   @UseGuards(JwtAuthGuard)
   @Get('/:id')
