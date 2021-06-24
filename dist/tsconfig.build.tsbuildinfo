@@ -2777,8 +2777,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "c26ec09af453c7218760e80d1930c290006ff97884e9d561e55f4620dfeb40c7",
-        "signature": "db4e8f3d0e174f564b1078624198a9f8e5e7c2b57ddf411db7c6e4e1bcd23c8e",
+        "version": "a574635d77a8265660a9f2e4ea2441fff7812f83dc3de9905c4670cb6a2e0623",
+        "signature": "559c93c175cfe4fe3b0553bcbc55d5ba9129a4222039711f55bbf7c2f950b56d",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.module.ts": {
