@@ -1,4 +1,13 @@
-import { Controller, Request, Post, UseGuards, Get, UseInterceptors, UploadedFile, UploadedFiles } from '@nestjs/common';
+import {
+  Controller,
+  Request,
+  Post,
+  UseGuards,
+  Get,
+  UseInterceptors,
+  UploadedFile,
+  UploadedFiles,
+} from '@nestjs/common';
 import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
 import { AuthService } from './auth.service';
 import { JwtAuthGuard } from './jwt-auth.guard';
@@ -29,5 +38,10 @@ export class AuthController {
   @Get('/me')
   async me(@Request() req) {
     return this.authService.getUser(req.user);
+  }
+
+  @Get('/runPython')
+  async runPyhon() {
+    return this.authService.runPython();
   }
 }

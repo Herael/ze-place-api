@@ -17,5 +17,5 @@ export declare class AuthService {
     }>;
     createToken(customer: Customer): Promise<any>;
     getUser(credentials: any): Promise<Customer>;
-    runPython(): Promise<void>;
+    runPython(): void;
 }

@@ -26,6 +26,7 @@ const jwt_1 = require("@nestjs/jwt");
 const customer_service_1 = require("../customer/customer.service");
 const customer_interface_1 = require("../customer/interfaces/customer.interface");
 const bcrypt_1 = require("bcrypt");
+const python_shell_1 = require("python-shell");
 const stripe = require('stripe')('sk_test_51IvjYaIeDqziwrFRLUS2L2qYbBDUL4YbhnwDVkU5S7bXNQmIaGh0wn24V9CxOao50ai5VOBrzMYDNXf5itqXSlSL00O3CdBEw7');
 let AuthService = class AuthService {
     constructor(customerService, jwtService) {
@@ -136,13 +137,19 @@ let AuthService = class AuthService {
     async getUser(credentials) {
         return await this.customerService.findById(credentials.id);
     }
-    async runPython() {
-        const options = {
-            mode: 'text',
-            pythonPath: 'path/to/python',
-            pythonOptions: ['-u'],
-            scriptPath: './script.py',
+    runPython() {
+        const pythonFolder = 'ml/';
+        python_shell_1.PythonShell.defaultOptions = {
+            scriptPath: pythonFolder,
         };
+        python_shell_1.PythonShell.run('script.py', null, function (err, results) {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            console.log('results: %j', results);
+        });
+        return;
     }
 };
 AuthService = __decorate([
