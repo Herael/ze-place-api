@@ -12,4 +12,5 @@ export declare class AuthController {
     }>;
     uploadID(req: any, files: any): Promise<any[]>;
     me(req: any): Promise<import("../customer/interfaces/customer.interface").Customer>;
+    runPyhon(): Promise<void>;
 }

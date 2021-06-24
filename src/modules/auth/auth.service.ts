@@ -3,6 +3,8 @@ import { JwtService } from '@nestjs/jwt';
 import { CustomerService } from 'src/modules/customer/customer.service';
 import { Customer } from 'src/modules/customer/interfaces/customer.interface';
 import { compare } from 'bcrypt';
+import { Script } from 'node:vm';
+import { PythonShell } from 'python-shell';
 
 const stripe = require('stripe')(
   'sk_test_51IvjYaIeDqziwrFRLUS2L2qYbBDUL4YbhnwDVkU5S7bXNQmIaGh0wn24V9CxOao50ai5VOBrzMYDNXf5itqXSlSL00O3CdBEw7',
@@ -34,6 +36,7 @@ export class AuthService {
   }
 
   async uploadID(data) {
+    //request here
     const IDRecto = await stripe.files.create({
       purpose: 'identity_document',
       file: {
@@ -79,6 +82,7 @@ export class AuthService {
 
   async createToken(customer: Customer) {
     const birthdate = customer.birthdate.toString().split('-');
+
     try {
       const token = await stripe.tokens.create({
         account: {
@@ -108,7 +112,7 @@ export class AuthService {
               additional_document: {
                 back: customer.IDVerso,
                 front: customer.IDRecto,
-              }
+              },
             },
           },
           tos_shown_and_accepted: true,
@@ -122,5 +126,22 @@ export class AuthService {
 
   async getUser(credentials) {
     return await this.customerService.findById(credentials.id);
+  }
+
+  runPython() {
+    const pythonFolder = 'ml/';
+
+    PythonShell.defaultOptions = {
+      scriptPath: pythonFolder,
+    };
+
+    PythonShell.run('script.py', null, function (err, results) {
+      if (err) {
+        console.log(err);
+        return;
+      }
+      console.log('results: %j', results);
+    });
+    return;
   }
 }

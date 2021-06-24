@@ -2241,9 +2241,14 @@
         "signature": "16efd756ffc87d71c3c0209a9769f60535c1e65cf25e843491c08355096d4805",
         "affectsGlobalScope": false
       },
+      "../node_modules/python-shell/index.d.ts": {
+        "version": "eb7b29168183fb25cc8e352c882a51bcffd4a7cfc2c76fc7d38d2215af98ba20",
+        "signature": "eb7b29168183fb25cc8e352c882a51bcffd4a7cfc2c76fc7d38d2215af98ba20",
+        "affectsGlobalScope": false
+      },
       "../src/modules/auth/auth.service.ts": {
-        "version": "ae40ff6d3625c3e8b7a6807a205b6d67a09909279eafd11aa23b7e10b661a1ff",
-        "signature": "12b8ca28b552576d95a6c0fc0263c4fc05e40bebff313ea27381bd138f473515",
+        "version": "efd6d2d357ae356d4654460b22b6f1a16b2a2e539c340818fb068514f202a033",
+        "signature": "79bde5941f99175104cfbe69c04f36a52e27504bdfd5ac92f2f68731ef7d523c",
         "affectsGlobalScope": false
       },
       "../src/app.controller.ts": {
@@ -2927,8 +2932,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.controller.ts": {
-        "version": "fc4a950bcb832cb7d7c967d8d995a7a50f86761376ed77650bfe6f5b04a718b2",
-        "signature": "fe406481291c5f050b4584de1fbd58a92ac10f0d0d125b25d65d6dbbc22df5e2",
+        "version": "c345d2c6af8addbd8d375c557171b8647e229dbb0c50a5317b0b99bc2fc79039",
+        "signature": "b8edbd44d8c3a9bd737bd2f35be8eff67978d3d2c097144c9754c2040bfe38fc",
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.module.ts": {
@@ -5479,6 +5484,12 @@
       "../node_modules/pretty-format/build/index.d.ts": [
         "../node_modules/pretty-format/build/types.d.ts"
       ],
+      "../node_modules/python-shell/index.d.ts": [
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
+      ],
       "../node_modules/rxjs/index.d.ts": [
         "../node_modules/rxjs/internal/asyncsubject.d.ts",
         "../node_modules/rxjs/internal/behaviorsubject.d.ts",
@@ -5836,6 +5847,8 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/jwt/index.d.ts",
         "../node_modules/@types/bcrypt/index.d.ts",
+        "../node_modules/@types/node/vm.d.ts",
+        "../node_modules/python-shell/index.d.ts",
         "../src/modules/customer/customer.service.ts",
         "../src/modules/customer/interfaces/customer.interface.ts"
       ],
@@ -8111,6 +8124,12 @@
       ],
       "../node_modules/pretty-format/build/index.d.ts": [
         "../node_modules/pretty-format/build/types.d.ts"
+      ],
+      "../node_modules/python-shell/index.d.ts": [
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
       ],
       "../node_modules/rxjs/index.d.ts": [
         "../node_modules/rxjs/internal/asyncsubject.d.ts",
