@@ -31,6 +31,10 @@ let PlaceService = class PlaceService {
         });
         return formattedPlaces;
     }
+    async getAllPlacesAdmin() {
+        const places = await this.placeModel.find().exec();
+        return places;
+    }
     async findById(placeId) {
         const place = await this.placeModel.findById(placeId).exec();
         return place;

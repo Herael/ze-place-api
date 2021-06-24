@@ -26,7 +26,7 @@ let PlaceController = class PlaceController {
         return res.status(common_1.HttpStatus.OK).json(places);
     }
     async getAllPlacesAdmin(req, res) {
-        const places = await this.placeService.getAllPlaces(req.user.id);
+        const places = await this.placeService.getAllPlacesAdmin();
         return res.status(common_1.HttpStatus.OK).json(places);
     }
     async getPlaceById(req, res) {
