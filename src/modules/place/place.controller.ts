@@ -22,9 +22,11 @@ export class PlaceController {
     const places = await this.placeService.getAllPlaces(req.user.id);
     return res.status(HttpStatus.OK).json(places);
   }
+
+
   @Get('/admin')
   async getAllPlacesAdmin(@Request() req, @Res() res) {
-    const places = await this.placeService.getAllPlaces(req.user.id);
+    const places = await this.placeService.getAllPlacesAdmin();
     return res.status(HttpStatus.OK).json(places);
   }
 
