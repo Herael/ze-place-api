@@ -20,14 +20,20 @@ let PlaceTypeController = class PlaceTypeController {
         this.typeService = typeService;
     }
     async createType(res, data) {
-        console.log(data);
         const places = await this.typeService.createType(data);
         return res.status(common_1.HttpStatus.OK).json(places);
     }
     async createFeatures(res, data) {
-        console.log(data);
         const places = await this.typeService.createFeatures(data);
         return res.status(common_1.HttpStatus.OK).json(places);
+    }
+    async getType(res) {
+        const type = await this.typeService.getType();
+        return res.status(common_1.HttpStatus.OK).json(type);
+    }
+    async getFeatures(res) {
+        const type = await this.typeService.getFeatures();
+        return res.status(common_1.HttpStatus.OK).json(type);
     }
 };
 __decorate([
@@ -44,6 +50,20 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PlaceTypeController.prototype, "createFeatures", null);
+__decorate([
+    common_1.Get(),
+    __param(0, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], PlaceTypeController.prototype, "getType", null);
+__decorate([
+    common_1.Get('/features'),
+    __param(0, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], PlaceTypeController.prototype, "getFeatures", null);
 PlaceTypeController = __decorate([
     common_1.Controller('place-type'),
     __metadata("design:paramtypes", [place_type_service_1.PlaceTypeService])

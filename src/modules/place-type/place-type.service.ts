@@ -22,5 +22,18 @@ export class PlaceTypeService {
     
         return newPlace;
       }
+
+      async getType(){
+        console.log('log');
+        
+        const newType = await this.typeModel.find()
+        return newType
+      }
+      async getFeatures(){
+        console.log('log');
+        
+        const newType = await this.featuresModel.find()
+        return newType
+      }
       
 }
