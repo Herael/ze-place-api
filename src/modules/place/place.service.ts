@@ -37,7 +37,7 @@ export class PlaceService {
 
   async getAllPlacesAdmin() {
     const places = await this.placeModel.find().exec();
-    
+
     return places;
   }
 
@@ -143,7 +143,7 @@ export class PlaceService {
         })
         .exec();
     } else {
-      return [];
+      places = await this.placeModel.find();
     }
 
     if (location) {

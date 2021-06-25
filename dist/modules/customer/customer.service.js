@@ -36,6 +36,14 @@ let CustomerService = class CustomerService {
         return customer;
     }
     async addCustomer(customer) {
+        const userExist = await this.customerModel
+            .findOne({
+            email: customer.email,
+        })
+            .exec();
+        if (userExist == null) {
+            return null;
+        }
         const stripeClient = await stripe.customers.create({
             email: customer.email,
             name: `${customer.first_name} ${customer.last_name}`,

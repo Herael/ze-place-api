@@ -2512,7 +2512,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/dto/create-customer.dto.ts": {
-        "version": "f7c2a1e1f7a42d14cba7310d51f4f90ec83de2db7c8c8195192734295a8a3936",
+        "version": "f4376618ad3483e010465c4d899ae7ad6361e1ff96524652acff9f24521b7b5a",
         "signature": "bf773823a315b8117c279f7c4573b7d7dd191e2f8f7a2710a48082992eb7630f",
         "affectsGlobalScope": false
       },
@@ -2527,8 +2527,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/customer.service.ts": {
-        "version": "a6b1ca6a1a49e758dbcdf2fd402027d11eb872c2309c457d9a1ab4b36fa51815",
-        "signature": "16efd756ffc87d71c3c0209a9769f60535c1e65cf25e843491c08355096d4805",
+        "version": "0ccbf8649a08b5f9fca5a832eb6a7d438759bc490830f637d0c628fdfc71ecaa",
+        "signature": "7d429dd445debe512cd83823ee3d3aa8d7d981722664abb63f01c42ac0939293",
         "affectsGlobalScope": false
       },
       "../node_modules/python-shell/index.d.ts": {
@@ -2537,7 +2537,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.service.ts": {
-        "version": "efd6d2d357ae356d4654460b22b6f1a16b2a2e539c340818fb068514f202a033",
+        "version": "356780908e33cca9ec98a92cbede2690eb613507e5eded9fc4e366455b3c2733",
         "signature": "79bde5941f99175104cfbe69c04f36a52e27504bdfd5ac92f2f68731ef7d523c",
         "affectsGlobalScope": false
       },
@@ -2832,7 +2832,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "98c500b66ca2458bf9835ceb3f7eb56f7ce0a34b94a247e9583fe144edd4ef5b",
+        "version": "e4b69dfe3c07b67231199ba94f5614f384b683734408ab9abd07929478b6786e",
         "signature": "db66928dc4b2be7e680e3dbea7de313c0317d1e7644237b5efb36388045cb1cd",
         "affectsGlobalScope": false
       },
@@ -3101,23 +3101,28 @@
         "signature": "56cb6003bd503af8146e755e727cc482ea327f09a868694a324d832c4636a190",
         "affectsGlobalScope": false
       },
+      "../src/modules/conversation/dto/conversation.dto.ts": {
+        "version": "b8fd1b688bf8de65f269347f57332e080352a7e649e270e4a04234fdffd025bf",
+        "signature": "386a8a957ef498a3bf9ef706a0a332fd97ddbf906a2aafb03d765ac58c8e5897",
+        "affectsGlobalScope": false
+      },
       "../src/modules/conversation/interfaces/conversation.interface.ts": {
-        "version": "51879ec87d988b42f5a42ad84948e703d2c36ff5e28d6521fec9cd9022ff9c64",
-        "signature": "0393d29f6be8f06a86ec69f10412eafd0735b8cffc2f3e08d64d72d0053a1dd2",
+        "version": "2ce6805d9033c14486d61149680d8f19213d77b047b07d6a780a441f10f02df0",
+        "signature": "8211cf8b9fd32dfe3ca803f167737657a463928c26565be5cf5f7eee9af5fb85",
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/conversation.service.ts": {
-        "version": "28b814062bc8ed32abbaa5e5d03215497712cc3ddf67afac1478be9db3778432",
-        "signature": "2330f31dd625b4399b1946ffc20861647178daed5e370c18a93987d1bf13018e",
+        "version": "663629641ac10d269bfa655fbcc770403b5c0ba5cf83b7c8ec50c3962ec51bcf",
+        "signature": "2f75deb1e03f2fba91ff14aa5ea8b11a027d5cc7b6c46408536110632ef5afd5",
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/conversation.controller.ts": {
-        "version": "78736aab55515eb7c1365974146f918325607b253a46ea06c5f64cf07b79b8fe",
-        "signature": "9bc9c48efd156c961b03b9aca3362677a4635d1655628b767fecb8cd0a42b14a",
+        "version": "84015bc5ec3cd53fe9916c07d59f25ecfe5498335b3a54f2c792ddd9f09eda04",
+        "signature": "92697c802d3625532f85d1889d0dc0e7b5c5239440c52c7e376538221493df34",
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/schemas/conversation.schema.ts": {
-        "version": "e52bbf2f3773b231b26c73fa220ad8cc1a8bd2da2a5dfae7cd86569c15ed5268",
+        "version": "2412ba3359d167077cf63f9a4ab58a27b9ac39e3f38e1851e5ce748fdd08c03d",
         "signature": "c577dc56e0dc6b51c8c0a7943d3dd5704900bb1fcae1aabd0e81588b73f00dca",
         "affectsGlobalScope": false
       },
@@ -3126,8 +3131,38 @@
         "signature": "c4f4aee78d0940ee7bcd743e2f5c3f913d34bbb98e8e83a8ffdd69fe0fd40fb3",
         "affectsGlobalScope": false
       },
+      "../src/modules/message/dto/message.dto.ts": {
+        "version": "0b53616bb77c68c2a0f6a751cd8c2f75855ea24b4e92e8480b6502f1a453c9d1",
+        "signature": "7ce32e7f53c5a8121348fc7adbbf50478831e7baa7579de43fe23db7b8de170c",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/message/interfaces/message.interface.ts": {
+        "version": "3a58eec0dd5203c998fb3127195be70c698baf4b8ad8e61551f052f2ac655e7e",
+        "signature": "aea4afda420780696851a073d6686c70f6ad34794e8b2877efb7b4683939ac9f",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/message/message.service.ts": {
+        "version": "9f8ba28c8c99109be82b0b6de74d2c13bda46512ae040602d2f32a62ad349656",
+        "signature": "a6ed87f257f9e44ba5fc544a1f42a9eb3f964765ed4a1f3938767bbc0e15b650",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/message/message.controller.ts": {
+        "version": "64d8fefbd47c5421eb9732a6b1fe11c7c5e397905f1d4b296543a553978658f0",
+        "signature": "2514dfae8122fe3b8fde09d491def658aaf2acf56884601424b90df450ecfaa9",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/message/schemas/message.schema.ts": {
+        "version": "93c1a5983baef9e9a3dc810433b6db703d01f501a6803bd614c23b079f45f950",
+        "signature": "64c02f2435d196a30bfa448ed34cb13ad9d0c3178a82a234a6bd4fc4311a34ff",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/message/message.module.ts": {
+        "version": "99b32e15a8d132d75de97beba3e3c4ccb0d1afce0d17b9aa3b02f1559273f366",
+        "signature": "6f3ad4d6feae0a27bd7a0529297a3ebcefcfde9fd8db76261760888377768037",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "aab18ff278a25b22be9442dcbdab4ba99fe0dc5cc94a6bdf2137c31c51f4d66d",
+        "version": "407522b3e8b7a87305f200a6d535e2de6791b15dd61ed4f9bdf0c2dd5a9d4eb3",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -5892,6 +5927,7 @@
         "../src/modules/conversation/conversation.module.ts",
         "../src/modules/customer/customer.module.ts",
         "../src/modules/feature/feature.module.ts",
+        "../src/modules/message/message.module.ts",
         "../src/modules/payment/payment.module.ts",
         "../src/modules/place-type/place-type.module.ts",
         "../src/modules/place/place.module.ts",
@@ -6026,7 +6062,8 @@
       "../src/modules/conversation/conversation.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/modules/auth/jwt-auth.guard.ts",
-        "../src/modules/conversation/conversation.service.ts"
+        "../src/modules/conversation/conversation.service.ts",
+        "../src/modules/conversation/dto/conversation.dto.ts"
       ],
       "../src/modules/conversation/conversation.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -6040,8 +6077,11 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../node_modules/mongoose/index.d.ts",
-        "../src/modules/conversation/interfaces/conversation.interface.ts",
-        "../src/modules/place/interfaces/place.interface.ts"
+        "../src/modules/conversation/dto/conversation.dto.ts",
+        "../src/modules/conversation/interfaces/conversation.interface.ts"
+      ],
+      "../src/modules/conversation/dto/conversation.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts"
       ],
       "../src/modules/conversation/interfaces/conversation.interface.ts": [
         "../node_modules/mongoose/index.d.ts"
@@ -6108,6 +6148,42 @@
       ],
       "../src/modules/feature/schemas/feature.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/message/dto/message.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts",
+        "../src/modules/conversation/interfaces/conversation.interface.ts",
+        "../src/modules/customer/interfaces/customer.interface.ts"
+      ],
+      "../src/modules/message/interfaces/message.interface.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/conversation/interfaces/conversation.interface.ts",
+        "../src/modules/customer/interfaces/customer.interface.ts"
+      ],
+      "../src/modules/message/message.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/message/dto/message.dto.ts",
+        "../src/modules/message/message.service.ts"
+      ],
+      "../src/modules/message/message.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/modules/conversation/schemas/conversation.schema.ts",
+        "../src/modules/customer/schemas/customer.schema.ts",
+        "../src/modules/message/message.controller.ts",
+        "../src/modules/message/message.service.ts",
+        "../src/modules/message/schemas/message.schema.ts"
+      ],
+      "../src/modules/message/message.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/message/dto/message.dto.ts",
+        "../src/modules/message/interfaces/message.interface.ts"
+      ],
+      "../src/modules/message/schemas/message.schema.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/conversation/schemas/conversation.schema.ts",
+        "../src/modules/customer/schemas/customer.schema.ts"
       ],
       "../src/modules/payment/payment.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -8606,12 +8682,13 @@
         "../node_modules/mongoose/index.d.ts"
       ],
       "../src/modules/conversation/conversation.controller.ts": [
-        "../src/modules/conversation/conversation.service.ts"
+        "../src/modules/conversation/conversation.service.ts",
+        "../src/modules/conversation/dto/conversation.dto.ts"
       ],
       "../src/modules/conversation/conversation.service.ts": [
         "../node_modules/mongoose/index.d.ts",
-        "../src/modules/conversation/interfaces/conversation.interface.ts",
-        "../src/modules/place/interfaces/place.interface.ts"
+        "../src/modules/conversation/dto/conversation.dto.ts",
+        "../src/modules/conversation/interfaces/conversation.interface.ts"
       ],
       "../src/modules/conversation/interfaces/conversation.interface.ts": [
         "../node_modules/mongoose/index.d.ts"
@@ -8647,6 +8724,27 @@
         "../node_modules/mongoose/index.d.ts"
       ],
       "../src/modules/feature/schemas/feature.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/message/dto/message.dto.ts": [
+        "../src/modules/conversation/interfaces/conversation.interface.ts",
+        "../src/modules/customer/interfaces/customer.interface.ts"
+      ],
+      "../src/modules/message/interfaces/message.interface.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/conversation/interfaces/conversation.interface.ts",
+        "../src/modules/customer/interfaces/customer.interface.ts"
+      ],
+      "../src/modules/message/message.controller.ts": [
+        "../src/modules/message/dto/message.dto.ts",
+        "../src/modules/message/message.service.ts"
+      ],
+      "../src/modules/message/message.service.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/message/dto/message.dto.ts",
+        "../src/modules/message/interfaces/message.interface.ts"
+      ],
+      "../src/modules/message/schemas/message.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
       "../src/modules/payment/payment.controller.ts": [
@@ -9414,6 +9512,7 @@
       "../src/modules/conversation/conversation.controller.ts",
       "../src/modules/conversation/conversation.module.ts",
       "../src/modules/conversation/conversation.service.ts",
+      "../src/modules/conversation/dto/conversation.dto.ts",
       "../src/modules/conversation/interfaces/conversation.interface.ts",
       "../src/modules/conversation/schemas/conversation.schema.ts",
       "../src/modules/customer/customer.controller.ts",
@@ -9428,6 +9527,12 @@
       "../src/modules/feature/feature.service.ts",
       "../src/modules/feature/interfaces/feature.interface.ts",
       "../src/modules/feature/schemas/feature.schema.ts",
+      "../src/modules/message/dto/message.dto.ts",
+      "../src/modules/message/interfaces/message.interface.ts",
+      "../src/modules/message/message.controller.ts",
+      "../src/modules/message/message.module.ts",
+      "../src/modules/message/message.service.ts",
+      "../src/modules/message/schemas/message.schema.ts",
       "../src/modules/payment/payment.controller.ts",
       "../src/modules/payment/payment.module.ts",
       "../src/modules/payment/payment.service.ts",

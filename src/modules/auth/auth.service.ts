@@ -36,7 +36,7 @@ export class AuthService {
   }
 
   async uploadID(data) {
-    //request here
+    //request here for python
     const IDRecto = await stripe.files.create({
       purpose: 'identity_document',
       file: {
@@ -73,6 +73,9 @@ export class AuthService {
     });
     customer.stripeAccount = account.id;
     const user = await this.customerService.addCustomer(customer);
+    if (user == null) {
+      return null;
+    }
     const payload = { email: user.email, id: user._id };
     return {
       access_token: this.jwtService.sign(payload),
