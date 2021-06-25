@@ -25,6 +25,7 @@ export declare type BookingClient = {
     description: string;
 };
 export declare type Availability = {
+    userId: string;
     date: string;
     disabled: boolean;
 };

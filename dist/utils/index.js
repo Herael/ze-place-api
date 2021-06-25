@@ -67,7 +67,7 @@ const getDates = (startDate, endDate) => {
     return dates;
 };
 exports.getDates = getDates;
-const dateToAvailabilities = (startDate, endDate) => {
+const dateToAvailabilities = (userId, startDate, endDate) => {
     const dates = [];
     let currentDate = startDate, addDays = function (days) {
         const date = new Date(this.valueOf());
@@ -79,6 +79,7 @@ const dateToAvailabilities = (startDate, endDate) => {
         const day = `${currentDate.getDate() < 10 ? '0' : ''}${currentDate.getDate()}`;
         const formatDate = `${currentDate.getFullYear()}-${month}-${day}`;
         dates.push({
+            userId,
             date: formatDate,
             disabled: true,
         });

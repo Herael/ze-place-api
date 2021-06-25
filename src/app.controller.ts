@@ -8,9 +8,4 @@ export class AppController {
     private readonly appService: AppService,
     private authService: AuthService,
   ) {}
-
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
-  }
 }

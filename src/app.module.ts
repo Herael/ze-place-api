@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
+import { ScheduleModule } from '@nestjs/schedule';
 
 import { CustomerModule } from './modules/customer/customer.module';
 import { PlaceModule } from './modules/place/place.module';
@@ -14,7 +15,6 @@ import { PaymentModule } from './modules/payment/payment.module';
 import { BookingModule } from './modules/booking/booking.module';
 import { AppGateway } from './app.gateway';
 import { BugTicketModule } from './modules/bug-ticket/bug-ticket.module';
-import { BugTicketService } from './modules/bug-ticket/bug-ticket.service';
 import { ConversationModule } from './modules/conversation/conversation.module';
 
 @Module({
@@ -24,7 +24,6 @@ import { ConversationModule } from './modules/conversation/conversation.module';
       process.env.MONGODB_URI || 'mongodb://localhost/ze-place-api',
       { useNewUrlParser: true, useFindAndModify: false },
     ),
-    BookingModule,
     CustomerModule,
     PlaceModule,
     ReviewPLaceModule,
@@ -35,6 +34,8 @@ import { ConversationModule } from './modules/conversation/conversation.module';
     PaymentModule,
     BugTicketModule,
     ConversationModule,
+    ScheduleModule.forRoot(),
+    BookingModule,
   ],
   controllers: [AppController],
   providers: [AppService, AppGateway],

@@ -7,6 +7,7 @@ exports.ImageSchema = new mongoose.Schema({
     url: String,
 });
 exports.AvailabilitySchema = new mongoose.Schema({
+    userId: String,
     date: String,
     disabled: Boolean,
 });

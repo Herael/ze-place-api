@@ -22,6 +22,7 @@ exports.BookingSchema = new mongoose.Schema({
     isAccepted: { type: Boolean, default: false },
     isDenied: { type: Boolean, default: false },
     isPast: { type: Boolean, default: false },
+    isPaid: { type: Boolean, default: false },
     created_at: { type: Date, default: Date.now },
 });
 //# sourceMappingURL=booking.schema.js.map

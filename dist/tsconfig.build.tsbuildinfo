@@ -1176,9 +1176,39 @@
         "signature": "95b5a3078fdc51508d5d9cde59a1dd9525b53fd42dc12265a55261fd415d3274",
         "affectsGlobalScope": false
       },
-      "../src/app.service.ts": {
-        "version": "eaf8514ce110fa428a93a27408df4d06d133dbd9ed0a775c315ddfdd507853a9",
-        "signature": "653711fba8904aa27fd8911b63cf526e7b334e13a292da4cefdbbe179ac3f3f2",
+      "../node_modules/@nestjs/schedule/dist/enums/cron-expression.enum.d.ts": {
+        "version": "64421c66dcd1ec7b5f7a79f9869a6c4e2090d031105fa70324b74db914423f97",
+        "signature": "64421c66dcd1ec7b5f7a79f9869a6c4e2090d031105fa70324b74db914423f97",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/schedule/dist/enums/index.d.ts": {
+        "version": "68065ce3af3ef8599af8338068cf336be35249eff281ee393186a0ef40db3abf",
+        "signature": "68065ce3af3ef8599af8338068cf336be35249eff281ee393186a0ef40db3abf",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/schedule/dist/decorators/cron.decorator.d.ts": {
+        "version": "f5e11b3470c7c3c44c05ef445eb509e1d339df13cee0e882edbcc5c389294f6a",
+        "signature": "f5e11b3470c7c3c44c05ef445eb509e1d339df13cee0e882edbcc5c389294f6a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/schedule/dist/decorators/interval.decorator.d.ts": {
+        "version": "d1fd6ff6e0d1cee69f853c805f3842924425f68edc108283a0bb1628c78d1a51",
+        "signature": "d1fd6ff6e0d1cee69f853c805f3842924425f68edc108283a0bb1628c78d1a51",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/schedule/dist/decorators/timeout.decorator.d.ts": {
+        "version": "6d3eb6a1c83878770cc946e7b8d59c51e1649aee979f4a11356a74613c52c649",
+        "signature": "6d3eb6a1c83878770cc946e7b8d59c51e1649aee979f4a11356a74613c52c649",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/schedule/dist/decorators/index.d.ts": {
+        "version": "4e5f1234308de112f09920e0a0b99f35a9780b3abbc13a84445f32a490d0bb87",
+        "signature": "4e5f1234308de112f09920e0a0b99f35a9780b3abbc13a84445f32a490d0bb87",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/schedule/dist/schedule.module.d.ts": {
+        "version": "a8a3b336f10078fb021c597d024a5526f2e72d81a349667db1a5cb5e9db8832c",
+        "signature": "a8a3b336f10078fb021c597d024a5526f2e72d81a349667db1a5cb5e9db8832c",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -1411,54 +1441,29 @@
         "signature": "9c4c395e927045b324877acdc4bfb95f128f36bc9f073266a2f0342495075a4f",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/jwt/node_modules/@types/jsonwebtoken/index.d.ts": {
-        "version": "f67c920eba6ab8e4558cb9ab661d900188f101c5657e19b1e15829a1d491d46e",
-        "signature": "f67c920eba6ab8e4558cb9ab661d900188f101c5657e19b1e15829a1d491d46e",
+      "../node_modules/moment/ts3.1-typings/moment.d.ts": {
+        "version": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
+        "signature": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts": {
-        "version": "fc0140cf41d169b3b77e09831c9d2eed1cdb131aa34f4fa27e4c01896ec97ad6",
-        "signature": "fc0140cf41d169b3b77e09831c9d2eed1cdb131aa34f4fa27e4c01896ec97ad6",
+      "../node_modules/@types/cron/index.d.ts": {
+        "version": "a88aa41ef28a1c632437f648c7f432da9e075567f4cbe35dbf6611bc76b86093",
+        "signature": "a88aa41ef28a1c632437f648c7f432da9e075567f4cbe35dbf6611bc76b86093",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/jwt/dist/interfaces/index.d.ts": {
-        "version": "7c14e702387296711c1a829bc95052ff02f533d4aa27d53cc0186c795094a3a9",
-        "signature": "7c14e702387296711c1a829bc95052ff02f533d4aa27d53cc0186c795094a3a9",
+      "../node_modules/@nestjs/schedule/dist/scheduler.registry.d.ts": {
+        "version": "ed69e37e2a05603674c6305dc7f56445f4ee822f84dcba5f35e6badb37d323b0",
+        "signature": "ed69e37e2a05603674c6305dc7f56445f4ee822f84dcba5f35e6badb37d323b0",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/jwt/dist/jwt.module.d.ts": {
-        "version": "579f8828da42ae02db6915a0223d23b0da07157ff484fecdbf8a96fffa0fa4df",
-        "signature": "579f8828da42ae02db6915a0223d23b0da07157ff484fecdbf8a96fffa0fa4df",
+      "../node_modules/@nestjs/schedule/dist/index.d.ts": {
+        "version": "0e00d55a00ecd78664a623d02a3cc73cd5cd5074fd0195be57ef1a1f5a9c9305",
+        "signature": "0e00d55a00ecd78664a623d02a3cc73cd5cd5074fd0195be57ef1a1f5a9c9305",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/jwt/dist/jwt.service.d.ts": {
-        "version": "d1e16a1778a336ae49607ca0becd8688e74a020bea949047dcfcbb1bd2dc0f5a",
-        "signature": "d1e16a1778a336ae49607ca0becd8688e74a020bea949047dcfcbb1bd2dc0f5a",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/jwt/dist/index.d.ts": {
-        "version": "a13aac535101a942283e3d00bce50f483bfa9bed6e1f8dfda33a3bb072498776",
-        "signature": "a13aac535101a942283e3d00bce50f483bfa9bed6e1f8dfda33a3bb072498776",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/jwt/index.d.ts": {
+      "../node_modules/@nestjs/schedule/index.d.ts": {
         "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@types/bson/index.d.ts": {
-        "version": "2d23edce1d4a3b33280970484e17ca87b03e2829d8677ae1501de18269f0498f",
-        "signature": "2d23edce1d4a3b33280970484e17ca87b03e2829d8677ae1501de18269f0498f",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@types/mongodb/index.d.ts": {
-        "version": "6ff75ec3cfe71ea4f33c75508e5620eb166fa94571100ee1c35344c18993c216",
-        "signature": "6ff75ec3cfe71ea4f33c75508e5620eb166fa94571100ee1c35344c18993c216",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/mongoose/index.d.ts": {
-        "version": "d77b64bbe4d289554ebd25de59ff2726df07d43dd560972c26bc4d551948166e",
-        "signature": "d77b64bbe4d289554ebd25de59ff2726df07d43dd560972c26bc4d551948166e",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts": {
@@ -1474,6 +1479,21 @@
       "../node_modules/@nestjs/mongoose/dist/common/index.d.ts": {
         "version": "23dbd21c1fe8ee7c2e1b260de8610d1ce67a785cd40d349520306c8d876385c4",
         "signature": "23dbd21c1fe8ee7c2e1b260de8610d1ce67a785cd40d349520306c8d876385c4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/bson/index.d.ts": {
+        "version": "2d23edce1d4a3b33280970484e17ca87b03e2829d8677ae1501de18269f0498f",
+        "signature": "2d23edce1d4a3b33280970484e17ca87b03e2829d8677ae1501de18269f0498f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/mongodb/index.d.ts": {
+        "version": "6ff75ec3cfe71ea4f33c75508e5620eb166fa94571100ee1c35344c18993c216",
+        "signature": "6ff75ec3cfe71ea4f33c75508e5620eb166fa94571100ee1c35344c18993c216",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/mongoose/index.d.ts": {
+        "version": "d77b64bbe4d289554ebd25de59ff2726df07d43dd560972c26bc4d551948166e",
+        "signature": "d77b64bbe4d289554ebd25de59ff2726df07d43dd560972c26bc4d551948166e",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/mongoose/dist/decorators/prop.decorator.d.ts": {
@@ -1561,14 +1581,224 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
+      "../node_modules/geolib/es/types.d.ts": {
+        "version": "98bbf533543802cb2767155b7733c257d6a72f79c1ec8bc98ab0528a9c96eddf",
+        "signature": "98bbf533543802cb2767155b7733c257d6a72f79c1ec8bc98ab0528a9c96eddf",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/computedestinationpoint.d.ts": {
+        "version": "a1a456327161c9d125f1382a77255699a929ac0afcad1f9327f8ca3b48cef58a",
+        "signature": "a1a456327161c9d125f1382a77255699a929ac0afcad1f9327f8ca3b48cef58a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/convertarea.d.ts": {
+        "version": "9671c1c0e31e7ac3dcdd0e3abafbb5139ca8ca0374828968f04c960aee62d90d",
+        "signature": "9671c1c0e31e7ac3dcdd0e3abafbb5139ca8ca0374828968f04c960aee62d90d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/convertdistance.d.ts": {
+        "version": "8bd3ab008329c459b6409dba003efcce89ad2714456c669ca55bad1cf65296c6",
+        "signature": "8bd3ab008329c459b6409dba003efcce89ad2714456c669ca55bad1cf65296c6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/convertspeed.d.ts": {
+        "version": "ec283dd4c08931b8447b0a5cef09129fda5eb955f7fe0645e00b0a2e988057f8",
+        "signature": "ec283dd4c08931b8447b0a5cef09129fda5eb955f7fe0645e00b0a2e988057f8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/decimaltosexagesimal.d.ts": {
+        "version": "a080fd70a1925a1d85fca0dc23f678a902dfffaacf1215532752691a851ce25e",
+        "signature": "a080fd70a1925a1d85fca0dc23f678a902dfffaacf1215532752691a851ce25e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/findnearest.d.ts": {
+        "version": "f5a7b23697cfcbdbf81e2fb1d5e30dd677d70381d0e039ceaed7fb192858d4a3",
+        "signature": "f5a7b23697cfcbdbf81e2fb1d5e30dd677d70381d0e039ceaed7fb192858d4a3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getareaofpolygon.d.ts": {
+        "version": "fa795f995b9109d4a9d0b5896c432a190a4681b4e350ea9839d76b7eb18fcfc5",
+        "signature": "fa795f995b9109d4a9d0b5896c432a190a4681b4e350ea9839d76b7eb18fcfc5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getbounds.d.ts": {
+        "version": "5deadb02de94feeff149db1e03e5b8f8d9cfcedd8be3663c51a4524152acf822",
+        "signature": "5deadb02de94feeff149db1e03e5b8f8d9cfcedd8be3663c51a4524152acf822",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getboundsofdistance.d.ts": {
+        "version": "4af4a23586d62ba595a25df27c52fa24f17537356a9ed98bfe0c8578ab33c23e",
+        "signature": "4af4a23586d62ba595a25df27c52fa24f17537356a9ed98bfe0c8578ab33c23e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getcenter.d.ts": {
+        "version": "fadbf851b586ef59c76074ad10d07a3b4c0289dd9bd0843de07430b00e502449",
+        "signature": "fadbf851b586ef59c76074ad10d07a3b4c0289dd9bd0843de07430b00e502449",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getcenterofbounds.d.ts": {
+        "version": "5dc4bf6f0b20cb43ab0f1d362647827b96b903c4aa8315403de201fbec8d7606",
+        "signature": "5dc4bf6f0b20cb43ab0f1d362647827b96b903c4aa8315403de201fbec8d7606",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getcompassdirection.d.ts": {
+        "version": "860fef6437907e1d6d2e10b6e833f581269946aada6c46c182a72b9c5b2f9c20",
+        "signature": "860fef6437907e1d6d2e10b6e833f581269946aada6c46c182a72b9c5b2f9c20",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getcoordinatekey.d.ts": {
+        "version": "3afed5ac7f15a3255d024717d86da1f12dfbc23877f10ee4cb75ad95cc92fdf0",
+        "signature": "3afed5ac7f15a3255d024717d86da1f12dfbc23877f10ee4cb75ad95cc92fdf0",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getcoordinatekeys.d.ts": {
+        "version": "368c9dccee699a2e10d91f5b04c7dc359ae0e07cff73333a478a4bfe9496313e",
+        "signature": "368c9dccee699a2e10d91f5b04c7dc359ae0e07cff73333a478a4bfe9496313e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getdistance.d.ts": {
+        "version": "0c15c884a1a2c4dd1fa566e3983bd11552432cfc58a40127cb7ab44132bf9214",
+        "signature": "0c15c884a1a2c4dd1fa566e3983bd11552432cfc58a40127cb7ab44132bf9214",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getdistancefromline.d.ts": {
+        "version": "63cbabbe5bbc3482b7d76ff8ea7c0d11c19f90d00cf923943839ade6585c88ce",
+        "signature": "63cbabbe5bbc3482b7d76ff8ea7c0d11c19f90d00cf923943839ade6585c88ce",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getgreatcirclebearing.d.ts": {
+        "version": "b570b7326841fe39489ab4f67d2916c48ca3d27f3d3e55458f03a68b70430416",
+        "signature": "b570b7326841fe39489ab4f67d2916c48ca3d27f3d3e55458f03a68b70430416",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getlatitude.d.ts": {
+        "version": "9dfc0843a63f9e604d9224df3602fa42019d1a800da63adfaa31b1139f46a450",
+        "signature": "9dfc0843a63f9e604d9224df3602fa42019d1a800da63adfaa31b1139f46a450",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getlongitude.d.ts": {
+        "version": "125d099877efdbdd481fdc5586a1289c625c77f35b03d80264536323aa057e4d",
+        "signature": "125d099877efdbdd481fdc5586a1289c625c77f35b03d80264536323aa057e4d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getpathlength.d.ts": {
+        "version": "1ab33671f349b1c24439fde27ff2594c515fcd4110e863654673c63b548f67a8",
+        "signature": "1ab33671f349b1c24439fde27ff2594c515fcd4110e863654673c63b548f67a8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getprecisedistance.d.ts": {
+        "version": "1d40901e31908c6e80e1656ed37094f6925b1b369202f286c9fddaa926b9423d",
+        "signature": "1d40901e31908c6e80e1656ed37094f6925b1b369202f286c9fddaa926b9423d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getrhumblinebearing.d.ts": {
+        "version": "67808a8f20c0033de14affa973d61ea207e3cff7ec0364feb0823b9e28bda7ba",
+        "signature": "67808a8f20c0033de14affa973d61ea207e3cff7ec0364feb0823b9e28bda7ba",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getroughcompassdirection.d.ts": {
+        "version": "88a1722eab8263432e0884a4137b00d9f912f246d67206183e792eba9895c492",
+        "signature": "88a1722eab8263432e0884a4137b00d9f912f246d67206183e792eba9895c492",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/getspeed.d.ts": {
+        "version": "572392828dcf0ad1a40d7a22a7c3cf570874450ae078a46b459fe9a6f05142a7",
+        "signature": "572392828dcf0ad1a40d7a22a7c3cf570874450ae078a46b459fe9a6f05142a7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/isdecimal.d.ts": {
+        "version": "e9cf31c962755cf6a669b8b10bb55a98a85bab0c01092c6e3062dc60624eb4a9",
+        "signature": "e9cf31c962755cf6a669b8b10bb55a98a85bab0c01092c6e3062dc60624eb4a9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/ispointinline.d.ts": {
+        "version": "df4a34bed60c4f1a84539b92ffafd3a1ec2738592da5ac3e04cb1bd3776478ee",
+        "signature": "df4a34bed60c4f1a84539b92ffafd3a1ec2738592da5ac3e04cb1bd3776478ee",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/ispointinpolygon.d.ts": {
+        "version": "d290f7dbd4ea7a41aee4f92d769bc27a2cd8f6206302782276c61cfdcde40d08",
+        "signature": "d290f7dbd4ea7a41aee4f92d769bc27a2cd8f6206302782276c61cfdcde40d08",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/ispointnearline.d.ts": {
+        "version": "0a4d286e982286be3471dbd22310c9486deed176f31d6d86966f46da4b5c842b",
+        "signature": "0a4d286e982286be3471dbd22310c9486deed176f31d6d86966f46da4b5c842b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/ispointwithinradius.d.ts": {
+        "version": "3628225154d7d50fc0edcfb741e0668ff0b440f15ff82e6bc70b355c11b1d2dc",
+        "signature": "3628225154d7d50fc0edcfb741e0668ff0b440f15ff82e6bc70b355c11b1d2dc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/issexagesimal.d.ts": {
+        "version": "51fbe52534cd93041eab08015983350f445d5fe3c7faec3e7c5f5ee3cba652af",
+        "signature": "51fbe52534cd93041eab08015983350f445d5fe3c7faec3e7c5f5ee3cba652af",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/isvalidcoordinate.d.ts": {
+        "version": "42c813c80c8ab167191fb6985b2863a2552e7565fade837c0e5f7e316c8d7c23",
+        "signature": "42c813c80c8ab167191fb6985b2863a2552e7565fade837c0e5f7e316c8d7c23",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/isvalidlatitude.d.ts": {
+        "version": "66c5261c7309bba04b5f1c9dae4cdae8dd44e38998434bfaa4049b1cc2d9b4af",
+        "signature": "66c5261c7309bba04b5f1c9dae4cdae8dd44e38998434bfaa4049b1cc2d9b4af",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/isvalidlongitude.d.ts": {
+        "version": "55b2857afdfe25a82bf1412d1b3a5018357e52c4080f2da51fc9e6c294fa2269",
+        "signature": "55b2857afdfe25a82bf1412d1b3a5018357e52c4080f2da51fc9e6c294fa2269",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/orderbydistance.d.ts": {
+        "version": "47419ec63702bd98f26ea6b4063369f0ac40db391f68565638a4d768da30397c",
+        "signature": "47419ec63702bd98f26ea6b4063369f0ac40db391f68565638a4d768da30397c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/sexagesimaltodecimal.d.ts": {
+        "version": "f4f031b17ccde8d38a80a6122263c2b3bcad5e3b5df77a79130c00614714737e",
+        "signature": "f4f031b17ccde8d38a80a6122263c2b3bcad5e3b5df77a79130c00614714737e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/todecimal.d.ts": {
+        "version": "bd138d4dcfc7a80b05f39e5c3cd39b52f5fa6f67019f6d13ab905599fa81e7e4",
+        "signature": "bd138d4dcfc7a80b05f39e5c3cd39b52f5fa6f67019f6d13ab905599fa81e7e4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/torad.d.ts": {
+        "version": "b9a4af82feb6a68db822e9f96981ad6fe4726b08e460a845febd369fe731607c",
+        "signature": "b9a4af82feb6a68db822e9f96981ad6fe4726b08e460a845febd369fe731607c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/todeg.d.ts": {
+        "version": "254c5c406cd28eaedb7f862bfd5416385eead82fad65cbe2efd6e452035179c4",
+        "signature": "254c5c406cd28eaedb7f862bfd5416385eead82fad65cbe2efd6e452035179c4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/wkttopolygon.d.ts": {
+        "version": "04761b581601486688e45c9d7c7eca75970c10542c90b197882b6263ec3ac5cd",
+        "signature": "04761b581601486688e45c9d7c7eca75970c10542c90b197882b6263ec3ac5cd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/constants.d.ts": {
+        "version": "60bbb86cad981aa817a04169874188b6b3b72251e2534b62c85bc3bbcdd3be0c",
+        "signature": "60bbb86cad981aa817a04169874188b6b3b72251e2534b62c85bc3bbcdd3be0c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/geolib/es/index.d.ts": {
+        "version": "d8c995451b0cdbf317ca463d8268160fe52260a91183232da998ff85c57ecdeb",
+        "signature": "d8c995451b0cdbf317ca463d8268160fe52260a91183232da998ff85c57ecdeb",
+        "affectsGlobalScope": false
+      },
       "../src/modules/feature/interfaces/feature.interface.ts": {
         "version": "fa28e41c14aa3a7cb5d298f88f05495f808f276c0d241ea31090c78c568d88af",
         "signature": "599395b622c7b880ec84a3412a1b7d61b42ba93df6b45253da22ddb344ce7471",
         "affectsGlobalScope": false
       },
       "../src/modules/booking/interfaces/booking.interface.ts": {
-        "version": "e0b19077e9dc288eb6e22305c683a3deb197ac32204440f16cda8cdce58136ac",
-        "signature": "5a3b401b447c0f909e85061833186a3f0cfaaa8be66589bba1506cbc96c1955b",
+        "version": "50a933dc0b23ad9e7920d71827c68359cd0d976ac0007a8462f918d38136c5e6",
+        "signature": "635bb8aafe4da87460f12013dd9dac313609ea0b913bf906bfc148cc93e64349",
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/interfaces/place-type.interface.ts": {
@@ -1581,11 +1811,6 @@
         "signature": "902caa7367e7b4ee50145ab18762d5bbacf69684a8fcfb9f85c2313131f1d757",
         "affectsGlobalScope": false
       },
-      "../src/modules/types.ts": {
-        "version": "d13b9273476fa7aa2628ce2f4fb0e1f159965f76fcc4e8d72741621846a28990",
-        "signature": "30248be75a2fdabeaed937bd7a7bb67271960dc578d0975c0e9ba3061c677adc",
-        "affectsGlobalScope": false
-      },
       "../src/modules/place/interfaces/place.interface.ts": {
         "version": "34bbf379a3a2826d37c28423d41301e2cbef7e144b85fdd54635978b080c5d82",
         "signature": "65dc4a7195544e426e3dd100c1bc71bc52e45538564ec7dd7d7ca21a20b35b07",
@@ -1594,6 +1819,71 @@
       "../src/modules/customer/interfaces/customer.interface.ts": {
         "version": "c8e06c55ca03ef9715121e17bd56c0157b29e859b1d9abdcbcfa76ba95b69623",
         "signature": "737b497779314090833d66bb1fb7ae929275f0cdf3b50319c1d1f9085203c5c9",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/types.ts": {
+        "version": "1146e80a902fb978578e2106aca69af6c42799c65355daef568cd2712996fcd2",
+        "signature": "fcec5d0490807d0ad7b9c5f1fa2c9d5cb06b8c256391bab5f01c61c84d0b06e3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/moment-range/dist/moment-range.d.ts": {
+        "version": "793ffe38009341aa72a64d21d55891d0d6b5d5dbd87ac05af6fbdb2d2b8d9d52",
+        "signature": "793ffe38009341aa72a64d21d55891d0d6b5d5dbd87ac05af6fbdb2d2b8d9d52",
+        "affectsGlobalScope": false
+      },
+      "../src/utils/index.ts": {
+        "version": "5683b662e494cabdfe0f9443820bb87992b74868fb04b6b87c7a776728c602ea",
+        "signature": "eb27523215e6578e7ffce3f3b29309bd164e18c7759370dc20381f8cb50670e8",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/booking/dto/booking.dto.ts": {
+        "version": "98ca7ef562463bbcd4aa8ae7e39545ccc3fcd70fe07efebaed71031711d4a7df",
+        "signature": "752295ac22c9b79f0c707d75b230e0fd8d57709ff0209231125bff7d766aefd1",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/booking/booking.service.ts": {
+        "version": "9b441a476d24ddcc2a936f4c1f46ad48754a58fbaaa0ba40b179f3f2ca46fcb1",
+        "signature": "9a3074225d88ecd426e903058b5302cfbf5588caf981c85d3112fe166736fdc2",
+        "affectsGlobalScope": false
+      },
+      "../src/app.service.ts": {
+        "version": "246d49532d6139109fee8861760372b18c7bab645ebb5dcced9c8874fb37e02f",
+        "signature": "fb74b4e868414bf4a887111b5d17784adf9184a0c7531ee63e6e85dac0c1bd78",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/jwt/node_modules/@types/jsonwebtoken/index.d.ts": {
+        "version": "f67c920eba6ab8e4558cb9ab661d900188f101c5657e19b1e15829a1d491d46e",
+        "signature": "f67c920eba6ab8e4558cb9ab661d900188f101c5657e19b1e15829a1d491d46e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts": {
+        "version": "fc0140cf41d169b3b77e09831c9d2eed1cdb131aa34f4fa27e4c01896ec97ad6",
+        "signature": "fc0140cf41d169b3b77e09831c9d2eed1cdb131aa34f4fa27e4c01896ec97ad6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/jwt/dist/interfaces/index.d.ts": {
+        "version": "7c14e702387296711c1a829bc95052ff02f533d4aa27d53cc0186c795094a3a9",
+        "signature": "7c14e702387296711c1a829bc95052ff02f533d4aa27d53cc0186c795094a3a9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/jwt/dist/jwt.module.d.ts": {
+        "version": "579f8828da42ae02db6915a0223d23b0da07157ff484fecdbf8a96fffa0fa4df",
+        "signature": "579f8828da42ae02db6915a0223d23b0da07157ff484fecdbf8a96fffa0fa4df",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/jwt/dist/jwt.service.d.ts": {
+        "version": "d1e16a1778a336ae49607ca0becd8688e74a020bea949047dcfcbb1bd2dc0f5a",
+        "signature": "d1e16a1778a336ae49607ca0becd8688e74a020bea949047dcfcbb1bd2dc0f5a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/jwt/dist/index.d.ts": {
+        "version": "a13aac535101a942283e3d00bce50f483bfa9bed6e1f8dfda33a3bb072498776",
+        "signature": "a13aac535101a942283e3d00bce50f483bfa9bed6e1f8dfda33a3bb072498776",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/jwt/index.d.ts": {
+        "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
+        "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
       "../node_modules/class-validator/types/validation/validationerror.d.ts": {
@@ -2241,14 +2531,19 @@
         "signature": "16efd756ffc87d71c3c0209a9769f60535c1e65cf25e843491c08355096d4805",
         "affectsGlobalScope": false
       },
+      "../node_modules/python-shell/index.d.ts": {
+        "version": "eb7b29168183fb25cc8e352c882a51bcffd4a7cfc2c76fc7d38d2215af98ba20",
+        "signature": "eb7b29168183fb25cc8e352c882a51bcffd4a7cfc2c76fc7d38d2215af98ba20",
+        "affectsGlobalScope": false
+      },
       "../src/modules/auth/auth.service.ts": {
         "version": "efd6d2d357ae356d4654460b22b6f1a16b2a2e539c340818fb068514f202a033",
         "signature": "79bde5941f99175104cfbe69c04f36a52e27504bdfd5ac92f2f68731ef7d523c",
         "affectsGlobalScope": false
       },
       "../src/app.controller.ts": {
-        "version": "d1a3d71f1d462c54c830a84c82eaefe0762c384e43af32fc51ebdab4751c71ba",
-        "signature": "d4b883ddbaae02ec46e87fe48e370005274789c30846e88687e32771b6e65835",
+        "version": "df1335ddbdf7d5ccdf6be1486657f64f2260cd2e65f9d8c0dd9f9a77276d31dc",
+        "signature": "9adc8465e9b0de2847659fa53a4e8ac98894f2f451d6f99ef4cff0c7fdccbfd0",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/websockets/adapters/ws-adapter.d.ts": {
@@ -2492,7 +2787,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/booking/schemas/booking.schema.ts": {
-        "version": "17eb62f3e34ceafa92302c39ef8a7a2160d11d688874dc80fad861b72a01e9d7",
+        "version": "42ef9ef9dabe86c1a7ee64147e738230898c567a59be04de809c2227d767f68c",
         "signature": "1e0bb72448e9366042ef672ecacd8bc89bcabe6bef47e398a8961b32e7cec1e3",
         "affectsGlobalScope": false
       },
@@ -2507,7 +2802,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/schemas.ts": {
-        "version": "23734761778b4ed5be0340ea3b58ebe8dac697e3ff18945c727df1c29903043c",
+        "version": "cccba0fd47ffb152f245c23aaea1127e6552c9ad66bba318269dd0edeaff45ed",
         "signature": "529b8a9fff3c9c30e2762a545ff991b15c872411040ee1682c3a141c927cdc42",
         "affectsGlobalScope": false
       },
@@ -2534,236 +2829,6 @@
       "../src/modules/place/dto/create-place.dto.ts": {
         "version": "32e692bbdeb1d27dd6ec8e4399e50808ac27f979144fc3412decbd60dcd6c337",
         "signature": "47c7a06f805dfd5fb32774800a5d67fb42e1d5a9e1ba8993df26645c48d6fd2e",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/types.d.ts": {
-        "version": "98bbf533543802cb2767155b7733c257d6a72f79c1ec8bc98ab0528a9c96eddf",
-        "signature": "98bbf533543802cb2767155b7733c257d6a72f79c1ec8bc98ab0528a9c96eddf",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/computedestinationpoint.d.ts": {
-        "version": "a1a456327161c9d125f1382a77255699a929ac0afcad1f9327f8ca3b48cef58a",
-        "signature": "a1a456327161c9d125f1382a77255699a929ac0afcad1f9327f8ca3b48cef58a",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/convertarea.d.ts": {
-        "version": "9671c1c0e31e7ac3dcdd0e3abafbb5139ca8ca0374828968f04c960aee62d90d",
-        "signature": "9671c1c0e31e7ac3dcdd0e3abafbb5139ca8ca0374828968f04c960aee62d90d",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/convertdistance.d.ts": {
-        "version": "8bd3ab008329c459b6409dba003efcce89ad2714456c669ca55bad1cf65296c6",
-        "signature": "8bd3ab008329c459b6409dba003efcce89ad2714456c669ca55bad1cf65296c6",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/convertspeed.d.ts": {
-        "version": "ec283dd4c08931b8447b0a5cef09129fda5eb955f7fe0645e00b0a2e988057f8",
-        "signature": "ec283dd4c08931b8447b0a5cef09129fda5eb955f7fe0645e00b0a2e988057f8",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/decimaltosexagesimal.d.ts": {
-        "version": "a080fd70a1925a1d85fca0dc23f678a902dfffaacf1215532752691a851ce25e",
-        "signature": "a080fd70a1925a1d85fca0dc23f678a902dfffaacf1215532752691a851ce25e",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/findnearest.d.ts": {
-        "version": "f5a7b23697cfcbdbf81e2fb1d5e30dd677d70381d0e039ceaed7fb192858d4a3",
-        "signature": "f5a7b23697cfcbdbf81e2fb1d5e30dd677d70381d0e039ceaed7fb192858d4a3",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getareaofpolygon.d.ts": {
-        "version": "fa795f995b9109d4a9d0b5896c432a190a4681b4e350ea9839d76b7eb18fcfc5",
-        "signature": "fa795f995b9109d4a9d0b5896c432a190a4681b4e350ea9839d76b7eb18fcfc5",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getbounds.d.ts": {
-        "version": "5deadb02de94feeff149db1e03e5b8f8d9cfcedd8be3663c51a4524152acf822",
-        "signature": "5deadb02de94feeff149db1e03e5b8f8d9cfcedd8be3663c51a4524152acf822",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getboundsofdistance.d.ts": {
-        "version": "4af4a23586d62ba595a25df27c52fa24f17537356a9ed98bfe0c8578ab33c23e",
-        "signature": "4af4a23586d62ba595a25df27c52fa24f17537356a9ed98bfe0c8578ab33c23e",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getcenter.d.ts": {
-        "version": "fadbf851b586ef59c76074ad10d07a3b4c0289dd9bd0843de07430b00e502449",
-        "signature": "fadbf851b586ef59c76074ad10d07a3b4c0289dd9bd0843de07430b00e502449",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getcenterofbounds.d.ts": {
-        "version": "5dc4bf6f0b20cb43ab0f1d362647827b96b903c4aa8315403de201fbec8d7606",
-        "signature": "5dc4bf6f0b20cb43ab0f1d362647827b96b903c4aa8315403de201fbec8d7606",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getcompassdirection.d.ts": {
-        "version": "860fef6437907e1d6d2e10b6e833f581269946aada6c46c182a72b9c5b2f9c20",
-        "signature": "860fef6437907e1d6d2e10b6e833f581269946aada6c46c182a72b9c5b2f9c20",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getcoordinatekey.d.ts": {
-        "version": "3afed5ac7f15a3255d024717d86da1f12dfbc23877f10ee4cb75ad95cc92fdf0",
-        "signature": "3afed5ac7f15a3255d024717d86da1f12dfbc23877f10ee4cb75ad95cc92fdf0",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getcoordinatekeys.d.ts": {
-        "version": "368c9dccee699a2e10d91f5b04c7dc359ae0e07cff73333a478a4bfe9496313e",
-        "signature": "368c9dccee699a2e10d91f5b04c7dc359ae0e07cff73333a478a4bfe9496313e",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getdistance.d.ts": {
-        "version": "0c15c884a1a2c4dd1fa566e3983bd11552432cfc58a40127cb7ab44132bf9214",
-        "signature": "0c15c884a1a2c4dd1fa566e3983bd11552432cfc58a40127cb7ab44132bf9214",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getdistancefromline.d.ts": {
-        "version": "63cbabbe5bbc3482b7d76ff8ea7c0d11c19f90d00cf923943839ade6585c88ce",
-        "signature": "63cbabbe5bbc3482b7d76ff8ea7c0d11c19f90d00cf923943839ade6585c88ce",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getgreatcirclebearing.d.ts": {
-        "version": "b570b7326841fe39489ab4f67d2916c48ca3d27f3d3e55458f03a68b70430416",
-        "signature": "b570b7326841fe39489ab4f67d2916c48ca3d27f3d3e55458f03a68b70430416",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getlatitude.d.ts": {
-        "version": "9dfc0843a63f9e604d9224df3602fa42019d1a800da63adfaa31b1139f46a450",
-        "signature": "9dfc0843a63f9e604d9224df3602fa42019d1a800da63adfaa31b1139f46a450",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getlongitude.d.ts": {
-        "version": "125d099877efdbdd481fdc5586a1289c625c77f35b03d80264536323aa057e4d",
-        "signature": "125d099877efdbdd481fdc5586a1289c625c77f35b03d80264536323aa057e4d",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getpathlength.d.ts": {
-        "version": "1ab33671f349b1c24439fde27ff2594c515fcd4110e863654673c63b548f67a8",
-        "signature": "1ab33671f349b1c24439fde27ff2594c515fcd4110e863654673c63b548f67a8",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getprecisedistance.d.ts": {
-        "version": "1d40901e31908c6e80e1656ed37094f6925b1b369202f286c9fddaa926b9423d",
-        "signature": "1d40901e31908c6e80e1656ed37094f6925b1b369202f286c9fddaa926b9423d",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getrhumblinebearing.d.ts": {
-        "version": "67808a8f20c0033de14affa973d61ea207e3cff7ec0364feb0823b9e28bda7ba",
-        "signature": "67808a8f20c0033de14affa973d61ea207e3cff7ec0364feb0823b9e28bda7ba",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getroughcompassdirection.d.ts": {
-        "version": "88a1722eab8263432e0884a4137b00d9f912f246d67206183e792eba9895c492",
-        "signature": "88a1722eab8263432e0884a4137b00d9f912f246d67206183e792eba9895c492",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/getspeed.d.ts": {
-        "version": "572392828dcf0ad1a40d7a22a7c3cf570874450ae078a46b459fe9a6f05142a7",
-        "signature": "572392828dcf0ad1a40d7a22a7c3cf570874450ae078a46b459fe9a6f05142a7",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/isdecimal.d.ts": {
-        "version": "e9cf31c962755cf6a669b8b10bb55a98a85bab0c01092c6e3062dc60624eb4a9",
-        "signature": "e9cf31c962755cf6a669b8b10bb55a98a85bab0c01092c6e3062dc60624eb4a9",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/ispointinline.d.ts": {
-        "version": "df4a34bed60c4f1a84539b92ffafd3a1ec2738592da5ac3e04cb1bd3776478ee",
-        "signature": "df4a34bed60c4f1a84539b92ffafd3a1ec2738592da5ac3e04cb1bd3776478ee",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/ispointinpolygon.d.ts": {
-        "version": "d290f7dbd4ea7a41aee4f92d769bc27a2cd8f6206302782276c61cfdcde40d08",
-        "signature": "d290f7dbd4ea7a41aee4f92d769bc27a2cd8f6206302782276c61cfdcde40d08",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/ispointnearline.d.ts": {
-        "version": "0a4d286e982286be3471dbd22310c9486deed176f31d6d86966f46da4b5c842b",
-        "signature": "0a4d286e982286be3471dbd22310c9486deed176f31d6d86966f46da4b5c842b",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/ispointwithinradius.d.ts": {
-        "version": "3628225154d7d50fc0edcfb741e0668ff0b440f15ff82e6bc70b355c11b1d2dc",
-        "signature": "3628225154d7d50fc0edcfb741e0668ff0b440f15ff82e6bc70b355c11b1d2dc",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/issexagesimal.d.ts": {
-        "version": "51fbe52534cd93041eab08015983350f445d5fe3c7faec3e7c5f5ee3cba652af",
-        "signature": "51fbe52534cd93041eab08015983350f445d5fe3c7faec3e7c5f5ee3cba652af",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/isvalidcoordinate.d.ts": {
-        "version": "42c813c80c8ab167191fb6985b2863a2552e7565fade837c0e5f7e316c8d7c23",
-        "signature": "42c813c80c8ab167191fb6985b2863a2552e7565fade837c0e5f7e316c8d7c23",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/isvalidlatitude.d.ts": {
-        "version": "66c5261c7309bba04b5f1c9dae4cdae8dd44e38998434bfaa4049b1cc2d9b4af",
-        "signature": "66c5261c7309bba04b5f1c9dae4cdae8dd44e38998434bfaa4049b1cc2d9b4af",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/isvalidlongitude.d.ts": {
-        "version": "55b2857afdfe25a82bf1412d1b3a5018357e52c4080f2da51fc9e6c294fa2269",
-        "signature": "55b2857afdfe25a82bf1412d1b3a5018357e52c4080f2da51fc9e6c294fa2269",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/orderbydistance.d.ts": {
-        "version": "47419ec63702bd98f26ea6b4063369f0ac40db391f68565638a4d768da30397c",
-        "signature": "47419ec63702bd98f26ea6b4063369f0ac40db391f68565638a4d768da30397c",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/sexagesimaltodecimal.d.ts": {
-        "version": "f4f031b17ccde8d38a80a6122263c2b3bcad5e3b5df77a79130c00614714737e",
-        "signature": "f4f031b17ccde8d38a80a6122263c2b3bcad5e3b5df77a79130c00614714737e",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/todecimal.d.ts": {
-        "version": "bd138d4dcfc7a80b05f39e5c3cd39b52f5fa6f67019f6d13ab905599fa81e7e4",
-        "signature": "bd138d4dcfc7a80b05f39e5c3cd39b52f5fa6f67019f6d13ab905599fa81e7e4",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/torad.d.ts": {
-        "version": "b9a4af82feb6a68db822e9f96981ad6fe4726b08e460a845febd369fe731607c",
-        "signature": "b9a4af82feb6a68db822e9f96981ad6fe4726b08e460a845febd369fe731607c",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/todeg.d.ts": {
-        "version": "254c5c406cd28eaedb7f862bfd5416385eead82fad65cbe2efd6e452035179c4",
-        "signature": "254c5c406cd28eaedb7f862bfd5416385eead82fad65cbe2efd6e452035179c4",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/wkttopolygon.d.ts": {
-        "version": "04761b581601486688e45c9d7c7eca75970c10542c90b197882b6263ec3ac5cd",
-        "signature": "04761b581601486688e45c9d7c7eca75970c10542c90b197882b6263ec3ac5cd",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/constants.d.ts": {
-        "version": "60bbb86cad981aa817a04169874188b6b3b72251e2534b62c85bc3bbcdd3be0c",
-        "signature": "60bbb86cad981aa817a04169874188b6b3b72251e2534b62c85bc3bbcdd3be0c",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/geolib/es/index.d.ts": {
-        "version": "d8c995451b0cdbf317ca463d8268160fe52260a91183232da998ff85c57ecdeb",
-        "signature": "d8c995451b0cdbf317ca463d8268160fe52260a91183232da998ff85c57ecdeb",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/moment/ts3.1-typings/moment.d.ts": {
-        "version": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
-        "signature": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/moment-range/dist/moment-range.d.ts": {
-        "version": "793ffe38009341aa72a64d21d55891d0d6b5d5dbd87ac05af6fbdb2d2b8d9d52",
-        "signature": "793ffe38009341aa72a64d21d55891d0d6b5d5dbd87ac05af6fbdb2d2b8d9d52",
-        "affectsGlobalScope": false
-      },
-      "../src/utils/index.ts": {
-        "version": "d60f9659154c96ff26815615a175fc2370dfa9f0775c73340f8c680fe6a4b0c4",
-        "signature": "dc463ee456c71f3054ae8fe0bd33592d2d89c47b4ea3e420a7e00152052127de",
-        "affectsGlobalScope": false
-      },
-      "../src/modules/booking/dto/booking.dto.ts": {
-        "version": "98ca7ef562463bbcd4aa8ae7e39545ccc3fcd70fe07efebaed71031711d4a7df",
-        "signature": "752295ac22c9b79f0c707d75b230e0fd8d57709ff0209231125bff7d766aefd1",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
@@ -3001,18 +3066,13 @@
         "signature": "a3684909b502d2414d94ce06228f5d6dae72b658eac3f386843965e540b51834",
         "affectsGlobalScope": false
       },
-      "../src/modules/booking/booking.service.ts": {
-        "version": "3f770ef8db0129c769aa7a22688fbe0135606bc8cefb1335caa6bfef59d7b381",
-        "signature": "e03cd8e285a114d9528edf40c24dbc414d992139ef400cb54b3d129ab1b57973",
-        "affectsGlobalScope": false
-      },
       "../src/modules/booking/booking.controller.ts": {
         "version": "66d31f083636ad88fbbcf93508b0d386e690c3e5b78da87e7e071b1d32fd6c7d",
         "signature": "cb83c8aaf207dd60cf5183eef96b214add89cebb7359c16aba7ac4cb14970f8d",
         "affectsGlobalScope": false
       },
       "../src/modules/booking/booking.module.ts": {
-        "version": "d62ec40b69717d89909abe0426eef75a49478e46372b9f994ef9728e32ce8372",
+        "version": "0c0e2f49ef6377a41dc3176ef02317de6db17a4dd960b2b5accef55c1220aba5",
         "signature": "307da3f1f46926da44f7648eb8e50e8695fb098723e4ee7b33d6bb54573c7d81",
         "affectsGlobalScope": false
       },
@@ -3067,7 +3127,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "d4d274dab2553f511c008ef63dfba570f7c723882c3727379ab27e7db0950e59",
+        "version": "aab18ff278a25b22be9442dcbdab4ba99fe0dc5cc94a6bdf2137c31c51f4d66d",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -4362,6 +4422,29 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts"
       ],
+      "../node_modules/@nestjs/schedule/dist/decorators/index.d.ts": [
+        "../node_modules/@nestjs/schedule/dist/decorators/cron.decorator.d.ts",
+        "../node_modules/@nestjs/schedule/dist/decorators/interval.decorator.d.ts",
+        "../node_modules/@nestjs/schedule/dist/decorators/timeout.decorator.d.ts"
+      ],
+      "../node_modules/@nestjs/schedule/dist/enums/index.d.ts": [
+        "../node_modules/@nestjs/schedule/dist/enums/cron-expression.enum.d.ts"
+      ],
+      "../node_modules/@nestjs/schedule/dist/index.d.ts": [
+        "../node_modules/@nestjs/schedule/dist/decorators/index.d.ts",
+        "../node_modules/@nestjs/schedule/dist/enums/index.d.ts",
+        "../node_modules/@nestjs/schedule/dist/schedule.module.d.ts",
+        "../node_modules/@nestjs/schedule/dist/scheduler.registry.d.ts"
+      ],
+      "../node_modules/@nestjs/schedule/dist/schedule.module.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../node_modules/@nestjs/schedule/dist/scheduler.registry.d.ts": [
+        "../node_modules/@types/cron/index.d.ts"
+      ],
+      "../node_modules/@nestjs/schedule/index.d.ts": [
+        "../node_modules/@nestjs/schedule/dist/index.d.ts"
+      ],
       "../node_modules/@nestjs/websockets/adapters/index.d.ts": [
         "../node_modules/@nestjs/websockets/adapters/ws-adapter.d.ts"
       ],
@@ -4449,6 +4532,11 @@
       "../node_modules/@types/connect/index.d.ts": [
         "../node_modules/@types/node/http.d.ts",
         "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@types/cron/index.d.ts": [
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/moment/ts3.1-typings/moment.d.ts"
       ],
       "../node_modules/@types/eslint-scope/index.d.ts": [
         "../node_modules/@types/eslint/index.d.ts",
@@ -5479,6 +5567,12 @@
       "../node_modules/pretty-format/build/index.d.ts": [
         "../node_modules/pretty-format/build/types.d.ts"
       ],
+      "../node_modules/python-shell/index.d.ts": [
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
+      ],
       "../node_modules/rxjs/index.d.ts": [
         "../node_modules/rxjs/internal/asyncsubject.d.ts",
         "../node_modules/rxjs/internal/behaviorsubject.d.ts",
@@ -5788,13 +5882,13 @@
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@nestjs/schedule/index.d.ts",
         "../src/app.controller.ts",
         "../src/app.gateway.ts",
         "../src/app.service.ts",
         "../src/modules/auth/auth.module.ts",
         "../src/modules/booking/booking.module.ts",
         "../src/modules/bug-ticket/bug-ticket.module.ts",
-        "../src/modules/bug-ticket/bug-ticket.service.ts",
         "../src/modules/conversation/conversation.module.ts",
         "../src/modules/customer/customer.module.ts",
         "../src/modules/feature/feature.module.ts",
@@ -5805,7 +5899,9 @@
         "../src/modules/review-place/review-place.module.ts"
       ],
       "../src/app.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/schedule/index.d.ts",
+        "../src/modules/booking/booking.service.ts"
       ],
       "../src/main.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -5837,6 +5933,7 @@
         "../node_modules/@nestjs/jwt/index.d.ts",
         "../node_modules/@types/bcrypt/index.d.ts",
         "../node_modules/@types/node/vm.d.ts",
+        "../node_modules/python-shell/index.d.ts",
         "../src/modules/customer/customer.service.ts",
         "../src/modules/customer/interfaces/customer.interface.ts"
       ],
@@ -5869,6 +5966,7 @@
       "../src/modules/booking/booking.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@nestjs/schedule/index.d.ts",
         "../src/modules/booking/booking.controller.ts",
         "../src/modules/booking/booking.service.ts",
         "../src/modules/booking/schemas/booking.schema.ts",
@@ -5878,6 +5976,7 @@
       "../src/modules/booking/booking.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@nestjs/schedule/index.d.ts",
         "../node_modules/mongoose/index.d.ts",
         "../src/modules/booking/dto/booking.dto.ts",
         "../src/modules/booking/interfaces/booking.interface.ts",
@@ -6996,6 +7095,29 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts"
       ],
+      "../node_modules/@nestjs/schedule/dist/decorators/index.d.ts": [
+        "../node_modules/@nestjs/schedule/dist/decorators/cron.decorator.d.ts",
+        "../node_modules/@nestjs/schedule/dist/decorators/interval.decorator.d.ts",
+        "../node_modules/@nestjs/schedule/dist/decorators/timeout.decorator.d.ts"
+      ],
+      "../node_modules/@nestjs/schedule/dist/enums/index.d.ts": [
+        "../node_modules/@nestjs/schedule/dist/enums/cron-expression.enum.d.ts"
+      ],
+      "../node_modules/@nestjs/schedule/dist/index.d.ts": [
+        "../node_modules/@nestjs/schedule/dist/decorators/index.d.ts",
+        "../node_modules/@nestjs/schedule/dist/enums/index.d.ts",
+        "../node_modules/@nestjs/schedule/dist/schedule.module.d.ts",
+        "../node_modules/@nestjs/schedule/dist/scheduler.registry.d.ts"
+      ],
+      "../node_modules/@nestjs/schedule/dist/schedule.module.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../node_modules/@nestjs/schedule/dist/scheduler.registry.d.ts": [
+        "../node_modules/@types/cron/index.d.ts"
+      ],
+      "../node_modules/@nestjs/schedule/index.d.ts": [
+        "../node_modules/@nestjs/schedule/dist/index.d.ts"
+      ],
       "../node_modules/@nestjs/websockets/adapters/index.d.ts": [
         "../node_modules/@nestjs/websockets/adapters/ws-adapter.d.ts"
       ],
@@ -7083,6 +7205,11 @@
       "../node_modules/@types/connect/index.d.ts": [
         "../node_modules/@types/node/http.d.ts",
         "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@types/cron/index.d.ts": [
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/moment/ts3.1-typings/moment.d.ts"
       ],
       "../node_modules/@types/eslint-scope/index.d.ts": [
         "../node_modules/@types/eslint/index.d.ts",
@@ -8113,6 +8240,12 @@
       "../node_modules/pretty-format/build/index.d.ts": [
         "../node_modules/pretty-format/build/types.d.ts"
       ],
+      "../node_modules/python-shell/index.d.ts": [
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
+      ],
       "../node_modules/rxjs/index.d.ts": [
         "../node_modules/rxjs/internal/asyncsubject.d.ts",
         "../node_modules/rxjs/internal/behaviorsubject.d.ts",
@@ -8835,6 +8968,16 @@
       "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts",
       "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
       "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts",
+      "../node_modules/@nestjs/schedule/dist/decorators/cron.decorator.d.ts",
+      "../node_modules/@nestjs/schedule/dist/decorators/index.d.ts",
+      "../node_modules/@nestjs/schedule/dist/decorators/interval.decorator.d.ts",
+      "../node_modules/@nestjs/schedule/dist/decorators/timeout.decorator.d.ts",
+      "../node_modules/@nestjs/schedule/dist/enums/cron-expression.enum.d.ts",
+      "../node_modules/@nestjs/schedule/dist/enums/index.d.ts",
+      "../node_modules/@nestjs/schedule/dist/index.d.ts",
+      "../node_modules/@nestjs/schedule/dist/schedule.module.d.ts",
+      "../node_modules/@nestjs/schedule/dist/scheduler.registry.d.ts",
+      "../node_modules/@nestjs/schedule/index.d.ts",
       "../node_modules/@nestjs/websockets/adapters/index.d.ts",
       "../node_modules/@nestjs/websockets/adapters/ws-adapter.d.ts",
       "../node_modules/@nestjs/websockets/decorators/connected-socket.decorator.d.ts",
@@ -8869,6 +9012,7 @@
       "../node_modules/@types/bson/index.d.ts",
       "../node_modules/@types/connect/index.d.ts",
       "../node_modules/@types/cookiejar/index.d.ts",
+      "../node_modules/@types/cron/index.d.ts",
       "../node_modules/@types/eslint-scope/index.d.ts",
       "../node_modules/@types/eslint/helpers.d.ts",
       "../node_modules/@types/eslint/index.d.ts",
@@ -9143,6 +9287,7 @@
       "../node_modules/mongoose/index.d.ts",
       "../node_modules/pretty-format/build/index.d.ts",
       "../node_modules/pretty-format/build/types.d.ts",
+      "../node_modules/python-shell/index.d.ts",
       "../node_modules/reflect-metadata/index.d.ts",
       "../node_modules/rxjs/index.d.ts",
       "../node_modules/rxjs/internal/asyncsubject.d.ts",
@@ -9248,19 +9393,7 @@
       "../src/main.ts",
       "../src/modules/auth/auth.controller.ts",
       "../src/modules/auth/auth.module.ts",
-      [
-        "../src/modules/auth/auth.service.ts",
-        [
-          {
-            "file": "../src/modules/auth/auth.service.ts",
-            "start": 335,
-            "length": 14,
-            "messageText": "Cannot find module 'python-shell' or its corresponding type declarations.",
-            "category": 1,
-            "code": 2307
-          }
-        ]
-      ],
+      "../src/modules/auth/auth.service.ts",
       "../src/modules/auth/constants.ts",
       "../src/modules/auth/jwt-auth.guard.ts",
       "../src/modules/auth/jwt.strategy.ts",

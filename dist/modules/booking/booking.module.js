@@ -9,6 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BookingModule = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
+const schedule_1 = require("@nestjs/schedule");
 const customer_schema_1 = require("../customer/schemas/customer.schema");
 const place_schema_1 = require("../place/schemas/place.schema");
 const booking_controller_1 = require("./booking.controller");
@@ -22,6 +23,7 @@ BookingModule = __decorate([
             mongoose_1.MongooseModule.forFeature([{ name: 'Booking', schema: booking_schema_1.BookingSchema }]),
             mongoose_1.MongooseModule.forFeature([{ name: 'Place', schema: place_schema_1.PlaceSchema }]),
             mongoose_1.MongooseModule.forFeature([{ name: 'Customer', schema: customer_schema_1.CustomerSchema }]),
+            schedule_1.ScheduleModule.forRoot(),
         ],
         controllers: [booking_controller_1.BookingController],
         providers: [booking_service_1.BookingService],

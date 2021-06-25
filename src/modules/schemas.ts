@@ -6,6 +6,7 @@ export const ImageSchema = new mongoose.Schema({
 });
 
 export const AvailabilitySchema = new mongoose.Schema({
+  userId: String,
   date: String,
   disabled: Boolean,
 });

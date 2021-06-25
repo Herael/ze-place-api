@@ -31,6 +31,7 @@ export type BookingClient = {
 };
 
 export type Availability = {
+  userId: string;
   date: string;
   disabled: boolean;
 };

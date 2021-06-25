@@ -10,7 +10,4 @@ export declare const sendPushNotifications: ({ pushId, title, description }: {
     description: any;
 }) => Promise<any>;
 export declare const getDates: (startDate: any, endDate: any) => any[];
-export declare const dateToAvailabilities: (startDate: Date, endDate: Date) => [{
-    readonly date: string;
-    readonly disabled: boolean;
-}];
+export declare const dateToAvailabilities: (userId: string, startDate: Date, endDate: Date) => any[];

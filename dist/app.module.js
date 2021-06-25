@@ -11,6 +11,7 @@ const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const mongoose_1 = require("@nestjs/mongoose");
+const schedule_1 = require("@nestjs/schedule");
 const customer_module_1 = require("./modules/customer/customer.module");
 const place_module_1 = require("./modules/place/place.module");
 const review_place_module_1 = require("./modules/review-place/review-place.module");
@@ -29,7 +30,6 @@ AppModule = __decorate([
     common_1.Module({
         imports: [
             mongoose_1.MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost/ze-place-api', { useNewUrlParser: true, useFindAndModify: false }),
-            booking_module_1.BookingModule,
             customer_module_1.CustomerModule,
             place_module_1.PlaceModule,
             review_place_module_1.ReviewPLaceModule,
@@ -40,6 +40,8 @@ AppModule = __decorate([
             payment_module_1.PaymentModule,
             bug_ticket_module_1.BugTicketModule,
             conversation_module_1.ConversationModule,
+            schedule_1.ScheduleModule.forRoot(),
+            booking_module_1.BookingModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService, app_gateway_1.AppGateway],
