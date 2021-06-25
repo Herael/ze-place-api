@@ -25,6 +25,10 @@ let PlaceController = class PlaceController {
         const places = await this.placeService.getAllPlaces(req.user.id);
         return res.status(common_1.HttpStatus.OK).json(places);
     }
+    async getAllPlacesAdmin(req, res) {
+        const places = await this.placeService.getAllPlacesAdmin();
+        return res.status(common_1.HttpStatus.OK).json(places);
+    }
     async getPlaceById(req, res) {
         console.log(req.params);
         const places = await this.placeService.findById(req.params.id);
@@ -64,6 +68,13 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PlaceController.prototype, "getAllPlaces", null);
+__decorate([
+    common_1.Get('/admin'),
+    __param(0, common_1.Request()), __param(1, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PlaceController.prototype, "getAllPlacesAdmin", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get('/:id'),

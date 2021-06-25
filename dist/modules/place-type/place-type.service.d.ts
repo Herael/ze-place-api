@@ -7,4 +7,6 @@ export declare class PlaceTypeService {
     constructor(typeModel: Model<PlaceType>, featuresModel: Model<PlaceType>);
     createType(createPlaceTypeDTO: CreatePlaceTypeDTO): Promise<PlaceType>;
     createFeatures(createPlaceFeatureDTO: CreatePlaceFeatureDTO): Promise<PlaceType>;
+    getType(): Promise<PlaceType[]>;
+    getFeatures(): Promise<PlaceType[]>;
 }

@@ -2782,7 +2782,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/feature/schemas/feature.schema.ts": {
-        "version": "7e374e12c58b12a6ddc972d253d7dba4ddde6b035c96108a341adf1d5c4b900a",
+        "version": "607722eda5aeebcc507512aaf8686b95a260884eada32703a606a273e52b3b5c",
         "signature": "f06ef335f0734e00a1b4490b4dbfa791a7ef89cc822e21924eb8594bd0b9a427",
         "affectsGlobalScope": false
       },
@@ -2832,13 +2832,13 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "7ae59de595b51025e64ed5f5a0b77a3d84c3b3e6a1f7581d09c46fa29d0321f2",
-        "signature": "e1d2caff2c8cb1b65bc8639848192f9026c7b3b9873a7375b3db100a64ee9f24",
+        "version": "98c500b66ca2458bf9835ceb3f7eb56f7ce0a34b94a247e9583fe144edd4ef5b",
+        "signature": "db66928dc4b2be7e680e3dbea7de313c0317d1e7644237b5efb36388045cb1cd",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "c26ec09af453c7218760e80d1930c290006ff97884e9d561e55f4620dfeb40c7",
-        "signature": "db4e8f3d0e174f564b1078624198a9f8e5e7c2b57ddf411db7c6e4e1bcd23c8e",
+        "version": "38c1517c4f8a350434f555f2818fc15cf66a93f1b97110bf59b54271f2c581f8",
+        "signature": "559c93c175cfe4fe3b0553bcbc55d5ba9129a4222039711f55bbf7c2f950b56d",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.module.ts": {
@@ -3022,13 +3022,13 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/place-type.service.ts": {
-        "version": "a07e9035528e489c910a35b9f60e4dd3d327417dca7cc8252302c9b5534dce9a",
-        "signature": "e18fd16501de6c5adc26c8fde45f30b4b195de8e42fdb40a4b2a05888ffbfff9",
+        "version": "bc2a90be2d0181e1a9f4ef8e0ab7bca5848f4e3c3bfc6baaf23012400a675282",
+        "signature": "a18b520a4454f7ea7d9d791c53e7e9bf91dffaea703554738180e919ab5f66a1",
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/place-type.controller.ts": {
-        "version": "17fd60af620aebbda39c7d80aa82e21a35efed5c5a99fbde0647ab38d5d0574c",
-        "signature": "12e2c3ee46d6a84d7dc4a8f40f9a39ac4cb172513fb28d5fc69bd6a0c736fbfa",
+        "version": "c37bc5315f6fa02b012618a11d710fc082b2fd505c3f70eea053e3003ff92a6b",
+        "signature": "488c4c8fb53e0faa7a129519121f66c375ea197537e3243dd0623c6a5c7b0e30",
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/place-type.module.ts": {

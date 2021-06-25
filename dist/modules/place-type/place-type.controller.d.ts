@@ -4,4 +4,6 @@ export declare class PlaceTypeController {
     constructor(typeService: PlaceTypeService);
     createType(res: any, data: any): Promise<any>;
     createFeatures(res: any, data: any): Promise<any>;
+    getType(res: any): Promise<any>;
+    getFeatures(res: any): Promise<any>;
 }
