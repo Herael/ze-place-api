@@ -161,7 +161,7 @@ export class BookingService {
     return booking;
   }
 
-  @Cron(CronExpression.EVERY_DAY_AT_MIDNIGHT)
+  @Cron(CronExpression.EVERY_DAY_AT_9AM)
   async sendPaymentToClient() {
     const bookings = await this.getBookingsOfTheDay();
     if (bookings.length > 0) {

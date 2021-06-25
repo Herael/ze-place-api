@@ -165,7 +165,7 @@ let BookingService = class BookingService {
     }
 };
 __decorate([
-    schedule_1.Cron(schedule_1.CronExpression.EVERY_DAY_AT_MIDNIGHT),
+    schedule_1.Cron(schedule_1.CronExpression.EVERY_DAY_AT_9AM),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
