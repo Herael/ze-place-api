@@ -11,5 +11,5 @@ export declare class PaymentService {
     updateDefaultBankAccount(accountId: string, bankAccountId: string): Promise<any>;
     removeBankAccount(accountId: string, bankAccountId: string): Promise<any>;
     getBankAccount(accountId: string): Promise<any>;
-    addPaymentMethod(stripeAccountId: string, cardToken: string): Promise<void>;
+    getBalance(accountId: string): Promise<any>;
 }

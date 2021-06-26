@@ -24,10 +24,6 @@ let PaymentController = class PaymentController {
         const customer = await this.paymentService.createPaymentIntent(req.user, req.body.bookingPrice);
         return res.status(common_1.HttpStatus.OK).json(customer);
     }
-    async confirm(res, req) {
-        const customer = await this.paymentService.addPaymentMethod(req.user, req.body.cardToken);
-        return res.status(common_1.HttpStatus.OK).json(customer);
-    }
     async createBankAccount(res, req) {
         const bankAccount = await this.paymentService.createBankAccount(req.body.accountId, {
             holderName: req.body.holderName,
@@ -48,6 +44,11 @@ let PaymentController = class PaymentController {
         const bankAccount = await this.paymentService.getBankAccount(req.params.id);
         return res.status(common_1.HttpStatus.OK).json(bankAccount);
     }
+    async getBalance(res, req) {
+        const balance = await this.paymentService.getBalance(req.body.accountId);
+        console.log(balance);
+        return res.status(common_1.HttpStatus.OK).json(balance);
+    }
 };
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
@@ -57,14 +58,6 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PaymentController.prototype, "init", null);
-__decorate([
-    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
-    common_1.Post('/paymentMethod/add'),
-    __param(0, common_1.Res()), __param(1, common_1.Req()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object]),
-    __metadata("design:returntype", Promise)
-], PaymentController.prototype, "confirm", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/bankAccount/new'),
@@ -97,6 +90,14 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PaymentController.prototype, "getBankAccount", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Post('/balance'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PaymentController.prototype, "getBalance", null);
 PaymentController = __decorate([
     common_1.Controller('payment'),
     __metadata("design:paramtypes", [payment_service_1.PaymentService])

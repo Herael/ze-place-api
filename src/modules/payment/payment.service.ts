@@ -62,25 +62,9 @@ export class PaymentService {
     return await stripe.accounts.retrieve(accountId);
   }
 
-  async addPaymentMethod(stripeAccountId: string, cardToken: string) {
-    const card = await stripe.accounts.createExternalAccount(
-      'acct_1J3gp8RDio72fPDz',
-      {
-        external_account: cardToken,
-      },
-    );
-    // console.log('CARD', card);
-    // // const payout = await stripe.payouts.create({
-    // //   amount: 1000,
-    // //   currency: 'eur',
-    // //   method: 'instant',
-    // // }, {
-    // //   stripeAccount: 'acct_1J3dsmRHm1vUa4tU',
-    // });
-    // stripe.transfers.create({
-    //   amount: 400,
-    //   currency: 'eur',
-    //   destination: 'acct_1J3gp8RDio72fPDz',
-    // });
+  async getBalance(accountId: string) {
+    return await stripe.balance.retrieve({
+      stripeAccount: accountId,
+    });
   }
 }

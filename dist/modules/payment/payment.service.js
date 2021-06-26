@@ -59,9 +59,9 @@ let PaymentService = class PaymentService {
     async getBankAccount(accountId) {
         return await stripe.accounts.retrieve(accountId);
     }
-    async addPaymentMethod(stripeAccountId, cardToken) {
-        const card = await stripe.accounts.createExternalAccount('acct_1J3gp8RDio72fPDz', {
-            external_account: cardToken,
+    async getBalance(accountId) {
+        return await stripe.balance.retrieve({
+            stripeAccount: accountId,
         });
     }
 };
