@@ -34,7 +34,15 @@ export class CustomerService {
     return customer;
   }
 
-  async addCustomer(customer: Customer): Promise<Customer> {
+  async addCustomer(customer: Customer): Promise<Customer> | undefined {
+    const userExist = await this.customerModel
+      .findOne({
+        email: customer.email,
+      })
+      .exec();
+    if (userExist == null) {
+      return null;
+    }
     const stripeClient = await stripe.customers.create({
       email: customer.email,
       name: `${customer.first_name} ${customer.last_name}`,
@@ -104,7 +112,7 @@ export class CustomerService {
     }
   }
 
-  async addFavorite(customerID: string, place: Place){
+  async addFavorite(customerID: string, place: Place) {
     const updatedCustomer = await this.customerModel.findById(customerID);
     updatedCustomer.favorites.push(place);
     updatedCustomer.save();

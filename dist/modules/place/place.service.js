@@ -102,7 +102,7 @@ let PlaceService = class PlaceService {
                 .exec();
         }
         else {
-            return [];
+            places = await this.placeModel.find();
         }
         if (location) {
             const coords = {

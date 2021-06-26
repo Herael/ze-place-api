@@ -85,6 +85,9 @@ let AuthService = class AuthService {
         });
         customer.stripeAccount = account.id;
         const user = await this.customerService.addCustomer(customer);
+        if (user == null) {
+            return null;
+        }
         const payload = { email: user.email, id: user._id };
         return {
             access_token: this.jwtService.sign(payload),

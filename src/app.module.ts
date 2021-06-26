@@ -16,6 +16,7 @@ import { BookingModule } from './modules/booking/booking.module';
 import { AppGateway } from './app.gateway';
 import { BugTicketModule } from './modules/bug-ticket/bug-ticket.module';
 import { ConversationModule } from './modules/conversation/conversation.module';
+import { MessageModule } from './modules/message/message.module';
 
 @Module({
   imports: [
@@ -36,6 +37,7 @@ import { ConversationModule } from './modules/conversation/conversation.module';
     ConversationModule,
     ScheduleModule.forRoot(),
     BookingModule,
+    MessageModule,
   ],
   controllers: [AppController],
   providers: [AppService, AppGateway],

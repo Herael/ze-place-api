@@ -17,34 +17,47 @@ const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
 let ConversationService = class ConversationService {
-    constructor(conversationModel, placeModel) {
+    constructor(conversationModel) {
         this.conversationModel = conversationModel;
-        this.placeModel = placeModel;
     }
-    async sendMessage(userId, placeId, message) {
-        const place = await this.placeModel.findOne({ _id: placeId });
-        const conversation = await this.conversationModel.findOne({ placeId });
-        if (!conversation) {
-            conversation.placeId = placeId;
-            conversation.senderId = userId;
-            conversation.ownerId = place.ownerId;
-        }
-        conversation.messages.push({
-            from: userId,
-            to: place.ownerId,
-            message: message,
-            isRead: false,
-        });
-        console.log(conversation);
-        conversation.save();
+    async getAllConversation() {
+        const conversations = await this.conversationModel.find().exec();
+        return conversations;
+    }
+    async findById(conversationID) {
+        const conversation = await this.conversationModel
+            .findById(conversationID)
+            .exec();
+        return conversation;
+    }
+    async findByPlaceID(placeId) {
+        const conversation = await this.conversationModel
+            .findOne({ placeId: placeId })
+            .exec();
+        return conversation;
+    }
+    async findByUserID(userId) {
+        const conversation = await this.conversationModel
+            .find({ $or: [{ ownerId: userId }, { senderId: userId }] })
+            .exec();
+        return conversation;
+    }
+    async addConversation(conversationDTO) {
+        return await new this.conversationModel(conversationDTO).save();
+    }
+    async updateConversation(conversationID, createConversationDTO) {
+        const updatedConversation = await this.conversationModel.findByIdAndUpdate(conversationID, createConversationDTO, { new: true });
+        return updatedConversation;
+    }
+    async deleteConversation(conversationID) {
+        const deletedConversation = await this.conversationModel.findByIdAndRemove(conversationID);
+        return deletedConversation;
     }
 };
 ConversationService = __decorate([
     common_1.Injectable(),
     __param(0, mongoose_1.InjectModel('Conversation')),
-    __param(1, mongoose_1.InjectModel('Place')),
-    __metadata("design:paramtypes", [mongoose_2.Model,
-        mongoose_2.Model])
+    __metadata("design:paramtypes", [mongoose_2.Model])
 ], ConversationService);
 exports.ConversationService = ConversationService;
 //# sourceMappingURL=conversation.service.js.map

@@ -33,18 +33,27 @@ export class CreateCustomerDTO {
   @IsString()
   readonly description: string;
   readonly favorites: Place[];
+
   @IsString()
   readonly customerId: string = null;
+
   readonly ownedPlaces: Place[] = [];
+
   readonly bookings: Place[] = [];
+
   readonly pushToken: string = null;
+
   @IsNotEmpty()
   readonly gender: string;
+
   @IsNotEmpty()
   readonly IDRecto: string;
+
   @IsNotEmpty()
   readonly IDVerso: string;
+
   @IsNotEmpty()
   location: Location;
+
   readonly created_at: Date;
 }

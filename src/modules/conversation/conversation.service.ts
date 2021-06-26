@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Place } from '../place/interfaces/place.interface';
+import { ConversationDTO } from './dto/conversation.dto';
 import { Conversation } from './interfaces/conversation.interface';
 
 @Injectable()
@@ -9,27 +9,56 @@ export class ConversationService {
   constructor(
     @InjectModel('Conversation')
     private readonly conversationModel: Model<Conversation>,
-    @InjectModel('Place')
-    private readonly placeModel: Model<Place>,
   ) {}
 
-  // async getConversation(userId, placeId) {}
+  async getAllConversation(): Promise<Conversation[]> {
+    const conversations = await this.conversationModel.find().exec();
+    return conversations;
+  }
 
-  async sendMessage(userId, placeId, message) {
-    const place = await this.placeModel.findOne({ _id: placeId });
-    const conversation = await this.conversationModel.findOne({ placeId });
-    if (!conversation) {
-      conversation.placeId = placeId;
-      conversation.senderId = userId;
-      conversation.ownerId = place.ownerId;
-    }
-    conversation.messages.push({
-      from: userId,
-      to: place.ownerId,
-      message: message,
-      isRead: false,
-    });
-    console.log(conversation);
-    conversation.save();
+  async findById(conversationID: string): Promise<Conversation> {
+    const conversation = await this.conversationModel
+      .findById(conversationID)
+      .exec();
+    return conversation;
+  }
+
+  async findByPlaceID(placeId: string): Promise<Conversation | undefined> {
+    const conversation = await this.conversationModel
+      .findOne({ placeId: placeId })
+      .exec();
+    return conversation;
+  }
+
+  async findByUserID(userId: string): Promise<Conversation[] | undefined> {
+    const conversation = await this.conversationModel
+      .find({ $or: [{ ownerId: userId }, { senderId: userId }] })
+      .exec();
+    return conversation;
+  }
+
+  async addConversation(
+    conversationDTO: ConversationDTO,
+  ): Promise<Conversation> {
+    return await new this.conversationModel(conversationDTO).save();
+  }
+
+  async updateConversation(
+    conversationID: string,
+    createConversationDTO: ConversationDTO,
+  ): Promise<Conversation> {
+    const updatedConversation = await this.conversationModel.findByIdAndUpdate(
+      conversationID,
+      createConversationDTO,
+      { new: true },
+    );
+    return updatedConversation;
+  }
+
+  async deleteConversation(conversationID: string): Promise<any> {
+    const deletedConversation = await this.conversationModel.findByIdAndRemove(
+      conversationID,
+    );
+    return deletedConversation;
   }
 }
