@@ -48,6 +48,7 @@ let PlaceService = class PlaceService {
         return places;
     }
     async createPlace(createPlaceDTO) {
+        console.log(createPlaceDTO.features);
         const newPlace = await new this.placeModel(createPlaceDTO).save();
         const updatedCustomer = await this.customerModel.findById(createPlaceDTO.ownerId);
         updatedCustomer.ownedPlaces.push(newPlace);

@@ -1792,8 +1792,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/feature/interfaces/feature.interface.ts": {
-        "version": "eb8ca9a5251d953ba2caac14fa87fb1e1ca629612e3a339795eab81f741cc02d",
-        "signature": "b028e54f35633c90aa203b206503d880204b57f519b0b81667c89574b2c81215",
+        "version": "e824e85ba2574e2bea9f8205c5d80cf388100e6e2b1ab5f0853c0c90bebf8cdb",
+        "signature": "17948ee99649054a614e23fe773b4b070a348ac1a387a0a15996baa6a1095e4e",
         "affectsGlobalScope": false
       },
       "../src/modules/booking/interfaces/booking.interface.ts": {
@@ -2787,7 +2787,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/feature/schemas/feature.schema.ts": {
-        "version": "607722eda5aeebcc507512aaf8686b95a260884eada32703a606a273e52b3b5c",
+        "version": "851ef02121720220d7ede4648caaa878b837f8d0c6260bad604f417cc75e380d",
         "signature": "f06ef335f0734e00a1b4490b4dbfa791a7ef89cc822e21924eb8594bd0b9a427",
         "affectsGlobalScope": false
       },
@@ -2837,12 +2837,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "e4b69dfe3c07b67231199ba94f5614f384b683734408ab9abd07929478b6786e",
+        "version": "9ed5546e3d3915220315eacedc290e39eba505f2c5995f14f14707f622bd3ae6",
         "signature": "db66928dc4b2be7e680e3dbea7de313c0317d1e7644237b5efb36388045cb1cd",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "38c1517c4f8a350434f555f2818fc15cf66a93f1b97110bf59b54271f2c581f8",
+        "version": "14b91a3a3748212c0687ca9520e106286e702d072b1a04013fa266dfb09f1fec",
         "signature": "559c93c175cfe4fe3b0553bcbc55d5ba9129a4222039711f55bbf7c2f950b56d",
         "affectsGlobalScope": false
       },
