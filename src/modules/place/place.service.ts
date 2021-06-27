@@ -66,6 +66,8 @@ export class PlaceService {
   }
 
   async createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place> {
+    console.log(createPlaceDTO.features);
+    
     const newPlace = await new this.placeModel(createPlaceDTO).save();
     const updatedCustomer = await this.customerModel.findById(
       createPlaceDTO.ownerId,
