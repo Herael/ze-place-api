@@ -85,6 +85,7 @@ let AuthService = class AuthService {
         });
         customer.stripeAccount = account.id;
         const user = await this.customerService.addCustomer(customer);
+        console.log('user', user);
         if (user == null) {
             return null;
         }

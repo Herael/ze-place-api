@@ -39,8 +39,8 @@ export class CustomerService {
       .findOne({
         email: customer.email,
       })
-      .exec();
-    if (userExist == null) {
+      .exec();      
+    if (userExist != null) {
       return null;
     }
     const stripeClient = await stripe.customers.create({
