@@ -39,8 +39,6 @@ let ConversationController = class ConversationController {
     }
     async getConversationByPlaceAndUser(req, res) {
         const conversation = await this.conversationService.findByPlaceAndUser(req.body.placeId, req.body.userId, req.body.ownerId);
-        if (!conversation)
-            throw new common_1.NotFoundException('Conversation does not exist with this placeId !');
         return res.status(common_1.HttpStatus.OK).json(conversation);
     }
     async getConversationByUserId(res, userId) {

@@ -26,7 +26,6 @@ let AuthController = class AuthController {
         return this.authService.login(req.user);
     }
     async register(req) {
-        console.log(req.body);
         return this.authService.register(req.body);
     }
     async uploadID(req, files) {

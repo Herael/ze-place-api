@@ -4,7 +4,7 @@ exports.ConversationSchema = void 0;
 const mongoose = require("mongoose");
 exports.ConversationSchema = new mongoose.Schema({
     placeId: String,
-    senderId: String,
+    userId: String,
     ownerId: String,
     created_at: { type: Date, default: Date.now },
 });

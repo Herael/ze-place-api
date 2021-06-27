@@ -37,13 +37,12 @@ let ConversationService = class ConversationService {
         return conversation;
     }
     async findByPlaceAndUser(placeId, userId, ownerId) {
-        console.log('Fetch');
         const conversation = await this.conversationModel
             .findOne({
             $and: [
                 { placeId: placeId },
-                { $or: [{ ownerId: userId }, { senderId: userId }] },
-                { $or: [{ ownerId: ownerId }, { senderId: ownerId }] },
+                { $or: [{ ownerId: userId }, { userId: userId }] },
+                { $or: [{ ownerId: ownerId }, { userId: ownerId }] },
             ],
         })
             .exec();
