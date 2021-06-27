@@ -41,8 +41,7 @@ let CustomerService = class CustomerService {
             email: customer.email,
         })
             .exec();
-        console.log('userExist', userExist);
-        if (userExist == null) {
+        if (userExist != null) {
             return null;
         }
         const stripeClient = await stripe.customers.create({
