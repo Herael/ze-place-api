@@ -41,6 +41,7 @@ let CustomerService = class CustomerService {
             email: customer.email,
         })
             .exec();
+        console.log('userExist', userExist);
         if (userExist == null) {
             return null;
         }

@@ -72,7 +72,7 @@ export class AuthService {
       account_token: token.id,
     });
     customer.stripeAccount = account.id;
-    const user = await this.customerService.addCustomer(customer);
+    const user = await this.customerService.addCustomer(customer);    
     if (user == null) {
       return null;
     }
