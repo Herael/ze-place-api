@@ -25,12 +25,16 @@ const app_gateway_1 = require("./app.gateway");
 const bug_ticket_module_1 = require("./modules/bug-ticket/bug-ticket.module");
 const conversation_module_1 = require("./modules/conversation/conversation.module");
 const message_module_1 = require("./modules/message/message.module");
+const conversation_schema_1 = require("./modules/conversation/schemas/conversation.schema");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
         imports: [
             mongoose_1.MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost/ze-place-api', { useNewUrlParser: true, useFindAndModify: false }),
+            mongoose_1.MongooseModule.forFeature([
+                { name: 'Conversation', schema: conversation_schema_1.ConversationSchema },
+            ]),
             customer_module_1.CustomerModule,
             place_module_1.PlaceModule,
             review_place_module_1.ReviewPLaceModule,

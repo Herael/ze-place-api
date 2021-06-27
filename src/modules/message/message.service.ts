@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { sendPushNotifications } from 'src/utils';
+import { Customer } from '../customer/interfaces/customer.interface';
 import { MessageDTO } from './dto/message.dto';
 import { Message } from './interfaces/message.interface';
 
@@ -9,6 +11,8 @@ export class MessageService {
   constructor(
     @InjectModel('Message')
     private readonly messageModel: Model<Message>,
+    @InjectModel('Customer')
+    private readonly customerModel: Model<Customer>,
   ) {}
 
   async getAllMessage(): Promise<Message[]> {
@@ -31,6 +35,14 @@ export class MessageService {
   }
 
   async addMessage(messageDTO: MessageDTO): Promise<Message> {
+    const receiver = await this.customerModel
+      .findById(messageDTO.receiverId)
+      .exec();
+    sendPushNotifications({
+      pushId: receiver.pushToken,
+      title: 'Nouveau message',
+      description: messageDTO.text,
+    });
     return await new this.messageModel(messageDTO).save();
   }
 

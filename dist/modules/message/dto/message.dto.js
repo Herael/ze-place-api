@@ -24,6 +24,10 @@ __decorate([
     __metadata("design:type", String)
 ], MessageDTO.prototype, "senderId", void 0);
 __decorate([
+    class_validator_1.IsNotEmpty(),
+    __metadata("design:type", String)
+], MessageDTO.prototype, "receiverId", void 0);
+__decorate([
     class_validator_1.IsString(),
     class_validator_1.IsNotEmpty(),
     __metadata("design:type", String)

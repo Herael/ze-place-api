@@ -9,6 +9,9 @@ export class MessageDTO {
   @IsNotEmpty()
   readonly senderId: string;
 
+  @IsNotEmpty()
+  readonly receiverId: string;
+
   @IsString()
   @IsNotEmpty()
   readonly text: string;

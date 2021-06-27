@@ -16,9 +16,11 @@ exports.MessageService = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
+const utils_1 = require("../../utils");
 let MessageService = class MessageService {
-    constructor(messageModel) {
+    constructor(messageModel, customerModel) {
         this.messageModel = messageModel;
+        this.customerModel = customerModel;
     }
     async getAllMessage() {
         const messages = await this.messageModel.find().exec();
@@ -35,6 +37,14 @@ let MessageService = class MessageService {
         return messages;
     }
     async addMessage(messageDTO) {
+        const receiver = await this.customerModel
+            .findById(messageDTO.receiverId)
+            .exec();
+        utils_1.sendPushNotifications({
+            pushId: receiver.pushToken,
+            title: 'Nouveau message',
+            description: messageDTO.text,
+        });
         return await new this.messageModel(messageDTO).save();
     }
     async deleteMessage(messageID) {
@@ -45,7 +55,9 @@ let MessageService = class MessageService {
 MessageService = __decorate([
     common_1.Injectable(),
     __param(0, mongoose_1.InjectModel('Message')),
-    __metadata("design:paramtypes", [mongoose_2.Model])
+    __param(1, mongoose_1.InjectModel('Customer')),
+    __metadata("design:paramtypes", [mongoose_2.Model,
+        mongoose_2.Model])
 ], MessageService);
 exports.MessageService = MessageService;
 //# sourceMappingURL=message.service.js.map

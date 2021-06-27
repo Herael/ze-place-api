@@ -17,6 +17,7 @@ import { AppGateway } from './app.gateway';
 import { BugTicketModule } from './modules/bug-ticket/bug-ticket.module';
 import { ConversationModule } from './modules/conversation/conversation.module';
 import { MessageModule } from './modules/message/message.module';
+import { ConversationSchema } from './modules/conversation/schemas/conversation.schema';
 
 @Module({
   imports: [
@@ -25,6 +26,9 @@ import { MessageModule } from './modules/message/message.module';
       process.env.MONGODB_URI || 'mongodb://localhost/ze-place-api',
       { useNewUrlParser: true, useFindAndModify: false },
     ),
+    MongooseModule.forFeature([
+      { name: 'Conversation', schema: ConversationSchema },
+    ]),
     CustomerModule,
     PlaceModule,
     ReviewPLaceModule,

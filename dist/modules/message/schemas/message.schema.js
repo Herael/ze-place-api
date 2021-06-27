@@ -7,6 +7,7 @@ const customer_schema_1 = require("../../customer/schemas/customer.schema");
 exports.MessageSchema = new mongoose.Schema({
     conversationId: String,
     senderId: String,
+    ownerId: String,
     text: String,
     created_at: { type: Date, default: Date.now },
 });

@@ -1,9 +1,11 @@
 import { Model } from 'mongoose';
+import { Customer } from '../customer/interfaces/customer.interface';
 import { MessageDTO } from './dto/message.dto';
 import { Message } from './interfaces/message.interface';
 export declare class MessageService {
     private readonly messageModel;
-    constructor(messageModel: Model<Message>);
+    private readonly customerModel;
+    constructor(messageModel: Model<Message>, customerModel: Model<Customer>);
     getAllMessage(): Promise<Message[]>;
     findById(messageID: string): Promise<Message>;
     findByConversationID(conversationId: string): Promise<Message[] | undefined>;

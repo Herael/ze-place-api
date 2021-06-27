@@ -8,19 +8,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var _a, _b;
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppGateway = void 0;
 const websockets_1 = require("@nestjs/websockets");
 const common_1 = require("@nestjs/common");
 const socket_io_1 = require("socket.io");
+const mongoose_1 = require("@nestjs/mongoose");
+const mongoose_2 = require("mongoose");
 let AppGateway = class AppGateway {
-    constructor() {
+    constructor(conversationModel) {
+        this.conversationModel = conversationModel;
         this.logger = new common_1.Logger('AppGateway');
+        this.clientId = '';
     }
-    handleMessage(client, payload) {
-        console.log('payload socket : ' + payload);
-        this.server.emit('msgToClient', 'Hey from the server !');
+    async handleMessage(data) {
+        const conversations = await this.conversationModel
+            .find({ $or: [{ ownerId: data.userId }, { userId: data.userId }] })
+            .exec();
+        const formatConversations = conversations.map((conversation) => {
+            if (conversation.userId === data.userId) {
+                return Object.assign(Object.assign({}, conversation), { userSocketId: this.clientId });
+            }
+            else {
+                return Object.assign(Object.assign({}, conversation), { ownerSocketId: this.clientId });
+            }
+        });
+        console.log(formatConversations);
     }
     afterInit(server) {
         this.logger.log('Init');
@@ -30,6 +47,7 @@ let AppGateway = class AppGateway {
     }
     handleConnection(client, ...args) {
         this.logger.log(`Client connected: ${client.id}`);
+        this.clientId = client.id;
     }
 };
 __decorate([
@@ -37,13 +55,16 @@ __decorate([
     __metadata("design:type", typeof (_a = typeof socket_io_1.Server !== "undefined" && socket_io_1.Server) === "function" ? _a : Object)
 ], AppGateway.prototype, "server", void 0);
 __decorate([
-    websockets_1.SubscribeMessage('msgToServer'),
+    websockets_1.SubscribeMessage('init_conversations'),
+    __param(0, websockets_1.MessageBody()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [typeof (_b = typeof socket_io_1.Socket !== "undefined" && socket_io_1.Socket) === "function" ? _b : Object, String]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
 ], AppGateway.prototype, "handleMessage", null);
 AppGateway = __decorate([
-    websockets_1.WebSocketGateway()
+    websockets_1.WebSocketGateway(),
+    __param(0, mongoose_1.InjectModel('Conversation')),
+    __metadata("design:paramtypes", [mongoose_2.Model])
 ], AppGateway);
 exports.AppGateway = AppGateway;
 //# sourceMappingURL=app.gateway.js.map
