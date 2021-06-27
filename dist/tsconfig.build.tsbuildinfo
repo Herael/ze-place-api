@@ -2527,7 +2527,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/customer.service.ts": {
-        "version": "0ccbf8649a08b5f9fca5a832eb6a7d438759bc490830f637d0c628fdfc71ecaa",
+        "version": "0a5071ceb2588d3d6f220ab422e7a0d1c1df8cfcb0bc95cd0e35064dbff67bba",
         "signature": "7d429dd445debe512cd83823ee3d3aa8d7d981722664abb63f01c42ac0939293",
         "affectsGlobalScope": false
       },
@@ -2537,7 +2537,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.service.ts": {
-        "version": "356780908e33cca9ec98a92cbede2690eb613507e5eded9fc4e366455b3c2733",
+        "version": "874bb5dbfa448e8ad980b69760af7e200d8a6244bfe62246b64ec0cb42396282",
         "signature": "79bde5941f99175104cfbe69c04f36a52e27504bdfd5ac92f2f68731ef7d523c",
         "affectsGlobalScope": false
       },
@@ -2992,7 +2992,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.controller.ts": {
-        "version": "c345d2c6af8addbd8d375c557171b8647e229dbb0c50a5317b0b99bc2fc79039",
+        "version": "0e4659c514ae4398e540c270a5e18e70b00dc9a96b64459b017a4f283dde4aa6",
         "signature": "b8edbd44d8c3a9bd737bd2f35be8eff67978d3d2c097144c9754c2040bfe38fc",
         "affectsGlobalScope": false
       },
@@ -3112,6 +3112,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/conversation.service.ts": {
+<<<<<<< HEAD
         "version": "3f6f80fd2e18ae61f961c0855fb269823e595747958dfe3a5880b943ecfab6cb",
         "signature": "daafa605433b98397ee36106a3e0e270290c8c826674fd1a4aa953168add9102",
         "affectsGlobalScope": false
@@ -3119,6 +3120,15 @@
       "../src/modules/conversation/conversation.controller.ts": {
         "version": "a64725d2a8c164d6f7dc870429dd18c204fb60423068e9e390cf13503b157aee",
         "signature": "14eba781e63a920e17ffd87f7d29208b444aa66e4f78fd00e43d722660228cad",
+=======
+        "version": "39c74539e03dca1493552dd43d2adf60463ee6a3f60bb3596ff6254d1d0af4ad",
+        "signature": "2f75deb1e03f2fba91ff14aa5ea8b11a027d5cc7b6c46408536110632ef5afd5",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/conversation/conversation.controller.ts": {
+        "version": "9a2ebcc51b24b4371e4a7e8f8453afa95b69cdd84aefabe32ad5e0f03dc2178e",
+        "signature": "92697c802d3625532f85d1889d0dc0e7b5c5239440c52c7e376538221493df34",
+>>>>>>> 67059699a610adc7a1ea3aa3084d229c328a4ad7
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/schemas/conversation.schema.ts": {
@@ -9061,16 +9071,6 @@
       "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts",
       "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
       "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts",
-      "../node_modules/@nestjs/schedule/dist/decorators/cron.decorator.d.ts",
-      "../node_modules/@nestjs/schedule/dist/decorators/index.d.ts",
-      "../node_modules/@nestjs/schedule/dist/decorators/interval.decorator.d.ts",
-      "../node_modules/@nestjs/schedule/dist/decorators/timeout.decorator.d.ts",
-      "../node_modules/@nestjs/schedule/dist/enums/cron-expression.enum.d.ts",
-      "../node_modules/@nestjs/schedule/dist/enums/index.d.ts",
-      "../node_modules/@nestjs/schedule/dist/index.d.ts",
-      "../node_modules/@nestjs/schedule/dist/schedule.module.d.ts",
-      "../node_modules/@nestjs/schedule/dist/scheduler.registry.d.ts",
-      "../node_modules/@nestjs/schedule/index.d.ts",
       "../node_modules/@nestjs/websockets/adapters/index.d.ts",
       "../node_modules/@nestjs/websockets/adapters/ws-adapter.d.ts",
       "../node_modules/@nestjs/websockets/decorators/connected-socket.decorator.d.ts",
@@ -9105,7 +9105,6 @@
       "../node_modules/@types/bson/index.d.ts",
       "../node_modules/@types/connect/index.d.ts",
       "../node_modules/@types/cookiejar/index.d.ts",
-      "../node_modules/@types/cron/index.d.ts",
       "../node_modules/@types/eslint-scope/index.d.ts",
       "../node_modules/@types/eslint/helpers.d.ts",
       "../node_modules/@types/eslint/index.d.ts",
@@ -9479,22 +9478,13 @@
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
-      "../src/app.controller.ts",
       "../src/app.gateway.ts",
-      "../src/app.module.ts",
-      "../src/app.service.ts",
-      "../src/main.ts",
-      "../src/modules/auth/auth.controller.ts",
       "../src/modules/auth/auth.module.ts",
-      "../src/modules/auth/auth.service.ts",
       "../src/modules/auth/constants.ts",
       "../src/modules/auth/jwt-auth.guard.ts",
       "../src/modules/auth/jwt.strategy.ts",
       "../src/modules/auth/local-auth.guard.ts",
       "../src/modules/auth/local.strategy.ts",
-      "../src/modules/booking/booking.controller.ts",
-      "../src/modules/booking/booking.module.ts",
-      "../src/modules/booking/booking.service.ts",
       "../src/modules/booking/dto/booking.dto.ts",
       "../src/modules/booking/interfaces/booking.interface.ts",
       "../src/modules/booking/schemas/booking.schema.ts",
@@ -9504,15 +9494,12 @@
       "../src/modules/bug-ticket/dto/create-ticket.dto.ts",
       "../src/modules/bug-ticket/interfaces/ticket.interface.ts",
       "../src/modules/bug-ticket/schemas/ticket.schema.ts",
-      "../src/modules/conversation/conversation.controller.ts",
       "../src/modules/conversation/conversation.module.ts",
-      "../src/modules/conversation/conversation.service.ts",
       "../src/modules/conversation/dto/conversation.dto.ts",
       "../src/modules/conversation/interfaces/conversation.interface.ts",
       "../src/modules/conversation/schemas/conversation.schema.ts",
       "../src/modules/customer/customer.controller.ts",
       "../src/modules/customer/customer.module.ts",
-      "../src/modules/customer/customer.service.ts",
       "../src/modules/customer/dto/create-customer.dto.ts",
       "../src/modules/customer/interfaces/customer.interface.ts",
       "../src/modules/customer/schemas/customer.schema.ts",
