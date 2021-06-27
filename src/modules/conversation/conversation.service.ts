@@ -35,13 +35,12 @@ export class ConversationService {
     userId: string,
     ownerId: string,
   ): Promise<Conversation | undefined> {
-    console.log('Fetch');
     const conversation = await this.conversationModel
       .findOne({
         $and: [
           { placeId: placeId },
-          { $or: [{ ownerId: userId }, { senderId: userId }] },
-          { $or: [{ ownerId: ownerId }, { senderId: ownerId }] },
+          { $or: [{ ownerId: userId }, { userId: userId }] },
+          { $or: [{ ownerId: ownerId }, { userId: ownerId }] },
         ],
       })
       .exec();
