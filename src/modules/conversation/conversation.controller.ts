@@ -61,10 +61,6 @@ export class ConversationController {
       req.body.userId,
       req.body.ownerId,
     );
-    if (!conversation)
-      throw new NotFoundException(
-        'Conversation does not exist with this placeId !',
-      );
     return res.status(HttpStatus.OK).json(conversation);
   }
 
