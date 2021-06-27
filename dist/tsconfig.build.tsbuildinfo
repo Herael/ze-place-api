@@ -3102,8 +3102,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/dto/conversation.dto.ts": {
-        "version": "b8fd1b688bf8de65f269347f57332e080352a7e649e270e4a04234fdffd025bf",
-        "signature": "386a8a957ef498a3bf9ef706a0a332fd97ddbf906a2aafb03d765ac58c8e5897",
+        "version": "ce5831550da5f0f11e2254626667b792f6447936f981c5ed6a1fc50f30987e69",
+        "signature": "34e0a831c914b46c66e72250acb3244665520ee05d18751a22833c1efb61d264",
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/interfaces/conversation.interface.ts": {
@@ -3112,13 +3112,13 @@
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/conversation.service.ts": {
-        "version": "663629641ac10d269bfa655fbcc770403b5c0ba5cf83b7c8ec50c3962ec51bcf",
-        "signature": "2f75deb1e03f2fba91ff14aa5ea8b11a027d5cc7b6c46408536110632ef5afd5",
+        "version": "3f6f80fd2e18ae61f961c0855fb269823e595747958dfe3a5880b943ecfab6cb",
+        "signature": "daafa605433b98397ee36106a3e0e270290c8c826674fd1a4aa953168add9102",
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/conversation.controller.ts": {
-        "version": "84015bc5ec3cd53fe9916c07d59f25ecfe5498335b3a54f2c792ddd9f09eda04",
-        "signature": "92697c802d3625532f85d1889d0dc0e7b5c5239440c52c7e376538221493df34",
+        "version": "a64725d2a8c164d6f7dc870429dd18c204fb60423068e9e390cf13503b157aee",
+        "signature": "14eba781e63a920e17ffd87f7d29208b444aa66e4f78fd00e43d722660228cad",
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/schemas/conversation.schema.ts": {
@@ -3132,13 +3132,13 @@
         "affectsGlobalScope": false
       },
       "../src/modules/message/dto/message.dto.ts": {
-        "version": "0b53616bb77c68c2a0f6a751cd8c2f75855ea24b4e92e8480b6502f1a453c9d1",
-        "signature": "7ce32e7f53c5a8121348fc7adbbf50478831e7baa7579de43fe23db7b8de170c",
+        "version": "fff0670cc7963eabb45345acdafbe83f1b52865013c3d65cffb07ca66ba4e8ad",
+        "signature": "93bc693896c5242a2131b5aa175354728ab58e031982c417ea39accd143e8c2e",
         "affectsGlobalScope": false
       },
       "../src/modules/message/interfaces/message.interface.ts": {
-        "version": "3a58eec0dd5203c998fb3127195be70c698baf4b8ad8e61551f052f2ac655e7e",
-        "signature": "aea4afda420780696851a073d6686c70f6ad34794e8b2877efb7b4683939ac9f",
+        "version": "604233809f77b003c11fc345a63afee9e04b9403e68a072f83234e5eadda6d8d",
+        "signature": "7b4e3e742d203100d0eb13e8c15d3e622b013a976d1c4ead78481e5dc67dbdcb",
         "affectsGlobalScope": false
       },
       "../src/modules/message/message.service.ts": {
@@ -3147,12 +3147,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/message/message.controller.ts": {
-        "version": "64d8fefbd47c5421eb9732a6b1fe11c7c5e397905f1d4b296543a553978658f0",
+        "version": "7fd5ef2121011b97818f01201bd31c599e5809617b03bec803ef81f1dcc02843",
         "signature": "2514dfae8122fe3b8fde09d491def658aaf2acf56884601424b90df450ecfaa9",
         "affectsGlobalScope": false
       },
       "../src/modules/message/schemas/message.schema.ts": {
-        "version": "93c1a5983baef9e9a3dc810433b6db703d01f501a6803bd614c23b079f45f950",
+        "version": "d658d7bd47fcbcc8f1e5f38185b1217b9dd6f8e1b2ecfdb1c5cc0db4f5548f68",
         "signature": "64c02f2435d196a30bfa448ed34cb13ad9d0c3178a82a234a6bd4fc4311a34ff",
         "affectsGlobalScope": false
       },
@@ -6161,6 +6161,7 @@
       ],
       "../src/modules/message/message.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/auth/jwt-auth.guard.ts",
         "../src/modules/message/dto/message.dto.ts",
         "../src/modules/message/message.service.ts"
       ],
@@ -8726,14 +8727,8 @@
       "../src/modules/feature/schemas/feature.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
-      "../src/modules/message/dto/message.dto.ts": [
-        "../src/modules/conversation/interfaces/conversation.interface.ts",
-        "../src/modules/customer/interfaces/customer.interface.ts"
-      ],
       "../src/modules/message/interfaces/message.interface.ts": [
-        "../node_modules/mongoose/index.d.ts",
-        "../src/modules/conversation/interfaces/conversation.interface.ts",
-        "../src/modules/customer/interfaces/customer.interface.ts"
+        "../node_modules/mongoose/index.d.ts"
       ],
       "../src/modules/message/message.controller.ts": [
         "../src/modules/message/dto/message.dto.ts",

@@ -3,9 +3,8 @@ import { Conversation } from 'src/modules/conversation/interfaces/conversation.i
 import { Customer } from 'src/modules/customer/interfaces/customer.interface';
 
 export interface Message extends Document {
-  conversation: Conversation;
-  sender: Customer;
-  reciever: Customer;
+  conversationId: string;
+  senderId: string;
   text: string;
   created_at: Date;
 }

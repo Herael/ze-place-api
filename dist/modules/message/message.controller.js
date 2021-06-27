@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MessageController = void 0;
 const common_1 = require("@nestjs/common");
+const jwt_auth_guard_1 = require("../auth/jwt-auth.guard");
 const message_dto_1 = require("./dto/message.dto");
 const message_service_1 = require("./message.service");
 let MessageController = class MessageController {
@@ -31,12 +32,14 @@ let MessageController = class MessageController {
         return res.status(common_1.HttpStatus.OK).json(message);
     }
     async getMessageByConversationId(res, conversationId) {
+        console.log('CONVERSATION');
         const message = await this.messageService.findByConversationID(conversationId);
         if (!message)
             throw new common_1.NotFoundException('Message does not exist with this conversation !');
         return res.status(common_1.HttpStatus.OK).json(message);
     }
     async createMessage(res, messageDTO) {
+        console.log(messageDTO);
         const messageAdded = await this.messageService.addMessage(messageDTO);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Message has been successfully created',
@@ -68,7 +71,8 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], MessageController.prototype, "getMessageById", null);
 __decorate([
-    common_1.Get('/:conversationID'),
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Get('/conversation/:conversationId'),
     __param(0, common_1.Res()),
     __param(1, common_1.Param('conversationId')),
     __metadata("design:type", Function),
@@ -76,6 +80,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], MessageController.prototype, "getMessageByConversationId", null);
 __decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/create'),
     __param(0, common_1.Res()), __param(1, common_1.Body()),
     __metadata("design:type", Function),
@@ -90,7 +95,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], MessageController.prototype, "deleteMessage", null);
 MessageController = __decorate([
-    common_1.Controller('message'),
+    common_1.Controller('messages'),
     __metadata("design:paramtypes", [message_service_1.MessageService])
 ], MessageController);
 exports.MessageController = MessageController;

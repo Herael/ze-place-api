@@ -3,9 +3,8 @@ import { ConversationSchema } from 'src/modules/conversation/schemas/conversatio
 import { CustomerSchema } from 'src/modules/customer/schemas/customer.schema';
 
 export const MessageSchema = new mongoose.Schema({
-  conversation: ConversationSchema,
-  sender: CustomerSchema,
-  reciever: CustomerSchema,
+  conversationId: String,
+  senderId: String,
   text: String,
   created_at: { type: Date, default: Date.now },
 });

@@ -17,16 +17,12 @@ class MessageDTO {
 }
 __decorate([
     class_validator_1.IsNotEmpty(),
-    __metadata("design:type", Object)
-], MessageDTO.prototype, "conversation", void 0);
+    __metadata("design:type", String)
+], MessageDTO.prototype, "conversationId", void 0);
 __decorate([
     class_validator_1.IsNotEmpty(),
-    __metadata("design:type", Object)
-], MessageDTO.prototype, "sender", void 0);
-__decorate([
-    class_validator_1.IsNotEmpty(),
-    __metadata("design:type", Object)
-], MessageDTO.prototype, "reciever", void 0);
+    __metadata("design:type", String)
+], MessageDTO.prototype, "senderId", void 0);
 __decorate([
     class_validator_1.IsString(),
     class_validator_1.IsNotEmpty(),

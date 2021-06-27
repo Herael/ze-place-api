@@ -7,7 +7,7 @@ export class ConversationDTO {
 
   @IsString()
   @IsNotEmpty()
-  readonly senderId: string;
+  readonly userId: string;
 
   @IsString()
   @IsNotEmpty()

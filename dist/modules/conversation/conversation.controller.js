@@ -37,6 +37,12 @@ let ConversationController = class ConversationController {
             throw new common_1.NotFoundException('Conversation does not exist with this placeId !');
         return res.status(common_1.HttpStatus.OK).json(conversation);
     }
+    async getConversationByPlaceAndUser(req, res) {
+        const conversation = await this.conversationService.findByPlaceAndUser(req.body.placeId, req.body.userId, req.body.ownerId);
+        if (!conversation)
+            throw new common_1.NotFoundException('Conversation does not exist with this placeId !');
+        return res.status(common_1.HttpStatus.OK).json(conversation);
+    }
     async getConversationByUserId(res, userId) {
         const conversation = await this.conversationService.findByUserID(userId);
         if (!conversation)
@@ -85,14 +91,22 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ConversationController.prototype, "getConversationById", null);
 __decorate([
-    common_1.Get('/:placeID'),
+    common_1.Get('/place/:placeID'),
     __param(0, common_1.Res()), __param(1, common_1.Param('placeID')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], ConversationController.prototype, "getConversationByPlaceId", null);
 __decorate([
-    common_1.Get('/:userID'),
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Post('/place/user'),
+    __param(0, common_1.Req()), __param(1, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], ConversationController.prototype, "getConversationByPlaceAndUser", null);
+__decorate([
+    common_1.Get('/user/:userID'),
     __param(0, common_1.Res()), __param(1, common_1.Param('userId')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),

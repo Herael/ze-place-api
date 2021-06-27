@@ -9,11 +9,13 @@ import {
   Post,
   Query,
   Res,
+  UseGuards,
 } from '@nestjs/common';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { MessageDTO } from './dto/message.dto';
 import { MessageService } from './message.service';
 
-@Controller('message')
+@Controller('messages')
 export class MessageController {
   constructor(private messageService: MessageService) {}
 
@@ -32,12 +34,13 @@ export class MessageController {
     return res.status(HttpStatus.OK).json(message);
   }
 
-  // @UseGuards(JwtAuthGuard)
-  @Get('/:conversationID')
+  @UseGuards(JwtAuthGuard)
+  @Get('/conversation/:conversationId')
   async getMessageByConversationId(
     @Res() res,
     @Param('conversationId') conversationId,
   ) {
+    console.log('CONVERSATION');
     const message = await this.messageService.findByConversationID(
       conversationId,
     );
@@ -48,9 +51,10 @@ export class MessageController {
     return res.status(HttpStatus.OK).json(message);
   }
 
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   @Post('/create')
   async createMessage(@Res() res, @Body() messageDTO: MessageDTO) {
+    console.log(messageDTO);
     const messageAdded = await this.messageService.addMessage(messageDTO);
     return res.status(HttpStatus.OK).json({
       message: 'Message has been successfully created',

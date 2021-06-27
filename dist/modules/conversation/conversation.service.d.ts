@@ -6,7 +6,8 @@ export declare class ConversationService {
     constructor(conversationModel: Model<Conversation>);
     getAllConversation(): Promise<Conversation[]>;
     findById(conversationID: string): Promise<Conversation>;
-    findByPlaceID(placeId: string): Promise<Conversation | undefined>;
+    findByPlaceID(placeId: string): Promise<Conversation[] | undefined>;
+    findByPlaceAndUser(placeId: string, userId: string, ownerId: string): Promise<Conversation | undefined>;
     findByUserID(userId: string): Promise<Conversation[] | undefined>;
     addConversation(conversationDTO: ConversationDTO): Promise<Conversation>;
     updateConversation(conversationID: string, createConversationDTO: ConversationDTO): Promise<Conversation>;

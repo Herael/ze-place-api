@@ -11,6 +11,7 @@ import {
   Put,
   Query,
   Delete,
+  Req,
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
 import { ConversationService } from './conversation.service';
@@ -42,7 +43,7 @@ export class ConversationController {
   }
 
   // @UseGuards(JwtAuthGuard)
-  @Get('/:placeID')
+  @Get('/place/:placeID')
   async getConversationByPlaceId(@Res() res, @Param('placeID') placeId) {
     const conversation = await this.conversationService.findByPlaceID(placeId);
     if (!conversation)
@@ -52,8 +53,23 @@ export class ConversationController {
     return res.status(HttpStatus.OK).json(conversation);
   }
 
+  @UseGuards(JwtAuthGuard)
+  @Post('/place/user')
+  async getConversationByPlaceAndUser(@Req() req, @Res() res) {
+    const conversation = await this.conversationService.findByPlaceAndUser(
+      req.body.placeId,
+      req.body.userId,
+      req.body.ownerId,
+    );
+    if (!conversation)
+      throw new NotFoundException(
+        'Conversation does not exist with this placeId !',
+      );
+    return res.status(HttpStatus.OK).json(conversation);
+  }
+
   // @UseGuards(JwtAuthGuard)
-  @Get('/:userID')
+  @Get('/user/:userID')
   async getConversationByUserId(@Res() res, @Param('userId') userId) {
     const conversation = await this.conversationService.findByUserID(userId);
     if (!conversation)

@@ -6,6 +6,7 @@ export declare class ConversationController {
     getAllConversation(res: any): Promise<any>;
     getConversationById(res: any, conversationID: any): Promise<any>;
     getConversationByPlaceId(res: any, placeId: any): Promise<any>;
+    getConversationByPlaceAndUser(req: any, res: any): Promise<any>;
     getConversationByUserId(res: any, userId: any): Promise<any>;
     createConversation(res: any, conversationDTO: ConversationDTO): Promise<any>;
     updateconversation(res: any, conversationID: any, conversationDTO: ConversationDTO): Promise<any>;
