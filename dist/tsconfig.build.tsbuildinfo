@@ -1832,8 +1832,8 @@
         "affectsGlobalScope": false
       },
       "../src/utils/index.ts": {
-        "version": "5683b662e494cabdfe0f9443820bb87992b74868fb04b6b87c7a776728c602ea",
-        "signature": "eb27523215e6578e7ffce3f3b29309bd164e18c7759370dc20381f8cb50670e8",
+        "version": "4c598f21af9e3301c94d1daded30584e99a1b3b5ee5aec585d406661875f85e6",
+        "signature": "caa16a5426aa0ab7a2576fa88d3a7e279aaec9ec449c59b2aa610393682da575",
         "affectsGlobalScope": false
       },
       "../src/modules/booking/dto/booking.dto.ts": {
@@ -2677,7 +2677,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.gateway.ts": {
-        "version": "54e2dc6a43cffc59cc259031a485e3075b5b0bcdcc4c093fc220b40fbe882fdb",
+        "version": "0688794ed9a7b4bd96e67c4b05ab19204412a928fc8641078dc9bb335f33a432",
         "signature": "31571a31ef89b419adcdabefd3572486671465f9a695829ff939f128abf3ed3d",
         "affectsGlobalScope": false
       },
@@ -3142,7 +3142,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/message/message.service.ts": {
-        "version": "e609eca4761ebf7a7cd3d14f03a4b9b36ecf9c197cd56b70d3fd1ddc31883b97",
+        "version": "961ad078dd08ae732a379c0343bcf838a8424566766fd53a1b84c87c0ce51054",
         "signature": "980c7b7613f5d4a74e316331c045f2f317c1ff385510ca4cd805d4872c84d8e0",
         "affectsGlobalScope": false
       },
@@ -3152,7 +3152,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/message/schemas/message.schema.ts": {
-        "version": "d213f69ebc2c26be947683d386f4f7ac3aa5287d26d39aa576f98844b5f0f3e6",
+        "version": "4346d4d24585445d39fb18d56b53dca65cb79f5d1fa25792ff80477ce5d19dc9",
         "signature": "64c02f2435d196a30bfa448ed34cb13ad9d0c3178a82a234a6bd4fc4311a34ff",
         "affectsGlobalScope": false
       },

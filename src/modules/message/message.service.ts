@@ -35,13 +35,22 @@ export class MessageService {
   }
 
   async addMessage(messageDTO: MessageDTO): Promise<Message> {
+    const sender = await this.customerModel
+      .findById(messageDTO.senderId)
+      .exec();
     const receiver = await this.customerModel
       .findById(messageDTO.receiverId)
       .exec();
     sendPushNotifications({
       pushId: receiver.pushToken,
-      title: 'Nouveau message',
+      title: `${sender.first_name} ${sender.last_name}`,
       description: messageDTO.text,
+      data: {
+        conversation: {
+          id: messageDTO.conversationId,
+          message: messageDTO.text,
+        },
+      },
     });
     return await new this.messageModel(messageDTO).save();
   }

@@ -50,13 +50,24 @@ export const isContainsFeatures = (
   return true;
 };
 
-export const sendPushNotifications = async ({ pushId, title, description }) => {
+export const sendPushNotifications = async ({
+  pushId,
+  title,
+  data,
+  description,
+}: {
+  pushId: string;
+  title: string;
+  data?: any;
+  description: string;
+}) => {
   if (pushId) {
     return await axios
       .post('https://exp.host/--/api/v2/push/send', {
         to: pushId,
         title: title,
         body: description,
+        data,
       })
       .then((response: AxiosResponse<any>) => {
         return response.data;
@@ -82,7 +93,11 @@ export const getDates = (startDate, endDate) => {
   return dates;
 };
 
-export const dateToAvailabilities = (userId: string, startDate: Date, endDate: Date) => {
+export const dateToAvailabilities = (
+  userId: string,
+  startDate: Date,
+  endDate: Date,
+) => {
   const dates = [];
   let currentDate: Date = startDate,
     addDays = function (days) {

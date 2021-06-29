@@ -5,7 +5,7 @@ import { CustomerSchema } from 'src/modules/customer/schemas/customer.schema';
 export const MessageSchema = new mongoose.Schema({
   conversationId: String,
   senderId: String,
-  ownerId: String,
+  receiverId: String,
   text: String,
   created_at: { type: Date, default: Date.now },
 });

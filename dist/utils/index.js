@@ -37,13 +37,14 @@ const isContainsFeatures = (researchFeature, placeFeature) => {
     return true;
 };
 exports.isContainsFeatures = isContainsFeatures;
-const sendPushNotifications = async ({ pushId, title, description }) => {
+const sendPushNotifications = async ({ pushId, title, data, description, }) => {
     if (pushId) {
         return await axios_1.default
             .post('https://exp.host/--/api/v2/push/send', {
             to: pushId,
             title: title,
             body: description,
+            data,
         })
             .then((response) => {
             return response.data;

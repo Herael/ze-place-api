@@ -37,7 +37,6 @@ let AppGateway = class AppGateway {
                 return Object.assign(Object.assign({}, conversation), { ownerSocketId: this.clientId });
             }
         });
-        console.log(formatConversations);
     }
     afterInit(server) {
         this.logger.log('Init');

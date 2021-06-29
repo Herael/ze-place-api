@@ -43,7 +43,6 @@ export class AppGateway
         };
       }
     });
-    console.log(formatConversations);
   }
 
   afterInit(server: Server) {
