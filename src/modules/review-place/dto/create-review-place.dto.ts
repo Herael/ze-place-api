@@ -23,6 +23,10 @@ export class CreateReviewPlaceDTO {
 
   @IsNotEmpty()
   @IsString()
+  readonly writerName: string;
+
+  @IsNotEmpty()
+  @IsString()
   readonly placeId: string;
 
   @IsNumber()

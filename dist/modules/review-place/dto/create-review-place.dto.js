@@ -32,6 +32,11 @@ __decorate([
     class_validator_1.IsNotEmpty(),
     class_validator_1.IsString(),
     __metadata("design:type", String)
+], CreateReviewPlaceDTO.prototype, "writerName", void 0);
+__decorate([
+    class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    __metadata("design:type", String)
 ], CreateReviewPlaceDTO.prototype, "placeId", void 0);
 __decorate([
     class_validator_1.IsNumber(),
