@@ -11,6 +11,33 @@ const stripe = require('stripe')(
 export class PaymentService {
   constructor(private customerService: CustomerService) {}
 
+  async getPaymentMethods(customerId: string) {
+    const paymentMethods = await stripe.paymentMethods.list({
+      customer: customerId,
+      type: 'card',
+    });
+    return paymentMethods;
+  }
+
+  async attachPaymentMethod(customerId: string, paymentMethodId: string) {
+    const paymentMethod = await stripe.paymentMethods.attach(paymentMethodId, {
+      customer: customerId,
+    });
+    return paymentMethod;
+  }
+
+  async detachPaymentMethod(paymentMethodId: string) {
+    const paymentMethod = await stripe.paymentMethods.detach(paymentMethodId);
+    return paymentMethod;
+  }
+
+  async updatePaymentMethod(customerId: string, paymentMethodId: string) {
+    const customer = await stripe.customers.update(customerId, {
+      invoice_settings: { default_payment_method: paymentMethodId },
+    });
+    return customer;
+  }
+
   async createPaymentIntent(token, bookingPrice: number) {
     const user: Customer = await this.customerService.findById(token.id);
     const ephemeralKey = await stripe.ephemeralKeys.create(

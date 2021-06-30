@@ -17,6 +17,29 @@ let PaymentService = class PaymentService {
     constructor(customerService) {
         this.customerService = customerService;
     }
+    async getPaymentMethods(customerId) {
+        const paymentMethods = await stripe.paymentMethods.list({
+            customer: customerId,
+            type: 'card',
+        });
+        return paymentMethods;
+    }
+    async attachPaymentMethod(customerId, paymentMethodId) {
+        const paymentMethod = await stripe.paymentMethods.attach(paymentMethodId, {
+            customer: customerId,
+        });
+        return paymentMethod;
+    }
+    async detachPaymentMethod(paymentMethodId) {
+        const paymentMethod = await stripe.paymentMethods.detach(paymentMethodId);
+        return paymentMethod;
+    }
+    async updatePaymentMethod(customerId, paymentMethodId) {
+        const customer = await stripe.customers.update(customerId, {
+            invoice_settings: { default_payment_method: paymentMethodId },
+        });
+        return customer;
+    }
     async createPaymentIntent(token, bookingPrice) {
         const user = await this.customerService.findById(token.id);
         const ephemeralKey = await stripe.ephemeralKeys.create({ customer: user.customerId }, { apiVersion: '2020-08-27' });

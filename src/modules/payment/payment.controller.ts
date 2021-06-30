@@ -25,6 +25,44 @@ export class PaymentController {
   }
 
   @UseGuards(JwtAuthGuard)
+  @Get('/paymentMethods/:customerId')
+  async getPaymentMethods(@Res() res, @Req() req) {
+    const paymentMethods = await this.paymentService.getPaymentMethods(
+      req.params.customerId,
+    );
+    return res.status(HttpStatus.OK).json(paymentMethods);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/paymentMethods/add')
+  async attachPaymentMethod(@Res() res, @Req() req) {
+    const paymentMethod = await this.paymentService.attachPaymentMethod(
+      req.body.customerId,
+      req.body.paymentMethodId,
+    );
+    return res.status(HttpStatus.OK).json(paymentMethod);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/paymentMethods/remove')
+  async detachPaymentMethod(@Res() res, @Req() req) {
+    const paymentMethod = await this.paymentService.detachPaymentMethod(
+      req.body.paymentMethodId,
+    );
+    return res.status(HttpStatus.OK).json(paymentMethod);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/paymentMethods/update')
+  async updatePaymentMethod(@Res() res, @Req() req) {
+    const paymentMethod = await this.paymentService.updatePaymentMethod(
+      req.body.customerId,
+      req.body.paymentMethodId,
+    );
+    return res.status(HttpStatus.OK).json(paymentMethod);
+  }
+
+  @UseGuards(JwtAuthGuard)
   @Post('/bankAccount/new')
   async createBankAccount(@Res() res, @Req() req) {
     const bankAccount = await this.paymentService.createBankAccount(

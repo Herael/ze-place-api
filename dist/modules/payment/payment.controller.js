@@ -24,6 +24,22 @@ let PaymentController = class PaymentController {
         const customer = await this.paymentService.createPaymentIntent(req.user, req.body.bookingPrice);
         return res.status(common_1.HttpStatus.OK).json(customer);
     }
+    async getPaymentMethods(res, req) {
+        const paymentMethods = await this.paymentService.getPaymentMethods(req.params.customerId);
+        return res.status(common_1.HttpStatus.OK).json(paymentMethods);
+    }
+    async attachPaymentMethod(res, req) {
+        const paymentMethod = await this.paymentService.attachPaymentMethod(req.body.customerId, req.body.paymentMethodId);
+        return res.status(common_1.HttpStatus.OK).json(paymentMethod);
+    }
+    async detachPaymentMethod(res, req) {
+        const paymentMethod = await this.paymentService.detachPaymentMethod(req.body.paymentMethodId);
+        return res.status(common_1.HttpStatus.OK).json(paymentMethod);
+    }
+    async updatePaymentMethod(res, req) {
+        const paymentMethod = await this.paymentService.updatePaymentMethod(req.body.customerId, req.body.paymentMethodId);
+        return res.status(common_1.HttpStatus.OK).json(paymentMethod);
+    }
     async createBankAccount(res, req) {
         const bankAccount = await this.paymentService.createBankAccount(req.body.accountId, {
             holderName: req.body.holderName,
@@ -58,6 +74,38 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PaymentController.prototype, "init", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Get('/paymentMethods/:customerId'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PaymentController.prototype, "getPaymentMethods", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Post('/paymentMethods/add'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PaymentController.prototype, "attachPaymentMethod", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Post('/paymentMethods/remove'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PaymentController.prototype, "detachPaymentMethod", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Post('/paymentMethods/update'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PaymentController.prototype, "updatePaymentMethod", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/bankAccount/new'),
