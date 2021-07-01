@@ -21,7 +21,11 @@ let PaymentController = class PaymentController {
         this.paymentService = paymentService;
     }
     async init(res, req) {
-        const customer = await this.paymentService.createPaymentIntent(req.user, req.body.bookingPrice);
+        const paymentIntent = await this.paymentService.createPaymentIntent(req.body.customerId, req.body.paymentMethodId);
+        return res.status(common_1.HttpStatus.OK).json(paymentIntent);
+    }
+    async getCustomer(res, req) {
+        const customer = await this.paymentService.getCustomer(req.params.customerId);
         return res.status(common_1.HttpStatus.OK).json(customer);
     }
     async getPaymentMethods(res, req) {
@@ -33,7 +37,7 @@ let PaymentController = class PaymentController {
         return res.status(common_1.HttpStatus.OK).json(paymentMethod);
     }
     async detachPaymentMethod(res, req) {
-        const paymentMethod = await this.paymentService.detachPaymentMethod(req.body.paymentMethodId);
+        const paymentMethod = await this.paymentService.detachPaymentMethod(req.body.customerId, req.body.paymentMethodId);
         return res.status(common_1.HttpStatus.OK).json(paymentMethod);
     }
     async updatePaymentMethod(res, req) {
@@ -65,15 +69,27 @@ let PaymentController = class PaymentController {
         console.log(balance);
         return res.status(common_1.HttpStatus.OK).json(balance);
     }
+    async initSetupIntent(res, req) {
+        const setupIntent = await this.paymentService.initSetupIntent(req.body.customerId, req.body.paymentMethodId);
+        return res.status(common_1.HttpStatus.OK).json(setupIntent);
+    }
 };
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
-    common_1.Post('/init'),
+    common_1.Post('/paymentIntent/create'),
     __param(0, common_1.Res()), __param(1, common_1.Req()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PaymentController.prototype, "init", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Get('/customer/:customerId'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PaymentController.prototype, "getCustomer", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get('/paymentMethods/:customerId'),
@@ -146,6 +162,14 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PaymentController.prototype, "getBalance", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Post('/setupIntent/create'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PaymentController.prototype, "initSetupIntent", null);
 PaymentController = __decorate([
     common_1.Controller('payment'),
     __metadata("design:paramtypes", [payment_service_1.PaymentService])

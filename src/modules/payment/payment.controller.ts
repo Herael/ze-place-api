@@ -15,11 +15,20 @@ export class PaymentController {
   constructor(private paymentService: PaymentService) {}
 
   @UseGuards(JwtAuthGuard)
-  @Post('/init')
+  @Post('/paymentIntent/create')
   async init(@Res() res, @Req() req) {
-    const customer = await this.paymentService.createPaymentIntent(
-      req.user,
-      req.body.bookingPrice,
+    const paymentIntent = await this.paymentService.createPaymentIntent(
+      req.body.customerId,
+      req.body.paymentMethodId,
+    );
+    return res.status(HttpStatus.OK).json(paymentIntent);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Get('/customer/:customerId')
+  async getCustomer(@Res() res, @Req() req) {
+    const customer = await this.paymentService.getCustomer(
+      req.params.customerId,
     );
     return res.status(HttpStatus.OK).json(customer);
   }
@@ -47,6 +56,7 @@ export class PaymentController {
   @Post('/paymentMethods/remove')
   async detachPaymentMethod(@Res() res, @Req() req) {
     const paymentMethod = await this.paymentService.detachPaymentMethod(
+      req.body.customerId,
       req.body.paymentMethodId,
     );
     return res.status(HttpStatus.OK).json(paymentMethod);
@@ -109,5 +119,15 @@ export class PaymentController {
     const balance = await this.paymentService.getBalance(req.body.accountId);
     console.log(balance);
     return res.status(HttpStatus.OK).json(balance);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/setupIntent/create')
+  async initSetupIntent(@Res() res, @Req() req) {
+    const setupIntent = await this.paymentService.initSetupIntent(
+      req.body.customerId,
+      req.body.paymentMethodId,
+    );
+    return res.status(HttpStatus.OK).json(setupIntent);
   }
 }

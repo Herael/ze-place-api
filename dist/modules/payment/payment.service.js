@@ -17,21 +17,39 @@ let PaymentService = class PaymentService {
     constructor(customerService) {
         this.customerService = customerService;
     }
+    async getCustomer(customerId) {
+        const customer = await stripe.customers.retrieve(customerId);
+        return customer;
+    }
     async getPaymentMethods(customerId) {
+        const customer = await this.getCustomer(customerId);
         const paymentMethods = await stripe.paymentMethods.list({
             customer: customerId,
             type: 'card',
         });
+        const index = paymentMethods.data.findIndex((item) => item.id === customer.invoice_settings.default_payment_method);
+        if (paymentMethods.data[index]) {
+            paymentMethods.data[index].isFavorite = true;
+        }
         return paymentMethods;
     }
     async attachPaymentMethod(customerId, paymentMethodId) {
         const paymentMethod = await stripe.paymentMethods.attach(paymentMethodId, {
             customer: customerId,
         });
+        await stripe.setupIntents.create({
+            customer: customerId,
+            payment_method: paymentMethod.id,
+            payment_method_types: ['card'],
+            confirm: true,
+        });
         return paymentMethod;
     }
-    async detachPaymentMethod(paymentMethodId) {
+    async detachPaymentMethod(customerId, paymentMethodId) {
         const paymentMethod = await stripe.paymentMethods.detach(paymentMethodId);
+        await stripe.customers.update(customerId, {
+            invoice_settings: { default_payment_method: paymentMethodId },
+        });
         return paymentMethod;
     }
     async updatePaymentMethod(customerId, paymentMethodId) {
@@ -40,19 +58,15 @@ let PaymentService = class PaymentService {
         });
         return customer;
     }
-    async createPaymentIntent(token, bookingPrice) {
-        const user = await this.customerService.findById(token.id);
-        const ephemeralKey = await stripe.ephemeralKeys.create({ customer: user.customerId }, { apiVersion: '2020-08-27' });
+    async createPaymentIntent(customerId, paymentMethodId) {
         const paymentIntent = await stripe.paymentIntents.create({
-            amount: bookingPrice,
+            amount: 1000,
             currency: 'eur',
-            customer: user.customerId,
+            customer: customerId,
+            payment_method: paymentMethodId,
+            confirm: true,
         });
-        return {
-            paymentIntent: paymentIntent,
-            ephemeralKey: ephemeralKey.secret,
-            customer: user.customerId,
-        };
+        return paymentIntent;
     }
     async createBankAccount(accountId, data) {
         const token = await stripe.tokens.create({
@@ -86,6 +100,15 @@ let PaymentService = class PaymentService {
         return await stripe.balance.retrieve({
             stripeAccount: accountId,
         });
+    }
+    async initSetupIntent(customerId, paymentMethodId) {
+        const setupIntent = await stripe.setupIntents.create({
+            customer: customerId,
+            payment_method: paymentMethodId,
+            payment_method_types: ['card'],
+            confirm: true,
+        });
+        return setupIntent;
     }
 };
 PaymentService = __decorate([
