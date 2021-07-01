@@ -2671,14 +2671,14 @@
         "signature": "4bc4c7612f5cc6298b01f76f7a21674181ae6e199a0b07c518107c15bde32344",
         "affectsGlobalScope": false
       },
-      "../src/modules/message/interfaces/message.interface.ts": {
-        "version": "e9258151e8ae00cc164f4633f2d3cf69e181570e5f00ea10a54bb1177abf39af",
-        "signature": "d629bd2113b3e3eaaf23dab92c40c37b19be1b1001ec55cddb33efa451b0f19b",
+      "../src/modules/message/dto/message.dto.ts": {
+        "version": "bf07edb5eb58cfa04b409c241d93f5dcb01d0d0bd7ea134ab9851e1ed4d30d86",
+        "signature": "5c6887fc523f6822c6c18ef3644268037fbbc3843178e757aea3e8785795aa3b",
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/interfaces/conversation.interface.ts": {
-        "version": "04a9859ffabbbf3134016fb2bab2ea13baaf1d79de336347f5d633ec933772b6",
-        "signature": "ba1180f02826cd7a6a9b7e2be721a384c97e602ca2eada65eeec21cc492c459e",
+        "version": "de964083cbb4fd6bb12cd23ff07a99ee5f0a868e9a6de2f25ed3b4bcff34d37d",
+        "signature": "ac16a31bde6a4b9304f779dcdf67674de39c496bdf7fb423b0376a39bfb2aa5f",
         "affectsGlobalScope": false
       },
       "../src/app.gateway.ts": {
@@ -3141,13 +3141,13 @@
         "signature": "c4f4aee78d0940ee7bcd743e2f5c3f913d34bbb98e8e83a8ffdd69fe0fd40fb3",
         "affectsGlobalScope": false
       },
-      "../src/modules/message/dto/message.dto.ts": {
-        "version": "bf07edb5eb58cfa04b409c241d93f5dcb01d0d0bd7ea134ab9851e1ed4d30d86",
-        "signature": "5c6887fc523f6822c6c18ef3644268037fbbc3843178e757aea3e8785795aa3b",
+      "../src/modules/message/interfaces/message.interface.ts": {
+        "version": "e9258151e8ae00cc164f4633f2d3cf69e181570e5f00ea10a54bb1177abf39af",
+        "signature": "d629bd2113b3e3eaaf23dab92c40c37b19be1b1001ec55cddb33efa451b0f19b",
         "affectsGlobalScope": false
       },
       "../src/modules/message/message.service.ts": {
-        "version": "12f4ca50ec70e797c92a6cc0cf98464a5f851d0b8d64495afb96fdcf821cbe5d",
+        "version": "a36bc6d8ce290e5688828683e80268d7df9ba65fbfdad9f0becca609ca7f7607",
         "signature": "9e02feccc3e6ca4b0ec75b9bcb1d00063061ed64ecf66e05e73efc74672dd656",
         "affectsGlobalScope": false
       },
@@ -6091,7 +6091,7 @@
       ],
       "../src/modules/conversation/interfaces/conversation.interface.ts": [
         "../node_modules/mongoose/index.d.ts",
-        "../src/modules/message/interfaces/message.interface.ts"
+        "../src/modules/message/dto/message.dto.ts"
       ],
       "../src/modules/conversation/schemas/conversation.schema.ts": [
         "../node_modules/mongoose/index.d.ts",
@@ -8707,7 +8707,7 @@
       ],
       "../src/modules/conversation/interfaces/conversation.interface.ts": [
         "../node_modules/mongoose/index.d.ts",
-        "../src/modules/message/interfaces/message.interface.ts"
+        "../src/modules/message/dto/message.dto.ts"
       ],
       "../src/modules/conversation/schemas/conversation.schema.ts": [
         "../node_modules/mongoose/index.d.ts"

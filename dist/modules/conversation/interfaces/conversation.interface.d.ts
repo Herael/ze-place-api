@@ -1,10 +1,10 @@
 import { Document } from 'mongoose';
-import { Message } from 'src/modules/message/interfaces/message.interface';
+import { MessageDTO } from 'src/modules/message/dto/message.dto';
 export interface Conversation extends Document {
     placeId: string;
     userId: string;
     ownerId: string;
-    lastMessage: Message;
+    lastMessage: MessageDTO;
     userAvatar: string;
     userName: string;
     ownerAvatar: string;
