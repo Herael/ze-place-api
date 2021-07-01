@@ -56,12 +56,14 @@ export class MessageService {
       },
     });
     const message = await new this.messageModel(messageDTO).save();
-    await this.conversationModel.findOneAndUpdate(
-      {
-        _id: messageDTO.conversationId,
-      },
-      { lastMessage: messageDTO },
-    );
+    await this.conversationModel
+      .findOneAndUpdate(
+        {
+          _id: messageDTO.conversationId,
+        },
+        { lastMessage: messageDTO },
+      )
+      .exec();
     return message;
   }
 

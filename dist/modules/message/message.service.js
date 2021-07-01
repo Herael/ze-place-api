@@ -56,9 +56,11 @@ let MessageService = class MessageService {
             },
         });
         const message = await new this.messageModel(messageDTO).save();
-        await this.conversationModel.findOneAndUpdate({
+        await this.conversationModel
+            .findOneAndUpdate({
             _id: messageDTO.conversationId,
-        }, { lastMessage: messageDTO });
+        }, { lastMessage: messageDTO })
+            .exec();
         return message;
     }
     async deleteMessage(messageID) {
