@@ -1812,8 +1812,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/interfaces/place.interface.ts": {
-        "version": "34bbf379a3a2826d37c28423d41301e2cbef7e144b85fdd54635978b080c5d82",
-        "signature": "65dc4a7195544e426e3dd100c1bc71bc52e45538564ec7dd7d7ca21a20b35b07",
+        "version": "52df6b6396cfc4538c4b628903f25c796c0f7f3d5ef6c47f53128795aaef4146",
+        "signature": "bf0d9f86fca00eb1192ee9edaa8ed9c929251781950e9dea997b8d194e27ff33",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/interfaces/customer.interface.ts": {
@@ -2837,18 +2837,18 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/dto/create-place.dto.ts": {
-        "version": "32e692bbdeb1d27dd6ec8e4399e50808ac27f979144fc3412decbd60dcd6c337",
-        "signature": "47c7a06f805dfd5fb32774800a5d67fb42e1d5a9e1ba8993df26645c48d6fd2e",
+        "version": "3caeaa8d83c1a2c6b80f34daef0d79a06b70e758833afe73690449e86e2a174b",
+        "signature": "1e4ee4b262800748dde3541dc9fc1aa88e3b8d46b092e4e7e4f651d82def5e20",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "37d64bd6976c6685766b9f5ce341beb04a1b6b269d2bd5b42147590e8a8ca6f6",
-        "signature": "8470fd50dc670e8dfd12e602ea30d1635c638519d7ef517571e6f85ae898ba0d",
+        "version": "2616f2ca20af79c18d5b1b09e0c9361d7b3949d40fa0fcb6baa4736e853508bf",
+        "signature": "005a1235435c0291bf0889cee22c53b513ff35120a346a166913cffe12e09b3e",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "5280788b6fc8e7faa8a4557aa71da9e84e1368bf87c231f35714613f0d313901",
-        "signature": "559c93c175cfe4fe3b0553bcbc55d5ba9129a4222039711f55bbf7c2f950b56d",
+        "version": "df5352d963915f214da878e6bfc2b628d45ff7ffdecfffe1836ede1da0245cad",
+        "signature": "7a4717cefa6527a00f8852552a6c9df3f7c6d6e7d569594e26daea63a5608ebe",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.module.ts": {

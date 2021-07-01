@@ -56,6 +56,27 @@ let PlaceService = class PlaceService {
         updatedCustomer.save();
         return newPlace;
     }
+    async updatePlace(createPlaceDTO) {
+        const place = await this.placeModel.findOneAndUpdate({
+            _id: createPlaceDTO.placeId,
+        }, {
+            title: createPlaceDTO.title,
+            location: createPlaceDTO.location,
+            surface: createPlaceDTO.surface,
+            placeType: createPlaceDTO.placeType[0],
+            price: createPlaceDTO.price,
+            description: createPlaceDTO.description,
+            features: createPlaceDTO.features,
+            images: createPlaceDTO.images,
+            authorizeAnimals: createPlaceDTO.authorizeAnimals,
+            authorizeMusic: createPlaceDTO.authorizeMusic,
+            authorizeSmoking: createPlaceDTO.authorizeSmoking,
+            authorizeFire: createPlaceDTO.authorizeFire,
+            authorizeFoodAndDrink: createPlaceDTO.authorizeFoodAndDrink,
+        });
+        place.save();
+        return place;
+    }
     async similarPlaces(placeID) {
         const place = await this.placeModel.findById(placeID);
         const priceDif = 0.4;

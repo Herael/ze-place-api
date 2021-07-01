@@ -44,6 +44,13 @@ let PlaceController = class PlaceController {
             place,
         });
     }
+    async updatePlace(res, createPlaceDTO) {
+        const place = await this.placeService.updatePlace(createPlaceDTO);
+        return res.status(common_1.HttpStatus.OK).json({
+            message: 'Place has been updated successfully',
+            place,
+        });
+    }
     async similarPlaces(res, body) {
         const places = await this.placeService.similarPlaces(body.placeID);
         return res.status(common_1.HttpStatus.OK).json({
@@ -97,6 +104,14 @@ __decorate([
     __metadata("design:paramtypes", [Object, create_place_dto_1.CreatePlaceDTO]),
     __metadata("design:returntype", Promise)
 ], PlaceController.prototype, "createPlace", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Post('/update'),
+    __param(0, common_1.Res()), __param(1, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, create_place_dto_1.CreatePlaceDTO]),
+    __metadata("design:returntype", Promise)
+], PlaceController.prototype, "updatePlace", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/similarPlaces'),

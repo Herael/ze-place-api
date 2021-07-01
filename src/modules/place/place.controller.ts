@@ -47,10 +47,20 @@ export class PlaceController {
 
   @UseGuards(JwtAuthGuard)
   @Post('/create')
-  async createPlace(@Res() res, @Body() createPlaceDTO: CreatePlaceDTO) {    
+  async createPlace(@Res() res, @Body() createPlaceDTO: CreatePlaceDTO) {
     const place = await this.placeService.createPlace(createPlaceDTO);
     return res.status(HttpStatus.OK).json({
       message: 'Place has been created successfully',
+      place,
+    });
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/update')
+  async updatePlace(@Res() res, @Body() createPlaceDTO: CreatePlaceDTO) {
+    const place = await this.placeService.updatePlace(createPlaceDTO);
+    return res.status(HttpStatus.OK).json({
+      message: 'Place has been updated successfully',
       place,
     });
   }

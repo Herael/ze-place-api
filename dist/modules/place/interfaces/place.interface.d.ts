@@ -3,17 +3,10 @@ import { Booking } from 'src/modules/booking/interfaces/booking.interface';
 import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 import { PlaceType } from 'src/modules/place-type/interfaces/place-type.interface';
 import { ReviewPlace } from 'src/modules/review-place/interfaces/review-place.interface';
-import { Image, Availability } from 'src/modules/types';
+import { Image, Availability, Location } from 'src/modules/types';
 export interface Place extends Document {
     readonly title: string;
-    readonly location: {
-        readonly address: string;
-        readonly postalCode: string;
-        readonly city: string;
-        readonly country: string;
-        readonly longitude: number;
-        readonly latitude: number;
-    };
+    location: Location;
     readonly surface: number;
     readonly placeType: PlaceType[];
     readonly price: number;

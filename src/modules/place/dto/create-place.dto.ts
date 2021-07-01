@@ -14,6 +14,9 @@ import { Image, Location, Availability } from 'src/modules/types';
 
 export class CreatePlaceDTO {
   @IsString()
+  readonly placeId: string;
+
+  @IsString()
   @IsNotEmpty()
   readonly title: string;
 

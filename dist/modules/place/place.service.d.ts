@@ -13,6 +13,7 @@ export declare class PlaceService {
     findById(userId: string, placeId: string): Promise<Place>;
     getPlacesNearbyCoordinates(coords: Coords, distance: number): Promise<Place[]>;
     createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;
+    updatePlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;
     similarPlaces(placeID: string): Promise<Place[]>;
     searchPlaces(placeTypeName: string, price: number, surface: number, features: Feature[], location: Location): Promise<Place[]>;
 }
