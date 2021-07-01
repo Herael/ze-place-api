@@ -15,6 +15,7 @@ import {
 import { Booking } from '../booking/interfaces/booking.interface';
 import { BookingDTO } from '../booking/dto/booking.dto';
 import { Feature } from '../feature/interfaces/feature.interface';
+import { PlaceType } from '../place-type/interfaces/place-type.interface';
 
 @Injectable()
 export class PlaceService {
@@ -89,7 +90,7 @@ export class PlaceService {
         title: createPlaceDTO.title,
         location: createPlaceDTO.location,
         surface: createPlaceDTO.surface,
-        placeType: createPlaceDTO.placeType[0],
+        placeType: createPlaceDTO.placeType,
         price: createPlaceDTO.price,
         description: createPlaceDTO.description,
         features: createPlaceDTO.features,
@@ -118,7 +119,7 @@ export class PlaceService {
     let places = await this.placeModel
       .find({
         _id: { $ne: place._id },
-        placeType: { $elemMatch: { name: place.placeType[0].name } }, //PlaceType.name fit with my origin place
+        placeType: place.placeType,
       })
       .exec();
 
@@ -143,7 +144,7 @@ export class PlaceService {
   }
 
   async searchPlaces(
-    placeTypeName: string,
+    placeType: PlaceType,
     price: number,
     surface: number,
     features: Feature[],
@@ -152,17 +153,17 @@ export class PlaceService {
     const distance = 20000;
     let places = [];
 
-    if (placeTypeName && surface) {
+    if (placeType && surface) {
       places = await this.placeModel
         .find({
-          placeType: { $elemMatch: { name: placeTypeName } },
+          placeType: placeType,
           surface: { $gte: surface },
         })
         .exec();
-    } else if (placeTypeName) {
+    } else if (placeType) {
       places = await this.placeModel
         .find({
-          placeType: { $elemMatch: { name: placeTypeName } },
+          placeType: placeType,
         })
         .exec();
     } else if (surface) {

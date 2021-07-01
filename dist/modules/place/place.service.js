@@ -63,7 +63,7 @@ let PlaceService = class PlaceService {
             title: createPlaceDTO.title,
             location: createPlaceDTO.location,
             surface: createPlaceDTO.surface,
-            placeType: createPlaceDTO.placeType[0],
+            placeType: createPlaceDTO.placeType,
             price: createPlaceDTO.price,
             description: createPlaceDTO.description,
             features: createPlaceDTO.features,
@@ -89,7 +89,7 @@ let PlaceService = class PlaceService {
         let places = await this.placeModel
             .find({
             _id: { $ne: place._id },
-            placeType: { $elemMatch: { name: place.placeType[0].name } },
+            placeType: place.placeType,
         })
             .exec();
         places = places.filter((place) => index_1.isPlaceInRadius({
@@ -99,21 +99,21 @@ let PlaceService = class PlaceService {
         places = places.filter((placeElement) => index_1.isInRangePrice(price, placeElement.price, priceDif) === true);
         return places;
     }
-    async searchPlaces(placeTypeName, price, surface, features, location) {
+    async searchPlaces(placeType, price, surface, features, location) {
         const distance = 20000;
         let places = [];
-        if (placeTypeName && surface) {
+        if (placeType && surface) {
             places = await this.placeModel
                 .find({
-                placeType: { $elemMatch: { name: placeTypeName } },
+                placeType: placeType,
                 surface: { $gte: surface },
             })
                 .exec();
         }
-        else if (placeTypeName) {
+        else if (placeType) {
             places = await this.placeModel
                 .find({
-                placeType: { $elemMatch: { name: placeTypeName } },
+                placeType: placeType,
             })
                 .exec();
         }

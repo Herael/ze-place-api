@@ -7,6 +7,6 @@ export const PlaceTypeSchema = new mongoose.Schema({
 
 export const PlaceFeaturesSchema = new mongoose.Schema({
   name: String,
-  image:String,
+  image: String,
   created_at: { type: Date, default: Date.now },
 });

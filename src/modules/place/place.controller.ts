@@ -79,7 +79,7 @@ export class PlaceController {
   @Post('/searchPlaces')
   async searchPlaces(@Res() res, @Body() body) {
     const places = await this.placeService.searchPlaces(
-      body.placeTypeName,
+      body.placeType,
       body.price,
       body.surface,
       body.features,

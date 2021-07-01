@@ -8,7 +8,7 @@ export interface Place extends Document {
     readonly title: string;
     location: Location;
     readonly surface: number;
-    readonly placeType: PlaceType[];
+    readonly placeType: PlaceType;
     readonly price: number;
     readonly description: string;
     readonly features: Feature[];

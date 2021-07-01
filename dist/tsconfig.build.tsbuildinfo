@@ -1802,7 +1802,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/interfaces/place-type.interface.ts": {
-        "version": "2a7052f4620816752e6c475ff7a6bf47dea8f47c7dd6bc74b171959ee5166b39",
+        "version": "62b5a10f0bb15e8cb6ecf3795a25fb8ab0d671a671813ee8979309355fffab62",
         "signature": "1a6afe8052508c7eb362734024bba4e5d6c235caab7bd125b6ba82324e7799b9",
         "affectsGlobalScope": false
       },
@@ -1812,8 +1812,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/interfaces/place.interface.ts": {
-        "version": "52df6b6396cfc4538c4b628903f25c796c0f7f3d5ef6c47f53128795aaef4146",
-        "signature": "bf0d9f86fca00eb1192ee9edaa8ed9c929251781950e9dea997b8d194e27ff33",
+        "version": "2a45cde45337a4567cd71728c62d3a35aedc3cc47c8c683fcab4294a28080773",
+        "signature": "60f080d2044f45158daa69df6b5a12df68329273658dad7282343965df22aff0",
         "affectsGlobalScope": false
       },
       "../src/modules/customer/interfaces/customer.interface.ts": {
@@ -2802,7 +2802,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/schemas/place-type.schema.ts": {
-        "version": "4d9ff284c081fdb57552f9e4f41dc1ef57cace570bf5b7845a2af9065ae39c8b",
+        "version": "4c9806272f723a601b97713f9ed000dd8700d75507a5876f027137cd3a0be93e",
         "signature": "b30d9c4443e34473a71659c2ff92fc9d06d233d52f70b0f5640e20c34bd48fa6",
         "affectsGlobalScope": false
       },
@@ -2817,7 +2817,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/schemas/place.schema.ts": {
-        "version": "567c2332d99f1e09befce69d62a49a9404b383c62cb1df56e30ccbc713f20a82",
+        "version": "1c3312ac94a7d262ed42a561744d99a36d4d794d9e226d4b49bac19fdcca5645",
         "signature": "b29d58e560e82ebd6eaeab2c411be4ab1c6d2a67eabb4aee61f7898e2071066d",
         "affectsGlobalScope": false
       },
@@ -2842,12 +2842,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "2616f2ca20af79c18d5b1b09e0c9361d7b3949d40fa0fcb6baa4736e853508bf",
-        "signature": "005a1235435c0291bf0889cee22c53b513ff35120a346a166913cffe12e09b3e",
+        "version": "9f203469b75161c70cc2d74e2018151c5080df59b3165c151ef2da0a5fa5e2a2",
+        "signature": "25d2c551ec0d55b52729487919b9ec9c22a1a4040e785ddb70a319dc0c725eae",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "df5352d963915f214da878e6bfc2b628d45ff7ffdecfffe1836ede1da0245cad",
+        "version": "eac4f18aee79163fded2fd69e1e3a5f1c53bcb33ffbadd87899b473b3bf4d21e",
         "signature": "7a4717cefa6527a00f8852552a6c9df3f7c6d6e7d569594e26daea63a5608ebe",
         "affectsGlobalScope": false
       },
@@ -3037,7 +3037,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/place-type.controller.ts": {
-        "version": "c37bc5315f6fa02b012618a11d710fc082b2fd505c3f70eea053e3003ff92a6b",
+        "version": "5fed8f7ba8e0d8fd7d83fa9d47deca098783e1dfacd4f900c7ca51866d6ad36e",
         "signature": "488c4c8fb53e0faa7a129519121f66c375ea197537e3243dd0623c6a5c7b0e30",
         "affectsGlobalScope": false
       },
@@ -6280,6 +6280,7 @@
         "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/feature/interfaces/feature.interface.ts",
+        "../src/modules/place-type/interfaces/place-type.interface.ts",
         "../src/modules/place/dto/create-place.dto.ts",
         "../src/modules/place/interfaces/place.interface.ts",
         "../src/modules/types.ts",
@@ -8802,6 +8803,7 @@
         "../node_modules/mongoose/index.d.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/feature/interfaces/feature.interface.ts",
+        "../src/modules/place-type/interfaces/place-type.interface.ts",
         "../src/modules/place/dto/create-place.dto.ts",
         "../src/modules/place/interfaces/place.interface.ts",
         "../src/modules/types.ts"

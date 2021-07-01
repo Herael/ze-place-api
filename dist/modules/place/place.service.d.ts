@@ -4,6 +4,7 @@ import { Customer } from '../customer/interfaces/customer.interface';
 import { CreatePlaceDTO } from './dto/create-place.dto';
 import { Coords, Location } from '../types';
 import { Feature } from '../feature/interfaces/feature.interface';
+import { PlaceType } from '../place-type/interfaces/place-type.interface';
 export declare class PlaceService {
     private readonly placeModel;
     private readonly customerModel;
@@ -15,5 +16,5 @@ export declare class PlaceService {
     createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;
     updatePlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;
     similarPlaces(placeID: string): Promise<Place[]>;
-    searchPlaces(placeTypeName: string, price: number, surface: number, features: Feature[], location: Location): Promise<Place[]>;
+    searchPlaces(placeType: PlaceType, price: number, surface: number, features: Feature[], location: Location): Promise<Place[]>;
 }
