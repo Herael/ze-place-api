@@ -30,8 +30,7 @@ let PlaceController = class PlaceController {
         return res.status(common_1.HttpStatus.OK).json(places);
     }
     async getPlaceById(req, res) {
-        console.log(req.params);
-        const places = await this.placeService.findById(req.params.id);
+        const places = await this.placeService.findById(req.user.id, req.params.id);
         return res.status(common_1.HttpStatus.OK).json(places);
     }
     async getPlacesNearbyCoordinates(res, data) {

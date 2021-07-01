@@ -10,7 +10,7 @@ export declare class PlaceService {
     constructor(placeModel: Model<Place>, customerModel: Model<Customer>);
     getAllPlaces(userId: string): Promise<Place[]>;
     getAllPlacesAdmin(): Promise<Place[]>;
-    findById(placeId: string): Promise<Place>;
+    findById(userId: string, placeId: string): Promise<Place>;
     getPlacesNearbyCoordinates(coords: Coords, distance: number): Promise<Place[]>;
     createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;
     similarPlaces(placeID: string): Promise<Place[]>;

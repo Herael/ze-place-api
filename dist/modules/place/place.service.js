@@ -35,8 +35,10 @@ let PlaceService = class PlaceService {
         const places = await this.placeModel.find().exec();
         return places;
     }
-    async findById(placeId) {
+    async findById(userId, placeId) {
+        const user = await this.customerModel.findById(userId);
         const place = await this.placeModel.findById(placeId).exec();
+        place.isFavorite = Boolean(user.favorites.find((p) => p._id.toString() === place._id.toString()));
         return place;
     }
     async getPlacesNearbyCoordinates(coords, distance) {
@@ -48,7 +50,6 @@ let PlaceService = class PlaceService {
         return places;
     }
     async createPlace(createPlaceDTO) {
-        console.log(createPlaceDTO.features);
         const newPlace = await new this.placeModel(createPlaceDTO).save();
         const updatedCustomer = await this.customerModel.findById(createPlaceDTO.ownerId);
         updatedCustomer.ownedPlaces.push(newPlace);

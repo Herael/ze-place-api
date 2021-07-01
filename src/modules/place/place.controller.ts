@@ -23,7 +23,6 @@ export class PlaceController {
     return res.status(HttpStatus.OK).json(places);
   }
 
-
   @Get('/admin')
   async getAllPlacesAdmin(@Request() req, @Res() res) {
     const places = await this.placeService.getAllPlacesAdmin();
@@ -33,8 +32,7 @@ export class PlaceController {
   @UseGuards(JwtAuthGuard)
   @Get('/:id')
   async getPlaceById(@Request() req, @Res() res) {
-    console.log(req.params);
-    const places = await this.placeService.findById(req.params.id);
+    const places = await this.placeService.findById(req.user.id, req.params.id);
     return res.status(HttpStatus.OK).json(places);
   }
 

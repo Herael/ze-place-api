@@ -41,8 +41,12 @@ export class PlaceService {
     return places;
   }
 
-  async findById(placeId: string): Promise<Place> {
+  async findById(userId: string, placeId: string): Promise<Place> {
+    const user = await this.customerModel.findById(userId);
     const place = await this.placeModel.findById(placeId).exec();
+    place.isFavorite = Boolean(
+      user.favorites.find((p) => p._id.toString() === place._id.toString()),
+    );
     return place;
   }
 
@@ -66,8 +70,6 @@ export class PlaceService {
   }
 
   async createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place> {
-    console.log(createPlaceDTO.features);
-    
     const newPlace = await new this.placeModel(createPlaceDTO).save();
     const updatedCustomer = await this.customerModel.findById(
       createPlaceDTO.ownerId,
