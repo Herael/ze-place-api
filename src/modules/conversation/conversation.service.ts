@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { Customer } from '../customer/interfaces/customer.interface';
 import { ConversationDTO } from './dto/conversation.dto';
 import { Conversation } from './interfaces/conversation.interface';
 
@@ -9,6 +10,8 @@ export class ConversationService {
   constructor(
     @InjectModel('Conversation')
     private readonly conversationModel: Model<Conversation>,
+    @InjectModel('Customer')
+    private readonly customerModel: Model<Customer>,
   ) {}
 
   async getAllConversation(): Promise<Conversation[]> {
@@ -44,7 +47,6 @@ export class ConversationService {
         ],
       })
       .exec();
-    console.log(conversation);
     return conversation;
   }
 
@@ -58,7 +60,16 @@ export class ConversationService {
   async addConversation(
     conversationDTO: ConversationDTO,
   ): Promise<Conversation> {
-    return await new this.conversationModel(conversationDTO).save();
+    const user = await this.customerModel.findById(conversationDTO.userId);
+    const owner = await this.customerModel.findById(conversationDTO.ownerId);
+    const conversation = {
+      ...conversationDTO,
+      userAvatar: user.avatar,
+      userName: `${user.first_name} ${user.last_name}`,
+      ownerAvatar: owner.avatar,
+      ownerName: `${owner.first_name} ${owner.last_name}`,
+    };
+    return await new this.conversationModel(conversation).save();
   }
 
   async updateConversation(

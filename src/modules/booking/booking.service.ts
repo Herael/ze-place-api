@@ -124,7 +124,6 @@ export class BookingService {
       description: 'test',
     });
     booking.isAccepted = true;
-    booking.isPast = true;
     booking.save();
     return booking;
   }

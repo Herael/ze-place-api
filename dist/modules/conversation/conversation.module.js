@@ -13,6 +13,7 @@ const conversation_controller_1 = require("./conversation.controller");
 const mongoose_1 = require("@nestjs/mongoose");
 const place_schema_1 = require("../place/schemas/place.schema");
 const conversation_schema_1 = require("../conversation/schemas/conversation.schema");
+const customer_schema_1 = require("../customer/schemas/customer.schema");
 let ConversationModule = class ConversationModule {
 };
 ConversationModule = __decorate([
@@ -21,6 +22,7 @@ ConversationModule = __decorate([
             mongoose_1.MongooseModule.forFeature([
                 { name: 'Conversation', schema: conversation_schema_1.ConversationSchema },
             ]),
+            mongoose_1.MongooseModule.forFeature([{ name: 'Customer', schema: customer_schema_1.CustomerSchema }]),
             mongoose_1.MongooseModule.forFeature([{ name: 'Place', schema: place_schema_1.PlaceSchema }]),
         ],
         providers: [conversation_service_1.ConversationService],

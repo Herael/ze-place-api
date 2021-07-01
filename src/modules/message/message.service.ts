@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { sendPushNotifications } from 'src/utils';
+import { Conversation } from '../conversation/interfaces/conversation.interface';
 import { Customer } from '../customer/interfaces/customer.interface';
 import { MessageDTO } from './dto/message.dto';
 import { Message } from './interfaces/message.interface';
@@ -9,6 +10,8 @@ import { Message } from './interfaces/message.interface';
 @Injectable()
 export class MessageService {
   constructor(
+    @InjectModel('Message')
+    private readonly conversationModel: Model<Conversation>,
     @InjectModel('Message')
     private readonly messageModel: Model<Message>,
     @InjectModel('Customer')
@@ -52,7 +55,13 @@ export class MessageService {
         },
       },
     });
-    return await new this.messageModel(messageDTO).save();
+    const message = await new this.messageModel(messageDTO).save();
+    await this.conversationModel.updateOne({ _id: messageDTO.conversationId }, [
+      {
+        lastMessage: messageDTO,
+      },
+    ]);
+    return message;
   }
 
   async deleteMessage(messageID: string): Promise<any> {
