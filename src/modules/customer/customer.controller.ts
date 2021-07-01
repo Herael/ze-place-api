@@ -40,7 +40,6 @@ export class CustomerController {
   @Get('/email/:email')
   async getCustomerByEmail(@Res() res, @Param('email') email) {
     const customer = await this.customerService.findByEmail(email);
-    if (!customer) throw new NotFoundException('Customer does not exist!');
     return res.status(HttpStatus.OK).json(customer);
   }
 
