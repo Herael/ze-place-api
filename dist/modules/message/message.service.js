@@ -68,7 +68,7 @@ let MessageService = class MessageService {
 };
 MessageService = __decorate([
     common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel('Message')),
+    __param(0, mongoose_1.InjectModel('Conversation')),
     __param(1, mongoose_1.InjectModel('Message')),
     __param(2, mongoose_1.InjectModel('Customer')),
     __metadata("design:paramtypes", [mongoose_2.Model,

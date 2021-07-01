@@ -10,7 +10,7 @@ import { Message } from './interfaces/message.interface';
 @Injectable()
 export class MessageService {
   constructor(
-    @InjectModel('Message')
+    @InjectModel('Conversation')
     private readonly conversationModel: Model<Conversation>,
     @InjectModel('Message')
     private readonly messageModel: Model<Message>,
