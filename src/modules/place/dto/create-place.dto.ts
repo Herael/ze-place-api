@@ -13,7 +13,6 @@ import { ReviewPlace } from 'src/modules/review-place/interfaces/review-place.in
 import { Image, Location, Availability } from 'src/modules/types';
 
 export class CreatePlaceDTO {
-  @IsString()
   readonly placeId: string;
 
   @IsString()

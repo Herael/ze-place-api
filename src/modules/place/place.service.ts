@@ -12,8 +12,6 @@ import {
   isInRangePrice,
   isPlaceInRadius,
 } from '../../utils/index';
-import { Booking } from '../booking/interfaces/booking.interface';
-import { BookingDTO } from '../booking/dto/booking.dto';
 import { Feature } from '../feature/interfaces/feature.interface';
 import { PlaceType } from '../place-type/interfaces/place-type.interface';
 

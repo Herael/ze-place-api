@@ -27,10 +27,6 @@ class CreatePlaceDTO {
 }
 __decorate([
     class_validator_1.IsString(),
-    __metadata("design:type", String)
-], CreatePlaceDTO.prototype, "placeId", void 0);
-__decorate([
-    class_validator_1.IsString(),
     class_validator_1.IsNotEmpty(),
     __metadata("design:type", String)
 ], CreatePlaceDTO.prototype, "title", void 0);
