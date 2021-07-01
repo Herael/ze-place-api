@@ -59,9 +59,13 @@ export class PaymentService {
     return customer;
   }
 
-  async createPaymentIntent(customerId: string, paymentMethodId: string) {
+  async createPaymentIntent(
+    customerId: string,
+    paymentMethodId: string,
+    bookingPrice: number,
+  ) {
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: 1000,
+      amount: bookingPrice,
       currency: 'eur',
       customer: customerId,
       payment_method: paymentMethodId,
