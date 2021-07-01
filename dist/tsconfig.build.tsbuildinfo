@@ -3032,7 +3032,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place-type/place-type.service.ts": {
-        "version": "bc2a90be2d0181e1a9f4ef8e0ab7bca5848f4e3c3bfc6baaf23012400a675282",
+        "version": "3e07352f0a84656a78688ffbe6dc7adc0b336a455aa142a754f079288d6302f2",
         "signature": "a18b520a4454f7ea7d9d791c53e7e9bf91dffaea703554738180e919ab5f66a1",
         "affectsGlobalScope": false
       },

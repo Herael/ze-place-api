@@ -30,7 +30,6 @@ let PlaceTypeService = class PlaceTypeService {
         return newPlace;
     }
     async getType() {
-        console.log('log');
         const newType = await this.typeModel.find();
         return newType;
     }
