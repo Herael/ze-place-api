@@ -37,6 +37,13 @@ export class CustomerController {
     return res.status(HttpStatus.OK).json(customer);
   }
 
+  @Get('/email/:email')
+  async getCustomerByEmail(@Res() res, @Param('email') email) {
+    const customer = await this.customerService.findByEmail(email);
+    if (!customer) throw new NotFoundException('Customer does not exist!');
+    return res.status(HttpStatus.OK).json(customer);
+  }
+
   // Update a customer's details
   @Put('/update')
   async updateCustomer(
