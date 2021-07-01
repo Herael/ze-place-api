@@ -112,6 +112,17 @@ export class CustomerService {
     }
   }
 
+  async setToHistory(req) {
+        
+    const user = await this.customerModel.findByIdAndUpdate(
+      { _id: req.userId },
+      { $push: { historyCode: req.promoId }},
+      { $pull: { promoCode: { $in: req.promoId }}},
+    );
+      return user;
+  
+}
+
   async addFavorite(customerID: string, place: Place) {
     const updatedCustomer = await this.customerModel.findById(customerID);
     updatedCustomer.favorites.push(place);
