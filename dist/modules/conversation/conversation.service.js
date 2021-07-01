@@ -17,8 +17,9 @@ const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
 let ConversationService = class ConversationService {
-    constructor(conversationModel) {
+    constructor(conversationModel, customerModel) {
         this.conversationModel = conversationModel;
+        this.customerModel = customerModel;
     }
     async getAllConversation() {
         const conversations = await this.conversationModel.find().exec();
@@ -46,7 +47,6 @@ let ConversationService = class ConversationService {
             ],
         })
             .exec();
-        console.log(conversation);
         return conversation;
     }
     async findByUserID(userId) {
@@ -56,7 +56,10 @@ let ConversationService = class ConversationService {
         return conversation;
     }
     async addConversation(conversationDTO) {
-        return await new this.conversationModel(conversationDTO).save();
+        const user = await this.customerModel.findById(conversationDTO.userId);
+        const owner = await this.customerModel.findById(conversationDTO.ownerId);
+        const conversation = Object.assign(Object.assign({}, conversationDTO), { userAvatar: user.avatar, userName: `${user.first_name} ${user.last_name}`, ownerAvatar: owner.avatar, ownerName: `${owner.first_name} ${owner.last_name}` });
+        return await new this.conversationModel(conversation).save();
     }
     async updateConversation(conversationID, createConversationDTO) {
         const updatedConversation = await this.conversationModel.findByIdAndUpdate(conversationID, createConversationDTO, { new: true });
@@ -70,7 +73,9 @@ let ConversationService = class ConversationService {
 ConversationService = __decorate([
     common_1.Injectable(),
     __param(0, mongoose_1.InjectModel('Conversation')),
-    __metadata("design:paramtypes", [mongoose_2.Model])
+    __param(1, mongoose_1.InjectModel('Customer')),
+    __metadata("design:paramtypes", [mongoose_2.Model,
+        mongoose_2.Model])
 ], ConversationService);
 exports.ConversationService = ConversationService;
 //# sourceMappingURL=conversation.service.js.map

@@ -20,6 +20,7 @@ export class PaymentController {
     const paymentIntent = await this.paymentService.createPaymentIntent(
       req.body.customerId,
       req.body.paymentMethodId,
+      req.body.bookingPrice,
     );
     return res.status(HttpStatus.OK).json(paymentIntent);
   }

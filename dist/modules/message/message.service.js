@@ -18,7 +18,8 @@ const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
 const utils_1 = require("../../utils");
 let MessageService = class MessageService {
-    constructor(messageModel, customerModel) {
+    constructor(conversationModel, messageModel, customerModel) {
+        this.conversationModel = conversationModel;
         this.messageModel = messageModel;
         this.customerModel = customerModel;
     }
@@ -54,7 +55,11 @@ let MessageService = class MessageService {
                 },
             },
         });
-        return await new this.messageModel(messageDTO).save();
+        const message = await new this.messageModel(messageDTO).save();
+        const conversation = await this.conversationModel.findById(messageDTO.conversationId);
+        conversation.lastMessage = messageDTO;
+        conversation.save();
+        return message;
     }
     async deleteMessage(messageID) {
         const deletedMessage = await this.messageModel.findByIdAndRemove(messageID);
@@ -63,9 +68,11 @@ let MessageService = class MessageService {
 };
 MessageService = __decorate([
     common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel('Message')),
-    __param(1, mongoose_1.InjectModel('Customer')),
+    __param(0, mongoose_1.InjectModel('Conversation')),
+    __param(1, mongoose_1.InjectModel('Message')),
+    __param(2, mongoose_1.InjectModel('Customer')),
     __metadata("design:paramtypes", [mongoose_2.Model,
+        mongoose_2.Model,
         mongoose_2.Model])
 ], MessageService);
 exports.MessageService = MessageService;

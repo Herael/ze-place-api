@@ -21,7 +21,7 @@ let PaymentController = class PaymentController {
         this.paymentService = paymentService;
     }
     async init(res, req) {
-        const paymentIntent = await this.paymentService.createPaymentIntent(req.body.customerId, req.body.paymentMethodId);
+        const paymentIntent = await this.paymentService.createPaymentIntent(req.body.customerId, req.body.paymentMethodId, req.body.bookingPrice);
         return res.status(common_1.HttpStatus.OK).json(paymentIntent);
     }
     async getCustomer(res, req) {

@@ -7,7 +7,7 @@ export declare class PaymentService {
     attachPaymentMethod(customerId: string, paymentMethodId: string): Promise<any>;
     detachPaymentMethod(customerId: string, paymentMethodId: string): Promise<any>;
     updatePaymentMethod(customerId: string, paymentMethodId: string): Promise<any>;
-    createPaymentIntent(customerId: string, paymentMethodId: string): Promise<any>;
+    createPaymentIntent(customerId: string, paymentMethodId: string, bookingPrice: number): Promise<any>;
     createBankAccount(accountId: string, data: any): Promise<any>;
     updateDefaultBankAccount(accountId: string, bankAccountId: string): Promise<any>;
     removeBankAccount(accountId: string, bankAccountId: string): Promise<any>;
