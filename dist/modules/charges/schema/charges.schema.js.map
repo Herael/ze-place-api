@@ -1,0 +1,1 @@
+{"version":3,"file":"charges.schema.js","sourceRoot":"","sources":["../../../../src/modules/charges/schema/charges.schema.ts"],"names":[],"mappings":";;;AAAA,qCAAqC;AAGxB,QAAA,aAAa,GAAG,IAAI,QAAQ,CAAC,MAAM,CAAC;IAC/C,KAAK,EAAC,MAAM;IACZ,UAAU,EAAE,EAAE,IAAI,EAAE,IAAI,EAAE,OAAO,EAAE,IAAI,CAAC,GAAG,EAAE;IAC7C,IAAI,EAAC,MAAM;CACZ,CAAC,CAAC"}
