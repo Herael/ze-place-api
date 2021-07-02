@@ -50,6 +50,7 @@ let AuthService = class AuthService {
         };
     }
     async uploadID(data) {
+        console.log('data : ' + data);
         const IDRecto = await stripe.files.create({
             purpose: 'identity_document',
             file: {
