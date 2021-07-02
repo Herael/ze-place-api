@@ -31,6 +31,10 @@ let CustomerController = class CustomerController {
             throw new common_1.NotFoundException('Customer does not exist!');
         return res.status(common_1.HttpStatus.OK).json(customer);
     }
+    async getCustomerByEmail(res, email) {
+        const customer = await this.customerService.findByEmail(email);
+        return res.status(common_1.HttpStatus.OK).json(customer);
+    }
     async updateCustomer(res, customerID, createCustomerDTO) {
         const customer = await this.customerService.updateCustomer(customerID, createCustomerDTO);
         if (!customer)
@@ -89,6 +93,13 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], CustomerController.prototype, "getCustomer", null);
+__decorate([
+    common_1.Get('/email/:email'),
+    __param(0, common_1.Res()), __param(1, common_1.Param('email')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], CustomerController.prototype, "getCustomerByEmail", null);
 __decorate([
     common_1.Put('/update'),
     __param(0, common_1.Res()),
