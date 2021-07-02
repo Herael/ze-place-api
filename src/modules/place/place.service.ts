@@ -12,9 +12,8 @@ import {
   isInRangePrice,
   isPlaceInRadius,
 } from '../../utils/index';
-import { Booking } from '../booking/interfaces/booking.interface';
-import { BookingDTO } from '../booking/dto/booking.dto';
 import { Feature } from '../feature/interfaces/feature.interface';
+import { PlaceType } from '../place-type/interfaces/place-type.interface';
 
 @Injectable()
 export class PlaceService {
@@ -41,8 +40,12 @@ export class PlaceService {
     return places;
   }
 
-  async findById(placeId: string): Promise<Place> {
+  async findById(userId: string, placeId: string): Promise<Place> {
+    const user = await this.customerModel.findById(userId);
     const place = await this.placeModel.findById(placeId).exec();
+    place.isFavorite = Boolean(
+      user.favorites.find((p) => p._id.toString() === place._id.toString()),
+    );
     return place;
   }
 
@@ -66,8 +69,6 @@ export class PlaceService {
   }
 
   async createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place> {
-    console.log(createPlaceDTO.features);
-    
     const newPlace = await new this.placeModel(createPlaceDTO).save();
     const updatedCustomer = await this.customerModel.findById(
       createPlaceDTO.ownerId,
@@ -76,6 +77,31 @@ export class PlaceService {
     updatedCustomer.save();
 
     return newPlace;
+  }
+
+  async updatePlace(createPlaceDTO: CreatePlaceDTO): Promise<Place> {
+    const place = await this.placeModel.findOneAndUpdate(
+      {
+        _id: createPlaceDTO.placeId,
+      },
+      {
+        title: createPlaceDTO.title,
+        location: createPlaceDTO.location,
+        surface: createPlaceDTO.surface,
+        placeType: createPlaceDTO.placeType,
+        price: createPlaceDTO.price,
+        description: createPlaceDTO.description,
+        features: createPlaceDTO.features,
+        images: createPlaceDTO.images,
+        authorizeAnimals: createPlaceDTO.authorizeAnimals,
+        authorizeMusic: createPlaceDTO.authorizeMusic,
+        authorizeSmoking: createPlaceDTO.authorizeSmoking,
+        authorizeFire: createPlaceDTO.authorizeFire,
+        authorizeFoodAndDrink: createPlaceDTO.authorizeFoodAndDrink,
+      },
+    );
+    place.save();
+    return place;
   }
 
   async similarPlaces(placeID: string): Promise<Place[]> {
@@ -91,7 +117,7 @@ export class PlaceService {
     let places = await this.placeModel
       .find({
         _id: { $ne: place._id },
-        placeType: { $elemMatch: { name: place.placeType[0].name } }, //PlaceType.name fit with my origin place
+        placeType: place.placeType,
       })
       .exec();
 
@@ -116,7 +142,7 @@ export class PlaceService {
   }
 
   async searchPlaces(
-    placeTypeName: string,
+    placeType: PlaceType,
     price: number,
     surface: number,
     features: Feature[],
@@ -125,17 +151,17 @@ export class PlaceService {
     const distance = 20000;
     let places = [];
 
-    if (placeTypeName && surface) {
+    if (placeType && surface) {
       places = await this.placeModel
         .find({
-          placeType: { $elemMatch: { name: placeTypeName } },
+          placeType: placeType,
           surface: { $gte: surface },
         })
         .exec();
-    } else if (placeTypeName) {
+    } else if (placeType) {
       places = await this.placeModel
         .find({
-          placeType: { $elemMatch: { name: placeTypeName } },
+          placeType: placeType,
         })
         .exec();
     } else if (surface) {

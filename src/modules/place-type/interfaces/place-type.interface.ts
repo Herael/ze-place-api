@@ -8,6 +8,6 @@ export interface PlaceType extends Document {
 
 export interface PlaceFeatures extends Document {
   readonly name: string;
-  readonly image:string;
+  readonly image: string;
   readonly created_at: Date;
 }

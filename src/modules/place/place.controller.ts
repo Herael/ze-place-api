@@ -23,7 +23,6 @@ export class PlaceController {
     return res.status(HttpStatus.OK).json(places);
   }
 
-
   @Get('/admin')
   async getAllPlacesAdmin(@Request() req, @Res() res) {
     const places = await this.placeService.getAllPlacesAdmin();
@@ -33,8 +32,7 @@ export class PlaceController {
   @UseGuards(JwtAuthGuard)
   @Get('/:id')
   async getPlaceById(@Request() req, @Res() res) {
-    console.log(req.params);
-    const places = await this.placeService.findById(req.params.id);
+    const places = await this.placeService.findById(req.user.id, req.params.id);
     return res.status(HttpStatus.OK).json(places);
   }
 
@@ -49,10 +47,20 @@ export class PlaceController {
 
   @UseGuards(JwtAuthGuard)
   @Post('/create')
-  async createPlace(@Res() res, @Body() createPlaceDTO: CreatePlaceDTO) {    
+  async createPlace(@Res() res, @Body() createPlaceDTO: CreatePlaceDTO) {
     const place = await this.placeService.createPlace(createPlaceDTO);
     return res.status(HttpStatus.OK).json({
       message: 'Place has been created successfully',
+      place,
+    });
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/update')
+  async updatePlace(@Res() res, @Body() createPlaceDTO: CreatePlaceDTO) {
+    const place = await this.placeService.updatePlace(createPlaceDTO);
+    return res.status(HttpStatus.OK).json({
+      message: 'Place has been updated successfully',
       place,
     });
   }
@@ -71,7 +79,7 @@ export class PlaceController {
   @Post('/searchPlaces')
   async searchPlaces(@Res() res, @Body() body) {
     const places = await this.placeService.searchPlaces(
-      body.placeTypeName,
+      body.placeType,
       body.price,
       body.surface,
       body.features,

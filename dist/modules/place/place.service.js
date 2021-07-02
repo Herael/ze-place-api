@@ -35,8 +35,10 @@ let PlaceService = class PlaceService {
         const places = await this.placeModel.find().exec();
         return places;
     }
-    async findById(placeId) {
+    async findById(userId, placeId) {
+        const user = await this.customerModel.findById(userId);
         const place = await this.placeModel.findById(placeId).exec();
+        place.isFavorite = Boolean(user.favorites.find((p) => p._id.toString() === place._id.toString()));
         return place;
     }
     async getPlacesNearbyCoordinates(coords, distance) {
@@ -48,12 +50,32 @@ let PlaceService = class PlaceService {
         return places;
     }
     async createPlace(createPlaceDTO) {
-        console.log(createPlaceDTO.features);
         const newPlace = await new this.placeModel(createPlaceDTO).save();
         const updatedCustomer = await this.customerModel.findById(createPlaceDTO.ownerId);
         updatedCustomer.ownedPlaces.push(newPlace);
         updatedCustomer.save();
         return newPlace;
+    }
+    async updatePlace(createPlaceDTO) {
+        const place = await this.placeModel.findOneAndUpdate({
+            _id: createPlaceDTO.placeId,
+        }, {
+            title: createPlaceDTO.title,
+            location: createPlaceDTO.location,
+            surface: createPlaceDTO.surface,
+            placeType: createPlaceDTO.placeType,
+            price: createPlaceDTO.price,
+            description: createPlaceDTO.description,
+            features: createPlaceDTO.features,
+            images: createPlaceDTO.images,
+            authorizeAnimals: createPlaceDTO.authorizeAnimals,
+            authorizeMusic: createPlaceDTO.authorizeMusic,
+            authorizeSmoking: createPlaceDTO.authorizeSmoking,
+            authorizeFire: createPlaceDTO.authorizeFire,
+            authorizeFoodAndDrink: createPlaceDTO.authorizeFoodAndDrink,
+        });
+        place.save();
+        return place;
     }
     async similarPlaces(placeID) {
         const place = await this.placeModel.findById(placeID);
@@ -67,7 +89,7 @@ let PlaceService = class PlaceService {
         let places = await this.placeModel
             .find({
             _id: { $ne: place._id },
-            placeType: { $elemMatch: { name: place.placeType[0].name } },
+            placeType: place.placeType,
         })
             .exec();
         places = places.filter((place) => index_1.isPlaceInRadius({
@@ -77,21 +99,21 @@ let PlaceService = class PlaceService {
         places = places.filter((placeElement) => index_1.isInRangePrice(price, placeElement.price, priceDif) === true);
         return places;
     }
-    async searchPlaces(placeTypeName, price, surface, features, location) {
+    async searchPlaces(placeType, price, surface, features, location) {
         const distance = 20000;
         let places = [];
-        if (placeTypeName && surface) {
+        if (placeType && surface) {
             places = await this.placeModel
                 .find({
-                placeType: { $elemMatch: { name: placeTypeName } },
+                placeType: placeType,
                 surface: { $gte: surface },
             })
                 .exec();
         }
-        else if (placeTypeName) {
+        else if (placeType) {
             places = await this.placeModel
                 .find({
-                placeType: { $elemMatch: { name: placeTypeName } },
+                placeType: placeType,
             })
                 .exec();
         }

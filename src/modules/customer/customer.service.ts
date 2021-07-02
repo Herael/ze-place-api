@@ -39,7 +39,7 @@ export class CustomerService {
       .findOne({
         email: customer.email,
       })
-      .exec();      
+      .exec();
     if (userExist != null) {
       return null;
     }
