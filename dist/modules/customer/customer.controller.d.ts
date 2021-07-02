@@ -11,4 +11,5 @@ export declare class CustomerController {
     deleteFavorite(req: any, res: any, placeID: any): Promise<any>;
     deleteCustomer(res: any, customerID: any): Promise<any>;
     addPromoCode(res: any, req: any, customerID: any): Promise<any>;
+    setToHistory(res: any, req: any): Promise<any>;
 }

@@ -2527,8 +2527,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/customer.service.ts": {
-        "version": "9def74c91a4c600a8ca91163f655d45ba0ac2a2562d0c5e5cfa05607d1a67d1c",
-        "signature": "7d429dd445debe512cd83823ee3d3aa8d7d981722664abb63f01c42ac0939293",
+        "version": "f4e06a822a21398f7457bb03ea9b7534cb9fabdbaaed5f1f4c6c541b1fe906d4",
+        "signature": "89e5ce6c9196cae6140bc62757bce8d37cd4e617c08880cb2911e9ca36d5f517",
         "affectsGlobalScope": false
       },
       "../node_modules/python-shell/index.d.ts": {
@@ -2537,7 +2537,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/auth/auth.service.ts": {
-        "version": "11c637c2427fff740ecae0b57ab76d6bbf6a8965c4f974f8a48cc12788e74871",
+        "version": "ec0996def8c58b532158493130c3d4c9e8d0b65c18026fdd7f6c3e0258d0fef4",
         "signature": "79bde5941f99175104cfbe69c04f36a52e27504bdfd5ac92f2f68731ef7d523c",
         "affectsGlobalScope": false
       },
@@ -2787,8 +2787,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/customer/customer.controller.ts": {
-        "version": "94899780269f2a309b756cfdb8c3c4c808a7d2404f81abdfa34ebe186f456171",
-        "signature": "d211bf951c9c342934f355622f5b66dc28d214982da7d9317062dec848e8a63f",
+        "version": "fb55a72c08ad322abc38d2076318798b42f7a6e0444c14b2e3efe6d70e9dbcf3",
+        "signature": "50eb2052caf555b9d1725ae398e07fb31a1d5502b50b9cb0c8c711cb47f964dc",
         "affectsGlobalScope": false
       },
       "../src/modules/feature/schemas/feature.schema.ts": {
@@ -3012,12 +3012,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/promo/promo.service.ts": {
-        "version": "acf6153beba235a6bcde1ce77f4dd1108b336fea21d96b5cc75c2a571a946a99",
+        "version": "61b172dcaf33aa03f48bf7a6a928477f87eb9df76035887e53b8511b199f4024",
         "signature": "ec99180f3413ef9a38fb3c907eb00a6386c84a7a2142b3d000e22eb6e2eaf586",
         "affectsGlobalScope": false
       },
       "../src/modules/promo/promo.controller.ts": {
-        "version": "0ca0e63a9f2916e3da3ba463e3b6c52de816e54be1550ef9cd684f4d34f69d67",
+        "version": "3425822322bf8e14649d128acd254dc8a9ef293fc05cc238b87c6ca972ee24d9",
         "signature": "5cc60f4f97d566b2d32219b208f66c4fd7a8c9e9fd55e28e4be2eeb71c3f61fa",
         "affectsGlobalScope": false
       },
@@ -9496,19 +9496,13 @@
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
-      "../src/app.controller.ts",
       "../src/app.gateway.ts",
-      "../src/app.module.ts",
       "../src/app.service.ts",
       "../src/main.ts",
-      "../src/modules/auth/auth.controller.ts",
-      "../src/modules/auth/auth.module.ts",
-      "../src/modules/auth/auth.service.ts",
       "../src/modules/auth/constants.ts",
       "../src/modules/auth/jwt-auth.guard.ts",
       "../src/modules/auth/jwt.strategy.ts",
       "../src/modules/auth/local-auth.guard.ts",
-      "../src/modules/auth/local.strategy.ts",
       "../src/modules/booking/booking.controller.ts",
       "../src/modules/booking/booking.module.ts",
       "../src/modules/booking/booking.service.ts",
@@ -9527,9 +9521,6 @@
       "../src/modules/conversation/dto/conversation.dto.ts",
       "../src/modules/conversation/interfaces/conversation.interface.ts",
       "../src/modules/conversation/schemas/conversation.schema.ts",
-      "../src/modules/customer/customer.controller.ts",
-      "../src/modules/customer/customer.module.ts",
-      "../src/modules/customer/customer.service.ts",
       "../src/modules/customer/dto/create-customer.dto.ts",
       "../src/modules/customer/interfaces/customer.interface.ts",
       "../src/modules/customer/schemas/customer.schema.ts",
@@ -9545,9 +9536,6 @@
       "../src/modules/message/message.module.ts",
       "../src/modules/message/message.service.ts",
       "../src/modules/message/schemas/message.schema.ts",
-      "../src/modules/payment/payment.controller.ts",
-      "../src/modules/payment/payment.module.ts",
-      "../src/modules/payment/payment.service.ts",
       "../src/modules/place-type/dto/create-place-type.dto.ts",
       "../src/modules/place-type/interfaces/place-type.interface.ts",
       "../src/modules/place-type/place-type.controller.ts",
@@ -9562,9 +9550,7 @@
       "../src/modules/place/schemas/place.schema.ts",
       "../src/modules/promo/dto/create-promo.dto.ts",
       "../src/modules/promo/interfaces/promo.interface.ts",
-      "../src/modules/promo/promo.controller.ts",
       "../src/modules/promo/promo.module.ts",
-      "../src/modules/promo/promo.service.ts",
       "../src/modules/promo/schemas/promo.schema.ts",
       "../src/modules/review-place/dto/create-review-place.dto.ts",
       "../src/modules/review-place/interfaces/review-place.interface.ts",

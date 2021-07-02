@@ -69,6 +69,11 @@ let CustomerController = class CustomerController {
             data: result,
         });
     }
+    async setToHistory(res, req) {
+        const code = await this.customerService.setToHistory(req.body);
+        console.log(code);
+        return res.status(common_1.HttpStatus.OK).json(code);
+    }
 };
 __decorate([
     common_1.Get(),
@@ -127,6 +132,13 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", Promise)
 ], CustomerController.prototype, "addPromoCode", null);
+__decorate([
+    common_1.Post('/setToHistory'),
+    __param(0, common_1.Res()), __param(1, common_1.Request()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], CustomerController.prototype, "setToHistory", null);
 CustomerController = __decorate([
     common_1.Controller('customers'),
     __metadata("design:paramtypes", [customer_service_1.CustomerService])

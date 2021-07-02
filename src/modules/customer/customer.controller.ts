@@ -105,9 +105,10 @@ export class CustomerController {
 
   @Post('/setToHistory')
   async setToHistory(@Res() res ,@Request() req){
-    console.log(req.body);
     
-    const code = await this.customerService.setToHistory(req.body);      
+    
+    const code = await this.customerService.setToHistory(req.body);    
+    console.log(code);      
     return res.status(HttpStatus.OK).json(code)
   }
 }
