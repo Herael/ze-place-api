@@ -44,6 +44,6 @@ import { ConversationSchema } from './modules/conversation/schemas/conversation.
     MessageModule,
   ],
   controllers: [AppController],
-  providers: [AppService, AppGateway],
+  providers: [AppService],
 })
 export class AppModule {}
