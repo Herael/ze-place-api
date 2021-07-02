@@ -13,7 +13,6 @@ import { PlaceTypeModule } from './modules/place-type/place-type.module';
 import { FeatureModule } from './modules/feature/feature.module';
 import { PaymentModule } from './modules/payment/payment.module';
 import { BookingModule } from './modules/booking/booking.module';
-import { AppGateway } from './app.gateway';
 import { BugTicketModule } from './modules/bug-ticket/bug-ticket.module';
 import { ConversationModule } from './modules/conversation/conversation.module';
 import { MessageModule } from './modules/message/message.module';

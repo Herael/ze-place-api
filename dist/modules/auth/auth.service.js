@@ -92,7 +92,7 @@ let AuthService = class AuthService {
         const payload = { email: user.email, id: user._id };
         return {
             access_token: this.jwtService.sign(payload),
-            userId: user,
+            user: user,
         };
     }
     async createToken(customer) {

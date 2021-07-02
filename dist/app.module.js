@@ -21,7 +21,6 @@ const place_type_module_1 = require("./modules/place-type/place-type.module");
 const feature_module_1 = require("./modules/feature/feature.module");
 const payment_module_1 = require("./modules/payment/payment.module");
 const booking_module_1 = require("./modules/booking/booking.module");
-const app_gateway_1 = require("./app.gateway");
 const bug_ticket_module_1 = require("./modules/bug-ticket/bug-ticket.module");
 const conversation_module_1 = require("./modules/conversation/conversation.module");
 const message_module_1 = require("./modules/message/message.module");
@@ -50,7 +49,7 @@ AppModule = __decorate([
             message_module_1.MessageModule,
         ],
         controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService, app_gateway_1.AppGateway],
+        providers: [app_service_1.AppService],
     })
 ], AppModule);
 exports.AppModule = AppModule;

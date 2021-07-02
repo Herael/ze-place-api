@@ -13,7 +13,7 @@ export declare class AuthService {
     uploadID(data: any): Promise<any[]>;
     register(customer: Customer): Promise<{
         access_token: string;
-        userId: Customer;
+        user: Customer;
     }>;
     createToken(customer: Customer): Promise<any>;
     getUser(credentials: any): Promise<Customer>;

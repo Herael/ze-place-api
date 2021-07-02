@@ -130,6 +130,8 @@ let BookingService = class BookingService {
         return booking;
     }
     async sendPaymentToClient() {
+        const tva = 1.2;
+        const fees = 1.2;
         const bookings = await this.getBookingsOfTheDay();
         if (bookings.length > 0) {
             bookings.forEach(async (booking) => {
@@ -138,8 +140,10 @@ let BookingService = class BookingService {
                 if (owner != null && owner.stripeAccount) {
                     bookingModel.isPaid = true;
                     bookingModel.save();
+                    const priceHT = (booking.price * booking.duration * 100) / tva;
+                    const priceOwner = priceHT / fees;
                     stripe.transfers.create({
-                        amount: booking.price * booking.duration * 100,
+                        amount: priceOwner,
                         currency: 'eur',
                         destination: owner.stripeAccount,
                     });
