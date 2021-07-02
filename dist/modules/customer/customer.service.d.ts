@@ -14,6 +14,7 @@ export declare class CustomerService {
     updateCustomer(customerID: string, createCustomerDTO: CreateCustomerDTO): Promise<Customer>;
     deleteCustomer(customerID: string): Promise<any>;
     addPromoCode(promoCodeName: Promo, customerID: string): Promise<any>;
+    setToHistory(req: any): Promise<Customer>;
     addFavorite(customerID: string, place: Place): Promise<void>;
     deleteFavorite(customerID: string, placeId: string): Promise<void>;
 }

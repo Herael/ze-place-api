@@ -108,4 +108,13 @@ export class CustomerController {
       data: result,
     });
   }
+
+  @Post('/setToHistory')
+  async setToHistory(@Res() res ,@Request() req){
+    
+    
+    const code = await this.customerService.setToHistory(req.body);    
+    console.log(code);      
+    return res.status(HttpStatus.OK).json(code)
+  }
 }
