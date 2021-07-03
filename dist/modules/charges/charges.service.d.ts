@@ -6,4 +6,6 @@ export declare class ChargesService {
     constructor(chargesModel: Model<Charges>);
     createTVA(body: ChargesTO): Promise<Charges>;
     createService(body: ChargesTO): Promise<Charges>;
+    getTVA(): Promise<Charges>;
+    getService(): Promise<Charges>;
 }

@@ -42,6 +42,14 @@ let ChargesService = class ChargesService {
         }
         return chargesUpdate;
     }
+    async getTVA() {
+        const charges = await this.chargesModel.findOne({ name: 'TVA' }).exec();
+        return charges;
+    }
+    async getService() {
+        const charges = await this.chargesModel.findOne({ name: 'Service' }).exec();
+        return charges;
+    }
 };
 ChargesService = __decorate([
     common_1.Injectable(),

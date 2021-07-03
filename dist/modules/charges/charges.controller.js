@@ -20,17 +20,31 @@ let ChargesController = class ChargesController {
         this.chargesService = chargesService;
     }
     async createTVA(req, res, body) {
-        const booking = await this.chargesService.createTVA(body);
+        const charges = await this.chargesService.createTVA(body);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Booking has been created successfully',
-            booking,
+            charges,
         });
     }
     async createService(req, res, body) {
-        const booking = await this.chargesService.createService(body);
+        const charges = await this.chargesService.createService(body);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Booking has been created successfully',
-            booking,
+            charges,
+        });
+    }
+    async getTVA(req, res) {
+        const charges = await this.chargesService.getTVA();
+        return res.status(common_1.HttpStatus.OK).json({
+            message: 'Booking has been created successfully',
+            charges,
+        });
+    }
+    async getService(req, res) {
+        const charges = await this.chargesService.getService();
+        return res.status(common_1.HttpStatus.OK).json({
+            message: 'Booking has been created successfully',
+            charges,
         });
     }
 };
@@ -48,6 +62,20 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", Promise)
 ], ChargesController.prototype, "createService", null);
+__decorate([
+    common_1.Get('/getTVA'),
+    __param(0, common_1.Req()), __param(1, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], ChargesController.prototype, "getTVA", null);
+__decorate([
+    common_1.Get('/getService'),
+    __param(0, common_1.Req()), __param(1, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], ChargesController.prototype, "getService", null);
 ChargesController = __decorate([
     common_1.Controller('charges'),
     __metadata("design:paramtypes", [charges_service_1.ChargesService])

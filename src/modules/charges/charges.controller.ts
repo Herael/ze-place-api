@@ -1,4 +1,4 @@
-import { Controller, Post, Req, Res, Body, HttpStatus } from '@nestjs/common';
+import { Controller, Post, Req, Res, Body, HttpStatus, Get } from '@nestjs/common';
 import { ChargesService } from './charges.service';
 
 @Controller('charges')
@@ -8,19 +8,37 @@ export class ChargesController {
 
   @Post('/createTVA')
   async createTVA(@Req() req, @Res() res, @Body() body) {
-    const booking = await this.chargesService.createTVA(body);
+    const charges = await this.chargesService.createTVA(body);
     return res.status(HttpStatus.OK).json({
       message: 'Booking has been created successfully',
-      booking,
+      charges,
     });
   }
 
   @Post('/createService')
   async createService(@Req() req, @Res() res, @Body() body) {
-    const booking = await this.chargesService.createService(body);
+    const charges = await this.chargesService.createService(body);
     return res.status(HttpStatus.OK).json({
       message: 'Booking has been created successfully',
-      booking,
+      charges,
+    });
+  }
+
+  @Get('/getTVA')
+  async getTVA(@Req() req, @Res() res) {
+    const charges = await this.chargesService.getTVA();
+    return res.status(HttpStatus.OK).json({
+      message: 'Booking has been created successfully',
+      charges,
+    });
+  }
+
+  @Get('/getService')
+  async getService(@Req() req, @Res() res) {
+    const charges = await this.chargesService.getService();
+    return res.status(HttpStatus.OK).json({
+      message: 'Booking has been created successfully',
+      charges,
     });
   }
 

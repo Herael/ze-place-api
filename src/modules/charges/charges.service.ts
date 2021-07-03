@@ -34,4 +34,13 @@ export class ChargesService {
         }
         return chargesUpdate;
       }
+
+      async getTVA():Promise<Charges>  {
+        const charges = await this.chargesModel.findOne({name:'TVA'}).exec();
+        return charges
+      }
+      async getService():Promise<Charges>  {
+        const charges = await this.chargesModel.findOne({name:'Service'}).exec();
+        return charges
+      }
 }
