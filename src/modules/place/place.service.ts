@@ -7,18 +7,22 @@ import { Customer } from '../customer/interfaces/customer.interface';
 import { CreatePlaceDTO } from './dto/create-place.dto';
 import { Coords, Location } from '../types';
 import {
+  filterOwnedPlace,
   isContainsFeatures,
   isHigherPrice,
   isInRangePrice,
   isPlaceInRadius,
+  isTooShortToDelete,
 } from '../../utils/index';
 import { Feature } from '../feature/interfaces/feature.interface';
 import { PlaceType } from '../place-type/interfaces/place-type.interface';
+import { Booking } from '../booking/interfaces/booking.interface';
 
 @Injectable()
 export class PlaceService {
   constructor(
     @InjectModel('Place') private readonly placeModel: Model<Place>,
+    @InjectModel('Booking') private readonly bookingModel: Model<Booking>,
     @InjectModel('Customer') private readonly customerModel: Model<Customer>,
   ) {}
 
@@ -215,5 +219,26 @@ export class PlaceService {
     }
 
     return places;
+  }
+
+  async deletePlace(placeId: string): Promise<any> {
+    const place = await this.placeModel.findById(placeId);
+    const bookings = await this.bookingModel.find({ placeId: placeId });
+    const checkBooking = bookings.filter(
+      (booking: Booking) => isTooShortToDelete(booking.startDate) === true,
+    );
+    if (checkBooking.length > 0) {
+      return false;
+    }
+    bookings.forEach(async (e) => {
+      await this.bookingModel.findByIdAndRemove(e._id);
+    });
+    await this.placeModel.findByIdAndRemove(placeId).exec();
+    const user = await this.customerModel.findById(place.ownerId);
+    user.ownedPlaces.filter(
+      (place: Place) => filterOwnedPlace(place._id, placeId) === true,
+    );
+    await user.save();
+    return true;
   }
 }

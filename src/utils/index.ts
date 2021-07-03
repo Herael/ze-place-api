@@ -4,6 +4,7 @@ import { Feature } from 'src/modules/feature/interfaces/feature.interface';
 import { Coords } from 'src/modules/types';
 import Moment from 'moment';
 import MomentRange from 'moment-range';
+import { Booking } from 'src/modules/booking/interfaces/booking.interface';
 
 export const isPlaceInRadius = (
   origin: Coords,
@@ -18,6 +19,13 @@ export const isHigherPrice = (originPrice: number, placePrice: number) => {
     return true;
   }
   return false;
+};
+
+export const filterOwnedPlace = (id: string, placeId: string) => {
+  if (id === placeId) {
+    return false;
+  }
+  return true;
 };
 
 export const isInRangePrice = (
@@ -45,6 +53,22 @@ export const isContainsFeatures = (
     }
   });
   if (count != researchFeature.length) {
+    return false;
+  }
+  return true;
+};
+
+export const isTooShortToDelete = (bookingDate: string) => {
+  const today = new Date();
+  const d = parseInt(String(today.getDate()).padStart(2, '0'));
+  const m = parseInt(String(today.getMonth() + 1).padStart(2, '0'));
+  const y = today.getFullYear();
+  const startDate = bookingDate.split('-');
+  if (
+    parseInt(startDate[0]) >= y &&
+    parseInt(startDate[1]) >= m &&
+    parseInt(startDate[2]) >= d + 2
+  ) {
     return false;
   }
   return true;

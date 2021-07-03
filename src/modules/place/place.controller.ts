@@ -7,6 +7,9 @@ import {
   UseGuards,
   Request,
   Body,
+  Delete,
+  Query,
+  NotFoundException,
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
 import { CreatePlaceDTO } from './dto/create-place.dto';
@@ -96,5 +99,11 @@ export class PlaceController {
       message: 'Search places has been get successfully',
       places,
     });
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Delete('/delete')
+  async deletePlace(@Res() res, @Query('placeID') placeId) {
+    return await this.placeService.deletePlace(placeId);
   }
 }
