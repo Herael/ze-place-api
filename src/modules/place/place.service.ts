@@ -34,6 +34,18 @@ export class PlaceService {
     return formattedPlaces;
   }
 
+  async getAllPlacesShuffle(userId: string) {
+    const user = await this.customerModel.findById(userId);
+    const places = await this.placeModel.find().exec();
+    const formattedPlaces = places.map((place) => {
+      place.isFavorite = Boolean(
+        user.favorites.find((p) => p._id.toString() === place._id.toString()),
+      );
+      return place;
+    });
+    return formattedPlaces.sort(() => 0.5 - Math.random());
+  }
+
   async getAllPlacesAdmin() {
     const places = await this.placeModel.find().exec();
 
