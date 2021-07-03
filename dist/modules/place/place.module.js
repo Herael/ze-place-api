@@ -13,6 +13,7 @@ const place_service_1 = require("./place.service");
 const place_controller_1 = require("./place.controller");
 const place_schema_1 = require("./schemas/place.schema");
 const customer_schema_1 = require("../customer/schemas/customer.schema");
+const booking_schema_1 = require("../booking/schemas/booking.schema");
 let PlaceModule = class PlaceModule {
 };
 PlaceModule = __decorate([
@@ -20,6 +21,7 @@ PlaceModule = __decorate([
         imports: [
             mongoose_1.MongooseModule.forFeature([{ name: 'Place', schema: place_schema_1.PlaceSchema }]),
             mongoose_1.MongooseModule.forFeature([{ name: 'Customer', schema: customer_schema_1.CustomerSchema }]),
+            mongoose_1.MongooseModule.forFeature([{ name: 'Booking', schema: booking_schema_1.BookingSchema }]),
         ],
         controllers: [place_controller_1.PlaceController],
         providers: [place_service_1.PlaceService],

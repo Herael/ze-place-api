@@ -25,6 +25,10 @@ let PlaceController = class PlaceController {
         const places = await this.placeService.getAllPlaces(req.user.id);
         return res.status(common_1.HttpStatus.OK).json(places);
     }
+    async getAllPlacesShuffle(req, res) {
+        const places = await this.placeService.getAllPlacesShuffle(req.user.id);
+        return res.status(common_1.HttpStatus.OK).json(places);
+    }
     async getAllPlacesAdmin(req, res) {
         const places = await this.placeService.getAllPlacesAdmin();
         return res.status(common_1.HttpStatus.OK).json(places);
@@ -65,6 +69,9 @@ let PlaceController = class PlaceController {
             places,
         });
     }
+    async deletePlace(res, placeId) {
+        return await this.placeService.deletePlace(placeId);
+    }
 };
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
@@ -74,6 +81,14 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PlaceController.prototype, "getAllPlaces", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Get('/shuffle'),
+    __param(0, common_1.Request()), __param(1, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PlaceController.prototype, "getAllPlacesShuffle", null);
 __decorate([
     common_1.Get('/admin'),
     __param(0, common_1.Request()), __param(1, common_1.Res()),
@@ -128,6 +143,14 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PlaceController.prototype, "searchPlaces", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Delete('/delete'),
+    __param(0, common_1.Res()), __param(1, common_1.Query('placeID')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PlaceController.prototype, "deletePlace", null);
 PlaceController = __decorate([
     common_1.Controller('places'),
     __metadata("design:paramtypes", [place_service_1.PlaceService])

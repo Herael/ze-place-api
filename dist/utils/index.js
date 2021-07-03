@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.dateToAvailabilities = exports.getDates = exports.sendPushNotifications = exports.isContainsFeatures = exports.isInRangePrice = exports.isHigherPrice = exports.isPlaceInRadius = void 0;
+exports.dateToAvailabilities = exports.getDates = exports.sendPushNotifications = exports.isTooShortToDelete = exports.isContainsFeatures = exports.isInRangePrice = exports.filterOwnedPlace = exports.isHigherPrice = exports.isPlaceInRadius = void 0;
 const geolib = require("geolib");
 const axios_1 = require("axios");
 const feature_interface_1 = require("../modules/feature/interfaces/feature.interface");
 const types_1 = require("../modules/types");
+const booking_interface_1 = require("../modules/booking/interfaces/booking.interface");
 const isPlaceInRadius = (origin, center, distance) => {
     return geolib.isPointWithinRadius(origin, center, distance);
 };
@@ -16,6 +17,13 @@ const isHigherPrice = (originPrice, placePrice) => {
     return false;
 };
 exports.isHigherPrice = isHigherPrice;
+const filterOwnedPlace = (id, placeId) => {
+    if (id === placeId) {
+        return false;
+    }
+    return true;
+};
+exports.filterOwnedPlace = filterOwnedPlace;
 const isInRangePrice = (originPrice, placePrice, percentage) => {
     if (placePrice <= originPrice + originPrice * percentage &&
         placePrice >= originPrice - originPrice * percentage) {
@@ -37,6 +45,20 @@ const isContainsFeatures = (researchFeature, placeFeature) => {
     return true;
 };
 exports.isContainsFeatures = isContainsFeatures;
+const isTooShortToDelete = (bookingDate) => {
+    const today = new Date();
+    const d = parseInt(String(today.getDate()).padStart(2, '0'));
+    const m = parseInt(String(today.getMonth() + 1).padStart(2, '0'));
+    const y = today.getFullYear();
+    const startDate = bookingDate.split('-');
+    if (parseInt(startDate[0]) >= y &&
+        parseInt(startDate[1]) >= m &&
+        parseInt(startDate[2]) >= d + 2) {
+        return false;
+    }
+    return true;
+};
+exports.isTooShortToDelete = isTooShortToDelete;
 const sendPushNotifications = async ({ pushId, title, data, description, }) => {
     if (pushId) {
         return await axios_1.default

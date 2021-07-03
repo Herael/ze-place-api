@@ -18,8 +18,9 @@ const mongoose_1 = require("mongoose");
 const mongoose_2 = require("@nestjs/mongoose");
 const index_1 = require("../../utils/index");
 let PlaceService = class PlaceService {
-    constructor(placeModel, customerModel) {
+    constructor(placeModel, bookingModel, customerModel) {
         this.placeModel = placeModel;
+        this.bookingModel = bookingModel;
         this.customerModel = customerModel;
     }
     async getAllPlaces(userId) {
@@ -30,6 +31,15 @@ let PlaceService = class PlaceService {
             return place;
         });
         return formattedPlaces;
+    }
+    async getAllPlacesShuffle(userId) {
+        const user = await this.customerModel.findById(userId);
+        const places = await this.placeModel.find().exec();
+        const formattedPlaces = places.map((place) => {
+            place.isFavorite = Boolean(user.favorites.find((p) => p._id.toString() === place._id.toString()));
+            return place;
+        });
+        return formattedPlaces.sort(() => 0.5 - Math.random());
     }
     async getAllPlacesAdmin() {
         const places = await this.placeModel.find().exec();
@@ -145,12 +155,30 @@ let PlaceService = class PlaceService {
         }
         return places;
     }
+    async deletePlace(placeId) {
+        const place = await this.placeModel.findById(placeId);
+        const bookings = await this.bookingModel.find({ placeId: placeId });
+        const checkBooking = bookings.filter((booking) => index_1.isTooShortToDelete(booking.startDate) === true);
+        if (checkBooking.length > 0) {
+            return false;
+        }
+        bookings.forEach(async (e) => {
+            await this.bookingModel.findByIdAndRemove(e._id);
+        });
+        await this.placeModel.findByIdAndRemove(placeId).exec();
+        const user = await this.customerModel.findById(place.ownerId);
+        user.ownedPlaces.filter((place) => index_1.filterOwnedPlace(place._id, placeId) === true);
+        await user.save();
+        return true;
+    }
 };
 PlaceService = __decorate([
     common_1.Injectable(),
     __param(0, mongoose_2.InjectModel('Place')),
-    __param(1, mongoose_2.InjectModel('Customer')),
+    __param(1, mongoose_2.InjectModel('Booking')),
+    __param(2, mongoose_2.InjectModel('Customer')),
     __metadata("design:paramtypes", [mongoose_1.Model,
+        mongoose_1.Model,
         mongoose_1.Model])
 ], PlaceService);
 exports.PlaceService = PlaceService;
