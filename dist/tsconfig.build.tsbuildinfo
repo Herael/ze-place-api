@@ -1832,8 +1832,8 @@
         "affectsGlobalScope": false
       },
       "../src/utils/index.ts": {
-        "version": "4c598f21af9e3301c94d1daded30584e99a1b3b5ee5aec585d406661875f85e6",
-        "signature": "caa16a5426aa0ab7a2576fa88d3a7e279aaec9ec449c59b2aa610393682da575",
+        "version": "84a190610cd8051776001f1b2aca3ee3bdc4ba80ee2922c6e92f673813100b66",
+        "signature": "ea1c52c13ad8d9b3ce628475418ba46ea1e8385585bd221b1ead8f9acb3026c3",
         "affectsGlobalScope": false
       },
       "../src/modules/booking/dto/booking.dto.ts": {
@@ -2702,17 +2702,17 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "25f8333cdbbac70f982ca24c33116692c70a30290ed30831924dd027064f9902",
-        "signature": "25d2c551ec0d55b52729487919b9ec9c22a1a4040e785ddb70a319dc0c725eae",
+        "version": "2d1cceb414c10648b2074a8a74b535fdf03e93aff940badd3ece2b74eee8c2e8",
+        "signature": "17d68be09461458ea4eb903ce7b361a99d3b37a989fe6874b6800340d82951fe",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "eac4f18aee79163fded2fd69e1e3a5f1c53bcb33ffbadd87899b473b3bf4d21e",
-        "signature": "7a4717cefa6527a00f8852552a6c9df3f7c6d6e7d569594e26daea63a5608ebe",
+        "version": "0ed3300a1a0644db5c5d1975b2b24d0eea4ed0cd5420d46e7fbad382fb3b0e56",
+        "signature": "a2042900e0a55c7586f6533fca60004b2321318657fdc704cf09c393695ee16b",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.module.ts": {
-        "version": "59e2180f676b53584e3704ef400164410c7628b7e97a41fda3e3b7cb4484ed9a",
+        "version": "ff3b9b7eaa205052b89ed8115acdd0e11cce30e542cb72063ed6c0190d47889f",
         "signature": "19d997ce27c99d6e74839ae37762f33da8cb45f4b60f73e7050b6c7bd71dd2b4",
         "affectsGlobalScope": false
       },
@@ -2987,12 +2987,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/conversation.service.ts": {
-        "version": "3707332e6241be967495585e09e82b2b7e94d236b9ff6180b2dca3b152e98766",
+        "version": "c3763bddcb2633999caf92ba36f10135457d20c0633118f0e3217662e84ca670",
         "signature": "d3450f2978a06ff7972619aeac17ad39b6912a8683ec7bdb8040466763477e57",
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/conversation.controller.ts": {
-        "version": "110a350d237f745f66cda5fd7a659a0ff1b6f0414411fc83cf8b76e815bda61a",
+        "version": "07ff4e8aacaae4f29626bb41072c3a89daf4436547648b6a1e7756e39157f9b5",
         "signature": "14eba781e63a920e17ffd87f7d29208b444aa66e4f78fd00e43d722660228cad",
         "affectsGlobalScope": false
       },
@@ -3031,8 +3031,38 @@
         "signature": "6f3ad4d6feae0a27bd7a0529297a3ebcefcfde9fd8db76261760888377768037",
         "affectsGlobalScope": false
       },
+      "../src/modules/charges/interfaces/charges.interface.ts": {
+        "version": "b47bc4a44510503eec2cad50c7c71f65d05fda4d7fa07b14dc4199ab1e0a6afe",
+        "signature": "58279116d2caaa1c74f39a398f6f5ff21f8c2287904be6fe9bc78b8a619f950c",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/charges/dto/charges.dto.ts": {
+        "version": "d15141cadacab9f1f12f3b1ffe698d867b00c1fe44782689dc01068e9b08be7e",
+        "signature": "9c984c853c4ea75de9599a7588888e6c6ff6caa51a4d5e7855ca936a5c6b93f2",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/charges/charges.service.ts": {
+        "version": "01fddf9ce5eaa956c7f85161c7d7d05826c78b61b628a99ddfb1d95a27d0d65c",
+        "signature": "4c2b95aa05af690a978e10e1dc3850ac63134562aea32370b67c80d98785c60b",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/charges/charges.controller.ts": {
+        "version": "549b6f99a03037ccabe8fe737951bc86c1d8190e600a38dc95edc10ac94d1f21",
+        "signature": "7162c0a0343ec4e20f23c9f9729e118a4c0ed642f1913949b62c57a8d07158f6",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/charges/schema/charges.schema.ts": {
+        "version": "3f3b32dca34251c198c77b2cadd500dc0db013fccf3eb1242437416d0475abc4",
+        "signature": "989c887b7e2ebf19a828dc2d7d061328bfd1415b3aa3ee17fdadcb5b01476a03",
+        "affectsGlobalScope": false
+      },
+      "../src/modules/charges/charges.module.ts": {
+        "version": "47e34a4dd2a5f95dddb7fddda80a8e34a37695c280f8333864bc3fc298706b66",
+        "signature": "0b41b07b995418582be3e806cc348a0fc3353c5ed2ff2234ca189485d7464a89",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "ea12731ec6920f52b87bc7d7aa050bb7721939122f6991a2296c44b3a5ed0c51",
+        "version": "6335384cf992fa937adac3bb6f2b20f9237f604285803f46307360b35343d2c3",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -5735,6 +5765,7 @@
         "../src/modules/auth/auth.module.ts",
         "../src/modules/booking/booking.module.ts",
         "../src/modules/bug-ticket/bug-ticket.module.ts",
+        "../src/modules/charges/charges.module.ts",
         "../src/modules/conversation/conversation.module.ts",
         "../src/modules/conversation/schemas/conversation.schema.ts",
         "../src/modules/customer/customer.module.ts",
@@ -5870,6 +5901,36 @@
       "../src/modules/bug-ticket/schemas/ticket.schema.ts": [
         "../node_modules/mongoose/index.d.ts",
         "../src/modules/place/schemas/place.schema.ts"
+      ],
+      "../src/modules/charges/charges.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/modules/charges/charges.service.ts"
+      ],
+      "../src/modules/charges/charges.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/modules/charges/charges.controller.ts",
+        "../src/modules/charges/charges.service.ts",
+        "../src/modules/charges/schema/charges.schema.ts"
+      ],
+      "../src/modules/charges/charges.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/charges/dto/charges.dto.ts",
+        "../src/modules/charges/interfaces/charges.interface.ts",
+        "../src/modules/customer/interfaces/customer.interface.ts",
+        "../src/modules/promo/interfaces/promo.interface.ts"
+      ],
+      "../src/modules/charges/dto/charges.dto.ts": [
+        "../src/modules/feature/interfaces/feature.interface.ts"
+      ],
+      "../src/modules/charges/interfaces/charges.interface.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/feature/interfaces/feature.interface.ts"
+      ],
+      "../src/modules/charges/schema/charges.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
       ],
       "../src/modules/conversation/conversation.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -6075,6 +6136,7 @@
       "../src/modules/place/place.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/modules/booking/schemas/booking.schema.ts",
         "../src/modules/customer/schemas/customer.schema.ts",
         "../src/modules/place/place.controller.ts",
         "../src/modules/place/place.service.ts",
@@ -6084,6 +6146,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/feature/interfaces/feature.interface.ts",
         "../src/modules/place-type/interfaces/place-type.interface.ts",
@@ -6170,6 +6233,7 @@
         "../node_modules/geolib/es/index.d.ts",
         "../node_modules/moment-range/dist/moment-range.d.ts",
         "../node_modules/moment/ts3.1-typings/moment.d.ts",
+        "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/feature/interfaces/feature.interface.ts",
         "../src/modules/types.ts"
       ]
@@ -8438,6 +8502,20 @@
       "../src/modules/bug-ticket/schemas/ticket.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
       ],
+      "../src/modules/charges/charges.controller.ts": [
+        "../src/modules/charges/charges.service.ts"
+      ],
+      "../src/modules/charges/charges.service.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/modules/charges/dto/charges.dto.ts",
+        "../src/modules/charges/interfaces/charges.interface.ts"
+      ],
+      "../src/modules/charges/interfaces/charges.interface.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/modules/charges/schema/charges.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
       "../src/modules/conversation/conversation.controller.ts": [
         "../src/modules/conversation/conversation.service.ts",
         "../src/modules/conversation/dto/conversation.dto.ts"
@@ -8543,6 +8621,7 @@
       ],
       "../src/modules/place/place.service.ts": [
         "../node_modules/mongoose/index.d.ts",
+        "../src/modules/booking/interfaces/booking.interface.ts",
         "../src/modules/customer/interfaces/customer.interface.ts",
         "../src/modules/feature/interfaces/feature.interface.ts",
         "../src/modules/place-type/interfaces/place-type.interface.ts",
@@ -9240,6 +9319,12 @@
       "../src/modules/bug-ticket/dto/create-ticket.dto.ts",
       "../src/modules/bug-ticket/interfaces/ticket.interface.ts",
       "../src/modules/bug-ticket/schemas/ticket.schema.ts",
+      "../src/modules/charges/charges.controller.ts",
+      "../src/modules/charges/charges.module.ts",
+      "../src/modules/charges/charges.service.ts",
+      "../src/modules/charges/dto/charges.dto.ts",
+      "../src/modules/charges/interfaces/charges.interface.ts",
+      "../src/modules/charges/schema/charges.schema.ts",
       "../src/modules/conversation/conversation.controller.ts",
       "../src/modules/conversation/conversation.module.ts",
       "../src/modules/conversation/conversation.service.ts",

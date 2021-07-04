@@ -25,6 +25,7 @@ const bug_ticket_module_1 = require("./modules/bug-ticket/bug-ticket.module");
 const conversation_module_1 = require("./modules/conversation/conversation.module");
 const message_module_1 = require("./modules/message/message.module");
 const conversation_schema_1 = require("./modules/conversation/schemas/conversation.schema");
+const charges_module_1 = require("./modules/charges/charges.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -47,6 +48,7 @@ AppModule = __decorate([
             schedule_1.ScheduleModule.forRoot(),
             booking_module_1.BookingModule,
             message_module_1.MessageModule,
+            charges_module_1.ChargesModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

@@ -64,14 +64,10 @@ export class ConversationController {
     return res.status(HttpStatus.OK).json(conversation);
   }
 
-  // @UseGuards(JwtAuthGuard)
-  @Get('/user/:userID')
+  @UseGuards(JwtAuthGuard)
+  @Get('/user/:userId')
   async getConversationByUserId(@Res() res, @Param('userId') userId) {
     const conversation = await this.conversationService.findByUserID(userId);
-    if (!conversation)
-      throw new NotFoundException(
-        'Any conversations exist with this userId for any sender or owner !',
-      );
     return res.status(HttpStatus.OK).json(conversation);
   }
 

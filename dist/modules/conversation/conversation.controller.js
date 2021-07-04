@@ -43,8 +43,6 @@ let ConversationController = class ConversationController {
     }
     async getConversationByUserId(res, userId) {
         const conversation = await this.conversationService.findByUserID(userId);
-        if (!conversation)
-            throw new common_1.NotFoundException('Any conversations exist with this userId for any sender or owner !');
         return res.status(common_1.HttpStatus.OK).json(conversation);
     }
     async createConversation(res, conversationDTO) {
@@ -104,7 +102,8 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ConversationController.prototype, "getConversationByPlaceAndUser", null);
 __decorate([
-    common_1.Get('/user/:userID'),
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Get('/user/:userId'),
     __param(0, common_1.Res()), __param(1, common_1.Param('userId')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),

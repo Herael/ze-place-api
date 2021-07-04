@@ -7,24 +7,32 @@ import { Customer } from '../customer/interfaces/customer.interface';
 import { CreatePlaceDTO } from './dto/create-place.dto';
 import { Coords, Location } from '../types';
 import {
+  filterOwnedPlace,
   isContainsFeatures,
   isHigherPrice,
   isInRangePrice,
   isPlaceInRadius,
+  isTooShortToDelete,
 } from '../../utils/index';
 import { Feature } from '../feature/interfaces/feature.interface';
 import { PlaceType } from '../place-type/interfaces/place-type.interface';
+import { Booking } from '../booking/interfaces/booking.interface';
 
 @Injectable()
 export class PlaceService {
   constructor(
     @InjectModel('Place') private readonly placeModel: Model<Place>,
+    @InjectModel('Booking') private readonly bookingModel: Model<Booking>,
     @InjectModel('Customer') private readonly customerModel: Model<Customer>,
   ) {}
 
-  async getAllPlaces(userId: string) {
+  async getAllPlaces(userId: string, limit?: number) {
     const user = await this.customerModel.findById(userId);
-    const places = await this.placeModel.find().exec();
+    const places = await this.placeModel
+      .find()
+      .sort({ created_at: -1 })
+      .limit(limit)
+      .exec();
     const formattedPlaces = places.map((place) => {
       place.isFavorite = Boolean(
         user.favorites.find((p) => p._id.toString() === place._id.toString()),
@@ -32,6 +40,18 @@ export class PlaceService {
       return place;
     });
     return formattedPlaces;
+  }
+
+  async getAllPlacesShuffle(userId: string, limit?: number) {
+    const user = await this.customerModel.findById(userId);
+    const places = await this.placeModel.find().limit(limit).exec();
+    const formattedPlaces = places.map((place) => {
+      place.isFavorite = Boolean(
+        user.favorites.find((p) => p._id.toString() === place._id.toString()),
+      );
+      return place;
+    });
+    return formattedPlaces.sort(() => 0.5 - Math.random());
   }
 
   async getAllPlacesAdmin() {
@@ -52,8 +72,9 @@ export class PlaceService {
   async getPlacesNearbyCoordinates(
     coords: Coords,
     distance: number,
+    limit?: number,
   ): Promise<Place[]> {
-    let places = await this.placeModel.find().exec();
+    let places = await this.placeModel.find().sort({ created_at: -1 }).exec();
     places = places.filter(
       (place: Place) =>
         isPlaceInRadius(
@@ -65,6 +86,7 @@ export class PlaceService {
           distance,
         ) === true,
     );
+    places.slice(0, 10);
     return places;
   }
 
@@ -104,7 +126,7 @@ export class PlaceService {
     return place;
   }
 
-  async similarPlaces(placeID: string): Promise<Place[]> {
+  async similarPlaces(placeID: string, limit?: number): Promise<Place[]> {
     const place = await this.placeModel.findById(placeID);
     const priceDif = 0.4;
     const price = place.price;
@@ -119,6 +141,7 @@ export class PlaceService {
         _id: { $ne: place._id },
         placeType: place.placeType,
       })
+      .limit(limit)
       .exec();
 
     places = places.filter(
@@ -203,5 +226,26 @@ export class PlaceService {
     }
 
     return places;
+  }
+
+  async deletePlace(placeId: string): Promise<any> {
+    const place = await this.placeModel.findById(placeId);
+    const bookings = await this.bookingModel.find({ placeId: placeId });
+    const checkBooking = bookings.filter(
+      (booking: Booking) => isTooShortToDelete(booking.startDate) === true,
+    );
+    if (checkBooking.length > 0) {
+      return false;
+    }
+    bookings.forEach(async (e) => {
+      await this.bookingModel.findByIdAndRemove(e._id);
+    });
+    await this.placeModel.findByIdAndRemove(placeId).exec();
+    const user = await this.customerModel.findById(place.ownerId);
+    user.ownedPlaces.filter(
+      (place: Place) => filterOwnedPlace(place._id, placeId) === true,
+    );
+    await user.save();
+    return true;
   }
 }

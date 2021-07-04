@@ -17,6 +17,7 @@ import { BugTicketModule } from './modules/bug-ticket/bug-ticket.module';
 import { ConversationModule } from './modules/conversation/conversation.module';
 import { MessageModule } from './modules/message/message.module';
 import { ConversationSchema } from './modules/conversation/schemas/conversation.schema';
+import { ChargesModule } from './modules/charges/charges.module';
 
 @Module({
   imports: [
@@ -41,6 +42,7 @@ import { ConversationSchema } from './modules/conversation/schemas/conversation.
     ScheduleModule.forRoot(),
     BookingModule,
     MessageModule,
+    ChargesModule
   ],
   controllers: [AppController],
   providers: [AppService],

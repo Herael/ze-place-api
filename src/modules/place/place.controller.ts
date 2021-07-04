@@ -7,6 +7,9 @@ import {
   UseGuards,
   Request,
   Body,
+  Delete,
+  Query,
+  NotFoundException,
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/modules/auth/jwt-auth.guard';
 import { CreatePlaceDTO } from './dto/create-place.dto';
@@ -17,9 +20,22 @@ export class PlaceController {
   constructor(private placeService: PlaceService) {}
 
   @UseGuards(JwtAuthGuard)
-  @Get()
+  @Post()
   async getAllPlaces(@Request() req, @Res() res) {
-    const places = await this.placeService.getAllPlaces(req.user.id);
+    const places = await this.placeService.getAllPlaces(
+      req.user.id,
+      req.body.limit,
+    );
+    return res.status(HttpStatus.OK).json(places);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/shuffle')
+  async getAllPlacesShuffle(@Request() req, @Res() res) {
+    const places = await this.placeService.getAllPlacesShuffle(
+      req.user.id,
+      req.body.limit,
+    );
     return res.status(HttpStatus.OK).json(places);
   }
 
@@ -36,11 +52,12 @@ export class PlaceController {
     return res.status(HttpStatus.OK).json(places);
   }
 
-  @Post()
+  @Post('/nearby')
   async getPlacesNearbyCoordinates(@Res() res, @Body() data) {
     const places = await this.placeService.getPlacesNearbyCoordinates(
       data.coords,
       data.distance,
+      data.limit,
     );
     return res.status(HttpStatus.OK).json(places);
   }
@@ -89,5 +106,11 @@ export class PlaceController {
       message: 'Search places has been get successfully',
       places,
     });
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Delete('/delete')
+  async deletePlace(@Res() res, @Query('placeID') placeId) {
+    return await this.placeService.deletePlace(placeId);
   }
 }
