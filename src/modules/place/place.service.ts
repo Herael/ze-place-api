@@ -30,7 +30,7 @@ export class PlaceService {
     const user = await this.customerModel.findById(userId);
     const places = await this.placeModel
       .find()
-      .sort({ created_at: 1 })
+      .sort({ created_at: -1 })
       .limit(limit)
       .exec();
     const formattedPlaces = places.map((place) => {
@@ -74,7 +74,7 @@ export class PlaceService {
     distance: number,
     limit?: number,
   ): Promise<Place[]> {
-    let places = await this.placeModel.find().sort({ created_at: 1 }).exec();
+    let places = await this.placeModel.find().sort({ created_at: -1 }).exec();
     places = places.filter(
       (place: Place) =>
         isPlaceInRadius(
