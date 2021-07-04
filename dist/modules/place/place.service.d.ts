@@ -11,14 +11,14 @@ export declare class PlaceService {
     private readonly bookingModel;
     private readonly customerModel;
     constructor(placeModel: Model<Place>, bookingModel: Model<Booking>, customerModel: Model<Customer>);
-    getAllPlaces(userId: string): Promise<Place[]>;
-    getAllPlacesShuffle(userId: string): Promise<Place[]>;
+    getAllPlaces(userId: string, limit?: number): Promise<Place[]>;
+    getAllPlacesShuffle(userId: string, limit?: number): Promise<Place[]>;
     getAllPlacesAdmin(): Promise<Place[]>;
     findById(userId: string, placeId: string): Promise<Place>;
-    getPlacesNearbyCoordinates(coords: Coords, distance: number): Promise<Place[]>;
+    getPlacesNearbyCoordinates(coords: Coords, distance: number, limit?: number): Promise<Place[]>;
     createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;
     updatePlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;
-    similarPlaces(placeID: string): Promise<Place[]>;
+    similarPlaces(placeID: string, limit?: number): Promise<Place[]>;
     searchPlaces(placeType: PlaceType, price: number, surface: number, features: Feature[], location: Location): Promise<Place[]>;
     deletePlace(placeId: string): Promise<any>;
 }

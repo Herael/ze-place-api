@@ -51,7 +51,7 @@ let ConversationService = class ConversationService {
     }
     async findByUserID(userId) {
         const conversation = await this.conversationModel
-            .find({ $or: [{ ownerId: userId }, { senderId: userId }] })
+            .find({ $or: [{ ownerId: userId }, { userId: userId }] })
             .exec();
         return conversation;
     }

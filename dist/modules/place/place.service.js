@@ -23,18 +23,18 @@ let PlaceService = class PlaceService {
         this.bookingModel = bookingModel;
         this.customerModel = customerModel;
     }
-    async getAllPlaces(userId) {
+    async getAllPlaces(userId, limit) {
         const user = await this.customerModel.findById(userId);
-        const places = await this.placeModel.find().exec();
+        const places = await this.placeModel.find().limit(limit).exec();
         const formattedPlaces = places.map((place) => {
             place.isFavorite = Boolean(user.favorites.find((p) => p._id.toString() === place._id.toString()));
             return place;
         });
         return formattedPlaces;
     }
-    async getAllPlacesShuffle(userId) {
+    async getAllPlacesShuffle(userId, limit) {
         const user = await this.customerModel.findById(userId);
-        const places = await this.placeModel.find().exec();
+        const places = await this.placeModel.find().limit(limit).exec();
         const formattedPlaces = places.map((place) => {
             place.isFavorite = Boolean(user.favorites.find((p) => p._id.toString() === place._id.toString()));
             return place;
@@ -51,8 +51,8 @@ let PlaceService = class PlaceService {
         place.isFavorite = Boolean(user.favorites.find((p) => p._id.toString() === place._id.toString()));
         return place;
     }
-    async getPlacesNearbyCoordinates(coords, distance) {
-        let places = await this.placeModel.find().exec();
+    async getPlacesNearbyCoordinates(coords, distance, limit) {
+        let places = await this.placeModel.find().limit(limit).exec();
         places = places.filter((place) => index_1.isPlaceInRadius({
             longitude: place.location.longitude,
             latitude: place.location.latitude,
@@ -87,7 +87,7 @@ let PlaceService = class PlaceService {
         place.save();
         return place;
     }
-    async similarPlaces(placeID) {
+    async similarPlaces(placeID, limit) {
         const place = await this.placeModel.findById(placeID);
         const priceDif = 0.4;
         const price = place.price;
@@ -101,6 +101,7 @@ let PlaceService = class PlaceService {
             _id: { $ne: place._id },
             placeType: place.placeType,
         })
+            .limit(limit)
             .exec();
         places = places.filter((place) => index_1.isPlaceInRadius({
             longitude: place.location.longitude,

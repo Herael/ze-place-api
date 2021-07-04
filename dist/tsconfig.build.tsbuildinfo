@@ -2702,12 +2702,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "25d5de9661a5c6dd3375b6482ded3b48d785fd2c4cd7a426d0de1f4c421209d9",
-        "signature": "dae7b82249efeaae4c8e90fb0631503183968edff4d95591940f82ce00a573b3",
+        "version": "2d1cceb414c10648b2074a8a74b535fdf03e93aff940badd3ece2b74eee8c2e8",
+        "signature": "17d68be09461458ea4eb903ce7b361a99d3b37a989fe6874b6800340d82951fe",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "c05f152359a98b712003bd737862e7f99f2fe4200b6cf40ac5ebde4f70e758aa",
+        "version": "0ed3300a1a0644db5c5d1975b2b24d0eea4ed0cd5420d46e7fbad382fb3b0e56",
         "signature": "a2042900e0a55c7586f6533fca60004b2321318657fdc704cf09c393695ee16b",
         "affectsGlobalScope": false
       },
@@ -2987,12 +2987,12 @@
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/conversation.service.ts": {
-        "version": "3707332e6241be967495585e09e82b2b7e94d236b9ff6180b2dca3b152e98766",
+        "version": "c3763bddcb2633999caf92ba36f10135457d20c0633118f0e3217662e84ca670",
         "signature": "d3450f2978a06ff7972619aeac17ad39b6912a8683ec7bdb8040466763477e57",
         "affectsGlobalScope": false
       },
       "../src/modules/conversation/conversation.controller.ts": {
-        "version": "110a350d237f745f66cda5fd7a659a0ff1b6f0414411fc83cf8b76e815bda61a",
+        "version": "07ff4e8aacaae4f29626bb41072c3a89daf4436547648b6a1e7756e39157f9b5",
         "signature": "14eba781e63a920e17ffd87f7d29208b444aa66e4f78fd00e43d722660228cad",
         "affectsGlobalScope": false
       },

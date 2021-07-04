@@ -20,16 +20,22 @@ export class PlaceController {
   constructor(private placeService: PlaceService) {}
 
   @UseGuards(JwtAuthGuard)
-  @Get()
+  @Post()
   async getAllPlaces(@Request() req, @Res() res) {
-    const places = await this.placeService.getAllPlaces(req.user.id);
+    const places = await this.placeService.getAllPlaces(
+      req.user.id,
+      req.body.limit,
+    );
     return res.status(HttpStatus.OK).json(places);
   }
 
   @UseGuards(JwtAuthGuard)
-  @Get('/shuffle')
+  @Post('/shuffle')
   async getAllPlacesShuffle(@Request() req, @Res() res) {
-    const places = await this.placeService.getAllPlacesShuffle(req.user.id);
+    const places = await this.placeService.getAllPlacesShuffle(
+      req.user.id,
+      req.body.limit,
+    );
     return res.status(HttpStatus.OK).json(places);
   }
 
@@ -51,6 +57,7 @@ export class PlaceController {
     const places = await this.placeService.getPlacesNearbyCoordinates(
       data.coords,
       data.distance,
+      data.limit,
     );
     return res.status(HttpStatus.OK).json(places);
   }

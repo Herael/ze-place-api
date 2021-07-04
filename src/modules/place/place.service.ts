@@ -26,9 +26,9 @@ export class PlaceService {
     @InjectModel('Customer') private readonly customerModel: Model<Customer>,
   ) {}
 
-  async getAllPlaces(userId: string) {
+  async getAllPlaces(userId: string, limit?: number) {
     const user = await this.customerModel.findById(userId);
-    const places = await this.placeModel.find().exec();
+    const places = await this.placeModel.find().limit(limit).exec();
     const formattedPlaces = places.map((place) => {
       place.isFavorite = Boolean(
         user.favorites.find((p) => p._id.toString() === place._id.toString()),
@@ -38,9 +38,9 @@ export class PlaceService {
     return formattedPlaces;
   }
 
-  async getAllPlacesShuffle(userId: string) {
+  async getAllPlacesShuffle(userId: string, limit?: number) {
     const user = await this.customerModel.findById(userId);
-    const places = await this.placeModel.find().exec();
+    const places = await this.placeModel.find().limit(limit).exec();
     const formattedPlaces = places.map((place) => {
       place.isFavorite = Boolean(
         user.favorites.find((p) => p._id.toString() === place._id.toString()),
@@ -68,8 +68,9 @@ export class PlaceService {
   async getPlacesNearbyCoordinates(
     coords: Coords,
     distance: number,
+    limit?: number,
   ): Promise<Place[]> {
-    let places = await this.placeModel.find().exec();
+    let places = await this.placeModel.find().limit(limit).exec();
     places = places.filter(
       (place: Place) =>
         isPlaceInRadius(
@@ -120,7 +121,7 @@ export class PlaceService {
     return place;
   }
 
-  async similarPlaces(placeID: string): Promise<Place[]> {
+  async similarPlaces(placeID: string, limit?: number): Promise<Place[]> {
     const place = await this.placeModel.findById(placeID);
     const priceDif = 0.4;
     const price = place.price;
@@ -135,6 +136,7 @@ export class PlaceService {
         _id: { $ne: place._id },
         placeType: place.placeType,
       })
+      .limit(limit)
       .exec();
 
     places = places.filter(
