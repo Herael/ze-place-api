@@ -67,9 +67,7 @@ export class ConversationController {
   @UseGuards(JwtAuthGuard)
   @Get('/user/:userId')
   async getConversationByUserId(@Res() res, @Param('userId') userId) {
-    console.log('userId : ' + userId);
     const conversation = await this.conversationService.findByUserID(userId);
-    console.log('Controller conversation : ' + conversation);
     return res.status(HttpStatus.OK).json(conversation);
   }
 

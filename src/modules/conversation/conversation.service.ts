@@ -51,7 +51,6 @@ export class ConversationService {
   }
 
   async findByUserID(userId: string): Promise<Conversation[] | undefined> {
-    console.log('service userId : ' + userId);
     const conversation = await this.conversationModel
       .find({ $or: [{ ownerId: userId }, { userId: userId }] })
       .exec();
