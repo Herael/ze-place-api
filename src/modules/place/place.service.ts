@@ -28,7 +28,11 @@ export class PlaceService {
 
   async getAllPlaces(userId: string, limit?: number) {
     const user = await this.customerModel.findById(userId);
-    const places = await this.placeModel.find().limit(limit).exec();
+    const places = await this.placeModel
+      .find()
+      .sort({ created_at: -1 })
+      .limit(limit)
+      .exec();
     const formattedPlaces = places.map((place) => {
       place.isFavorite = Boolean(
         user.favorites.find((p) => p._id.toString() === place._id.toString()),
