@@ -32,14 +32,12 @@ let MessageController = class MessageController {
         return res.status(common_1.HttpStatus.OK).json(message);
     }
     async getMessageByConversationId(res, conversationId) {
-        console.log('CONVERSATION');
         const message = await this.messageService.findByConversationID(conversationId);
         if (!message)
             throw new common_1.NotFoundException('Message does not exist with this conversation !');
         return res.status(common_1.HttpStatus.OK).json(message);
     }
     async createMessage(res, messageDTO) {
-        console.log(messageDTO);
         const messageAdded = await this.messageService.addMessage(messageDTO);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Message has been successfully created',

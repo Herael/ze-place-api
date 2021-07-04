@@ -67,12 +67,9 @@ let CustomerService = class CustomerService {
             .findOne({ name: promoCodeName.name })
             .exec();
         const custo = await this.customerModel.findById(customerID).exec();
-        console.log(code._id);
         if (code != undefined) {
             if (code.user_limit > 0) {
                 if (code.end_date > new Date()) {
-                    console.log('include', !custo.promoCode.includes(code._id) &&
-                        !custo.historyCode.includes(code._id));
                     if (!custo.promoCode.includes(code._id) &&
                         !custo.historyCode.includes(code._id)) {
                         const customer = await this.customerModel
@@ -98,7 +95,6 @@ let CustomerService = class CustomerService {
         }
     }
     async setToHistory(req) {
-        console.log('history', req);
         const user = await this.customerModel.findByIdAndUpdate({ _id: req.userId }, { $push: { historyCode: req.promoId } });
         const user2 = await this.customerModel.findByIdAndUpdate({ _id: req.userId }, { $pull: { promoCode: { $in: req.promoId } } });
         return user2;

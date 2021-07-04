@@ -97,12 +97,10 @@ export class CustomerController {
     @Request() req,
     @Query('customerID') customerID,
   ) {
-    console.log(req.body);
     const result = await this.customerService.addPromoCode(
       req.body,
       customerID,
     );
-    console.log(result);
 
     return res.status(HttpStatus.OK).json({
       data: result,
@@ -114,7 +112,6 @@ export class CustomerController {
     
     
     const code = await this.customerService.setToHistory(req.body);    
-    console.log(code);      
     return res.status(HttpStatus.OK).json(code)
   }
 }

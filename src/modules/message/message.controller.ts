@@ -40,7 +40,6 @@ export class MessageController {
     @Res() res,
     @Param('conversationId') conversationId,
   ) {
-    console.log('CONVERSATION');
     const message = await this.messageService.findByConversationID(
       conversationId,
     );
@@ -54,7 +53,6 @@ export class MessageController {
   @UseGuards(JwtAuthGuard)
   @Post('/create')
   async createMessage(@Res() res, @Body() messageDTO: MessageDTO) {
-    console.log(messageDTO);
     const messageAdded = await this.messageService.addMessage(messageDTO);
     return res.status(HttpStatus.OK).json({
       message: 'Message has been successfully created',

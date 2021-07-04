@@ -37,7 +37,6 @@ export class AuthService {
 
   async uploadID(data) {
     //request here for python
-    console.log('data : ' + data);
     const IDRecto = await stripe.files.create({
       purpose: 'identity_document',
       file: {
@@ -124,7 +123,6 @@ export class AuthService {
       });
       return token;
     } catch (err) {
-      console.log(err);
     }
   }
 
@@ -141,10 +139,8 @@ export class AuthService {
 
     PythonShell.run('script.py', null, function (err, results) {
       if (err) {
-        console.log(err);
         return;
       }
-      console.log('results: %j', results);
     });
     return;
   }

@@ -20,7 +20,6 @@ let PromoController = class PromoController {
         this.promoService = promoService;
     }
     async create(req) {
-        console.log(req.body);
         return this.promoService.createPromo(req.body);
     }
     async getCode(res) {
@@ -28,7 +27,6 @@ let PromoController = class PromoController {
         return res.status(common_1.HttpStatus.OK).json(code);
     }
     async getSevralCode(res, req) {
-        console.log(req.body);
         const code = await this.promoService.getSevralCode(req.body);
         return res.status(common_1.HttpStatus.OK).json(code);
     }

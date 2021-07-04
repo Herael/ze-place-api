@@ -118,7 +118,6 @@ export class PaymentController {
   @Post('/balance')
   async getBalance(@Res() res, @Req() req) {
     const balance = await this.paymentService.getBalance(req.body.accountId);
-    console.log(balance);
     return res.status(HttpStatus.OK).json(balance);
   }
 

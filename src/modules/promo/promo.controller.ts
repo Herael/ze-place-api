@@ -12,7 +12,6 @@ export class PromoController {
 
     @Post('/create')
     async create(@Request() req) {
-      console.log(req.body);
       
       return this.promoService.createPromo(req.body);
     }
@@ -25,7 +24,6 @@ export class PromoController {
 
     @Post('/getSevralCode')
     async getSevralCode(@Res() res ,@Request() req){
-      console.log(req.body);
       const code = await this.promoService.getSevralCode(req.body);      
       return res.status(HttpStatus.OK).json(code)
     }

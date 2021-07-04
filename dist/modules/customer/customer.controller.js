@@ -66,16 +66,13 @@ let CustomerController = class CustomerController {
         });
     }
     async addPromoCode(res, req, customerID) {
-        console.log(req.body);
         const result = await this.customerService.addPromoCode(req.body, customerID);
-        console.log(result);
         return res.status(common_1.HttpStatus.OK).json({
             data: result,
         });
     }
     async setToHistory(res, req) {
         const code = await this.customerService.setToHistory(req.body);
-        console.log(code);
         return res.status(common_1.HttpStatus.OK).json(code);
     }
 };

@@ -13,9 +13,7 @@ export class BugTicketController {
     @Res() res,
     @Request() req
   ) {
-    console.log(req.body);
     const result = await this.ticketService.addTicket(req.body);
-    console.log(result);
 
     return res.status(HttpStatus.OK).json({
       data: result,
