@@ -52,7 +52,7 @@ export class PlaceController {
     return res.status(HttpStatus.OK).json(places);
   }
 
-  @Post()
+  @Post('/nearby')
   async getPlacesNearbyCoordinates(@Res() res, @Body() data) {
     const places = await this.placeService.getPlacesNearbyCoordinates(
       data.coords,
