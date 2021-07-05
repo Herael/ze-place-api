@@ -21,9 +21,7 @@ let BugTicketController = class BugTicketController {
         this.ticketService = ticketService;
     }
     async addBugTicket(res, req) {
-        console.log(req.body);
         const result = await this.ticketService.addTicket(req.body);
-        console.log(result);
         return res.status(common_1.HttpStatus.OK).json({
             data: result,
         });

@@ -66,7 +66,6 @@ let PaymentController = class PaymentController {
     }
     async getBalance(res, req) {
         const balance = await this.paymentService.getBalance(req.body.accountId);
-        console.log(balance);
         return res.status(common_1.HttpStatus.OK).json(balance);
     }
     async initSetupIntent(res, req) {

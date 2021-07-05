@@ -16,7 +16,6 @@ export class ReviewPlaceController {
     }
     @Post('/get')
     async getReview(@Req() req, @Res() res, @Body() body){
-        console.log(body);
         const review = await this.reviewPlaceService.getReview(body)
        return res.status(HttpStatus.OK).json({
         data:review
@@ -24,7 +23,6 @@ export class ReviewPlaceController {
     }
     @Post('/getByUser')
     async getReviewBuser(@Req() req, @Res() res, @Body() body){
-        console.log(body);
         const review = await this.reviewPlaceService.getReviewBuser(body)
        return res.status(HttpStatus.OK).json({
         data:review

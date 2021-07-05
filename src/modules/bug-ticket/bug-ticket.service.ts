@@ -14,12 +14,10 @@ export class BugTicketService {
 
     async getTicket():Promise<Ticket[]>{
         const ticket = await this.ticketModel.find().exec();
-        console.log(ticket);
         
         return ticket;
     }
     async changeTag(data):Promise<Ticket>{
-        console.log('tag');
         
         const ticket = await this.ticketModel.findByIdAndUpdate(data.id,{tag:data.tag})        
         return ticket;

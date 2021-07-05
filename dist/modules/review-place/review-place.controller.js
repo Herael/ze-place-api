@@ -27,14 +27,12 @@ let ReviewPlaceController = class ReviewPlaceController {
         });
     }
     async getReview(req, res, body) {
-        console.log(body);
         const review = await this.reviewPlaceService.getReview(body);
         return res.status(common_1.HttpStatus.OK).json({
             data: review
         });
     }
     async getReviewBuser(req, res, body) {
-        console.log(body);
         const review = await this.reviewPlaceService.getReviewBuser(body);
         return res.status(common_1.HttpStatus.OK).json({
             data: review

@@ -50,7 +50,6 @@ let AuthService = class AuthService {
         };
     }
     async uploadID(data) {
-        console.log('data : ' + data);
         const IDRecto = await stripe.files.create({
             purpose: 'identity_document',
             file: {
@@ -135,7 +134,6 @@ let AuthService = class AuthService {
             return token;
         }
         catch (err) {
-            console.log(err);
         }
     }
     async getUser(credentials) {
@@ -148,10 +146,8 @@ let AuthService = class AuthService {
         };
         python_shell_1.PythonShell.run('script.py', null, function (err, results) {
             if (err) {
-                console.log(err);
                 return;
             }
-            console.log('results: %j', results);
         });
         return;
     }

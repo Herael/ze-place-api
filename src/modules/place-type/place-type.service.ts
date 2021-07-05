@@ -29,7 +29,6 @@ export class PlaceTypeService {
     return newType;
   }
   async getFeatures() {
-    console.log('log');
 
     const newType = await this.featuresModel.find();
     return newType;
