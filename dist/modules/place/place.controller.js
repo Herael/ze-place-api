@@ -105,7 +105,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], PlaceController.prototype, "getPlaceById", null);
 __decorate([
-    common_1.Post(),
+    common_1.Post('/nearby'),
     __param(0, common_1.Res()), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),

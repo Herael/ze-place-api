@@ -37,8 +37,9 @@ let BookingService = class BookingService {
         place.save();
         utils_1.sendPushNotifications({
             pushId: owner.pushToken,
-            title: 'Your place has been booked !',
-            description: 'Check',
+            title: `${place.title}`,
+            subtitle: 'Your place has been booked',
+            description: `${user.first_name} ${user.last_name} has booked your place, send him a message now !`,
         });
     }
     async getBookingsOfTheDay() {
@@ -90,11 +91,17 @@ let BookingService = class BookingService {
     }
     async acceptBooking(bookingId) {
         const booking = await this.bookingModel.findById(bookingId);
+        const owner = await this.customerModel.findById(booking.ownerId);
         const user = await this.customerModel.findById(booking.userId);
+        const place = await this.placeModel.findById(booking.placeId);
+        const placeBooking = place.bookings.find((booking) => booking._id === bookingId);
+        placeBooking.isAccepted = true;
+        place.save();
         utils_1.sendPushNotifications({
             pushId: user.pushToken,
-            title: 'Test',
-            description: 'test',
+            title: `${place.title}`,
+            subtitle: `${owner.first_name} has accepted your reservation`,
+            description: 'Find it in the reservation tab, you can continue to discuss with the owner',
         });
         booking.isAccepted = true;
         booking.save();
@@ -106,22 +113,28 @@ let BookingService = class BookingService {
         const owner = await this.customerModel.findById(booking.ownerId);
         const place = await this.placeModel.findById(booking.placeId);
         place.availabilities = place.availabilities.filter((availabilities) => availabilities.userId !== booking.userId);
+        const placeBooking = place.bookings.find((booking) => booking._id.toString() === bookingId.toString());
+        console.log(placeBooking);
+        placeBooking.isDenied = true;
         place.save();
+        console.log(place.bookings);
         await stripe.refunds.create({
             payment_intent: booking.paymentId,
         });
         if (userId === booking.userId) {
             utils_1.sendPushNotifications({
                 pushId: owner.pushToken,
-                title: 'Annulation de réservation',
-                description: `${user.first_name} a annulé sa réservation pour ${booking.placeTitle}`,
+                title: `${place.title}`,
+                subtitle: `${user.first_name} canceled his reservation`,
+                description: `A refund has been made, send him a message to find out why...`,
             });
         }
         else {
             utils_1.sendPushNotifications({
                 pushId: user.pushToken,
-                title: 'Annulation de réservation',
-                description: `${owner.first_name} a annulé votre réservation pour ${booking.placeTitle}`,
+                title: `${place.title}`,
+                subtitle: `${owner.first_name} canceled your reservation`,
+                description: 'Your reservation has been canceled, you will be refunded shortly.',
             });
         }
         booking.isDenied = true;
@@ -137,6 +150,7 @@ let BookingService = class BookingService {
             bookings.forEach(async (booking) => {
                 const owner = await this.customerModel.findById(booking.ownerId);
                 const bookingModel = await this.bookingModel.findById(booking._id);
+                const place = await this.placeModel.findById(booking.placeId);
                 if (owner != null && owner.stripeAccount) {
                     bookingModel.isPaid = true;
                     bookingModel.save();
@@ -149,8 +163,9 @@ let BookingService = class BookingService {
                     });
                     utils_1.sendPushNotifications({
                         pushId: owner.pushToken,
-                        title: 'Virement réalisé',
-                        description: `La réservation de ${booking.firstname} a démarré, vous recevrez bientôt votre argent sur votre compte ZePlace`,
+                        title: `${place.title}`,
+                        subtitle: `New bank transfer`,
+                        description: `The transfer of ${booking.price}€ from ${booking.firstname} has been made, find it directly in your account within 2 days.`,
                     });
                 }
             });
@@ -161,6 +176,14 @@ let BookingService = class BookingService {
         if (bookings.length > 0) {
             bookings.forEach(async (booking) => {
                 const bookingModel = await this.bookingModel.findById(booking._id);
+                const owner = await this.customerModel.findById(booking.ownerId);
+                const place = await this.placeModel.findById(booking.placeId);
+                utils_1.sendPushNotifications({
+                    pushId: owner.pushToken,
+                    title: `${place.title}`,
+                    subtitle: `Reservation completed`,
+                    description: `${booking.firstname}'s booking has ended !`,
+                });
                 bookingModel.isPast = true;
                 bookingModel.save();
             });

@@ -59,12 +59,13 @@ const isTooShortToDelete = (bookingDate) => {
     return true;
 };
 exports.isTooShortToDelete = isTooShortToDelete;
-const sendPushNotifications = async ({ pushId, title, data, description, }) => {
+const sendPushNotifications = async ({ pushId, title, subtitle, data, description, }) => {
     if (pushId) {
         return await axios_1.default
             .post('https://exp.host/--/api/v2/push/send', {
             to: pushId,
             title: title,
+            subtitle: subtitle,
             body: description,
             data,
         })

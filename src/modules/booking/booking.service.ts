@@ -147,10 +147,12 @@ export class BookingService {
       (availabilities) => availabilities.userId !== booking.userId,
     );
     const placeBooking = place.bookings.find(
-      (booking) => booking._id === bookingId,
+      (booking) => booking._id.toString() === bookingId.toString(),
     );
+    console.log(placeBooking);
     placeBooking.isDenied = true;
     place.save();
+    console.log(place.bookings);
     await stripe.refunds.create({
       payment_intent: booking.paymentId,
     });

@@ -6,9 +6,10 @@ export declare const filterOwnedPlace: (id: string, placeId: string) => boolean;
 export declare const isInRangePrice: (originPrice: number, placePrice: number, percentage: number) => boolean;
 export declare const isContainsFeatures: (researchFeature: Feature[], placeFeature: Feature[]) => boolean;
 export declare const isTooShortToDelete: (bookingDate: string) => boolean;
-export declare const sendPushNotifications: ({ pushId, title, data, description, }: {
+export declare const sendPushNotifications: ({ pushId, title, subtitle, data, description, }: {
     pushId: string;
     title: string;
+    subtitle?: string;
     data?: any;
     description: string;
 }) => Promise<any>;
