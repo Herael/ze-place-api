@@ -172,6 +172,7 @@ export class BookingService {
           'Your reservation has been canceled, you will be refunded shortly.',
       });
     }
+    booking.isAccepted = false;
     booking.isDenied = true;
     booking.isPast = true;
     booking.save();
