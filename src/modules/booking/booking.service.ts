@@ -45,8 +45,9 @@ export class BookingService {
     place.save();
     sendPushNotifications({
       pushId: owner.pushToken,
-      title: 'Your place has been booked !',
-      description: 'Check',
+      title: `${place.title}`,
+      subtitle: 'Your place has been booked',
+      description: `${user.first_name} ${user.last_name} has booked your place, send him a message now !`,
     });
   }
 
@@ -117,11 +118,17 @@ export class BookingService {
 
   async acceptBooking(bookingId: string): Promise<Booking> {
     const booking = await this.bookingModel.findById(bookingId);
+    const owner = await this.customerModel.findById(booking.ownerId);
     const user = await this.customerModel.findById(booking.userId);
+    const place = await this.placeModel.findById(booking.placeId);
+    place.bookings.find((booking) => booking._id === bookingId).isDenied = true;
+    place.save();
     sendPushNotifications({
       pushId: user.pushToken,
-      title: 'Test',
-      description: 'test',
+      title: `${place.title}`,
+      subtitle: `${owner.first_name} has accepted your reservation`,
+      description:
+        'Find it in the reservation tab, you can continue to discuss with the owner',
     });
     booking.isAccepted = true;
     booking.save();
@@ -136,6 +143,7 @@ export class BookingService {
     place.availabilities = place.availabilities.filter(
       (availabilities) => availabilities.userId !== booking.userId,
     );
+    place.bookings.find((booking) => booking._id === bookingId).isDenied = true;
     place.save();
     await stripe.refunds.create({
       payment_intent: booking.paymentId,
@@ -144,14 +152,17 @@ export class BookingService {
     if (userId === booking.userId) {
       sendPushNotifications({
         pushId: owner.pushToken,
-        title: 'Annulation de réservation',
-        description: `${user.first_name} a annulé sa réservation pour ${booking.placeTitle}`,
+        title: `${place.title}`,
+        subtitle: `${user.first_name} canceled his reservation`,
+        description: `A refund has been made, send him a message to find out why...`,
       });
     } else {
       sendPushNotifications({
         pushId: user.pushToken,
-        title: 'Annulation de réservation',
-        description: `${owner.first_name} a annulé votre réservation pour ${booking.placeTitle}`,
+        title: `${place.title}`,
+        subtitle: `${owner.first_name} canceled your reservation`,
+        description:
+          'Your reservation has been canceled, you will be refunded shortly.',
       });
     }
     booking.isDenied = true;
@@ -169,6 +180,7 @@ export class BookingService {
       bookings.forEach(async (booking) => {
         const owner = await this.customerModel.findById(booking.ownerId);
         const bookingModel = await this.bookingModel.findById(booking._id);
+        const place = await this.placeModel.findById(booking.placeId);
         if (owner != null && owner.stripeAccount) {
           bookingModel.isPaid = true;
           bookingModel.save();
@@ -181,8 +193,9 @@ export class BookingService {
           });
           sendPushNotifications({
             pushId: owner.pushToken,
-            title: 'Virement réalisé',
-            description: `La réservation de ${booking.firstname} a démarré, vous recevrez bientôt votre argent sur votre compte ZePlace`,
+            title: `${place.title}`,
+            subtitle: `New bank transfer`,
+            description: `The transfer of ${booking.price}€ from ${booking.firstname} has been made, find it directly in your account within 2 days.`,
           });
         }
       });
@@ -195,6 +208,14 @@ export class BookingService {
     if (bookings.length > 0) {
       bookings.forEach(async (booking) => {
         const bookingModel = await this.bookingModel.findById(booking._id);
+        const owner = await this.customerModel.findById(booking.ownerId);
+        const place = await this.placeModel.findById(booking.placeId);
+        sendPushNotifications({
+          pushId: owner.pushToken,
+          title: `${place.title}`,
+          subtitle: `Reservation completed`,
+          description: `${booking.firstname}'s booking has ended !`,
+        });
         bookingModel.isPast = true;
         bookingModel.save();
       });

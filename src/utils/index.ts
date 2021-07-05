@@ -77,11 +77,13 @@ export const isTooShortToDelete = (bookingDate: string) => {
 export const sendPushNotifications = async ({
   pushId,
   title,
+  subtitle,
   data,
   description,
 }: {
   pushId: string;
   title: string;
+  subtitle?: string;
   data?: any;
   description: string;
 }) => {
@@ -90,6 +92,7 @@ export const sendPushNotifications = async ({
       .post('https://exp.host/--/api/v2/push/send', {
         to: pushId,
         title: title,
+        subtitle: subtitle,
         body: description,
         data,
       })
