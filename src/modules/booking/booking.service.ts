@@ -121,7 +121,10 @@ export class BookingService {
     const owner = await this.customerModel.findById(booking.ownerId);
     const user = await this.customerModel.findById(booking.userId);
     const place = await this.placeModel.findById(booking.placeId);
-    place.bookings.find((booking) => booking._id === bookingId).isDenied = true;
+    const placeBooking = place.bookings.find(
+      (booking) => booking._id === bookingId,
+    );
+    placeBooking.isAccepted = true;
     place.save();
     sendPushNotifications({
       pushId: user.pushToken,
@@ -143,7 +146,10 @@ export class BookingService {
     place.availabilities = place.availabilities.filter(
       (availabilities) => availabilities.userId !== booking.userId,
     );
-    place.bookings.find((booking) => booking._id === bookingId).isDenied = true;
+    const placeBooking = place.bookings.find(
+      (booking) => booking._id === bookingId,
+    );
+    placeBooking.isDenied = true;
     place.save();
     await stripe.refunds.create({
       payment_intent: booking.paymentId,
