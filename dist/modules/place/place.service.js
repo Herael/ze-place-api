@@ -103,9 +103,10 @@ let PlaceService = class PlaceService {
             latitude: place.location.latitude,
             longitude: place.location.longitude,
         };
-        let places = await this.placeModel
-            .find({ _id: { $ne: place._id }, placeType: place.placeType })
-            .exec();
+        let places = await this.placeModel.find({
+            _id: { $ne: placeID },
+            'placeType._id': place.placeType._id,
+        });
         places = places.filter((place) => index_1.isPlaceInRadius({
             longitude: place.location.longitude,
             latitude: place.location.latitude,

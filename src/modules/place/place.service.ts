@@ -141,9 +141,10 @@ export class PlaceService {
       longitude: place.location.longitude,
     };
 
-    let places = await this.placeModel
-      .find({ _id: { $ne: place._id }, placeType: place.placeType })
-      .exec();
+    let places = await this.placeModel.find({
+      _id: { $ne: placeID },
+      'placeType._id': place.placeType._id,
+    });
 
     places = places.filter(
       (place: Place) =>
