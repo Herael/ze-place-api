@@ -52,6 +52,13 @@ export class PlaceController {
     return res.status(HttpStatus.OK).json(places);
   }
 
+  @UseGuards(JwtAuthGuard)
+  @Get('/user')
+  async getPlaceByUser(@Request() req, @Res() res) {
+    const places = await this.placeService.getPlacesByUser(req.user.id);
+    return res.status(HttpStatus.OK).json(places);
+  }
+
   @Post('/nearby')
   async getPlacesNearbyCoordinates(@Res() res, @Body() data) {
     const places = await this.placeService.getPlacesNearbyCoordinates(
