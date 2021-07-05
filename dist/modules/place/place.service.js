@@ -49,6 +49,10 @@ let PlaceService = class PlaceService {
         const places = await this.placeModel.find().exec();
         return places;
     }
+    async getPlacesByUser(userId) {
+        const places = await this.placeModel.find({ ownerId: userId }).exec();
+        return places;
+    }
     async findById(userId, placeId) {
         const user = await this.customerModel.findById(userId);
         const place = await this.placeModel.findById(placeId).exec();

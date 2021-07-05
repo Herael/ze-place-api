@@ -53,9 +53,9 @@ export class PlaceController {
   }
 
   @UseGuards(JwtAuthGuard)
-  @Get('/user')
+  @Get('/user/:userId')
   async getPlaceByUser(@Request() req, @Res() res) {
-    const places = await this.placeService.getPlacesByUser(req.user.id);
+    const places = await this.placeService.getPlacesByUser(req.params.userId);
     return res.status(HttpStatus.OK).json(places);
   }
 

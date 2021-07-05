@@ -94,7 +94,7 @@ let BookingService = class BookingService {
         const owner = await this.customerModel.findById(booking.ownerId);
         const user = await this.customerModel.findById(booking.userId);
         const place = await this.placeModel.findById(booking.placeId);
-        const placeBooking = place.bookings.find((booking) => booking._id === bookingId);
+        const placeBooking = place.bookings.find((booking) => booking._id.toString() === bookingId.toString());
         placeBooking.isAccepted = true;
         place.save();
         utils_1.sendPushNotifications({
@@ -114,10 +114,9 @@ let BookingService = class BookingService {
         const place = await this.placeModel.findById(booking.placeId);
         place.availabilities = place.availabilities.filter((availabilities) => availabilities.userId !== booking.userId);
         const placeBooking = place.bookings.find((booking) => booking._id.toString() === bookingId.toString());
-        console.log(placeBooking);
         placeBooking.isDenied = true;
+        placeBooking.isAccepted = false;
         place.save();
-        console.log(place.bookings);
         await stripe.refunds.create({
             payment_intent: booking.paymentId,
         });
@@ -137,6 +136,7 @@ let BookingService = class BookingService {
                 description: 'Your reservation has been canceled, you will be refunded shortly.',
             });
         }
+        booking.isAccepted = false;
         booking.isDenied = true;
         booking.isPast = true;
         booking.save();

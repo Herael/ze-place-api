@@ -14,6 +14,7 @@ export declare class PlaceService {
     getAllPlaces(userId: string, limit?: number): Promise<Place[]>;
     getAllPlacesShuffle(userId: string, limit?: number): Promise<Place[]>;
     getAllPlacesAdmin(): Promise<Place[]>;
+    getPlacesByUser(userId: string): Promise<Place[]>;
     findById(userId: string, placeId: string): Promise<Place>;
     getPlacesNearbyCoordinates(coords: Coords, distance: number, limit?: number): Promise<Place[]>;
     createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;

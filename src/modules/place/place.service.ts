@@ -60,7 +60,7 @@ export class PlaceService {
     return places;
   }
 
-  async getPlacesByUser(userId: string): Promise<Place[]> {
+  async getPlacesByUser(userId: string) {
     const places = await this.placeModel.find({ ownerId: userId }).exec();
     return places;
   }

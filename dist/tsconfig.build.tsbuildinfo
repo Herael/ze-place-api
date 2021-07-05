@@ -1842,7 +1842,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/booking/booking.service.ts": {
-        "version": "67ace34e2d14033e024001d4b99342eab8f0b93d4d58b6a0a4f6d1227a95d1be",
+        "version": "f39fcdae1b296b4989ba957391c8ea540a8e9882905badafdc43b766b7ce21a5",
         "signature": "9a3074225d88ecd426e903058b5302cfbf5588caf981c85d3112fe166736fdc2",
         "affectsGlobalScope": false
       },
@@ -2702,13 +2702,13 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "71411fb3eba7690d0d3cdc32415ff01aad510aa5b86412e75aac06aa8b4f8395",
-        "signature": "17d68be09461458ea4eb903ce7b361a99d3b37a989fe6874b6800340d82951fe",
+        "version": "c31c39403e485dbeae0ed71f55827bd2720bd81f5b50bc78261ba44412c749d5",
+        "signature": "32096e3292f63150a2289df15cfc75d1d4a40e6b4aa8e0118f03bd24f7fb3947",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.controller.ts": {
-        "version": "f55f05df93eff9d7a3d3a5a0135987a85a1fdb3c6ca4e768327b404601783d92",
-        "signature": "a2042900e0a55c7586f6533fca60004b2321318657fdc704cf09c393695ee16b",
+        "version": "0d424379a03e2b6056767bec11c86b7c40257979ef05bf27232196a79abe9bd6",
+        "signature": "a44f2e43d4f63f27d6821f610f9402b60b95ebeca66f4f4fb600c997f84ae11c",
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.module.ts": {

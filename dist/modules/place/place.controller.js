@@ -37,6 +37,10 @@ let PlaceController = class PlaceController {
         const places = await this.placeService.findById(req.user.id, req.params.id);
         return res.status(common_1.HttpStatus.OK).json(places);
     }
+    async getPlaceByUser(req, res) {
+        const places = await this.placeService.getPlacesByUser(req.params.userId);
+        return res.status(common_1.HttpStatus.OK).json(places);
+    }
     async getPlacesNearbyCoordinates(res, data) {
         const places = await this.placeService.getPlacesNearbyCoordinates(data.coords, data.distance, data.limit);
         return res.status(common_1.HttpStatus.OK).json(places);
@@ -104,6 +108,14 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PlaceController.prototype, "getPlaceById", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Get('/user/:userId'),
+    __param(0, common_1.Request()), __param(1, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PlaceController.prototype, "getPlaceByUser", null);
 __decorate([
     common_1.Post('/nearby'),
     __param(0, common_1.Res()), __param(1, common_1.Body()),
