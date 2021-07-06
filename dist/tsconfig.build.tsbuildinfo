@@ -2702,7 +2702,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/place/place.service.ts": {
-        "version": "c31c39403e485dbeae0ed71f55827bd2720bd81f5b50bc78261ba44412c749d5",
+        "version": "fd148cb3933eb7f30bc25001ced57155ce316e3fd8eeea9168e60182da619902",
         "signature": "32096e3292f63150a2289df15cfc75d1d4a40e6b4aa8e0118f03bd24f7fb3947",
         "affectsGlobalScope": false
       },

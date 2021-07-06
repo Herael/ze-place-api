@@ -133,21 +133,18 @@ export class PlaceService {
 
   async similarPlaces(placeID: string, limit?: number): Promise<Place[]> {
     const place = await this.placeModel.findById(placeID);
-    const priceDif = 0.4;
-    const price = place.price;
-    const distance = 20000;
+    // const priceDif = 0.4;
+    // const price = place.price;
+    const distance = 40000;
     const coords = {
       latitude: place.location.latitude,
       longitude: place.location.longitude,
     };
 
-    let places = await this.placeModel
-      .find({
-        _id: { $ne: place._id },
-        placeType: place.placeType,
-      })
-      .limit(limit)
-      .exec();
+    let places = await this.placeModel.find({
+      _id: { $ne: placeID },
+      'placeType._id': place.placeType._id,
+    });
 
     places = places.filter(
       (place: Place) =>
@@ -161,10 +158,10 @@ export class PlaceService {
         ) === true,
     );
 
-    places = places.filter(
-      (placeElement: Place) =>
-        isInRangePrice(price, placeElement.price, priceDif) === true,
-    );
+    // places = places.filter(
+    //   (placeElement: Place) =>
+    //     isInRangePrice(price, placeElement.price, priceDif) === true,
+    // );
 
     return places;
   }
