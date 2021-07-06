@@ -131,8 +131,9 @@ export class PlaceService {
     return place;
   }
 
-  async similarPlaces(placeID: string, limit?: number): Promise<Place[]> {
+  async similarPlaces(placeID: string, userId: string): Promise<Place[]> {
     const place = await this.placeModel.findById(placeID);
+    const user = await this.customerModel.findById(userId);
     // const priceDif = 0.4;
     // const price = place.price;
     const distance = 40000;
@@ -157,13 +158,17 @@ export class PlaceService {
           distance,
         ) === true,
     );
-
     // places = places.filter(
     //   (placeElement: Place) =>
     //     isInRangePrice(price, placeElement.price, priceDif) === true,
     // );
-
-    return places;
+    const formattedPlaces = places.map((place) => {
+      place.isFavorite = Boolean(
+        user.favorites.find((p) => p._id.toString() === place._id.toString()),
+      );
+      return place;
+    });
+    return formattedPlaces;
   }
 
   async searchPlaces(
@@ -172,9 +177,11 @@ export class PlaceService {
     surface: number,
     features: Feature[],
     location: Location,
+    userId: string,
   ): Promise<Place[]> {
     const distance = 20000;
     let places = [];
+    const user = await this.customerModel.findById(userId);
 
     if (placeType && surface) {
       places = await this.placeModel
@@ -227,7 +234,13 @@ export class PlaceService {
       );
     }
 
-    return places;
+    const formattedPlaces = places.map((place) => {
+      place.isFavorite = Boolean(
+        user.favorites.find((p) => p._id.toString() === place._id.toString()),
+      );
+      return place;
+    });
+    return formattedPlaces;
   }
 
   async deletePlace(placeId: string): Promise<any> {

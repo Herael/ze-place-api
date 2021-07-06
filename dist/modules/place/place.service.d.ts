@@ -19,7 +19,7 @@ export declare class PlaceService {
     getPlacesNearbyCoordinates(coords: Coords, distance: number, limit?: number): Promise<Place[]>;
     createPlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;
     updatePlace(createPlaceDTO: CreatePlaceDTO): Promise<Place>;
-    similarPlaces(placeID: string, limit?: number): Promise<Place[]>;
-    searchPlaces(placeType: PlaceType, price: number, surface: number, features: Feature[], location: Location): Promise<Place[]>;
+    similarPlaces(placeID: string, userId: string): Promise<Place[]>;
+    searchPlaces(placeType: PlaceType, price: number, surface: number, features: Feature[], location: Location, userId: string): Promise<Place[]>;
     deletePlace(placeId: string): Promise<any>;
 }

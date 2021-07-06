@@ -91,8 +91,11 @@ export class PlaceController {
 
   @UseGuards(JwtAuthGuard)
   @Post('/similarPlaces')
-  async similarPlaces(@Res() res, @Body() body) {
-    const places = await this.placeService.similarPlaces(body.placeID);
+  async similarPlaces(@Res() res, @Body() body, @Request() req) {
+    const places = await this.placeService.similarPlaces(
+      body.placeID,
+      req.user.id,
+    );
     return res.status(HttpStatus.OK).json({
       message: 'Similar places has been get successfully',
       places,
@@ -101,13 +104,14 @@ export class PlaceController {
 
   @UseGuards(JwtAuthGuard)
   @Post('/searchPlaces')
-  async searchPlaces(@Res() res, @Body() body) {
+  async searchPlaces(@Res() res, @Body() body, @Request() req) {
     const places = await this.placeService.searchPlaces(
       body.placeType,
       body.price,
       body.surface,
       body.features,
       body.location,
+      req.user.id,
     );
     return res.status(HttpStatus.OK).json({
       message: 'Search places has been get successfully',

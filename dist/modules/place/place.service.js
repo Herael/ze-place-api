@@ -96,8 +96,9 @@ let PlaceService = class PlaceService {
         place.save();
         return place;
     }
-    async similarPlaces(placeID, limit) {
+    async similarPlaces(placeID, userId) {
         const place = await this.placeModel.findById(placeID);
+        const user = await this.customerModel.findById(userId);
         const distance = 40000;
         const coords = {
             latitude: place.location.latitude,
@@ -111,11 +112,16 @@ let PlaceService = class PlaceService {
             longitude: place.location.longitude,
             latitude: place.location.latitude,
         }, coords, distance) === true);
-        return places;
+        const formattedPlaces = places.map((place) => {
+            place.isFavorite = Boolean(user.favorites.find((p) => p._id.toString() === place._id.toString()));
+            return place;
+        });
+        return formattedPlaces;
     }
-    async searchPlaces(placeType, price, surface, features, location) {
+    async searchPlaces(placeType, price, surface, features, location, userId) {
         const distance = 20000;
         let places = [];
+        const user = await this.customerModel.findById(userId);
         if (placeType && surface) {
             places = await this.placeModel
                 .find({
@@ -157,7 +163,11 @@ let PlaceService = class PlaceService {
         if (features && features.length > 0) {
             places = places.filter((place) => index_1.isContainsFeatures(features, place.features) === true);
         }
-        return places;
+        const formattedPlaces = places.map((place) => {
+            place.isFavorite = Boolean(user.favorites.find((p) => p._id.toString() === place._id.toString()));
+            return place;
+        });
+        return formattedPlaces;
     }
     async deletePlace(placeId) {
         const place = await this.placeModel.findById(placeId);

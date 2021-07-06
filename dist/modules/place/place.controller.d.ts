@@ -11,7 +11,7 @@ export declare class PlaceController {
     getPlacesNearbyCoordinates(res: any, data: any): Promise<any>;
     createPlace(res: any, createPlaceDTO: CreatePlaceDTO): Promise<any>;
     updatePlace(res: any, createPlaceDTO: CreatePlaceDTO): Promise<any>;
-    similarPlaces(res: any, body: any): Promise<any>;
-    searchPlaces(res: any, body: any): Promise<any>;
+    similarPlaces(res: any, body: any, req: any): Promise<any>;
+    searchPlaces(res: any, body: any, req: any): Promise<any>;
     deletePlace(res: any, placeId: any): Promise<any>;
 }

@@ -59,15 +59,15 @@ let PlaceController = class PlaceController {
             place,
         });
     }
-    async similarPlaces(res, body) {
-        const places = await this.placeService.similarPlaces(body.placeID);
+    async similarPlaces(res, body, req) {
+        const places = await this.placeService.similarPlaces(body.placeID, req.user.id);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Similar places has been get successfully',
             places,
         });
     }
-    async searchPlaces(res, body) {
-        const places = await this.placeService.searchPlaces(body.placeType, body.price, body.surface, body.features, body.location);
+    async searchPlaces(res, body, req) {
+        const places = await this.placeService.searchPlaces(body.placeType, body.price, body.surface, body.features, body.location, req.user.id);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Search places has been get successfully',
             places,
@@ -142,17 +142,17 @@ __decorate([
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/similarPlaces'),
-    __param(0, common_1.Res()), __param(1, common_1.Body()),
+    __param(0, common_1.Res()), __param(1, common_1.Body()), __param(2, common_1.Request()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", Promise)
 ], PlaceController.prototype, "similarPlaces", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Post('/searchPlaces'),
-    __param(0, common_1.Res()), __param(1, common_1.Body()),
+    __param(0, common_1.Res()), __param(1, common_1.Body()), __param(2, common_1.Request()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", Promise)
 ], PlaceController.prototype, "searchPlaces", null);
 __decorate([
