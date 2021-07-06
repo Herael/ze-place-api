@@ -47,7 +47,6 @@ let PaymentController = class PaymentController {
     async createBankAccount(res, req) {
         const bankAccount = await this.paymentService.createBankAccount(req.body.accountId, {
             holderName: req.body.holderName,
-            bank_name: req.body.bank_name,
             account_number: req.body.account_number,
         });
         return res.status(common_1.HttpStatus.OK).json(bankAccount);

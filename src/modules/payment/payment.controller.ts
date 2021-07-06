@@ -80,7 +80,6 @@ export class PaymentController {
       req.body.accountId,
       {
         holderName: req.body.holderName,
-        bank_name: req.body.bank_name,
         account_number: req.body.account_number,
       },
     );

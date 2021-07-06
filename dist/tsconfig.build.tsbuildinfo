@@ -2927,7 +2927,7 @@
         "affectsGlobalScope": false
       },
       "../src/modules/payment/payment.controller.ts": {
-        "version": "d8c1f98c3361da6b93eaebf1d6db3763c3280853a3dc3631926c4326c584d372",
+        "version": "52694cfc759f882eba2a53b8f83ff93afb9982cd46a0265978fa5e711a785c1a",
         "signature": "49df750c98942c2e80ae656658667fe9c4dba6c1250efb6bf9bc854e8f536f20",
         "affectsGlobalScope": false
       },
